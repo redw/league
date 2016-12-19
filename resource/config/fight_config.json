@@ -1,0 +1,9 @@
+{
+  "hero":[101,102,103,104,105,106,0,0,0],
+  "monster":[201,202,0,0,0,0,0,0,0],
+  "meanwhile_fight_delay_time":200,
+  "can_meanwhile_fight":true,
+  "retreat_time":150,
+  "move_time":150,
+  "move_attack_position_off":100
+}

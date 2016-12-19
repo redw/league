@@ -1,0 +1,178 @@
+{
+	"1": {
+		"Mail": 1,
+		"Disc": "铜钱x A",
+		"name": "铜钱",
+		"parm_num": 1,
+		"TipsName": "铜钱",
+		"TipsDisc": 1,
+		"icon_s": "ic_coin_s",
+		"icon": "ic_coin",
+		"id": 1
+	},
+	"2": {
+		"Mail": 1,
+		"Disc": "铜钱x A小时",
+		"name": "时间铜钱",
+		"parm_num": 1,
+		"TipsName": "时间铜钱",
+		"TipsDisc": 2,
+		"icon_s": "ic_timecoin_s",
+		"icon": "ic_timecoin",
+		"id": 2
+	},
+	"3": {
+		"Mail": 1,
+		"Disc": "元宝x A",
+		"name": "元宝",
+		"parm_num": 1,
+		"TipsName": "元宝",
+		"TipsDisc": 3,
+		"icon_s": "ic_gold_s",
+		"icon": "ic_gold",
+		"id": 3
+	},
+	"4": {
+		"Mail": 1,
+		"Disc": "仙玉x A",
+		"name": "仙玉",
+		"parm_num": 1,
+		"TipsName": "仙玉",
+		"TipsDisc": 4,
+		"icon_s": "ic_jade_s",
+		"icon": "ic_jade",
+		"id": 4
+	},
+	"5": {
+		"Mail": 1,
+		"Disc": "闯关仙玉",
+		"name": "闯关仙玉",
+		"parm_num": 1,
+		"TipsName": "闯关仙玉",
+		"TipsDisc": 5,
+		"icon_s": "ic_passjade_s",
+		"icon": "ic_passjade",
+		"id": 5
+	},
+	"6": {
+		"Mail": 1,
+		"Disc": "伙伴",
+		"name": "伙伴",
+		"parm_num": 2,
+		"TipsName": "伙伴A",
+		"TipsDisc": 6,
+		"icon_s": "ic_hero_s",
+		"icon": "ic_hero",
+		"id": 6
+	},
+	"7": {
+		"Mail": 1,
+		"Disc": "伙伴碎片",
+		"name": "伙伴碎片",
+		"parm_num": 2,
+		"TipsName": "A碎片",
+		"TipsDisc": 7,
+		"icon_s": "ic_herochip_s",
+		"icon": "ic_herochip",
+		"id": 7
+	},
+	"8": {
+		"Mail": 1,
+		"Disc": "装备",
+		"name": "装备",
+		"parm_num": 1,
+		"TipsName": "装备",
+		"TipsDisc": 8,
+		"icon_s": "ic_weapon_s",
+		"icon": "ic_weapon",
+		"id": 8
+	},
+	"9": {
+		"Mail": 1,
+		"Disc": "装备材料金",
+		"name": "装备材料-乾金",
+		"parm_num": 1,
+		"TipsName": "装备材料金",
+		"TipsDisc": 9,
+		"icon_s": "ic_wp_metal_s",
+		"icon": "ic_wp_metal",
+		"id": 9
+	},
+	"10": {
+		"Mail": 1,
+		"Disc": "装备材料木",
+		"name": "装备材料-震木",
+		"parm_num": 1,
+		"TipsName": "装备材料木",
+		"TipsDisc": 10,
+		"icon_s": "ic_wp_wood_s",
+		"icon": "ic_wp_wood",
+		"id": 10
+	},
+	"11": {
+		"Mail": 1,
+		"Disc": "装备材料水",
+		"name": "装备材料-坎水",
+		"parm_num": 1,
+		"TipsName": "装备材料水",
+		"TipsDisc": 11,
+		"icon_s": "ic_wp_water_s",
+		"icon": "ic_wp_water",
+		"id": 11
+	},
+	"12": {
+		"Mail": 1,
+		"Disc": "装备材料火",
+		"name": "装备材料-离火",
+		"parm_num": 1,
+		"TipsName": "装备材料火",
+		"TipsDisc": 12,
+		"icon_s": "ic_wp_fire_s",
+		"icon": "ic_wp_fire",
+		"id": 12
+	},
+	"13": {
+		"Mail": 1,
+		"Disc": "装备材料土",
+		"name": "装备材料-坤土",
+		"parm_num": 1,
+		"TipsName": "装备材料土",
+		"TipsDisc": 13,
+		"icon_s": "ic_wp_soil_s",
+		"icon": "ic_wp_soil",
+		"id": 13
+	},
+	"14": {
+		"Mail": 1,
+		"Disc": "寻仙令x A",
+		"name": "寻仙令",
+		"parm_num": 1,
+		"TipsName": "寻仙",
+		"TipsDisc": 14,
+		"icon_s": "ic_herodraw_s",
+		"icon": "ic_herodraw",
+		"id": 14
+	},
+	"15": {
+		"Mail": 0,
+		"Disc": "装备格子",
+		"name": "装备格子",
+		"parm_num": 1,
+		"TipsName": "装备格子",
+		"TipsDisc": 15,
+		"icon_s": "ic_weaponbox_s",
+		"icon": "ic_weaponbox",
+		"id": 15
+	},
+	"16": {
+		"Mail": 0,
+		"Disc": "秘境挑战上限",
+		"name": "秘境挑战上限",
+		"parm_num": 1,
+		"TipsName": "秘境挑战上限",
+		"TipsDisc": 16,
+		"icon_s": "ic_weaponfb_s",
+		"icon": "ic_weaponfb",
+		"id": 16
+	}
+}

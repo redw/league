@@ -1,0 +1,171 @@
+{
+	"1": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 1,
+		"name": "邀请好友 1 次",
+		"task_type": 1,
+		"type_child": 1,
+		"id": 1
+	},
+	"2": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 2,
+		"name": "充值任意金额",
+		"task_type": 2,
+		"type_child": 1,
+		"id": 2
+	},
+	"3": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 10,
+		"name": "升级巡山 10 级",
+		"task_type": 3,
+		"type_child": 1,
+		"id": 3
+	},
+	"4": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 3,
+		"name": "摇钱树 3 次",
+		"task_type": 4,
+		"type_child": 1,
+		"id": 4
+	},
+	"5": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 10,
+		"name": "升级伙伴 10 级",
+		"task_type": 5,
+		"type_child": 1,
+		"id": 5
+	},
+	"6": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 10,
+		"name": "强化伙伴 10 级",
+		"task_type": 6,
+		"type_child": 1,
+		"id": 6
+	},
+	"7": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 2,
+		"name": "进行寻仙 2 次",
+		"task_type": 7,
+		"type_child": 1,
+		"id": 7
+	},
+	"8": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 10,
+		"name": "闯关通过 10 关",
+		"task_type": 8,
+		"type_child": 1,
+		"id": 8
+	},
+	"9": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 5,
+		"name": "完成捉妖 5 次",
+		"task_type": 9,
+		"type_child": 1,
+		"id": 9
+	},
+	"10": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 3,
+		"name": "在秘境胜利 3 次",
+		"task_type": 10,
+		"type_child": 1,
+		"id": 10
+	},
+	"11": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 1,
+		"name": "进行轮回 1 次",
+		"task_type": 11,
+		"type_child": 1,
+		"id": 11
+	},
+	"12": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 5,
+		"name": "向好友赠送体力 5 次",
+		"task_type": 12,
+		"type_child": 1,
+		"id": 12
+	},
+	"13": {
+		"next_id": 0,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_parm": 10,
+		"name": "场景里触发小事件 10 次",
+		"task_type": 13,
+		"type_child": 1,
+		"id": 13
+	}
+}

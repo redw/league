@@ -1,0 +1,72 @@
+{
+	"1": {
+		"double_condition": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"100"
+		],
+		"id": 1,
+		"days": 1
+	},
+	"2": {
+		"double_condition": 0,
+		"reward_1": [
+			"2",
+			"0",
+			"1"
+		],
+		"id": 2,
+		"days": 2
+	},
+	"3": {
+		"double_condition": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"200"
+		],
+		"id": 3,
+		"days": 3
+	},
+	"4": {
+		"double_condition": 0,
+		"reward_1": [
+			"2",
+			"0",
+			"1.5"
+		],
+		"id": 4,
+		"days": 4
+	},
+	"5": {
+		"double_condition": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"200"
+		],
+		"id": 5,
+		"days": 5
+	},
+	"6": {
+		"double_condition": 0,
+		"reward_1": [
+			"2",
+			"0",
+			"2"
+		],
+		"id": 6,
+		"days": 6
+	},
+	"7": {
+		"double_condition": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"id": 7,
+		"days": 7
+	}
+}

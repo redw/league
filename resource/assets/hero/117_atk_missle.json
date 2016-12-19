@@ -1,0 +1,19 @@
+{"mc":{
+	"117_atk_missle":{
+		"frameRate":24,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"E99C9E5C",
+			"x":-9,
+			"y":-29,
+			"duration":2
+			}
+			]
+}},
+	"res":{
+		"E99C9E5C":{"x":0,"y":0,"w":20,"h":29}
+	}}

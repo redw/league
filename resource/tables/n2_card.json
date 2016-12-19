@@ -1,0 +1,30 @@
+{
+	"1": {
+		"makemoney_dps": 0.2,
+		"circle_time": 240,
+		"name": "月卡",
+		"off_dps": 0.1,
+		"off_time": 120,
+		"reward_1": [
+			"3",
+			"0",
+			"200"
+		],
+		"price": 28,
+		"id": 1
+	},
+	"2": {
+		"makemoney_dps": 0.3,
+		"circle_time": 240,
+		"name": "终身卡",
+		"off_dps": 0.2,
+		"off_time": 120,
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"price": 88,
+		"id": 2
+	}
+}

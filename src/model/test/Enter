@@ -1,0 +1,755 @@
+{
+  "serverTime": 1481593364,
+  "heroList": {
+    "101": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "102": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "103": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "104": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "105": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "106": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "107": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "108": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "109": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "110": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 1,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "111": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "112": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "113": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "114": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "115": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "116": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "117": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "118": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "119": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "120": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 3,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "121": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 4,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "122": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 4,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "123": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 4,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "124": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 4,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "125": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 4,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "126": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 5,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "127": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 5,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "128": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 5,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "129": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 5,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    },
+    "130": {
+      "lv": 1,
+      "enhanceLv": 0,
+      "star": 6,
+      "starPiece": 0,
+      "evolution": 0,
+      "skill": 0
+    }
+  },
+  "battleObj": {
+    "myPos": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      0,
+      0,
+      0
+    ],
+    "nextSyncTime": 0
+  },
+  "curArea": 2,
+  "gold": "0",
+  "diamond": 0,
+  "makeMoney": {
+    "1": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "2": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "3": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "4": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "5": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "6": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "7": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "8": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "9": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "10": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "11": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "12": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "13": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "14": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "15": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "16": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "17": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "18": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "19": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "20": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "21": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "22": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "23": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "24": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "25": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "26": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "27": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "28": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "29": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    },
+    "30": {
+      "lv": 0,
+      "auto": 0,
+      "lastMoneyTime": 0
+    }
+  },
+  "weaponObj": {
+    "maxNum": 4,
+    "buyNum": 0,
+    "weaponCoin": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "weaponList": {},
+    "nowRank": 0,
+    "weaponShop": [
+      {
+        "id": 1,
+        "state": 0
+      },
+      {
+        "id": 2,
+        "state": 0
+      },
+      {
+        "id": 3,
+        "state": 0
+      },
+      {
+        "id": 4,
+        "state": 0
+      }
+    ],
+    "weaponShopResetLastTime": 0,
+    "weaponShopTodayTimes": 0
+  },
+  "dungeonObj": {
+    "dungeonList": {
+      "1": {
+        "dungeonPos": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dungeonId": 0
+      },
+      "2": {
+        "dungeonPos": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dungeonId": 0
+      },
+      "3": {
+        "dungeonPos": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dungeonId": 0
+      },
+      "4": {
+        "dungeonPos": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dungeonId": 0
+      },
+      "5": {
+        "dungeonPos": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dungeonId": 0
+      }
+    },
+    "buyTimes": 0,
+    "maxTimes": 3,
+    "freeTimes": 3,
+    "lastRecoverTime": 0
+  },
+  "monsterObj": {
+    "monsterList": {
+      "1": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "2": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "3": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "4": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "5": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "6": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "7": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "8": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "9": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "10": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "11": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "12": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "13": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "14": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "15": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "16": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "17": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "18": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "19": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "20": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "21": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "22": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "23": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "24": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "25": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "26": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "27": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "28": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "29": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      },
+      "30": {
+        "lv": 0,
+        "piece": 0,
+        "challenge": 3,
+        "difficult": 0,
+        "resetTimes": 0
+      }
+    },
+    "buyVitTimes": 0,
+    "vitality": 80,
+    "vitalityMax": 80,
+    "lastRecoverTime": 0,
+    "recoverNum": 1,
+    "allKindPiece": 0,
+    "score": 0
+  },
+  "signObj": {
+    "todayFlag": 0,
+    "lastSignTime": 0,
+    "signDays": 0
+  },
+  "sevenDay": {
+    "sevenDayBit": "",
+    "sevenDayBegTime": 0
+  }
+}

@@ -1,0 +1,1865 @@
+{
+	"128": {
+		"order": 28,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"3000",
+			"4500",
+			"6000"
+		],
+		"resource": "101_wukong",
+		"nature": "water",
+		"origin_star": 5,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 1000,
+		"name": "后羿",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 128,
+		"begin_skill": [
+			"1283",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1285",
+			"1281"
+		],
+		"magical_atk": 0,
+		"physical_def": 100,
+		"tip": "太阳射下来，",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"11",
+			"16",
+			"21",
+			"26"
+		],
+		"job": "shooter",
+		"skill": [
+			"1281",
+			"1282",
+			"1283",
+			"1284",
+			"1285",
+			"1286"
+		],
+		"piece": 50,
+		"physical_atk": 250,
+		"magical_def": 25
+	},
+	"129": {
+		"order": 29,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"3000",
+			"4500",
+			"6000"
+		],
+		"resource": "129_nvwa",
+		"nature": "fire",
+		"origin_star": 5,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 1800,
+		"name": "女娲",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 129,
+		"begin_skill": [
+			"1293",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1295",
+			"1291"
+		],
+		"magical_atk": 300,
+		"physical_def": 30,
+		"tip": "补天，",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"11",
+			"16",
+			"21",
+			"26"
+		],
+		"job": "wizard",
+		"skill": [
+			"1291",
+			"1292",
+			"1293",
+			"1294",
+			"1295",
+			"1296"
+		],
+		"piece": 50,
+		"physical_atk": 0,
+		"magical_def": 120
+	},
+	"130": {
+		"order": 30,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"3500",
+			"5000",
+			"6500"
+		],
+		"resource": "101_wukong",
+		"nature": "soil",
+		"origin_star": 6,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 3000,
+		"name": "盘古",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 130,
+		"begin_skill": [
+			"1303",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1305",
+			"1301"
+		],
+		"magical_atk": 0,
+		"physical_def": 120,
+		"tip": "先有鸡还是先有蛋？",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"13",
+			"18",
+			"23",
+			"28"
+		],
+		"job": "warrior",
+		"skill": [
+			"1301",
+			"1302",
+			"1303",
+			"1304",
+			"1305",
+			"1306"
+		],
+		"piece": 50,
+		"physical_atk": 300,
+		"magical_def": 30
+	},
+	"101": {
+		"order": 1,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "101_wukong",
+		"nature": "gold",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 800,
+		"name": "悟空",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 101,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1015",
+			"1014",
+			"1013",
+			"1012",
+			"1011"
+		],
+		"magical_atk": 0,
+		"physical_def": 40,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "warrior",
+		"skill": [
+			"1011",
+			"1012",
+			"1013",
+			"1014",
+			"1015",
+			"1016"
+		],
+		"piece": 10,
+		"physical_atk": 100,
+		"magical_def": 10
+	},
+	"102": {
+		"order": 2,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "102_tangseng",
+		"nature": "fire",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 400,
+		"name": "唐僧",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 102,
+		"begin_skill": [
+			"1026",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1025",
+			"1024",
+			"1023",
+			"1022",
+			"1021"
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "wizard",
+		"skill": [
+			"1021",
+			"1022",
+			"1023",
+			"1024",
+			"1025",
+			"1026"
+		],
+		"piece": 10,
+		"physical_atk": 0,
+		"magical_def": 40
+	},
+	"103": {
+		"order": 3,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "103_bajie",
+		"nature": "wood",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 1200,
+		"name": "八戒",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 103,
+		"begin_skill": [
+			"1033",
+			"1034",
+			"1035"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1031",
+			"1036",
+			"1032",
+			""
+		],
+		"magical_atk": 0,
+		"physical_def": 40,
+		"tip": "八戒者，一戒杀生,二戒偷盗,三戒淫,四戒妄语,五戒饮酒,六戒着香华,七戒坐卧高广大床,八戒非时食",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "warrior",
+		"skill": [
+			"1031",
+			"1032",
+			"1033",
+			"1034",
+			"1035",
+			"1036"
+		],
+		"piece": 10,
+		"physical_atk": 100,
+		"magical_def": 10
+	},
+	"104": {
+		"order": 4,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "104_shaheshang",
+		"nature": "soil",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 800,
+		"name": "沙和尚",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 104,
+		"begin_skill": [
+			"1043",
+			"1044",
+			"1045"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1041",
+			"1046",
+			"1042"
+		],
+		"magical_atk": 0,
+		"physical_def": 40,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "warrior",
+		"skill": [
+			"1041",
+			"1042",
+			"1043",
+			"1044",
+			"1045",
+			"1046"
+		],
+		"piece": 10,
+		"physical_atk": 100,
+		"magical_def": 10
+	},
+	"105": {
+		"order": 5,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "105_xiaobailong",
+		"nature": "water",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 400,
+		"name": "小白龙",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 105,
+		"begin_skill": [
+			"1053",
+			"1054",
+			"1055",
+			"1056"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1051",
+			"1052"
+		],
+		"magical_atk": 0,
+		"physical_def": 40,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "assassin",
+		"skill": [
+			"1051",
+			"1052",
+			"1053",
+			"1054",
+			"1055",
+			"1056"
+		],
+		"piece": 10,
+		"physical_atk": 100,
+		"magical_def": 10
+	},
+	"106": {
+		"order": 6,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "101_wukong",
+		"nature": "soil",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 2400,
+		"name": "牛魔王",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 106,
+		"begin_skill": [
+			"1063",
+			"1064",
+			"1065",
+			"1066"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1061",
+			"1062"
+		],
+		"magical_atk": 0,
+		"physical_def": 80,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "warrior",
+		"skill": [
+			"1061",
+			"1062",
+			"1063",
+			"1064",
+			"1065",
+			"1066"
+		],
+		"piece": 10,
+		"physical_atk": 200,
+		"magical_def": 20
+	},
+	"107": {
+		"order": 7,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "107_honghaier",
+		"nature": "fire",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 1800,
+		"name": "红孩儿",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 107,
+		"begin_skill": [
+			"1073",
+			"1074",
+			"1075",
+			"1076"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1071",
+			"1075"
+		],
+		"magical_atk": 0,
+		"physical_def": 80,
+		"tip": "红红红红火火恍恍惚惚",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "warrior",
+		"skill": [
+			"1071",
+			"1072",
+			"1073",
+			"1074",
+			"1075",
+			"1076"
+		],
+		"piece": 10,
+		"physical_atk": 200,
+		"magical_def": 20
+	},
+	"108": {
+		"order": 8,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "108_tieshangongzhu",
+		"nature": "water",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 600,
+		"name": "铁扇公主",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 108,
+		"begin_skill": [
+			"1083",
+			"1084",
+			"1085"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1081",
+			"",
+			"1086",
+			"1085"
+		],
+		"magical_atk": 150,
+		"physical_def": 15,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "wizard",
+		"skill": [
+			"1081",
+			"1082",
+			"1083",
+			"1084",
+			"1085",
+			"1086"
+		],
+		"piece": 10,
+		"physical_atk": 0,
+		"magical_def": 60
+	},
+	"109": {
+		"order": 9,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "109_erlangshen",
+		"nature": "gold",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 2000,
+		"name": "二郎神",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 109,
+		"begin_skill": [
+			"1093",
+			"1094",
+			"1095"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1091",
+			"1096",
+			"1092"
+		],
+		"magical_atk": 0,
+		"physical_def": 100,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "warrior",
+		"skill": [
+			"1091",
+			"1092",
+			"1093",
+			"1094",
+			"1095",
+			"1096"
+		],
+		"piece": 10,
+		"physical_atk": 250,
+		"magical_def": 25
+	},
+	"110": {
+		"order": 10,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"resource": "110_yutujing",
+		"nature": "soil",
+		"origin_star": 1,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 600,
+		"name": "玉兔精",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 110,
+		"begin_skill": [
+			"1106",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1101",
+			"1106",
+			"1105"
+		],
+		"magical_atk": 0,
+		"physical_def": 60,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"job": "shooter",
+		"skill": [
+			"1101",
+			"1102",
+			"1103",
+			"1104",
+			"1105",
+			"1106"
+		],
+		"piece": 10,
+		"physical_atk": 150,
+		"magical_def": 15
+	},
+	"111": {
+		"order": 11,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "111_xiezijing",
+		"nature": "soil",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 600,
+		"name": "蝎子精",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 111,
+		"begin_skill": [
+			"1113",
+			"1114",
+			"1115"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1111",
+			"1116",
+			"1115"
+		],
+		"magical_atk": 150,
+		"physical_def": 15,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "shooter",
+		"skill": [
+			"1111",
+			"1112",
+			"1113",
+			"1114",
+			"1115",
+			"1116"
+		],
+		"piece": 30,
+		"physical_atk": 0,
+		"magical_def": 60
+	},
+	"112": {
+		"order": 12,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "112_kongquegongzhu",
+		"nature": "wood",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 600,
+		"name": "孔雀公主",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 112,
+		"begin_skill": [
+			"1123",
+			"1124",
+			"1125",
+			"1126"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1121",
+			"1122"
+		],
+		"magical_atk": 150,
+		"physical_def": 15,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "doctor",
+		"skill": [
+			"1121",
+			"1122",
+			"1123",
+			"1124",
+			"1125",
+			"1126"
+		],
+		"piece": 30,
+		"physical_atk": 0,
+		"magical_def": 60
+	},
+	"113": {
+		"order": 13,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "113_nvwang",
+		"nature": "fire",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 600,
+		"name": "女王",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 113,
+		"begin_skill": [
+			"1133",
+			"1134",
+			"1135"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1131",
+			"1136",
+			"1135"
+		],
+		"magical_atk": 150,
+		"physical_def": 60,
+		"tip": "西梁女国国王，姓名",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "shooter",
+		"skill": [
+			"1131",
+			"1132",
+			"1133",
+			"1134",
+			"1135",
+			"1136"
+		],
+		"piece": 30,
+		"physical_atk": 0,
+		"magical_def": 15
+	},
+	"114": {
+		"order": 14,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "114_xiwangmu",
+		"nature": "fire",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 1000,
+		"name": "西王母",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 114,
+		"begin_skill": [
+			"1143",
+			"1144",
+			"1145",
+			"1146"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1141",
+			"1142"
+		],
+		"magical_atk": 250,
+		"physical_def": 25,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "doctor",
+		"skill": [
+			"1141",
+			"1142",
+			"1143",
+			"1144",
+			"1145",
+			"1146"
+		],
+		"piece": 30,
+		"physical_atk": 0,
+		"magical_def": 100
+	},
+	"115": {
+		"order": 15,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "101_wukong",
+		"nature": "soil",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 800,
+		"name": "紫霞仙子",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 115,
+		"begin_skill": [
+			"1153",
+			"1154",
+			"1155"
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1151",
+			"1156",
+			"1152"
+		],
+		"magical_atk": 0,
+		"physical_def": 80,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "assassin",
+		"skill": [
+			"1151",
+			"1152",
+			"1153",
+			"1154",
+			"1155",
+			"1156"
+		],
+		"piece": 30,
+		"physical_atk": 200,
+		"magical_def": 20
+	},
+	"116": {
+		"order": 16,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "116_heiwuchang",
+		"nature": "gold",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 800,
+		"name": "黑无常",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 116,
+		"begin_skill": [
+			"1163",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1165",
+			"1161"
+		],
+		"magical_atk": 0,
+		"physical_def": 80,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "wizard",
+		"skill": [
+			"1161",
+			"1162",
+			"1163",
+			"1164",
+			"1165",
+			"1166"
+		],
+		"piece": 30,
+		"physical_atk": 200,
+		"magical_def": 20
+	},
+	"117": {
+		"order": 17,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "107_baiwuchang",
+		"nature": "wood",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 800,
+		"name": "白无常",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 117,
+		"begin_skill": [
+			"1173",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1175",
+			"1171"
+		],
+		"magical_atk": 200,
+		"physical_def": 20,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "doctor",
+		"skill": [
+			"1171",
+			"1172",
+			"1173",
+			"1174",
+			"1175",
+			"1176"
+		],
+		"piece": 30,
+		"physical_atk": 0,
+		"magical_def": 80
+	},
+	"118": {
+		"order": 18,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "118_donghailongwang",
+		"nature": "water",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 1000,
+		"name": "东海龙王",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 118,
+		"begin_skill": [
+			"1183",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1185",
+			"1181"
+		],
+		"magical_atk": 250,
+		"physical_def": 25,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "wizard",
+		"skill": [
+			"1181",
+			"1182",
+			"1183",
+			"1184",
+			"1185",
+			"1186"
+		],
+		"piece": 30,
+		"physical_atk": 0,
+		"magical_def": 100
+	},
+	"119": {
+		"order": 19,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "119_jinjiaodawang",
+		"nature": "fire",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 1800,
+		"name": "金角大王",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 119,
+		"begin_skill": [
+			"1193",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1195",
+			"1191"
+		],
+		"magical_atk": 0,
+		"physical_def": 60,
+		"tip": "金角大王喜爱派人巡山，抓个和尚做晚餐",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "warrior",
+		"skill": [
+			"1191",
+			"1192",
+			"1193",
+			"1194",
+			"1195",
+			"1196"
+		],
+		"piece": 30,
+		"physical_atk": 150,
+		"magical_def": 15
+	},
+	"120": {
+		"order": 20,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"resource": "101_wukong",
+		"nature": "soil",
+		"origin_star": 3,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 1800,
+		"name": "银角大王",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 120,
+		"begin_skill": [
+			"1203",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1205",
+			"1201"
+		],
+		"magical_atk": 0,
+		"physical_def": 60,
+		"tip": "金角大王喜爱打鼓敲锣，生活充满节奏感",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"job": "warrior",
+		"skill": [
+			"1201",
+			"1202",
+			"1203",
+			"1204",
+			"1205",
+			"1206"
+		],
+		"piece": 30,
+		"physical_atk": 150,
+		"magical_def": 15
+	},
+	"121": {
+		"order": 21,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"2500",
+			"4000",
+			"5500"
+		],
+		"resource": "101_wukong",
+		"nature": "gold",
+		"origin_star": 4,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 1000,
+		"name": "金翅大鹏",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 121,
+		"begin_skill": [
+			"1213",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1215",
+			"1211"
+		],
+		"magical_atk": 0,
+		"physical_def": 100,
+		"tip": "北冥有鱼，其名为鲲，鲲之大，一锅炖不下；化而为鸟，其名为鹏，鹏之大，需要两烤架，一个孜然，一个微辣！",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"9",
+			"14",
+			"19",
+			"24"
+		],
+		"job": "shooter",
+		"skill": [
+			"1211",
+			"1212",
+			"1213",
+			"1214",
+			"1215",
+			"1216"
+		],
+		"piece": 40,
+		"physical_atk": 250,
+		"magical_def": 25
+	},
+	"122": {
+		"order": 22,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"2500",
+			"4000",
+			"5500"
+		],
+		"resource": "122_nezha",
+		"nature": "wood",
+		"origin_star": 4,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 1800,
+		"name": "哪吒",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 122,
+		"begin_skill": [
+			"1223",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1225",
+			"1221"
+		],
+		"magical_atk": 0,
+		"physical_def": 80,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"9",
+			"14",
+			"19",
+			"24"
+		],
+		"job": "warrior",
+		"skill": [
+			"1221",
+			"1222",
+			"1223",
+			"1224",
+			"1225",
+			"1226"
+		],
+		"piece": 40,
+		"physical_atk": 200,
+		"magical_def": 20
+	},
+	"123": {
+		"order": 23,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"2500",
+			"4000",
+			"5500"
+		],
+		"resource": "101_wukong",
+		"nature": "water",
+		"origin_star": 4,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 800,
+		"name": "苏妲己",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 123,
+		"begin_skill": [
+			"1233",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1235",
+			"1231"
+		],
+		"magical_atk": 200,
+		"physical_def": 20,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"9",
+			"14",
+			"19",
+			"24"
+		],
+		"job": "wizard",
+		"skill": [
+			"1231",
+			"1232",
+			"1233",
+			"1234",
+			"1235",
+			"1236"
+		],
+		"piece": 40,
+		"physical_atk": 0,
+		"magical_def": 80
+	},
+	"124": {
+		"order": 24,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"2500",
+			"4000",
+			"5500"
+		],
+		"resource": "101_wukong",
+		"nature": "fire",
+		"origin_star": 4,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 800,
+		"name": "姜子牙",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 124,
+		"begin_skill": [
+			"1243",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1245",
+			"1241"
+		],
+		"magical_atk": 200,
+		"physical_def": 20,
+		"tip": "热衷于钓鱼执法",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"9",
+			"14",
+			"19",
+			"24"
+		],
+		"job": "wizard",
+		"skill": [
+			"1241",
+			"1242",
+			"1243",
+			"1244",
+			"1245",
+			"1246"
+		],
+		"piece": 40,
+		"physical_atk": 0,
+		"magical_def": 80
+	},
+	"125": {
+		"order": 25,
+		"race": "human",
+		"evolution_stage": [
+			"0",
+			"2500",
+			"4000",
+			"5500"
+		],
+		"resource": "101_wukong",
+		"nature": "soil",
+		"origin_star": 4,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 1000,
+		"name": "阎罗王",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 125,
+		"begin_skill": [
+			"1253",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1255",
+			"1251"
+		],
+		"magical_atk": 250,
+		"physical_def": 25,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"9",
+			"14",
+			"19",
+			"24"
+		],
+		"job": "wizard",
+		"skill": [
+			"1251",
+			"1252",
+			"1253",
+			"1254",
+			"1255",
+			"1256"
+		],
+		"piece": 40,
+		"physical_atk": 0,
+		"magical_def": 100
+	},
+	"126": {
+		"order": 26,
+		"race": "god",
+		"evolution_stage": [
+			"0",
+			"3000",
+			"4500",
+			"6000"
+		],
+		"resource": "101_wukong",
+		"nature": "gold",
+		"origin_star": 5,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "法术",
+		"hp": 1800,
+		"name": "如来",
+		"block_chance": 0.05,
+		"speed": 10000,
+		"id": 126,
+		"begin_skill": [
+			"1263",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1265",
+			"1261"
+		],
+		"magical_atk": 300,
+		"physical_def": 30,
+		"tip": "印度的高僧，印度人不认，",
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"11",
+			"16",
+			"21",
+			"26"
+		],
+		"job": "doctor",
+		"skill": [
+			"1261",
+			"1262",
+			"1263",
+			"1264",
+			"1265",
+			"1266"
+		],
+		"piece": 50,
+		"physical_atk": 0,
+		"magical_def": 120
+	},
+	"127": {
+		"order": 27,
+		"race": "monster",
+		"evolution_stage": [
+			"0",
+			"3000",
+			"4500",
+			"6000"
+		],
+		"resource": "101_wukong",
+		"nature": "wood",
+		"origin_star": 5,
+		"crit_damage": 1.5,
+		"modle_height": 70,
+		"friendly": [
+			"1",
+			"2",
+			"3"
+		],
+		"damage_type": "物理",
+		"hp": 800,
+		"name": "嫦娥",
+		"block_chance": 0.05,
+		"speed": 5000,
+		"id": 127,
+		"begin_skill": [
+			"1273",
+			""
+		],
+		"crit_chance": 0.05,
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"skill_trigger_order": [
+			"1275",
+			"1271"
+		],
+		"magical_atk": 0,
+		"physical_def": 80,
+		"tip": 1,
+		"dodge_chance": 0.05,
+		"evolution_star": [
+			"11",
+			"16",
+			"21",
+			"26"
+		],
+		"job": "shooter",
+		"skill": [
+			"1271",
+			"1272",
+			"1273",
+			"1274",
+			"1275",
+			"1276"
+		],
+		"piece": 50,
+		"physical_atk": 200,
+		"magical_def": 20
+	}
+}

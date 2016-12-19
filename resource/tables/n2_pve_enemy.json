@@ -1,0 +1,2297 @@
+{
+	"401": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "悟空",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 401,
+		"boss": 0
+	},
+	"402": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "唐僧",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 402,
+		"boss": 0
+	},
+	"403": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "八戒",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 403,
+		"boss": 0
+	},
+	"404": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "沙和尚",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 404,
+		"boss": 0
+	},
+	"405": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "小白龙",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 405,
+		"boss": 0
+	},
+	"406": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "牛魔王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 406,
+		"boss": 0
+	},
+	"407": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "红孩儿",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 407,
+		"boss": 0
+	},
+	"408": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "铁扇公主",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 408,
+		"boss": 0
+	},
+	"409": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "二郎神",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 409,
+		"boss": 0
+	},
+	"410": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "玉兔精",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 410,
+		"boss": 0
+	},
+	"411": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "蝎子精",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 411,
+		"boss": 0
+	},
+	"412": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "孔雀公主",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 412,
+		"boss": 0
+	},
+	"413": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "女王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 413,
+		"boss": 0
+	},
+	"414": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "西王母",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 414,
+		"boss": 0
+	},
+	"415": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "紫霞仙子",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 415,
+		"boss": 0
+	},
+	"416": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "黑无常",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 416,
+		"boss": 0
+	},
+	"417": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "白无常",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 417,
+		"boss": 0
+	},
+	"418": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "东海龙王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 418,
+		"boss": 0
+	},
+	"419": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "金角大王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 419,
+		"boss": 0
+	},
+	"420": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "银角大王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 420,
+		"boss": 0
+	},
+	"421": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "金翅大鹏",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 421,
+		"boss": 0
+	},
+	"422": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "哪吒",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 422,
+		"boss": 0
+	},
+	"423": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "苏妲己",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 423,
+		"boss": 0
+	},
+	"424": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "姜子牙",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 424,
+		"boss": 0
+	},
+	"425": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "阎罗王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 425,
+		"boss": 0
+	},
+	"426": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "如来",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 426,
+		"boss": 0
+	},
+	"427": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "嫦娥",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 427,
+		"boss": 0
+	},
+	"428": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "后羿",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 428,
+		"boss": 0
+	},
+	"301": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "金刚蛤蟆",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 301,
+		"boss": 1
+	},
+	"302": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "青木龙王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 302,
+		"boss": 1
+	},
+	"303": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "深蓝魔蛇",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 303,
+		"boss": 1
+	},
+	"304": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "火焰山魂",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 304,
+		"boss": 1
+	},
+	"305": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "多臂蛮王",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 305,
+		"boss": 1
+	},
+	"429": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "女娲",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 5000,
+		"hp": 400,
+		"id": 429,
+		"boss": 0
+	},
+	"430": {
+		"crit_chance": 0.05,
+		"resource": "101_wukong",
+		"race": "human",
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "盘古",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"speed": 10000,
+		"hp": 400,
+		"id": 430,
+		"boss": 0
+	},
+	"201": {
+		"crit_chance": 0.05,
+		"resource": "201_bangkejing",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2011",
+			""
+		],
+		"name": "蚌壳精",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 201,
+		"boss": 0
+	},
+	"202": {
+		"crit_chance": 0.05,
+		"resource": "202_jiaolong",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2021",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2021",
+			""
+		],
+		"name": "蛟龙",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 202,
+		"boss": 0
+	},
+	"203": {
+		"crit_chance": 0.05,
+		"resource": "203_guijiang",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2031",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2031",
+			""
+		],
+		"name": "鬼将",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 203,
+		"boss": 0
+	},
+	"204": {
+		"crit_chance": 0.05,
+		"resource": "204_shixiang",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2041",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2041",
+			""
+		],
+		"name": "石像",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 204,
+		"boss": 0
+	},
+	"205": {
+		"crit_chance": 0.05,
+		"resource": "205_shuyao",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2051",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2051",
+			""
+		],
+		"name": "树妖",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 205,
+		"boss": 0
+	},
+	"206": {
+		"crit_chance": 0.05,
+		"resource": "206_caoyao",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2061",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2061",
+			""
+		],
+		"name": "草妖",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 206,
+		"boss": 0
+	},
+	"207": {
+		"crit_chance": 0.05,
+		"resource": "207_shiziguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2071",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2071",
+			""
+		],
+		"name": "狮子怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 207,
+		"boss": 0
+	},
+	"208": {
+		"crit_chance": 0.05,
+		"resource": "208_hamaguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2081",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2081",
+			""
+		],
+		"name": "蛤蟆怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 208,
+		"boss": 0
+	},
+	"209": {
+		"crit_chance": 0.05,
+		"resource": "209_tianjiang",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2091",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2091",
+			""
+		],
+		"name": "天将",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 209,
+		"boss": 0
+	},
+	"210": {
+		"crit_chance": 0.05,
+		"resource": "210_tianbing",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2101",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2101",
+			""
+		],
+		"name": "天兵",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 210,
+		"boss": 0
+	},
+	"211": {
+		"crit_chance": 0.05,
+		"resource": "211_guichengxiang",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2111",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2111",
+			""
+		],
+		"name": "龟丞相",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 211,
+		"boss": 0
+	},
+	"212": {
+		"crit_chance": 0.05,
+		"resource": "212_guipopo",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2121",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2121",
+			""
+		],
+		"name": "鬼婆婆",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 212,
+		"boss": 0
+	},
+	"213": {
+		"crit_chance": 0.05,
+		"resource": "213_xiaozuanfeng",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2131",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2131",
+			""
+		],
+		"name": "小钻风",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 213,
+		"boss": 0
+	},
+	"214": {
+		"crit_chance": 0.05,
+		"resource": "214_dipi",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2141",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2141",
+			""
+		],
+		"name": "地痞",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 214,
+		"boss": 0
+	},
+	"215": {
+		"crit_chance": 0.05,
+		"resource": "215_langguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2151",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2151",
+			""
+		],
+		"name": "狼怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 215,
+		"boss": 0
+	},
+	"216": {
+		"crit_chance": 0.05,
+		"resource": "216_zhizhu",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2161",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2161",
+			""
+		],
+		"name": "蜘蛛",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 216,
+		"boss": 0
+	},
+	"217": {
+		"crit_chance": 0.05,
+		"resource": "217_nvfeizei",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2171",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2171",
+			""
+		],
+		"name": "女飞贼",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 217,
+		"boss": 0
+	},
+	"218": {
+		"crit_chance": 0.05,
+		"resource": "218_qiangdao",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2181",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2181",
+			""
+		],
+		"name": "强盗",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 218,
+		"boss": 0
+	},
+	"219": {
+		"crit_chance": 0.05,
+		"resource": "219_jianxia",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2191",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2191",
+			""
+		],
+		"name": "剑侠",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 219,
+		"boss": 0
+	},
+	"220": {
+		"crit_chance": 0.05,
+		"resource": "220_sheguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2201",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2201",
+			""
+		],
+		"name": "蛇怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 220,
+		"boss": 0
+	},
+	"221": {
+		"crit_chance": 0.05,
+		"resource": "221_yuguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"2211",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"2211",
+			""
+		],
+		"name": "鱼怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 221,
+		"boss": 0
+	},
+	"222": {
+		"crit_chance": 0.05,
+		"resource": "222_huangfeng",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "黄蜂",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 222,
+		"boss": 0
+	},
+	"223": {
+		"crit_chance": 0.05,
+		"resource": "223_dieyao",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "蝶妖",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 223,
+		"boss": 0
+	},
+	"224": {
+		"crit_chance": 0.05,
+		"resource": "224_jiutanguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "酒坛怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 224,
+		"boss": 0
+	},
+	"225": {
+		"crit_chance": 0.05,
+		"resource": "225_guichai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "鬼差",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 225,
+		"boss": 0
+	},
+	"226": {
+		"crit_chance": 0.05,
+		"resource": "226_niaoyao",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "鸟妖",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 226,
+		"boss": 0
+	},
+	"227": {
+		"crit_chance": 0.05,
+		"resource": "227_xiabing",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "虾兵",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 227,
+		"boss": 0
+	},
+	"228": {
+		"crit_chance": 0.05,
+		"resource": "228_jiadaoshi",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "假道士",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 228,
+		"boss": 0
+	},
+	"229": {
+		"crit_chance": 0.05,
+		"resource": "229_eseng",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "恶僧",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 10000,
+		"hp": 400,
+		"id": 229,
+		"boss": 0
+	},
+	"230": {
+		"crit_chance": 0.05,
+		"resource": "230_dengguai",
+		"race": "human",
+		"shoot_point": [
+			"10",
+			"35"
+		],
+		"magical_def": 10,
+		"begin_skill": [
+			"1016",
+			""
+		],
+		"dodge_chance": 0,
+		"skill_trigger_order": [
+			"1011",
+			""
+		],
+		"magical_atk": 100,
+		"physical_def": 10,
+		"tip": 0,
+		"nature": "gold",
+		"crit_damage": 1.5,
+		"job": "warrior",
+		"damage_type": "物理",
+		"skill": [
+			"1011",
+			""
+		],
+		"name": "灯怪",
+		"block_chance": 0,
+		"physical_atk": 100,
+		"modle_height": 70,
+		"speed": 5000,
+		"hp": 400,
+		"id": 230,
+		"boss": 0
+	}
+}

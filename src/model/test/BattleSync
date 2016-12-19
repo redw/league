@@ -1,0 +1,221 @@
+{
+  "ret": 1,
+  "curArea": 3,
+  "battleReport": [
+    {
+      "target": [
+        {
+          "id": 204,
+          "damage": "9e1",
+          "hp": "3.1e2",
+          "phyAtk": 100,
+          "magAtk": 100,
+          "phyDef": 10,
+          "magDef": 10,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "2_1"
+        }
+      ],
+      "buff": [],
+      "id": 101,
+      "skid": 1011,
+      "pos": "1_0",
+      "beforeHp": "8e2",
+      "hp": "8e2",
+      "phyAtk": "1e2",
+      "magAtk": "0e0",
+      "phyDef": "4e1",
+      "magDef": "1e1",
+      "crit": 1,
+      "stun": 1,
+      "round": 0
+    },
+    {
+      "target": [
+        {
+          "id": 204,
+          "damage": "9e1",
+          "hp": "2.2e2",
+          "phyAtk": 100,
+          "magAtk": 100,
+          "phyDef": 10,
+          "magDef": 10,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "2_1"
+        }
+      ],
+      "buff": [],
+      "id": 103,
+      "skid": 1031,
+      "pos": "1_2",
+      "beforeHp": "1.2e3",
+      "hp": "1.2e3",
+      "phyAtk": "1e2",
+      "magAtk": "0e0",
+      "phyDef": "4e1",
+      "magDef": "1e1",
+      "crit": 1,
+      "stun": 1,
+      "round": 0
+    },
+    {
+      "target": [
+        {
+          "id": 101,
+          "damage": "1e2",
+          "hp": "7e2",
+          "phyAtk": "1e2",
+          "magAtk": "0e0",
+          "phyDef": "4e1",
+          "magDef": "1e1",
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "1_0"
+        },
+        {
+          "id": 102,
+          "damage": "1e2",
+          "hp": "3e2",
+          "phyAtk": 0,
+          "magAtk": 100,
+          "phyDef": 10,
+          "magDef": 40,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "1_1"
+        },
+        {
+          "id": 103,
+          "damage": "1e2",
+          "hp": "1.1e3",
+          "phyAtk": "1e2",
+          "magAtk": "0e0",
+          "phyDef": "4e1",
+          "magDef": "1e1",
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "1_2"
+        },
+        {
+          "id": 104,
+          "damage": "1e2",
+          "hp": "7e2",
+          "phyAtk": "1e2",
+          "magAtk": "0e0",
+          "phyDef": "4e1",
+          "magDef": "1e1",
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "1_3"
+        },
+        {
+          "id": 105,
+          "damage": "1e2",
+          "hp": "3e2",
+          "phyAtk": 100,
+          "magAtk": 0,
+          "phyDef": 40,
+          "magDef": 10,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "1_4"
+        },
+        {
+          "id": 106,
+          "damage": "1e2",
+          "hp": "2.3e3",
+          "phyAtk": 200,
+          "magAtk": 0,
+          "phyDef": 80,
+          "magDef": 20,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "1_5"
+        }
+      ],
+      "buff": [],
+      "id": 104,
+      "skid": 1041,
+      "pos": "1_3",
+      "beforeHp": "8e2",
+      "hp": "7e2",
+      "phyAtk": "1e2",
+      "magAtk": "0e0",
+      "phyDef": "4e1",
+      "magDef": "1e1",
+      "crit": 1,
+      "stun": 1,
+      "round": 0
+    },
+    {
+      "target": [
+        {
+          "id": 204,
+          "damage": "9e1",
+          "hp": "1.3e2",
+          "phyAtk": 100,
+          "magAtk": 100,
+          "phyDef": 10,
+          "magDef": 10,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "2_1"
+        }
+      ],
+      "buff": [],
+      "id": 105,
+      "skid": 1051,
+      "pos": "1_4",
+      "beforeHp": "3e2",
+      "hp": "3e2",
+      "phyAtk": "1e2",
+      "magAtk": "0e0",
+      "phyDef": "4e1",
+      "magDef": "1e1",
+      "crit": 1,
+      "stun": 1,
+      "round": 0
+    },
+    {
+      "target": [
+        {
+          "id": 204,
+          "damage": "1.9e2",
+          "hp": "-5.999999999999998e1",
+          "phyAtk": 100,
+          "magAtk": 100,
+          "phyDef": 10,
+          "magDef": 10,
+          "buff": [],
+          "dodge": 1,
+          "block": 1,
+          "pos": "2_1"
+        }
+      ],
+      "buff": [],
+      "id": 106,
+      "skid": 1061,
+      "pos": "1_5",
+      "beforeHp": "2.3e3",
+      "hp": "2.3e3",
+      "phyAtk": "2e2",
+      "magAtk": "0e0",
+      "phyDef": "8e1",
+      "magDef": "2e1",
+      "crit": 1,
+      "stun": 1,
+      "round": 0
+    }
+  ]
+}

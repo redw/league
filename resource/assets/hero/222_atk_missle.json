@@ -1,0 +1,19 @@
+{"mc":{
+	"222_atk_missle":{
+		"frameRate":24,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"8F6CACD0",
+			"x":-17,
+			"y":-9,
+			"duration":2
+			}
+			]
+}},
+	"res":{
+		"8F6CACD0":{"x":0,"y":0,"w":22,"h":10}
+	}}

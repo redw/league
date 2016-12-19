@@ -1,0 +1,1367 @@
+{
+	"1": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 1,
+		"id": 1,
+		"name": "累计邀请好友 1天",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"2": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 1,
+		"id": 2,
+		"name": "累计充值任意金额 1天",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"3": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 3,
+		"id": 3,
+		"name": "解锁第 3个巡山",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"4": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 5,
+		"id": 4,
+		"name": "解锁第 5个巡山",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"5": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 2,
+		"id": 5,
+		"name": "拥有强化+ 100 伙伴2位",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 100,
+		"next_id": 0
+	},
+	"6": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 6,
+		"name": "拥有伙伴 1011",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 101,
+		"next_id": 0
+	},
+	"7": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 5,
+		"id": 7,
+		"name": "拥有 1品质装备5件",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 1,
+		"next_id": 0
+	},
+	"8": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 3,
+		"id": 8,
+		"name": "收服 1 级小妖3只",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 1,
+		"next_id": 0
+	},
+	"9": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 4,
+		"id": 9,
+		"name": "斗法获得 4 胜",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"10": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 2,
+		"id": 10,
+		"name": "斗法获得 2 连胜",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"11": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 200,
+		"id": 11,
+		"name": "闯过第 200 关",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"12": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 300,
+		"id": 12,
+		"name": "闯过第 300 关",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"13": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 3,
+		"id": 13,
+		"name": "激活 3 组情缘",
+		"day": 1,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"14": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 2,
+		"id": 14,
+		"name": "累计邀请好友 2天",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"15": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 2,
+		"id": 15,
+		"name": "累计充值任意金额 2天",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"16": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 6,
+		"id": 16,
+		"name": "解锁第 6个巡山",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"17": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 8,
+		"id": 17,
+		"name": "解锁第 8个巡山",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"18": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 2,
+		"id": 18,
+		"name": "拥有强化+ 200 伙伴2位",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 200,
+		"next_id": 0
+	},
+	"19": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 19,
+		"name": "拥有伙伴 1021",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 102,
+		"next_id": 0
+	},
+	"20": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 1,
+		"id": 20,
+		"name": "拥有 2品质装备1件",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 2,
+		"next_id": 0
+	},
+	"21": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 3,
+		"id": 21,
+		"name": "收服 2 级小妖3只",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 2,
+		"next_id": 0
+	},
+	"22": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 8,
+		"id": 22,
+		"name": "斗法获得 8 胜",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"23": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 3,
+		"id": 23,
+		"name": "斗法获得 3 连胜",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"24": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 400,
+		"id": 24,
+		"name": "闯过第 400 关",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"25": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 500,
+		"id": 25,
+		"name": "闯过第 500 关",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"26": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 5,
+		"id": 26,
+		"name": "激活 5 组情缘",
+		"day": 2,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"27": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 3,
+		"id": 27,
+		"name": "累计邀请好友 3天",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"28": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 3,
+		"id": 28,
+		"name": "累计充值任意金额 3天",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"29": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 9,
+		"id": 29,
+		"name": "解锁第 9个巡山",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"30": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 11,
+		"id": 30,
+		"name": "解锁第 11个巡山",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"31": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 3,
+		"id": 31,
+		"name": "拥有强化+ 300 伙伴3位",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 300,
+		"next_id": 0
+	},
+	"32": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 32,
+		"name": "拥有伙伴 1031",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 103,
+		"next_id": 0
+	},
+	"33": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 3,
+		"id": 33,
+		"name": "拥有 2品质装备3件",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 2,
+		"next_id": 0
+	},
+	"34": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 5,
+		"id": 34,
+		"name": "收服 1 级小妖5只",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 1,
+		"next_id": 0
+	},
+	"35": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 13,
+		"id": 35,
+		"name": "斗法获得 13 胜",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"36": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 4,
+		"id": 36,
+		"name": "斗法获得 4 连胜",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"37": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 600,
+		"id": 37,
+		"name": "闯过第 600 关",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"38": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 700,
+		"id": 38,
+		"name": "闯过第 700 关",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"39": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 7,
+		"id": 39,
+		"name": "激活 7 组情缘",
+		"day": 3,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"40": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 4,
+		"id": 40,
+		"name": "累计邀请好友 4天",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"41": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 4,
+		"id": 41,
+		"name": "累计充值任意金额 4天",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"42": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 12,
+		"id": 42,
+		"name": "解锁第 12个巡山",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"43": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 14,
+		"id": 43,
+		"name": "解锁第 14个巡山",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"44": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 3,
+		"id": 44,
+		"name": "拥有强化+ 400 伙伴3位",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 400,
+		"next_id": 0
+	},
+	"45": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 45,
+		"name": "拥有伙伴 1041",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 104,
+		"next_id": 0
+	},
+	"46": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 1,
+		"id": 46,
+		"name": "拥有 3品质装备1件",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 3,
+		"next_id": 0
+	},
+	"47": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 7,
+		"id": 47,
+		"name": "收服 1 级小妖7只",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 1,
+		"next_id": 0
+	},
+	"48": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 18,
+		"id": 48,
+		"name": "斗法获得 18 胜",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"49": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 5,
+		"id": 49,
+		"name": "斗法获得 5 连胜",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"50": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 800,
+		"id": 50,
+		"name": "闯过第 800 关",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"51": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 900,
+		"id": 51,
+		"name": "闯过第 900 关",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"52": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 10,
+		"id": 52,
+		"name": "激活 10 组情缘",
+		"day": 4,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"53": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 5,
+		"id": 53,
+		"name": "累计邀请好友 5天",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"54": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 5,
+		"id": 54,
+		"name": "累计充值任意金额 5天",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"55": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 15,
+		"id": 55,
+		"name": "解锁第 15个巡山",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"56": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 16,
+		"id": 56,
+		"name": "解锁第 16个巡山",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"57": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 1,
+		"id": 57,
+		"name": "拥有强化+ 500 伙伴1位",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 500,
+		"next_id": 0
+	},
+	"58": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 58,
+		"name": "拥有伙伴 1051",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 105,
+		"next_id": 0
+	},
+	"59": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 3,
+		"id": 59,
+		"name": "拥有 3品质装备3件",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 3,
+		"next_id": 0
+	},
+	"60": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 3,
+		"id": 60,
+		"name": "收服 5 级小妖3只",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 5,
+		"next_id": 0
+	},
+	"61": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 24,
+		"id": 61,
+		"name": "斗法获得 24 胜",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"62": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 7,
+		"id": 62,
+		"name": "斗法获得 7 连胜",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"63": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 1000,
+		"id": 63,
+		"name": "闯过第 1000 关",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"64": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 1100,
+		"id": 64,
+		"name": "闯过第 1100 关",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"65": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 13,
+		"id": 65,
+		"name": "激活 13 组情缘",
+		"day": 5,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"66": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 6,
+		"id": 66,
+		"name": "累计邀请好友 6天",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"67": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 6,
+		"id": 67,
+		"name": "累计充值任意金额 6天",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"68": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 17,
+		"id": 68,
+		"name": "解锁第 17个巡山",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"69": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 18,
+		"id": 69,
+		"name": "解锁第 18个巡山",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"70": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 2,
+		"id": 70,
+		"name": "拥有强化+ 600 伙伴2位",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 600,
+		"next_id": 0
+	},
+	"71": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 71,
+		"name": "拥有伙伴 1061",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 106,
+		"next_id": 0
+	},
+	"72": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 1,
+		"id": 72,
+		"name": "拥有 4品质装备1件",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 4,
+		"next_id": 0
+	},
+	"73": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 10,
+		"id": 73,
+		"name": "收服 1 级小妖10只",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 1,
+		"next_id": 0
+	},
+	"74": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 30,
+		"id": 74,
+		"name": "斗法获得 30 胜",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"75": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 9,
+		"id": 75,
+		"name": "斗法获得 9 连胜",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"76": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 1200,
+		"id": 76,
+		"name": "闯过第 1200 关",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"77": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 1300,
+		"id": 77,
+		"name": "闯过第 1300 关",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"78": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 16,
+		"id": 78,
+		"name": "激活 16 组情缘",
+		"day": 6,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"79": {
+		"type_child": 1,
+		"task_type": 1,
+		"task_num": 7,
+		"id": 79,
+		"name": "累计邀请好友 7天",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"80": {
+		"type_child": 1,
+		"task_type": 2,
+		"task_num": 7,
+		"id": 80,
+		"name": "累计充值任意金额 7天",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"81": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 19,
+		"id": 81,
+		"name": "解锁第 19个巡山",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"82": {
+		"type_child": 1,
+		"task_type": 3,
+		"task_num": 20,
+		"id": 82,
+		"name": "解锁第 20个巡山",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"83": {
+		"type_child": 1,
+		"task_type": 4,
+		"task_num": 3,
+		"id": 83,
+		"name": "拥有强化+ 600 伙伴3位",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 600,
+		"next_id": 0
+	},
+	"84": {
+		"type_child": 1,
+		"task_type": 5,
+		"task_num": 1,
+		"id": 84,
+		"name": "拥有伙伴 1071",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 107,
+		"next_id": 0
+	},
+	"85": {
+		"type_child": 1,
+		"task_type": 6,
+		"task_num": 3,
+		"id": 85,
+		"name": "拥有 4品质装备3件",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 4,
+		"next_id": 0
+	},
+	"86": {
+		"type_child": 1,
+		"task_type": 7,
+		"task_num": 5,
+		"id": 86,
+		"name": "收服 6 级小妖5只",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": 6,
+		"next_id": 0
+	},
+	"87": {
+		"type_child": 1,
+		"task_type": 8,
+		"task_num": 40,
+		"id": 87,
+		"name": "斗法获得 40 胜",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"88": {
+		"type_child": 1,
+		"task_type": 9,
+		"task_num": 12,
+		"id": 88,
+		"name": "斗法获得 12 连胜",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"89": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 1400,
+		"id": 89,
+		"name": "闯过第 1400 关",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"90": {
+		"type_child": 1,
+		"task_type": 11,
+		"task_num": 1500,
+		"id": 90,
+		"name": "闯过第 1500 关",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	},
+	"91": {
+		"type_child": 1,
+		"task_type": 12,
+		"task_num": 20,
+		"id": 91,
+		"name": "激活 20 组情缘",
+		"day": 7,
+		"reward_1": [
+			"3",
+			"0",
+			"50"
+		],
+		"task_id": null,
+		"next_id": 0
+	}
+}
