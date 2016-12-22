@@ -407,3 +407,4 @@ var FightRoleData = (function (_super) {
     return FightRoleData;
 }(RoleData));
 egret.registerClass(FightRoleData,'FightRoleData');
+//# sourceMappingURL=FightRoleData.js.map

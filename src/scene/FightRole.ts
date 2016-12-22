@@ -11,14 +11,15 @@ class FightRole extends egret.DisplayObjectContainer {
     private curSkill:SkillConfig;
     private reportItem:FightReportItem;
     private targets:FightRole[];
+    private fightContainer:FightContainer;
 
     private isTriggerDamage:boolean = false;
     private isPlayingDamage:boolean = false;
+    private isPlayingAction:boolean = false;
 
     public roleData:FightRoleData;
     public waiting:boolean = true;
     public zIndex:number = 0;
-    public fightContainer:FightContainer;
 
     public constructor(fightContainer:FightContainer, roleData:FightRoleData) {
         super();
@@ -29,7 +30,6 @@ class FightRole extends egret.DisplayObjectContainer {
     public active(fightContainer:FightContainer, roleData:FightRoleData){
         this.fightContainer = fightContainer;
         this.roleData = roleData;
-        this.idle();
         egret.startTick(this.onTick, this);
     }
 
@@ -292,7 +292,6 @@ class FightRole extends egret.DisplayObjectContainer {
         if (!this.curSkill || !this.curSkill.scource_effect) {
             fight.recordLog(`技能${this.curSkill.id}资源source_effect没配置`, fight.LOG_FIGHT_WARN);
             result = false;
-            this.triggerFrameMap = {};
             this.updateTargets();
             this.nextStep();
         }
@@ -408,6 +407,7 @@ class FightRole extends egret.DisplayObjectContainer {
     private attack() {
         if (this.curSkill) {
             this.waiting = false;
+            this.isPlayingAction = true;
             this.fightContainer.bringRoleToSelfZPos(this, this.targets);
             if (fight.playFrameLabel(this.curSkill.action, this.body, 1, this.roleData.config.resource)) {
                 this.body.addEventListener(egret.Event.COMPLETE, this.attackComplete, this);
@@ -420,6 +420,7 @@ class FightRole extends egret.DisplayObjectContainer {
     }
 
     private attackComplete() {
+        this.isPlayingAction = false;
         this.body.removeEventListener(egret.Event.COMPLETE, this.attackComplete, this);
 
         if (!this.isTriggerDamage) {
@@ -535,7 +536,7 @@ class FightRole extends egret.DisplayObjectContainer {
             for (let i = 0; i < this.targets.length; i++) {
                 oneStepComplete = (oneStepComplete && (this.targets[i].waiting || !this.targets[i].parent));
             }
-            if (oneStepComplete && !!this.triggerFrameMap &&  !this.isPlayingDamage) {
+            if (oneStepComplete && !!this.triggerFrameMap && !this.isPlayingDamage && !this.isPlayingAction) {
                 this.nextStep();
             }
         }

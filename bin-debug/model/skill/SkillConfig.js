@@ -10,3 +10,4 @@ var SkillConfig = (function () {
     return SkillConfig;
 }());
 egret.registerClass(SkillConfig,'SkillConfig');
+//# sourceMappingURL=SkillConfig.js.map

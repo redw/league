@@ -10,6 +10,7 @@ class FightRoleFactory {
         if (arr && arr.length > 0) {
             role = arr.shift();
             role.active(fightContainer, roleData);
+            role.idle();
         } else {
             role = new FightRole(fightContainer, roleData);
         }

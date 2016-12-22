@@ -9,6 +9,7 @@ var FightRole = (function (_super) {
         _super.call(this);
         this.isTriggerDamage = false;
         this.isPlayingDamage = false;
+        this.isPlayingAction = false;
         this.waiting = true;
         this.zIndex = 0;
         this.active(fightContainer, roleData);
@@ -18,7 +19,6 @@ var FightRole = (function (_super) {
     p.active = function (fightContainer, roleData) {
         this.fightContainer = fightContainer;
         this.roleData = roleData;
-        this.idle();
         egret.startTick(this.onTick, this);
     };
     /**
@@ -281,7 +281,6 @@ var FightRole = (function (_super) {
         if (!this.curSkill || !this.curSkill.scource_effect) {
             fight.recordLog("\u6280\u80FD" + this.curSkill.id + "\u8D44\u6E90source_effect\u6CA1\u914D\u7F6E", fight.LOG_FIGHT_WARN);
             result = false;
-            this.triggerFrameMap = {};
             this.updateTargets();
             this.nextStep();
         }
@@ -404,6 +403,7 @@ var FightRole = (function (_super) {
     p.attack = function () {
         if (this.curSkill) {
             this.waiting = false;
+            this.isPlayingAction = true;
             this.fightContainer.bringRoleToSelfZPos(this, this.targets);
             if (fight.playFrameLabel(this.curSkill.action, this.body, 1, this.roleData.config.resource)) {
                 this.body.addEventListener(egret.Event.COMPLETE, this.attackComplete, this);
@@ -417,6 +417,7 @@ var FightRole = (function (_super) {
         }
     };
     p.attackComplete = function () {
+        this.isPlayingAction = false;
         this.body.removeEventListener(egret.Event.COMPLETE, this.attackComplete, this);
         if (!this.isTriggerDamage) {
             this.triggerFrameMap = {};
@@ -531,7 +532,7 @@ var FightRole = (function (_super) {
             for (var i = 0; i < this.targets.length; i++) {
                 oneStepComplete = (oneStepComplete && (this.targets[i].waiting || !this.targets[i].parent));
             }
-            if (oneStepComplete && !!this.triggerFrameMap && !this.isPlayingDamage) {
+            if (oneStepComplete && !!this.triggerFrameMap && !this.isPlayingDamage && !this.isPlayingAction) {
                 this.nextStep();
             }
         }
@@ -581,3 +582,4 @@ var FightRole = (function (_super) {
     return FightRole;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightRole,'FightRole');
+//# sourceMappingURL=FightRole.js.map

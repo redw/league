@@ -8,3 +8,4 @@ var BuffConfig = (function () {
     return BuffConfig;
 }());
 egret.registerClass(BuffConfig,'BuffConfig');
+//# sourceMappingURL=BuffConfig.js.map

@@ -144,9 +144,9 @@ module fight{
         } else if (level >= LOG_FIGHT_WARN) {
             egret.warn(content);
         }
-        // else {
-        //     egret.log(content);
-        // }
+        else {
+            egret.log(content);
+        }
     }
 
     /**

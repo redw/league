@@ -21,3 +21,4 @@ var LEVEL_DATA = {
         monster: [{ id: "202", pos: 4, side: 2 }]
     }
 };
+//# sourceMappingURL=StageData.js.map

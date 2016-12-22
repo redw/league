@@ -51,7 +51,6 @@ class Main extends egret.DisplayObjectContainer {
      * Loading process of preload resource group
      */
     private onResourceProgress(event:RES.ResourceEvent):void {
-        console.log(event.itemsLoaded, event.itemsLoaded, event.resItem.url);
         if (event.groupName == "preload") {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }

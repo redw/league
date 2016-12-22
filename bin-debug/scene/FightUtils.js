@@ -151,9 +151,9 @@ var fight;
         else if (level >= fight.LOG_FIGHT_WARN) {
             egret.warn(content);
         }
-        // else {
-        //     egret.log(content);
-        // }
+        else {
+            egret.log(content);
+        }
     }
     fight.recordLog = recordLog;
     /**
@@ -265,3 +265,4 @@ var fight;
     }
     fight.createRole = createRole;
 })(fight || (fight = {}));
+//# sourceMappingURL=FightUtils.js.map

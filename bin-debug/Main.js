@@ -45,7 +45,6 @@ var Main = (function (_super) {
      * Loading process of preload resource group
      */
     p.onResourceProgress = function (event) {
-        console.log(event.itemsLoaded, event.itemsLoaded, event.resItem.url);
         if (event.groupName == "preload") {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
@@ -130,3 +129,4 @@ var Main = (function (_super) {
     return Main;
 }(egret.DisplayObjectContainer));
 egret.registerClass(Main,'Main');
+//# sourceMappingURL=Main.js.map
