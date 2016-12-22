@@ -63,6 +63,12 @@ class RoleData {
 
     private getHeroPropValue(value:number)
     {
+        // let paraA:number = Config.BaseData[4]["value"];
+        // let paraB:number = Config.BaseData[5]["value"];
+        // let paraC:number = Config.BaseData[6]["value"];
+        // let heroLv:number = this.level;
+        // let heroEnhanceLv:number = this.strengthenLevel;
+        // let result = (value + paraC)*(Math.pow(paraA,heroLv-1))*(Math.pow(paraB,heroEnhanceLv));
         return value + "";
     }
 

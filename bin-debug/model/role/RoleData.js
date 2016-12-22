@@ -51,6 +51,12 @@ var RoleData = (function () {
         return value + "";
     };
     p.getHeroPropValue = function (value) {
+        // let paraA:number = Config.BaseData[4]["value"];
+        // let paraB:number = Config.BaseData[5]["value"];
+        // let paraC:number = Config.BaseData[6]["value"];
+        // let heroLv:number = this.level;
+        // let heroEnhanceLv:number = this.strengthenLevel;
+        // let result = (value + paraC)*(Math.pow(paraA,heroLv-1))*(Math.pow(paraB,heroEnhanceLv));
         return value + "";
     };
     /**
@@ -72,3 +78,4 @@ var RoleData = (function () {
     return RoleData;
 }());
 egret.registerClass(RoleData,'RoleData');
+//# sourceMappingURL=RoleData.js.map

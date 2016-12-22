@@ -47,6 +47,12 @@ var FightProcessGenerator = (function () {
             this.addSceneData(right[i]);
         }
     };
+    p.addSceneDataVec = function (roleVec) {
+        this.reset();
+        for (var i = 0; i < roleVec.length; i++) {
+            this.addSceneData(roleVec[i]);
+        }
+    };
     /**
      * 添加单个角色数据
      * @param role
@@ -110,7 +116,8 @@ var FightProcessGenerator = (function () {
         for (var i = 0; i < roles.length; i++) {
             var role = roles[i];
             var beginSkillArr = role.config.begin_skill;
-            for (var j = 0; j < beginSkillArr.length; j++) {
+            var len = beginSkillArr ? beginSkillArr.length : 0;
+            for (var j = 0; j < len; j++) {
                 var skillId = beginSkillArr[j];
                 if (!!skillId) {
                     if (role.isSkillActive(skillId)) {
@@ -557,3 +564,4 @@ var FightProcessGenerator = (function () {
     return FightProcessGenerator;
 }());
 egret.registerClass(FightProcessGenerator,'FightProcessGenerator');
+//# sourceMappingURL=FightProcessGenerator.js.map

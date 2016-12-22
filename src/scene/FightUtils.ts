@@ -2,43 +2,6 @@
  * Created by Administrator on 2016/11/30.
  */
 module fight{
-    // 左边角色
-    export const SIDE_LEFT:number = 1;
-    // 右边角色
-    export const SIDE_RIGHT:number = 2;
-
-    // 同时出战的时间间隔
-    export const MEANWHILE_FIGHT_DELAY_TIME:number = 200;
-    // 能否同时出战
-    export const CAN_MEANWHILE_FIGHT:boolean = false;
-    // 回退的时间间隔
-    export const RETREAT_TIME:number = 150;
-    // 移动的时间
-    export const MOVE_TIME:number = 150;
-    // 移动攻击时,距离目标点的位置
-    export const MOVE_ATTACK_OFF:number = 100;
-
-    export const LOG_FIGHT_INFO:number = 1;
-    export const LOG_FIGHT_STEP_START:number = 5;
-    export const LOG_FIGHT_ROLE_DIE:number = 10;
-    export const LOG_FIGHT_STEP_END:number = 15;
-    export const LOG_FIGHT_WARN:number = 50;
-    export const LOG_FIGHT_ERROR:number = 100;
-
-
-    let POS_MAP:egret.Point[][] = [
-        [
-            new egret.Point(160, 200), new egret.Point(160, 280), new egret.Point(160, 380),
-            new egret.Point(110, 240), new egret.Point(110, 280), new egret.Point(110, 340),
-            new egret.Point(60, 200), new egret.Point(60, 280), new egret.Point(60, 380),
-        ],
-        [
-            new egret.Point(320, 200), new egret.Point(320, 280), new egret.Point(350, 380),
-            new egret.Point(370, 240), new egret.Point(370, 280), new egret.Point(370, 340),
-            new egret.Point(420, 200), new egret.Point(420, 280), new egret.Point(420, 380),
-        ]
-    ];
-
     /**
      * 得到角色的描述信息
      * @param role RoleData或FightRole
@@ -58,7 +21,6 @@ module fight{
                 result += (arr[i].roleData.side + "_" + arr[i].roleData.pos);
             else
                 result += (arr[i].side + "_" + arr[i].pos);
-
             if (i < len - 1)
                 result += ",";
         }
@@ -81,12 +43,46 @@ module fight{
     }
 
     /**
+     * 验证主动配置
+     * @param value
+     */
+    export function verifyActiveSkill(value:SkillConfig) {
+        if (value.type == "passive") {
+            recordLog(`技能${value.id}主动与被动技能配置错误`,fight.LOG_FIGHT_WARN);
+        }
+        if (!value.trigger_chance || value.trigger_chance > 1) {
+            recordLog(`技能${value.id}的串配置错误`,fight.LOG_FIGHT_WARN);
+        }
+        if (!value.repeat || value.repeat > 5) {
+            recordLog(`技能${value.id}的repeat配置错误`,fight.LOG_FIGHT_WARN);
+        }
+        if (!value.damage_frame) {
+            recordLog(`技能${value.id}没有配伤害帧`,fight.LOG_FIGHT_WARN);
+        }
+        if (value.action_type == fight.ATTACK_ACTION_JUMP && !value.jump_frame) {
+            recordLog(`技能${value.id}的跳跃攻击没有配跳跃帧`,fight.LOG_FIGHT_WARN);
+        }
+        if (value.action_type == fight.ATTACK_ACTION_AREA || value.action_type == fight.ATTACK_ACTION_TURN) {
+            if (!value.effect_damage_frame) {
+                recordLog(`技能${value.id}的${value.action_type}攻击没有配效果伤害帧`,fight.LOG_FIGHT_WARN);
+            }
+        }
+    }
+
+    /**
      * 是否是英雄
      * @param roleId
      * @returns {boolean}
      */
     export function isHero(roleId:number){
         return roleId < 200;
+    }
+
+    /**
+     * 是否是加血技能
+     */
+    export function isAddHPSkill(value:SkillConfig){
+        return value && value.target_group == "friend"
     }
 
     /**
@@ -105,11 +101,20 @@ module fight{
     /**
      * 得到近战攻击玩家时的攻击位置
      * @param role
+     * @param targets
      * @returns {Point}
      */
-    export function getNearFightPoint(role:{side:number, pos:number}){
-        let point = getRoleInitPoint(role);
-        if (role.side == SIDE_LEFT) {
+    export function getNearFightPoint(role:FightRole, targets:FightRole[]){
+        let curRole = targets[0];
+        let minValue = Math.abs(role.roleData.pos - curRole.roleData.pos);
+        for (let i = 1; i < targets.length; i++) {
+            let curValue = Math.abs(role.roleData.pos - curRole.roleData.pos);
+            if (curValue < minValue) {
+                curRole = targets[i];
+            }
+        }
+        let point = getRoleInitPoint(curRole.roleData);
+        if (role.roleData.side == FightSideEnum.RIGHT_SIDE) {
             point.x += MOVE_ATTACK_OFF;
         } else {
             point.x -= MOVE_ATTACK_OFF;
@@ -134,13 +139,13 @@ module fight{
      * @param level
      */
     export function recordLog(content:any, level:number=0){
-        if (level >= LOG_FIGHT_ERROR) {
-            egret.error(content);
-        } else if (level >= LOG_FIGHT_WARN) {
-            egret.warn(content);
-        } else {
-            egret.log(content);
-        }
+        // if (level >= LOG_FIGHT_ERROR) {
+        //     egret.error(content);
+        // } else if (level >= LOG_FIGHT_WARN) {
+        //     egret.warn(content);
+        // } else {
+        //     egret.log(content);
+        // }
     }
 
     /**
@@ -148,7 +153,19 @@ module fight{
      * @param action
      */
     export function needMoveAttack(action:string){
-        return action == "normal_attack" || action == "jump_attack" || action == "row_attack";
+        return action == fight.ATTACK_ACTION_NORMAL ||
+            action == fight.ATTACK_ACTION_ROW;
+    }
+
+    /**
+     * 需要回退
+     * @param action
+     * @returns {boolean}
+     */
+    export function needRetreat(action:string){
+        return action == fight.ATTACK_ACTION_NORMAL ||
+            action == fight.ATTACK_ACTION_JUMP ||
+            action == fight.ATTACK_ACTION_ROW;
     }
 
     /**
@@ -176,30 +193,66 @@ module fight{
     }
 
     /**
-     * 添加战斗伤害效果
+     * 显示伤害,飘字等效果
      * @param parent
-     * @param text
-     * @param off
+     * @param content
+     * @param type
      */
-    export  function addHurtText(parent:egret.DisplayObjectContainer, text:string, off:{x:number,y:number} = {x:0,y:0}) {
-        let container:egret.DisplayObjectContainer = parent;
-        let txtHp: egret.TextField = new egret.TextField;
-        txtHp.textAlign = egret.HorizontalAlign.CENTER;
-        txtHp.verticalAlign = egret.VerticalAlign.MIDDLE;
-        txtHp.textColor = 0xFA725D;
-        txtHp.fontFamily = Global.SYS_FONT;
-        txtHp.size = 16;
-        txtHp.bold = true;
-        txtHp.stroke = 2;
-        txtHp.strokeColor = 0x672B23;
-        txtHp.text = text;
-        txtHp.x = container.scaleX < 0 ? off.x - 10 : off.x + 10;
-        txtHp.y = off.y ;
-        txtHp.scaleX = container.scaleX;
-        container.addChild(txtHp);
-        egret.Tween.get(txtHp).to({ y: off.y - 20, x: container.scaleX < 0 ? off.x - 20 : off.x + 20 },300,egret.Ease.bounceOut).wait(200).to({scaleX:0.5,scaleY:0.5, alpha: 0 },300).call(function() {
-            egret.Tween.removeTweens(txtHp);
-            DisplayUtil.removeFromParent(txtHp);
-        },txtHp);
+    export function showTxt(parent:egret.DisplayObjectContainer, content:any, type:number=0){
+        let fontEff;
+        switch (type) {
+            case FightFontEffEnum.PHYSICAL_ATK:
+                fontEff = new FontPhysicalAtkEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+
+            case FightFontEffEnum.MAGIC_ATK:
+                fontEff = new FontMagicAtkEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+
+            case FightFontEffEnum.ADD_HP:
+                fontEff = new FontAddHPEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+
+            case FightFontEffEnum.SYSTEM:
+                fontEff = new FontSystemEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+
+            case FightFontEffEnum.OTHER:
+                fontEff = new FontOtherEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+        }
+    }
+
+    export function playSound(url:string){
+        if (url){
+            try {
+                SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+            } catch (e) {
+                recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
+            }
+
+        }
+    }
+
+    /**
+     * 生成角色
+     */
+    export function createRole(){
+        // var factory = new egret.MovieClipDataFactory()
+        // let dataRes:any = RES.getRes(name + "_json");
+        // let textureRes:any = RES.getRes(name + "_png");
+        // factory.mcDataSet = dataRes;
+        // factory.texture = textureRes;
+        // return new egret.MovieClip(factory.generateMovieClipData(name));
     }
 }

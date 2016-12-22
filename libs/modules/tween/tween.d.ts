@@ -589,6 +589,10 @@ declare namespace egret {
         /**
          * @private
          */
+        private _actions;
+        /**
+         * @private
+         */
         private paused;
         /**
          * @private
@@ -740,7 +744,7 @@ declare namespace egret {
          * @param endPos
          * @param includeStart
          */
-        private _runAction(action, startPos, endPos, includeStart?);
+        private _runActions(startPos, endPos, includeStart?);
         /**
          * @private
          *
@@ -933,7 +937,7 @@ declare namespace egret {
          * @version Egret 2.4
          * @platform Web,Native
          */
-        $tick(delta: number): void;
+        tick(delta: number): void;
     }
 }
 declare namespace egret.tween {

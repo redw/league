@@ -3,38 +3,6 @@
  */
 var fight;
 (function (fight) {
-    // 左边角色
-    fight.SIDE_LEFT = 1;
-    // 右边角色
-    fight.SIDE_RIGHT = 2;
-    // 同时出战的时间间隔
-    fight.MEANWHILE_FIGHT_DELAY_TIME = 200;
-    // 能否同时出战
-    fight.CAN_MEANWHILE_FIGHT = false;
-    // 回退的时间间隔
-    fight.RETREAT_TIME = 150;
-    // 移动的时间
-    fight.MOVE_TIME = 150;
-    // 移动攻击时,距离目标点的位置
-    fight.MOVE_ATTACK_OFF = 100;
-    fight.LOG_FIGHT_INFO = 1;
-    fight.LOG_FIGHT_STEP_START = 5;
-    fight.LOG_FIGHT_ROLE_DIE = 10;
-    fight.LOG_FIGHT_STEP_END = 15;
-    fight.LOG_FIGHT_WARN = 50;
-    fight.LOG_FIGHT_ERROR = 100;
-    var POS_MAP = [
-        [
-            new egret.Point(160, 200), new egret.Point(160, 280), new egret.Point(160, 380),
-            new egret.Point(110, 240), new egret.Point(110, 280), new egret.Point(110, 340),
-            new egret.Point(60, 200), new egret.Point(60, 280), new egret.Point(60, 380),
-        ],
-        [
-            new egret.Point(320, 200), new egret.Point(320, 280), new egret.Point(350, 380),
-            new egret.Point(370, 240), new egret.Point(370, 280), new egret.Point(370, 340),
-            new egret.Point(420, 200), new egret.Point(420, 280), new egret.Point(420, 380),
-        ]
-    ];
     /**
      * 得到角色的描述信息
      * @param role RoleData或FightRole
@@ -79,6 +47,33 @@ var fight;
     }
     fight.getCommonOrders = getCommonOrders;
     /**
+     * 验证主动配置
+     * @param value
+     */
+    function verifyActiveSkill(value) {
+        if (value.type == "passive") {
+            recordLog("\u6280\u80FD" + value.id + "\u4E3B\u52A8\u4E0E\u88AB\u52A8\u6280\u80FD\u914D\u7F6E\u9519\u8BEF", fight.LOG_FIGHT_WARN);
+        }
+        if (!value.trigger_chance || value.trigger_chance > 1) {
+            recordLog("\u6280\u80FD" + value.id + "\u7684\u4E32\u914D\u7F6E\u9519\u8BEF", fight.LOG_FIGHT_WARN);
+        }
+        if (!value.repeat || value.repeat > 5) {
+            recordLog("\u6280\u80FD" + value.id + "\u7684repeat\u914D\u7F6E\u9519\u8BEF", fight.LOG_FIGHT_WARN);
+        }
+        if (!value.damage_frame) {
+            recordLog("\u6280\u80FD" + value.id + "\u6CA1\u6709\u914D\u4F24\u5BB3\u5E27", fight.LOG_FIGHT_WARN);
+        }
+        if (value.action_type == fight.ATTACK_ACTION_JUMP && !value.jump_frame) {
+            recordLog("\u6280\u80FD" + value.id + "\u7684\u8DF3\u8DC3\u653B\u51FB\u6CA1\u6709\u914D\u8DF3\u8DC3\u5E27", fight.LOG_FIGHT_WARN);
+        }
+        if (value.action_type == fight.ATTACK_ACTION_AREA || value.action_type == fight.ATTACK_ACTION_TURN) {
+            if (!value.effect_damage_frame) {
+                recordLog("\u6280\u80FD" + value.id + "\u7684" + value.action_type + "\u653B\u51FB\u6CA1\u6709\u914D\u6548\u679C\u4F24\u5BB3\u5E27", fight.LOG_FIGHT_WARN);
+            }
+        }
+    }
+    fight.verifyActiveSkill = verifyActiveSkill;
+    /**
      * 是否是英雄
      * @param roleId
      * @returns {boolean}
@@ -87,6 +82,13 @@ var fight;
         return roleId < 200;
     }
     fight.isHero = isHero;
+    /**
+     * 是否是加血技能
+     */
+    function isAddHPSkill(value) {
+        return value && value.target_group == "friend";
+    }
+    fight.isAddHPSkill = isAddHPSkill;
     /**
      * 是否是boss
      * @param roleId
@@ -103,11 +105,20 @@ var fight;
     /**
      * 得到近战攻击玩家时的攻击位置
      * @param role
+     * @param targets
      * @returns {Point}
      */
-    function getNearFightPoint(role) {
-        var point = getRoleInitPoint(role);
-        if (role.side == fight.SIDE_LEFT) {
+    function getNearFightPoint(role, targets) {
+        var curRole = targets[0];
+        var minValue = Math.abs(role.roleData.pos - curRole.roleData.pos);
+        for (var i = 1; i < targets.length; i++) {
+            var curValue = Math.abs(role.roleData.pos - curRole.roleData.pos);
+            if (curValue < minValue) {
+                curRole = targets[i];
+            }
+        }
+        var point = getRoleInitPoint(curRole.roleData);
+        if (role.roleData.side == FightSideEnum.RIGHT_SIDE) {
             point.x += fight.MOVE_ATTACK_OFF;
         }
         else {
@@ -124,7 +135,7 @@ var fight;
     function getRoleInitPoint(role) {
         var side = role.side - 1;
         var pos = role.pos;
-        return POS_MAP[side][pos].clone();
+        return fight.POS_MAP[side][pos].clone();
     }
     fight.getRoleInitPoint = getRoleInitPoint;
     /**
@@ -134,15 +145,13 @@ var fight;
      */
     function recordLog(content, level) {
         if (level === void 0) { level = 0; }
-        if (level >= fight.LOG_FIGHT_ERROR) {
-            egret.error(content);
-        }
-        else if (level >= fight.LOG_FIGHT_WARN) {
-            egret.warn(content);
-        }
-        else {
-            egret.log(content);
-        }
+        // if (level >= LOG_FIGHT_ERROR) {
+        //     egret.error(content);
+        // } else if (level >= LOG_FIGHT_WARN) {
+        //     egret.warn(content);
+        // } else {
+        //     egret.log(content);
+        // }
     }
     fight.recordLog = recordLog;
     /**
@@ -150,9 +159,21 @@ var fight;
      * @param action
      */
     function needMoveAttack(action) {
-        return action == "normal_attack" || action == "jump_attack" || action == "row_attack";
+        return action == fight.ATTACK_ACTION_NORMAL ||
+            action == fight.ATTACK_ACTION_ROW;
     }
     fight.needMoveAttack = needMoveAttack;
+    /**
+     * 需要回退
+     * @param action
+     * @returns {boolean}
+     */
+    function needRetreat(action) {
+        return action == fight.ATTACK_ACTION_NORMAL ||
+            action == fight.ATTACK_ACTION_JUMP ||
+            action == fight.ATTACK_ACTION_ROW;
+    }
+    fight.needRetreat = needRetreat;
     /**
      * 播放mc的帧标签
      * @param label
@@ -182,32 +203,65 @@ var fight;
     }
     fight.playFrameLabel = playFrameLabel;
     /**
-     * 添加战斗伤害效果
+     * 显示伤害,飘字等效果
      * @param parent
-     * @param text
-     * @param off
+     * @param content
+     * @param type
      */
-    function addHurtText(parent, text, off) {
-        if (off === void 0) { off = { x: 0, y: 0 }; }
-        var container = parent;
-        var txtHp = new egret.TextField;
-        txtHp.textAlign = egret.HorizontalAlign.CENTER;
-        txtHp.verticalAlign = egret.VerticalAlign.MIDDLE;
-        txtHp.textColor = 0xFA725D;
-        txtHp.fontFamily = Global.SYS_FONT;
-        txtHp.size = 16;
-        txtHp.bold = true;
-        txtHp.stroke = 2;
-        txtHp.strokeColor = 0x672B23;
-        txtHp.text = text;
-        txtHp.x = container.scaleX < 0 ? off.x - 10 : off.x + 10;
-        txtHp.y = off.y;
-        txtHp.scaleX = container.scaleX;
-        container.addChild(txtHp);
-        egret.Tween.get(txtHp).to({ y: off.y - 20, x: container.scaleX < 0 ? off.x - 20 : off.x + 20 }, 300, egret.Ease.bounceOut).wait(200).to({ scaleX: 0.5, scaleY: 0.5, alpha: 0 }, 300).call(function () {
-            egret.Tween.removeTweens(txtHp);
-            DisplayUtil.removeFromParent(txtHp);
-        }, txtHp);
+    function showTxt(parent, content, type) {
+        if (type === void 0) { type = 0; }
+        var fontEff;
+        switch (type) {
+            case FightFontEffEnum.PHYSICAL_ATK:
+                fontEff = new FontPhysicalAtkEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+            case FightFontEffEnum.MAGIC_ATK:
+                fontEff = new FontMagicAtkEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+            case FightFontEffEnum.ADD_HP:
+                fontEff = new FontAddHPEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+            case FightFontEffEnum.SYSTEM:
+                fontEff = new FontSystemEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+            case FightFontEffEnum.OTHER:
+                fontEff = new FontOtherEff();
+                parent.addChild(fontEff);
+                fontEff.show(content);
+                break;
+        }
     }
-    fight.addHurtText = addHurtText;
+    fight.showTxt = showTxt;
+    function playSound(url) {
+        if (url) {
+            try {
+                SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+            }
+            catch (e) {
+                recordLog("\u64AD\u653E{url}\u58F0\u97F3\u51FA\u9519", fight.LOG_FIGHT_WARN);
+            }
+        }
+    }
+    fight.playSound = playSound;
+    /**
+     * 生成角色
+     */
+    function createRole() {
+        // var factory = new egret.MovieClipDataFactory()
+        // let dataRes:any = RES.getRes(name + "_json");
+        // let textureRes:any = RES.getRes(name + "_png");
+        // factory.mcDataSet = dataRes;
+        // factory.texture = textureRes;
+        // return new egret.MovieClip(factory.generateMovieClipData(name));
+    }
+    fight.createRole = createRole;
 })(fight || (fight = {}));
+//# sourceMappingURL=FightUtils.js.map

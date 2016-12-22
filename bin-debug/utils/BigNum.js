@@ -304,3 +304,4 @@ var BigNum = (function () {
     return BigNum;
 }());
 egret.registerClass(BigNum,'BigNum');
+//# sourceMappingURL=BigNum.js.map

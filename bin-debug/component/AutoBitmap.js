@@ -9,9 +9,13 @@ var AutoBitmap = (function (_super) {
         _super.call(this);
     }
     var d = __define,c=AutoBitmap,p=c.prototype;
-    d(p, "source",undefined
+    d(p, "source"
+        ,function () {
+            return this._source;
+        }
         ,function (value) {
             var _this = this;
+            this._source = value;
             if (typeof (value) == "string") {
                 if (RES.hasRes(value)) {
                     RES.getResAsync(value, function (res) {
@@ -32,3 +36,4 @@ var AutoBitmap = (function (_super) {
     return AutoBitmap;
 }(egret.Bitmap));
 egret.registerClass(AutoBitmap,'AutoBitmap');
+//# sourceMappingURL=AutoBitmap.js.map

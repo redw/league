@@ -9,3 +9,4 @@ var URLConfig;
     }
     URLConfig.getSoundURL = getSoundURL;
 })(URLConfig || (URLConfig = {}));
+//# sourceMappingURL=URLConfig.js.map

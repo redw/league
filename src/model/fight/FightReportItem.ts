@@ -33,15 +33,15 @@ class FightReportItem{
     /** 伤害 */
     damage:string;
     /** 物攻 */
-    physicalAtk:string;
+    phyAtk:string;
     /** 物防 */
-    physicalDef:string;
+    phyDef:string;
     /** 魔攻 */
-    magicAtk:string;
+    magAtk:string;
     /** 魔防 */
-    magicDef:string;
+    magDef:string;
     /** buffs */
-    buffs:number[];
+    buff:number[];
 }
 
 class FightReportTargetItem {
@@ -76,13 +76,13 @@ class FightReportTargetItem {
     /** 伤害 */
     damage:string;
     /** 物攻 */
-    physicalAtk:string;
+    phyAtk:string;
     /** 物防 */
-    physicalDef:string;
+    phyDef:string;
     /** 魔攻 */
-    magicAtk:string;
+    magAtk:string;
     /** 魔防 */
-    magicDef:string;
+    magDef:string;
     /** buffs */
-    buffs:number[];
+    buff:number[];
 }

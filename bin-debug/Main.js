@@ -9,6 +9,10 @@ var Main = (function (_super) {
     p.onAddToStage = function (event) {
         this.loadingView = new LoadingUI();
         this.stage.addChild(this.loadingView);
+        //注入自定义的素材解析器
+        var assetAdapter = new AssetAdapter();
+        egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
+        egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/default.res.json", "resource/");
     };
@@ -22,6 +26,7 @@ var Main = (function (_super) {
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.loadGroup("preload");
+        console.log("开始加载资源");
     };
     /**
      * preload资源组加载完成
@@ -40,6 +45,7 @@ var Main = (function (_super) {
      * Loading process of preload resource group
      */
     p.onResourceProgress = function (event) {
+        console.log(event.itemsLoaded, event.itemsLoaded, event.resItem.url);
         if (event.groupName == "preload") {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
@@ -49,8 +55,6 @@ var Main = (function (_super) {
     };
     p.createGameScene = function () {
         Config.init();
-        this.background = new PVEFightBackground();
-        this.addChild(this.background);
         this.fightContainer = new FightContainer();
         this.addChild(this.fightContainer);
         this.levelLabel = new eui.Label();
@@ -58,6 +62,8 @@ var Main = (function (_super) {
         this.levelLabel.width = 480;
         this.levelLabel.y = 80;
         this.addChild(this.levelLabel);
+        this.fightDropContainer = new FightDropContainer();
+        this.addChild(this.fightDropContainer);
         this.addEventListener("fight_end", this.onFightEnd, this, true);
         this.startStage(this.level);
     };
@@ -67,7 +73,6 @@ var Main = (function (_super) {
     };
     p.startStage = function (level) {
         this.levelLabel.text = "stage " + level;
-        this.background.level = level;
         var monsterConfig = Config.FightConfig.monster.concat();
         var heroConfig = Config.FightConfig.hero.concat();
         this.myHeroArr = [];
@@ -122,9 +127,11 @@ var Main = (function (_super) {
     p.loadResComplete = function (e) {
         if (e.groupName == "scene" + this.level) {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
-            this.fightContainer.startFight(this.myHeroArr, this.monsterArr, true);
+            this.fightContainer.startFight([].concat(this.myHeroArr, this.monsterArr), true, this.level);
+            this.fightDropContainer.startLevel();
         }
     };
     return Main;
 }(egret.DisplayObjectContainer));
 egret.registerClass(Main,'Main');
+//# sourceMappingURL=Main.js.map

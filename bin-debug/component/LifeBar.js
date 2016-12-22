@@ -1,3 +1,4 @@
+var Tween = egret.Tween;
 /**
  * 血条显示
  * Created by Administrator on 11/16 0016.
@@ -21,7 +22,8 @@ var LifeBar = (function (_super) {
     };
     p.setRatio = function (value) {
         value = MathUtil.clamp(value, 0, 1);
-        this._bar.width = this._width * value;
+        // this._bar.width = this._width * value;
+        egret.Tween.get(this._bar).to({ width: this._width * value }, 200);
     };
     p.reSet = function () {
         this._bar.width = this._width;
@@ -29,3 +31,4 @@ var LifeBar = (function (_super) {
     return LifeBar;
 }(egret.DisplayObjectContainer));
 egret.registerClass(LifeBar,'LifeBar');
+//# sourceMappingURL=LifeBar.js.map

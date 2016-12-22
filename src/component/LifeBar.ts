@@ -1,3 +1,4 @@
+import Tween = egret.Tween;
 /**
  * 血条显示
  * Created by Administrator on 11/16 0016.
@@ -29,7 +30,8 @@ class LifeBar extends egret.DisplayObjectContainer
 
     public setRatio(value:number) {
         value = MathUtil.clamp(value, 0, 1);
-        this._bar.width = this._width * value;
+        // this._bar.width = this._width * value;
+        egret.Tween.get(this._bar).to({width:this._width * value}, 200);
     }
 
     public reSet()

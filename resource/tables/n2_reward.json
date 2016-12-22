@@ -1,178 +1,222 @@
 {
 	"1": {
-		"Mail": 1,
-		"Disc": "铜钱x A",
-		"name": "铜钱",
 		"parm_num": 1,
 		"TipsName": "铜钱",
-		"TipsDisc": 1,
 		"icon_s": "ic_coin_s",
+		"Disc": "铜钱x A",
+		"Mail": 1,
+		"TipsDisc": 1,
 		"icon": "ic_coin",
-		"id": 1
+		"id": 1,
+		"name": "铜钱"
 	},
 	"2": {
-		"Mail": 1,
-		"Disc": "铜钱x A小时",
-		"name": "时间铜钱",
 		"parm_num": 1,
 		"TipsName": "时间铜钱",
-		"TipsDisc": 2,
 		"icon_s": "ic_timecoin_s",
+		"Disc": "铜钱x A小时",
+		"Mail": 1,
+		"TipsDisc": 2,
 		"icon": "ic_timecoin",
-		"id": 2
+		"id": 2,
+		"name": "时间铜钱"
 	},
 	"3": {
-		"Mail": 1,
-		"Disc": "元宝x A",
-		"name": "元宝",
 		"parm_num": 1,
 		"TipsName": "元宝",
-		"TipsDisc": 3,
 		"icon_s": "ic_gold_s",
+		"Disc": "元宝x A",
+		"Mail": 1,
+		"TipsDisc": 3,
 		"icon": "ic_gold",
-		"id": 3
+		"id": 3,
+		"name": "元宝"
 	},
 	"4": {
-		"Mail": 1,
-		"Disc": "仙玉x A",
-		"name": "仙玉",
 		"parm_num": 1,
 		"TipsName": "仙玉",
-		"TipsDisc": 4,
 		"icon_s": "ic_jade_s",
+		"Disc": "仙玉x A",
+		"Mail": 1,
+		"TipsDisc": 4,
 		"icon": "ic_jade",
-		"id": 4
+		"id": 4,
+		"name": "仙玉"
 	},
 	"5": {
-		"Mail": 1,
-		"Disc": "闯关仙玉",
-		"name": "闯关仙玉",
 		"parm_num": 1,
 		"TipsName": "闯关仙玉",
-		"TipsDisc": 5,
 		"icon_s": "ic_passjade_s",
+		"Disc": "闯关仙玉",
+		"Mail": 1,
+		"TipsDisc": 5,
 		"icon": "ic_passjade",
-		"id": 5
+		"id": 5,
+		"name": "闯关仙玉"
 	},
 	"6": {
-		"Mail": 1,
-		"Disc": "伙伴",
-		"name": "伙伴",
 		"parm_num": 2,
 		"TipsName": "伙伴A",
-		"TipsDisc": 6,
 		"icon_s": "ic_hero_s",
+		"Disc": "伙伴",
+		"Mail": 1,
+		"TipsDisc": 6,
 		"icon": "ic_hero",
-		"id": 6
+		"id": 6,
+		"name": "伙伴"
 	},
 	"7": {
-		"Mail": 1,
-		"Disc": "伙伴碎片",
-		"name": "伙伴碎片",
 		"parm_num": 2,
 		"TipsName": "A碎片",
-		"TipsDisc": 7,
 		"icon_s": "ic_herochip_s",
+		"Disc": "伙伴碎片",
+		"Mail": 1,
+		"TipsDisc": 7,
 		"icon": "ic_herochip",
-		"id": 7
+		"id": 7,
+		"name": "伙伴碎片"
 	},
 	"8": {
-		"Mail": 1,
-		"Disc": "装备",
-		"name": "装备",
 		"parm_num": 1,
 		"TipsName": "装备",
-		"TipsDisc": 8,
 		"icon_s": "ic_weapon_s",
+		"Disc": "装备",
+		"Mail": 1,
+		"TipsDisc": 8,
 		"icon": "ic_weapon",
-		"id": 8
+		"id": 8,
+		"name": "装备"
 	},
 	"9": {
-		"Mail": 1,
-		"Disc": "装备材料金",
-		"name": "装备材料-乾金",
 		"parm_num": 1,
 		"TipsName": "装备材料金",
-		"TipsDisc": 9,
 		"icon_s": "ic_wp_metal_s",
+		"Disc": "装备材料金",
+		"Mail": 1,
+		"TipsDisc": 9,
 		"icon": "ic_wp_metal",
-		"id": 9
+		"id": 9,
+		"name": "装备材料-乾金"
 	},
 	"10": {
-		"Mail": 1,
-		"Disc": "装备材料木",
-		"name": "装备材料-震木",
 		"parm_num": 1,
 		"TipsName": "装备材料木",
-		"TipsDisc": 10,
 		"icon_s": "ic_wp_wood_s",
+		"Disc": "装备材料木",
+		"Mail": 1,
+		"TipsDisc": 10,
 		"icon": "ic_wp_wood",
-		"id": 10
+		"id": 10,
+		"name": "装备材料-震木"
 	},
 	"11": {
-		"Mail": 1,
-		"Disc": "装备材料水",
-		"name": "装备材料-坎水",
 		"parm_num": 1,
 		"TipsName": "装备材料水",
-		"TipsDisc": 11,
 		"icon_s": "ic_wp_water_s",
+		"Disc": "装备材料水",
+		"Mail": 1,
+		"TipsDisc": 11,
 		"icon": "ic_wp_water",
-		"id": 11
+		"id": 11,
+		"name": "装备材料-坎水"
 	},
 	"12": {
-		"Mail": 1,
-		"Disc": "装备材料火",
-		"name": "装备材料-离火",
 		"parm_num": 1,
 		"TipsName": "装备材料火",
-		"TipsDisc": 12,
 		"icon_s": "ic_wp_fire_s",
+		"Disc": "装备材料火",
+		"Mail": 1,
+		"TipsDisc": 12,
 		"icon": "ic_wp_fire",
-		"id": 12
+		"id": 12,
+		"name": "装备材料-离火"
 	},
 	"13": {
-		"Mail": 1,
-		"Disc": "装备材料土",
-		"name": "装备材料-坤土",
 		"parm_num": 1,
 		"TipsName": "装备材料土",
-		"TipsDisc": 13,
 		"icon_s": "ic_wp_soil_s",
+		"Disc": "装备材料土",
+		"Mail": 1,
+		"TipsDisc": 13,
 		"icon": "ic_wp_soil",
-		"id": 13
+		"id": 13,
+		"name": "装备材料-坤土"
 	},
 	"14": {
-		"Mail": 1,
-		"Disc": "寻仙令x A",
-		"name": "寻仙令",
 		"parm_num": 1,
 		"TipsName": "寻仙",
-		"TipsDisc": 14,
 		"icon_s": "ic_herodraw_s",
+		"Disc": "寻仙令x A",
+		"Mail": 1,
+		"TipsDisc": 14,
 		"icon": "ic_herodraw",
-		"id": 14
+		"id": 14,
+		"name": "寻仙令"
 	},
 	"15": {
-		"Mail": 0,
-		"Disc": "装备格子",
-		"name": "装备格子",
 		"parm_num": 1,
 		"TipsName": "装备格子",
-		"TipsDisc": 15,
 		"icon_s": "ic_weaponbox_s",
+		"Disc": "装备格子",
+		"Mail": 0,
+		"TipsDisc": 15,
 		"icon": "ic_weaponbox",
-		"id": 15
+		"id": 15,
+		"name": "装备格子"
 	},
 	"16": {
-		"Mail": 0,
-		"Disc": "秘境挑战上限",
-		"name": "秘境挑战上限",
 		"parm_num": 1,
 		"TipsName": "秘境挑战上限",
-		"TipsDisc": 16,
 		"icon_s": "ic_weaponfb_s",
+		"Disc": "秘境挑战上限",
+		"Mail": 0,
+		"TipsDisc": 16,
 		"icon": "ic_weaponfb",
-		"id": 16
+		"id": 16,
+		"name": "秘境挑战上限"
+	},
+	"17": {
+		"parm_num": 1,
+		"TipsName": "可在特惠商店购买特惠商品",
+		"icon_s": "ic_disc_point_s",
+		"Disc": "点券",
+		"Mail": 1,
+		"TipsDisc": 15,
+		"icon": "ic_disc_point",
+		"id": 17,
+		"name": "点券"
+	},
+	"18": {
+		"parm_num": 1,
+		"TipsName": "可在充值点券处领取积分宝箱",
+		"icon_s": "ic_disc_score_s",
+		"Disc": "特惠积分",
+		"Mail": 1,
+		"TipsDisc": 16,
+		"icon": "ic_disc_score",
+		"id": 18,
+		"name": "特惠积分"
+	},
+	"19": {
+		"parm_num": 2,
+		"TipsName": "用于召唤、升级指定小妖",
+		"icon_s": "ic_monster_s",
+		"Disc": "小妖碎片",
+		"Mail": 1,
+		"TipsDisc": 17,
+		"icon": "ic_monster",
+		"id": 19,
+		"name": "小妖碎片"
+	},
+	"20": {
+		"parm_num": 1,
+		"TipsName": "用于升级任意小妖",
+		"icon_s": "ic_allmonster_s",
+		"Disc": "万能碎片",
+		"Mail": 1,
+		"TipsDisc": 18,
+		"icon": "ic_allmonster",
+		"id": 20,
+		"name": "万能碎片"
 	}
 }

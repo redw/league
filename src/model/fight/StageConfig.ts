@@ -6,6 +6,7 @@ class StageConfig {
     "monster_number": number[];
     "monster":string[];
     "id": number;
+    "map":string;
 
     public static getMonster(config:StageConfig){
         let result:{id:number, pos:number, side:number}[] = [];
@@ -32,9 +33,5 @@ class StageConfig {
             }
         }
         return result;
-    }
-
-    public static getHero(level:number) {
-
     }
 }

@@ -8,3 +8,4 @@ var RoleConfig = (function () {
     return RoleConfig;
 }());
 egret.registerClass(RoleConfig,'RoleConfig');
+//# sourceMappingURL=RoleConfig.js.map

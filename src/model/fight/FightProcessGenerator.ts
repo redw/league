@@ -65,6 +65,13 @@ class FightProcessGenerator {
         }
     }
 
+    public addSceneDataVec(roleVec:FightRoleData[]) {
+        this.reset();
+        for (let i = 0; i < roleVec.length; i++) {
+            this.addSceneData(roleVec[i]);
+        }
+    }
+
     /**
      * 添加单个角色数据
      * @param role
@@ -87,7 +94,7 @@ class FightProcessGenerator {
         this.addBeginBuff(this.roles);
         while (!this.checkEnd() && this.index <= 300) {
             if (this.index >= 300) {
-                fight.recordLog("战斗步数超过了300,数据有问题", fight.LOG_FIGHT_ERROR);
+                fight.recordLog("战斗步数超过了300,数所有问题了", fight.LOG_FIGHT_ERROR);
                 break;
             }
             this.generateOrder();
@@ -131,13 +138,9 @@ class FightProcessGenerator {
     private addBeginBuff(roles:FightRoleData[]){
         for (let i = 0; i < roles.length; i++) {
             let role = roles[i];
-            let beginSkillArr:string[];
-            if (typeof role.config.begin_skill == "string" || typeof role.config.begin_skill == "number") {
-                beginSkillArr = (String(role.config.begin_skill)).split(",");
-            } else {
-                beginSkillArr = role.config.begin_skill;
-            }
-            for (let j = 0; j < beginSkillArr.length; j++) {
+            let beginSkillArr:string[] = role.config.begin_skill;
+            let len = beginSkillArr ? beginSkillArr.length : 0;
+            for (let j = 0; j < len; j++) {
                 let skillId = beginSkillArr[j];
                 if (!!skillId) {
                     if (role.isSkillActive(skillId)) {
@@ -159,7 +162,7 @@ class FightProcessGenerator {
         for (let i = 0; i < skillRepeat; i++) {
             let targets = this[getTargetFunName](role);
             if (i == 0 && targets.length <= 0) {
-                fight.recordLog("方法" + getTargetFunName + "错误", fight.LOG_FIGHT_ERROR);
+                fight.recordLog("方法" + getTargetFunName + "错误", 100);
             }
             if (targets.length > 0) {
                 let item = this.damageCore(role, targets, skillInfo, this.index++, this.turn - 1);
@@ -185,7 +188,7 @@ class FightProcessGenerator {
         let cri = startRole.isCri();
         let criDamage = cri ? (startRole.critDamage): 1;
 
-        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(startRole) + "发动攻击", fight.LOG_FIGHT_INFO);
+        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(startRole) + "发动攻击", 0);
         let result:FightReportItem = <FightReportItem>{
             skillId:skillInfo.id,
             target:[],
@@ -220,7 +223,7 @@ class FightProcessGenerator {
                     target.curHP = BigNum.min(target.curHP, target.maxHP);
                     item.hp = target.curHP;
                     item.addHP = addHP;
-                    fight.recordLog("第" + index + "步角色" +  fight.getRolePosDes(target) + "加血" + addHP, fight.LOG_FIGHT_INFO);
+                    fight.recordLog("第" + index + "步角色" +  fight.getRolePosDes(target) + "加血" + addHP, 0);
                     if (!!skillInfo.buff_id) {
                         target.addBuff(skillInfo.buff_id, startRole);
                     }
@@ -229,21 +232,21 @@ class FightProcessGenerator {
                     item.block = target.isBlock();
                     if (item.dodge) {
                         // 如果被闪避了
-                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时闪避了", fight.LOG_FIGHT_INFO);
+                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时闪避了", 0);
                     } else {
                         let ratio = 1;
                         if (target.isInvincible) {
                             ratio = 0;
                             item.invincible = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时无敌", fight.LOG_FIGHT_INFO);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时无敌", 0);
                         } else if (isPhyAtk && target.freePhysicalAtk) {
                             ratio = 0;
                             item.isFreePhysicalAtk = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时物免", fight.LOG_FIGHT_INFO);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时物免", 0);
                         } else if (isMagicAtk && target.freeMagicAtk) {
                             ratio = 0;
                             item.isFreeMagicAtk = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时魔免", fight.LOG_FIGHT_INFO);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时魔免", 0);
                         }
 
                         // 计算伤害
@@ -272,7 +275,7 @@ class FightProcessGenerator {
                         result.hp = startRole.curHP;
 
                         if (BigNum.greaterOrEqual(0, target.curHP)){
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击死亡", fight.LOG_FIGHT_ROLE_DIE);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击死亡", 1);
                             this.removeRole(target);
                         } else {
                             if (!!skillInfo.buff_id) {
@@ -280,7 +283,7 @@ class FightProcessGenerator {
                             }
                         }
                         if (BigNum.greaterOrEqual(0, startRole.curHP)) {
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "反弹死亡", fight.LOG_FIGHT_ROLE_DIE);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "反弹死亡", 1);
                             this.removeRole(startRole);
                         }
                     }
@@ -309,7 +312,7 @@ class FightProcessGenerator {
         }
     }
 
-    // 角色死亡后，移除角色
+    // 角色战败后，移除角色
     private removeRole(role: FightRoleData) {
         let side = role.side - 1;
         let pos = role.pos;
@@ -326,7 +329,7 @@ class FightProcessGenerator {
             }
         }
         if (this.allTeam[side][pos] == null) {
-            fight.recordLog("角色不应该为空,移除角色或发生错误", fight.LOG_FIGHT_WARN);
+            fight.recordLog("角色不应该为空,移除角色或发生错误", 1);
         }
         this.allTeam[side][pos] = null;
     }
@@ -576,8 +579,6 @@ class FightProcessGenerator {
     private reset() {
         this.leftTeam = Array(9);
         this.rightTeam = Array(9);
-        this.index = 0;
-        this.turn = 0;
         this.orders = [];
         this.roles = [];
     }

@@ -5,6 +5,7 @@
  */
 class AutoBitmap extends egret.Bitmap
 {
+    private _source:any;
     public constructor()
     {
         super();
@@ -12,6 +13,7 @@ class AutoBitmap extends egret.Bitmap
 
     public set source(value:any)
     {
+        this._source = value;
         if (typeof(value) == "string")
         {
             if (RES.hasRes(value))
@@ -33,5 +35,9 @@ class AutoBitmap extends egret.Bitmap
         {
             this.texture = value;
         }
+    }
+
+    public get source(){
+        return this._source;
     }
 }

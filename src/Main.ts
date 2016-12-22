@@ -11,6 +11,11 @@ class Main extends egret.DisplayObjectContainer {
         this.loadingView = new LoadingUI();
         this.stage.addChild(this.loadingView);
 
+        //注入自定义的素材解析器
+        let assetAdapter = new AssetAdapter();
+        egret.registerImplementation("eui.IAssetAdapter",assetAdapter);
+        egret.registerImplementation("eui.IThemeAdapter",new ThemeAdapter());
+
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/default.res.json", "resource/");
     }
@@ -25,6 +30,7 @@ class Main extends egret.DisplayObjectContainer {
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.loadGroup("preload");
+        console.log("开始加载资源");
     }
 
     /**
@@ -45,6 +51,7 @@ class Main extends egret.DisplayObjectContainer {
      * Loading process of preload resource group
      */
     private onResourceProgress(event:RES.ResourceEvent):void {
+        console.log(event.itemsLoaded, event.itemsLoaded, event.resItem.url);
         if (event.groupName == "preload") {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
@@ -59,8 +66,8 @@ class Main extends egret.DisplayObjectContainer {
      * 创建游戏场景
      * Create a game scene
      */
-    private background;
     private fightContainer;
+    private fightDropContainer;
     private levelLabel:eui.Label;
     private level = 1;
     private myHeroArr;
@@ -68,9 +75,6 @@ class Main extends egret.DisplayObjectContainer {
 
     private createGameScene():void {
         Config.init();
-
-        this.background = new PVEFightBackground();
-        this.addChild(this.background);
 
         this.fightContainer = new FightContainer();
         this.addChild(this.fightContainer);
@@ -80,6 +84,9 @@ class Main extends egret.DisplayObjectContainer {
         this.levelLabel.width = 480;
         this.levelLabel.y = 80;
         this.addChild(this.levelLabel);
+
+        this.fightDropContainer = new FightDropContainer();
+        this.addChild(this.fightDropContainer);
 
         this.addEventListener("fight_end", this.onFightEnd, this, true);
         this.startStage(this.level);
@@ -92,7 +99,6 @@ class Main extends egret.DisplayObjectContainer {
 
     private startStage(level:number){
         this.levelLabel.text = "stage " + level;
-        this.background.level = level;
         let monsterConfig = Config.FightConfig.monster.concat();
         let heroConfig = Config.FightConfig.hero.concat();
 
@@ -152,7 +158,8 @@ class Main extends egret.DisplayObjectContainer {
     private loadResComplete(e:RES.ResourceEvent) {
         if (e.groupName == "scene" + this.level) {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
-            this.fightContainer.startFight(this.myHeroArr, this.monsterArr, true);
+            this.fightContainer.startFight([].concat(this.myHeroArr, this.monsterArr), true, this.level);
+            this.fightDropContainer.startLevel();
         }
     }
 }
