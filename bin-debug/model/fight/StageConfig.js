@@ -6,7 +6,8 @@ var StageConfig = (function () {
     function StageConfig() {
     }
     var d = __define,c=StageConfig,p=c.prototype;
-    StageConfig.getMonster = function (config) {
+    StageConfig.getMonster = function (level) {
+        var config = Config.StageData[level];
         var result = [];
         var counts = config.monster_number.concat();
         var monsters = config.monster.concat();
@@ -35,4 +36,3 @@ var StageConfig = (function () {
     return StageConfig;
 }());
 egret.registerClass(StageConfig,'StageConfig');
-//# sourceMappingURL=StageConfig.js.map

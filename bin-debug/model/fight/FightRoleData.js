@@ -58,10 +58,8 @@ var FightRoleData = (function (_super) {
     p.turnBegin = function () {
         this.reduceBuff();
         this.turnCount++;
-        // this.physicalDef = BigNum.mul(this.physicalDef, 1 + this.getBuffPlusValue(BuffTypeEnum.DEF_MORE_MORE));
-        // this.magicDef = BigNum.mul(this.magicDef, 1 + this.getBuffPlusValue(BuffTypeEnum.DEF_MORE_MORE));
-        this.physicalAtk = BigNum.mul(this.physicalAtk, 1 + this.getBuffPlusValue(BuffTypeEnum.ATK_MORE_MORE));
-        this.magicAtk = BigNum.mul(this.magicAtk, 1 + this.getBuffPlusValue(BuffTypeEnum.ATK_MORE_MORE));
+        this.physicalAtk = BigNum.mul(this.physicalAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
+        this.magicAtk = BigNum.mul(this.magicAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
     };
     /**
      * 要使用的技能
@@ -287,15 +285,15 @@ var FightRoleData = (function (_super) {
      * @param type
      * @returns {number}
      */
-    p.getBuffIndexValue = function (type) {
-        var result = 1;
-        var buffs = this.buffInfo[type];
-        var len = buffs ? buffs.length : 0;
-        for (var i = 0; i < len; i++) {
-            result *= (1 + buffs[i].value);
-        }
-        return result;
-    };
+    // private getBuffIndexValue(type:number|string) {
+    //     let result = 1;
+    //     let buffs = this.buffInfo[type];
+    //     let len = buffs ? buffs.length : 0;
+    //     for (let i = 0; i < len; i++) {
+    //         result *= (1 + buffs[i].value);
+    //     }
+    //     return result;
+    // }
     /**
      * 给角色施加buff
      *
@@ -312,16 +310,16 @@ var FightRoleData = (function (_super) {
                 return;
             }
             if (type == BuffTypeEnum.PHYSICAL_ATK) {
-                this.physicalAtk = BigNum.mul(this.physicalAtk, 1 + value);
+                this.physicalAtk = BigNum.mul(this.physicalAtk, value);
             }
             else if (type == BuffTypeEnum.MAGIC_ATK) {
-                this.magicAtk = BigNum.mul(this.magicAtk, 1 + value);
+                this.magicAtk = BigNum.mul(this.magicAtk, value);
             }
             else if (type == BuffTypeEnum.PHYSICAL_DEF) {
-                this.physicalDef = BigNum.mul(this.physicalDef, 1 + value);
+                this.physicalDef = BigNum.mul(this.physicalDef, value);
             }
             else if (type == BuffTypeEnum.MAGIC_DEF) {
-                this.magicDef = BigNum.mul(this.magicDef, 1 + value);
+                this.magicDef = BigNum.mul(this.magicDef, value);
             }
             else if (type == BuffTypeEnum.LIFE) {
                 this.curHP = BigNum.mul(this.curHP, 1 + value);
@@ -377,23 +375,23 @@ var FightRoleData = (function (_super) {
     };
     p.addDesInfo = function (obj) {
         obj.hp = this.curHP;
-        obj.physicalAtk = this.physicalAtk;
-        obj.physicalDef = this.physicalDef;
-        obj.magicAtk = this.magicAtk;
-        obj.magicDef = this.magicDef;
+        obj.phyAtk = this.physicalAtk;
+        obj.phyDef = this.physicalDef;
+        obj.magAtk = this.magicAtk;
+        obj.magDef = this.magicDef;
         obj.id = this.config.id;
         obj.pos = fight.getRolePosDes(this);
         obj.dcri = this.critChance;
         obj.dcirDom = this.critDamage;
         obj.ddodge = this.dodgeChance;
         obj.dblock = this.blockChance;
-        obj.buffs = [];
+        obj.buff = [];
         var arr = Object.keys(this.buffInfo);
         for (var i = 0; i < arr.length; i++) {
             var type = arr[i];
             var buffs = this.buffInfo[type];
             for (var j = 0; j < buffs.length; j++) {
-                obj.buffs.push(buffs[j].id);
+                obj.buff.push(buffs[j].id);
             }
         }
     };
@@ -409,4 +407,3 @@ var FightRoleData = (function (_super) {
     return FightRoleData;
 }(RoleData));
 egret.registerClass(FightRoleData,'FightRoleData');
-//# sourceMappingURL=FightRoleData.js.map

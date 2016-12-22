@@ -95,4 +95,3 @@ var Global;
     }
     Global.getPvPEffectURL = getPvPEffectURL;
 })(Global || (Global = {}));
-//# sourceMappingURL=Global.js.map

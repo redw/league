@@ -25,4 +25,3 @@ var EventManager = (function (_super) {
     return EventManager;
 }(egret.EventDispatcher));
 egret.registerClass(EventManager,'EventManager');
-//# sourceMappingURL=EventManager.js.map

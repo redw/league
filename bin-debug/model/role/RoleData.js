@@ -78,4 +78,3 @@ var RoleData = (function () {
     return RoleData;
 }());
 egret.registerClass(RoleData,'RoleData');
-//# sourceMappingURL=RoleData.js.map

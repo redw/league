@@ -139,11 +139,12 @@ module fight{
      * @param level
      */
     export function recordLog(content:any, level:number=0){
-        // if (level >= LOG_FIGHT_ERROR) {
-        //     egret.error(content);
-        // } else if (level >= LOG_FIGHT_WARN) {
-        //     egret.warn(content);
-        // } else {
+        if (level >= LOG_FIGHT_ERROR) {
+            egret.error(content);
+        } else if (level >= LOG_FIGHT_WARN) {
+            egret.warn(content);
+        }
+        // else {
         //     egret.log(content);
         // }
     }
@@ -236,7 +237,7 @@ module fight{
     export function playSound(url:string){
         if (url){
             try {
-                SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+                // SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
             } catch (e) {
                 recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
             }

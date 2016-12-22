@@ -145,11 +145,13 @@ var fight;
      */
     function recordLog(content, level) {
         if (level === void 0) { level = 0; }
-        // if (level >= LOG_FIGHT_ERROR) {
-        //     egret.error(content);
-        // } else if (level >= LOG_FIGHT_WARN) {
-        //     egret.warn(content);
-        // } else {
+        if (level >= fight.LOG_FIGHT_ERROR) {
+            egret.error(content);
+        }
+        else if (level >= fight.LOG_FIGHT_WARN) {
+            egret.warn(content);
+        }
+        // else {
         //     egret.log(content);
         // }
     }
@@ -243,7 +245,6 @@ var fight;
     function playSound(url) {
         if (url) {
             try {
-                SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
             }
             catch (e) {
                 recordLog("\u64AD\u653E{url}\u58F0\u97F3\u51FA\u9519", fight.LOG_FIGHT_WARN);
@@ -264,4 +265,3 @@ var fight;
     }
     fight.createRole = createRole;
 })(fight || (fight = {}));
-//# sourceMappingURL=FightUtils.js.map

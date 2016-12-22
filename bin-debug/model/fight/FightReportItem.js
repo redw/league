@@ -15,4 +15,3 @@ var FightReportTargetItem = (function () {
     return FightReportTargetItem;
 }());
 egret.registerClass(FightReportTargetItem,'FightReportTargetItem');
-//# sourceMappingURL=FightReportItem.js.map

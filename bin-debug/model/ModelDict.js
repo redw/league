@@ -111,4 +111,3 @@ var ModelDict = (function (_super) {
     return ModelDict;
 }(egret.HashObject));
 egret.registerClass(ModelDict,'ModelDict');
-//# sourceMappingURL=ModelDict.js.map

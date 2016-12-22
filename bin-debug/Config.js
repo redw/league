@@ -58,4 +58,3 @@ var Config = (function (_super) {
     return Config;
 }(egret.HashObject));
 egret.registerClass(Config,'Config');
-//# sourceMappingURL=Config.js.map

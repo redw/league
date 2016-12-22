@@ -6,7 +6,6 @@
 class FightRole extends egret.DisplayObjectContainer {
     private body:egret.MovieClip;
     private lifeBar:LifeBar;
-    private fightContainer:FightContainer;
     private triggerFrameMap:any;
 
     private curSkill:SkillConfig;
@@ -19,13 +18,19 @@ class FightRole extends egret.DisplayObjectContainer {
     public roleData:FightRoleData;
     public waiting:boolean = true;
     public zIndex:number = 0;
+    public fightContainer:FightContainer;
 
     public constructor(fightContainer:FightContainer, roleData:FightRoleData) {
         super();
+        this.active(fightContainer, roleData);
+        this.initRole();
+    }
+
+    public active(fightContainer:FightContainer, roleData:FightRoleData){
         this.fightContainer = fightContainer;
         this.roleData = roleData;
+        this.idle();
         egret.startTick(this.onTick, this);
-        this.initRole();
     }
 
     /**
@@ -508,6 +513,7 @@ class FightRole extends egret.DisplayObjectContainer {
             for (let i = frames.length; i--;) {
                 let funName = obj[frames[i]];
                 let triggerFrameArr = String(this.curSkill[frames[i]] || "").split(",");
+                triggerFrameArr = [triggerFrameArr[0]];
                 let triggerCount = triggerFrameArr.length;
                 for (let j = 0; j < triggerCount; j++) {
                     let triggerFrame = +triggerFrameArr[j];
@@ -563,6 +569,7 @@ class FightRole extends egret.DisplayObjectContainer {
             this.parent.removeChild(this);
         }
         this.body.stop();
+        FightRoleFactory.freeRole(this);
     }
 
     private static FRAME_EVENT_MAP:any = {

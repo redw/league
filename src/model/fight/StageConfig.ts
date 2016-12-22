@@ -8,7 +8,8 @@ class StageConfig {
     "id": number;
     "map":string;
 
-    public static getMonster(config:StageConfig){
+    public static getMonster(level:number){
+        let config:StageConfig = Config.StageData[level];
         let result:{id:number, pos:number, side:number}[] = [];
         const counts = config.monster_number.concat();
         const monsters = config.monster.concat();

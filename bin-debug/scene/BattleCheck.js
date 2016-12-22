@@ -92,4 +92,3 @@ var fight;
         return a.substr(0, 1) == b.substr(0, 1);
     }
 })(fight || (fight = {}));
-//# sourceMappingURL=BattleCheck.js.map

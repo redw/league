@@ -11,12 +11,16 @@ var FightRole = (function (_super) {
         this.isPlayingDamage = false;
         this.waiting = true;
         this.zIndex = 0;
-        this.fightContainer = fightContainer;
-        this.roleData = roleData;
-        egret.startTick(this.onTick, this);
+        this.active(fightContainer, roleData);
         this.initRole();
     }
     var d = __define,c=FightRole,p=c.prototype;
+    p.active = function (fightContainer, roleData) {
+        this.fightContainer = fightContainer;
+        this.roleData = roleData;
+        this.idle();
+        egret.startTick(this.onTick, this);
+    };
     /**
      * 构建角色
      */
@@ -505,6 +509,7 @@ var FightRole = (function (_super) {
             for (var i = frames_1.length; i--;) {
                 var funName = obj[frames_1[i]];
                 var triggerFrameArr = String(this.curSkill[frames_1[i]] || "").split(",");
+                triggerFrameArr = [triggerFrameArr[0]];
                 var triggerCount = triggerFrameArr.length;
                 for (var j = 0; j < triggerCount; j++) {
                     var triggerFrame = +triggerFrameArr[j];
@@ -557,6 +562,7 @@ var FightRole = (function (_super) {
             this.parent.removeChild(this);
         }
         this.body.stop();
+        FightRoleFactory.freeRole(this);
     };
     FightRole.createMovieClip = function (name) {
         if (FightRole.inst == null) {
@@ -575,4 +581,3 @@ var FightRole = (function (_super) {
     return FightRole;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightRole,'FightRole');
-//# sourceMappingURL=FightRole.js.map

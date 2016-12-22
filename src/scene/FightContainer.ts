@@ -87,7 +87,7 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.moveCount = 0;
         for (let i = 0; i < arr.length; i++) {
             let roleData = arr[i];
-            let role = new FightRole(this, roleData);
+            let role = FightRoleFactory.createRole(this, roleData);
             let side = roleData.side - 1;
             let pos = roleData.pos;
             this.roles[side][pos] = role;
@@ -145,7 +145,6 @@ class FightContainer extends egret.DisplayObjectContainer {
     private roleMoveComplete(){
         this.moveCount++;
         if (this.moveCount >= this.elements.length) {
-            console.log(this.moveCount, this.elements.length, "...");
             if (this.autoFight)
                 this.start();
         }

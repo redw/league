@@ -99,7 +99,7 @@ class Main extends egret.DisplayObjectContainer {
 
     private startStage(level:number){
         this.levelLabel.text = "stage " + level;
-        let monsterConfig = Config.FightConfig.monster.concat();
+        let monsterConfig = StageConfig.getMonster(level);
         let heroConfig = Config.FightConfig.hero.concat();
 
         this.myHeroArr = [];
@@ -107,11 +107,7 @@ class Main extends egret.DisplayObjectContainer {
             if (!!heroConfig[i])
                 this.myHeroArr.push({id:heroConfig[i], side:1, pos:i})
         }
-        this.monsterArr = [];
-        for (let i = 0; i < monsterConfig.length; i++) {
-            if (!!monsterConfig[i])
-                this.monsterArr.push({id:monsterConfig[i], side:2, pos:i})
-        }
+        this.monsterArr = StageConfig.getMonster(level);
 
         this.loadRes(this.myHeroArr, this.monsterArr);
     }

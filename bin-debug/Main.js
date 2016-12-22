@@ -73,18 +73,14 @@ var Main = (function (_super) {
     };
     p.startStage = function (level) {
         this.levelLabel.text = "stage " + level;
-        var monsterConfig = Config.FightConfig.monster.concat();
+        var monsterConfig = StageConfig.getMonster(level);
         var heroConfig = Config.FightConfig.hero.concat();
         this.myHeroArr = [];
         for (var i = 0; i < heroConfig.length; i++) {
             if (!!heroConfig[i])
                 this.myHeroArr.push({ id: heroConfig[i], side: 1, pos: i });
         }
-        this.monsterArr = [];
-        for (var i = 0; i < monsterConfig.length; i++) {
-            if (!!monsterConfig[i])
-                this.monsterArr.push({ id: monsterConfig[i], side: 2, pos: i });
-        }
+        this.monsterArr = StageConfig.getMonster(level);
         this.loadRes(this.myHeroArr, this.monsterArr);
     };
     p.loadRes = function (heroArr, monsterArr) {
@@ -134,4 +130,3 @@ var Main = (function (_super) {
     return Main;
 }(egret.DisplayObjectContainer));
 egret.registerClass(Main,'Main');
-//# sourceMappingURL=Main.js.map

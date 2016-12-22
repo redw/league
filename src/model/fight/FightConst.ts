@@ -68,9 +68,9 @@ module fight{
     export const LOG_FIGHT_WARN:number = 50;
     export const LOG_FIGHT_ERROR:number = 100;
 
-    export const FORE_GROUND_MOVE_TIME:number = 400;
+    export const FORE_GROUND_MOVE_TIME:number = 440;
     export const MIDDLE_GROUND_MOVE_TIME:number = 500;
-    export const BACK_GROUND_MOVE_TIME:number = 650;
+    export const BACK_GROUND_MOVE_TIME:number = 560;
     export const FORE_GROUND_MOVE_EASE:string = "quintInOut";
     export const MIDDLE_GROUND_MOVE_EASE:string = "quintInOut";
     export const BACK_GROUND_MOVE_EASE:string = "quintInOut";

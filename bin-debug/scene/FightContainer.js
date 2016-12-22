@@ -73,7 +73,7 @@ var FightContainer = (function (_super) {
         this.moveCount = 0;
         for (var i = 0; i < arr.length; i++) {
             var roleData = arr[i];
-            var role = new FightRole(this, roleData);
+            var role = FightRoleFactory.createRole(this, roleData);
             var side = roleData.side - 1;
             var pos = roleData.pos;
             this.roles[side][pos] = role;
@@ -127,7 +127,6 @@ var FightContainer = (function (_super) {
     p.roleMoveComplete = function () {
         this.moveCount++;
         if (this.moveCount >= this.elements.length) {
-            console.log(this.moveCount, this.elements.length, "...");
             if (this.autoFight)
                 this.start();
         }
@@ -352,4 +351,3 @@ var FightContainer = (function (_super) {
     return FightContainer;
 }(egret.DisplayObjectContainer));
 egret.registerClass(FightContainer,'FightContainer');
-//# sourceMappingURL=FightContainer.js.map
