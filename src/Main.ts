@@ -65,97 +65,14 @@ class Main extends egret.DisplayObjectContainer {
      * 创建游戏场景
      * Create a game scene
      */
-    private fightContainer;
-    private fightDropContainer;
-    private levelLabel:eui.Label;
-    private level = 1;
-    private myHeroArr;
-    private monsterArr;
+    private pveScene:PVEFightPanel;
 
     private createGameScene():void {
         Config.init();
 
-        this.fightContainer = new FightContainer();
-        this.addChild(this.fightContainer);
-
-        this.levelLabel = new eui.Label();
-        this.levelLabel.textAlign = "center";
-        this.levelLabel.width = 480;
-        this.levelLabel.y = 80;
-        this.addChild(this.levelLabel);
-
-        this.fightDropContainer = new FightDropContainer();
-        this.addChild(this.fightDropContainer);
-
-        this.addEventListener("fight_end", this.onFightEnd, this, true);
-        this.startStage(this.level);
-    }
-
-    private onFightEnd(){
-        this.level++;
-        this.startStage(this.level);
-    }
-
-    private startStage(level:number){
-        this.levelLabel.text = "stage " + level;
-        let monsterConfig = StageConfig.getMonster(level);
-        let heroConfig = Config.FightConfig.hero.concat();
-
-        this.myHeroArr = [];
-        for (let i = 0; i < heroConfig.length; i++) {
-            if (!!heroConfig[i])
-                this.myHeroArr.push({id:heroConfig[i], side:1, pos:i})
-        }
-        this.monsterArr = StageConfig.getMonster(level);
-
-        this.loadRes(this.myHeroArr, this.monsterArr);
-    }
-
-    private loadRes(heroArr:{id:number}[], monsterArr:{id:number}[]){
-        let resPath:string[] = [];
-        for (let i = 0; i < heroArr.length; i++) {
-            let heroConfig:RoleConfig = Config.HeroData[heroArr[i].id];
-            this.pushUniqueValue(heroConfig.resource, resPath);
-            let skill:string[] = [].concat(heroConfig.skill, heroConfig.begin_skill);
-            for (let j = 0; j < skill.length; j++) {
-                if (!!skill[j]) {
-                    let skillConfig = Config.SkillData[skill[j]];
-                    this.pushUniqueValue(skillConfig.scource_effect, resPath);
-                    this.pushUniqueValue(skillConfig.target_effect, resPath);
-                }
-            }
-        }
-        for (let i = 0; i < monsterArr.length; i++) {
-            let enemyConfig:RoleConfig = Config.EnemyData[monsterArr[i].id];
-            this.pushUniqueValue(enemyConfig.resource, resPath);
-            let skill:string[] = [].concat(enemyConfig.skill, enemyConfig.begin_skill);
-            for (let j = 0; j < skill.length; j++) {
-                if (!!skill[j]) {
-                    let skillConfig = Config.SkillData[skill[j]];
-                    this.pushUniqueValue(skillConfig.scource_effect, resPath);
-                    this.pushUniqueValue(skillConfig.target_effect, resPath);
-                }
-            }
-        }
-        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
-        RES.createGroup("scene" + this.level, resPath);
-        RES.loadGroup("scene" + this.level);
-    }
-
-    private pushUniqueValue(value:any, set:any[]) {
-        if (!!value) {
-            if (set.indexOf(value + "_png") < 0) {
-                set.push(value + "_png", value + "_json");
-            }
-        }
-    }
-
-    private loadResComplete(e:RES.ResourceEvent) {
-        if (e.groupName == "scene" + this.level) {
-            RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
-            this.fightContainer.startFight([].concat(this.myHeroArr, this.monsterArr), true, this.level);
-            this.fightDropContainer.startLevel();
-        }
+        this.pveScene = new PVEFightPanel();
+        this.addChild(this.pveScene);
+        this.pveScene.startLevel(1);
     }
 }
 

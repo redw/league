@@ -1105,41 +1105,6 @@
 			"name": "pvp_blood_white_png"
 		},
 		{
-			"url": "assets/scene/11_3.png",
-			"type": "image",
-			"name": "11_3_png"
-		},
-		{
-			"url": "assets/scene/12_1.png",
-			"type": "image",
-			"name": "12_1_png"
-		},
-		{
-			"url": "assets/scene/12_2.png",
-			"type": "image",
-			"name": "12_2_png"
-		},
-		{
-			"url": "assets/scene/13_1.png",
-			"type": "image",
-			"name": "13_1_png"
-		},
-		{
-			"url": "assets/scene/13_2.png",
-			"type": "image",
-			"name": "13_2_png"
-		},
-		{
-			"url": "assets/scene/13_3.png",
-			"type": "image",
-			"name": "13_3_png"
-		},
-		{
-			"url": "default.res.json",
-			"type": "json",
-			"name": "default.res_json"
-		},
-		{
 			"url": "config/fight_config.json",
 			"type": "json",
 			"name": "fight_config_json"

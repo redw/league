@@ -11,8 +11,8 @@ class PVEProspect extends PVEBackGround{
     }
 
     protected getSceneResourcePath(level:number){
-        let mapName = Config.StageData[level].map;
-        return "resource/assets/scene/" + mapName + "_" + 3 + ".png";
+        let sceneIndex:string = Config.StageData[level].map;
+        return "resource/assets/scene/" + sceneIndex + "_" + 3 + ".png";
     }
 
     // 缓动

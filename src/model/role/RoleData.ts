@@ -7,7 +7,7 @@ class RoleData {
     public magicDef:string;      // 魔法防御力
     public physicalAtk:string;   // 物理攻击力
     public physicalDef:string;   // 物理防御力
-    public curHP:string;		 // 当前血量
+    protected _curHP:string;     // 当前血量
     public maxHP:string;         // 最大血量
     public config:RoleConfig;    // 角色配置数据
 
@@ -17,8 +17,8 @@ class RoleData {
 
     public parse(obj:any, id:number) {
         this.id = obj.id || id;
-        this.level = obj["lv"] || 1;
-        this.starLevel = obj["star"] || 0;
+        this.level = obj["lv"] || 0;
+        this.starLevel = obj["star"] || 1;
         this.strengthenLevel = obj["enhanceLv"] || 0;
         let getPropFun = "";
         if (fight.isHero(this.id)) {
@@ -33,7 +33,7 @@ class RoleData {
         this.physicalDef = this[getPropFun](this.config.physical_def);
         this.magicAtk = this[getPropFun](this.config.magical_atk);
         this.magicDef =  this[getPropFun](this.config.magical_def);
-        this.curHP = obj.hp || this.maxHP;
+        this._curHP = obj.hp || this.maxHP;
     }
 
     public copy(roleData:RoleData) {
@@ -49,7 +49,7 @@ class RoleData {
             getPropFun = "getMonsterPropValue";
         }
         this.maxHP = this[getPropFun](this.config.hp);
-        this.curHP = roleData.curHP;
+        this._curHP = roleData.curHP;
         this.physicalAtk = this[getPropFun](this.config.physical_atk);
         this.physicalDef = this[getPropFun](this.config.physical_def);
         this.magicAtk = this[getPropFun](this.config.magical_atk);
@@ -69,6 +69,7 @@ class RoleData {
         // let heroLv:number = this.level;
         // let heroEnhanceLv:number = this.strengthenLevel;
         // let result = (value + paraC)*(Math.pow(paraA,heroLv-1))*(Math.pow(paraB,heroEnhanceLv));
+        // return result + "";
         return value + "";
     }
 
@@ -78,6 +79,15 @@ class RoleData {
     public isSkillActive(skillId:number|string){
         // TODO 技能是否激活
         return true;
+    }
+
+    public get curHP(){
+        return this._curHP;
+    }
+
+    public set curHP(value:string) {
+        this._curHP = value;
+        this._curHP = BigNum.clamp(this._curHP, 0, this.maxHP);
     }
 
     /**

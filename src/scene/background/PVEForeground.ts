@@ -22,8 +22,8 @@ class PVEForeground extends PVEBackGround{
     }
 
     protected getSceneResourcePath(level:number){
-        let mapName = Config.StageData[level].map;
-        return "resource/assets/scene/" + mapName + "_" + 1 + ".png";
+        let sceneIndex:string = Config.StageData[level].map;
+        return "resource/assets/scene/" + sceneIndex + "_" + 1 + ".png";
     }
 
     // 缓动

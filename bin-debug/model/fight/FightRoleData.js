@@ -56,7 +56,8 @@ var FightRoleData = (function (_super) {
         }
     );
     p.turnBegin = function () {
-        this.reduceBuff();
+        if (this.turnCount > 0)
+            this.reduceBuff();
         this.turnCount++;
         this.physicalAtk = BigNum.mul(this.physicalAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
         this.magicAtk = BigNum.mul(this.magicAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
@@ -67,27 +68,30 @@ var FightRoleData = (function (_super) {
      */
     p.getSkillId = function () {
         var arr = this.config.skill_trigger_order;
-        var result = arr[arr.length - 1];
+        var skillArr = arr.filter(function (value) { return value > 0; });
+        var result = skillArr[skillArr.length - 1];
         if (this.canSelectSkill) {
-            var len = arr.length;
+            var len = skillArr.length;
             for (var i = 0; i < len; ++i) {
-                var skillId = arr[i];
+                var skillId = skillArr[i];
                 var skillInfo = Config.SkillData[skillId];
-                var triggerId = skillInfo.trigger_chance || 0;
-                var triggerInfo = Config.TriggerChanceData[triggerId];
-                if (!triggerInfo) {
-                    fight.recordLog("\u6280\u80FD" + skillId + " \u89E6\u53D1\u4E32" + triggerId + " \u51FA\u9519\u4E86", 50);
-                }
-                else {
-                    var triggerArr = triggerInfo['type_' + this.triggerChanceType];
-                    if (!triggerArr) {
-                        fight.recordLog("\u4E32" + triggerId + " \u6CA1\u6709\u7C7B\u578B" + this.triggerChanceType, 50);
+                if (skillInfo) {
+                    var triggerId = skillInfo.trigger_chance;
+                    var triggerInfo = Config.TriggerChanceData[triggerId];
+                    if (!triggerInfo) {
+                        fight.recordLog("\u6280\u80FD" + skillId + " \u89E6\u53D1\u4E32" + triggerId + " \u51FA\u9519\u4E86", 50);
                     }
                     else {
-                        var totalSkillCount = triggerArr.length;
-                        if (triggerArr[(this.turnCount - 1) % totalSkillCount] == 1) {
-                            result = skillId;
-                            break;
+                        var triggerArr = triggerInfo['type_' + this.triggerChanceType];
+                        if (!triggerArr) {
+                            fight.recordLog("\u4E32" + triggerId + " \u6CA1\u6709\u7C7B\u578B" + this.triggerChanceType, 50);
+                        }
+                        else {
+                            var totalSkillCount = triggerArr.length;
+                            if (triggerArr[(this.turnCount - 1) % totalSkillCount] == 1) {
+                                result = skillId;
+                                break;
+                            }
                         }
                     }
                 }
@@ -208,7 +212,12 @@ var FightRoleData = (function (_super) {
     );
     // 回血
     p.backBlood = function () {
-        this.changeHP(BigNum.mul(this.maxHP, this.getBuffPlusValue(BuffTypeEnum.ADD_BLOOD)));
+        var addHP = BigNum.mul(this.maxHP, this.getBuffPlusValue(BuffTypeEnum.ADD_BLOOD));
+        if (BigNum.greater(fight.DIE_HP, addHP)) {
+            if (!this.isExistBuff(BuffTypeEnum.FORBIDDEN_ADD_BLOOD)) {
+                this.curHP = BigNum.add(this.curHP, addHP);
+            }
+        }
     };
     // 掉血(中毒后)
     p.loseBlood = function () {
@@ -218,23 +227,11 @@ var FightRoleData = (function (_super) {
             var hurt = BigNum.sub(buffs[i].magicAtk, this.magicDef);
             hurt = BigNum.mul(hurt, buffs[i].value);
             if (BigNum.greaterOrEqual(hurt, 0)) {
-                this.changeHP(BigNum.mul(hurt, -1));
+                this.curHP = BigNum.sub(this.curHP, hurt);
             }
             else {
                 console.warn("中毒后，伤害应该大于0");
             }
-        }
-    };
-    // 加血(最好要直接掉curHP)
-    p.changeHP = function (hp) {
-        if (hp > 0) {
-            if (!this.isExistBuff(BuffTypeEnum.FORBIDDEN_ADD_BLOOD)) {
-                this.curHP = BigNum.add(this.curHP, hp);
-                this.curHP = BigNum.min(this.curHP, this.maxHP);
-            }
-        }
-        else {
-            this.curHP = BigNum.add(this.curHP, hp);
         }
     };
     /**
@@ -285,7 +282,7 @@ var FightRoleData = (function (_super) {
      * @param type
      * @returns {number}
      */
-    // private getBuffIndexValue(type:number|string) {
+    // public getBuffIndexValue(type:number|string) {
     //     let result = 1;
     //     let buffs = this.buffInfo[type];
     //     let len = buffs ? buffs.length : 0;
@@ -322,7 +319,7 @@ var FightRoleData = (function (_super) {
                 this.magicDef = BigNum.mul(this.magicDef, value);
             }
             else if (type == BuffTypeEnum.LIFE) {
-                this.curHP = BigNum.mul(this.curHP, 1 + value);
+                this._curHP = BigNum.mul(this._curHP, 1 + value);
                 this.maxHP = BigNum.mul(this.maxHP, 1 + value);
             }
             else if (type == BuffTypeEnum.CHANGE_DODGE) {

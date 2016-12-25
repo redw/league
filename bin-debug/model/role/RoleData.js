@@ -7,8 +7,8 @@ var RoleData = (function () {
     var d = __define,c=RoleData,p=c.prototype;
     p.parse = function (obj, id) {
         this.id = obj.id || id;
-        this.level = obj["lv"] || 1;
-        this.starLevel = obj["star"] || 0;
+        this.level = obj["lv"] || 0;
+        this.starLevel = obj["star"] || 1;
         this.strengthenLevel = obj["enhanceLv"] || 0;
         var getPropFun = "";
         if (fight.isHero(this.id)) {
@@ -24,7 +24,7 @@ var RoleData = (function () {
         this.physicalDef = this[getPropFun](this.config.physical_def);
         this.magicAtk = this[getPropFun](this.config.magical_atk);
         this.magicDef = this[getPropFun](this.config.magical_def);
-        this.curHP = obj.hp || this.maxHP;
+        this._curHP = obj.hp || this.maxHP;
     };
     p.copy = function (roleData) {
         this.id = roleData.id;
@@ -40,7 +40,7 @@ var RoleData = (function () {
             getPropFun = "getMonsterPropValue";
         }
         this.maxHP = this[getPropFun](this.config.hp);
-        this.curHP = roleData.curHP;
+        this._curHP = roleData.curHP;
         this.physicalAtk = this[getPropFun](this.config.physical_atk);
         this.physicalDef = this[getPropFun](this.config.physical_def);
         this.magicAtk = this[getPropFun](this.config.magical_atk);
@@ -57,6 +57,7 @@ var RoleData = (function () {
         // let heroLv:number = this.level;
         // let heroEnhanceLv:number = this.strengthenLevel;
         // let result = (value + paraC)*(Math.pow(paraA,heroLv-1))*(Math.pow(paraB,heroEnhanceLv));
+        // return result + "";
         return value + "";
     };
     /**
@@ -66,6 +67,15 @@ var RoleData = (function () {
         // TODO 技能是否激活
         return true;
     };
+    d(p, "curHP"
+        ,function () {
+            return this._curHP;
+        }
+        ,function (value) {
+            this._curHP = value;
+            this._curHP = BigNum.clamp(this._curHP, 0, this.maxHP);
+        }
+    );
     d(p, "isHero"
         /**
          * 是否是英雄

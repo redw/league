@@ -143,8 +143,7 @@ module fight{
             egret.error(content);
         } else if (level >= LOG_FIGHT_WARN) {
             egret.warn(content);
-        }
-        else {
+        } else {
             egret.log(content);
         }
     }
@@ -194,6 +193,16 @@ module fight{
     }
 
     /**
+     * 随机技能触发串
+     * @returns {string|string|string|string|string}
+     */
+    export function randomSkillTriggerBunch(){
+        let bunch = ["a", "b", "c", "d", "e"];
+        let index = Math.floor(Math.random() * bunch.length);
+        return fight.TEST_BUNCH || bunch[index];
+    }
+
+    /**
      * 显示伤害,飘字等效果
      * @param parent
      * @param content
@@ -237,6 +246,7 @@ module fight{
     export function playSound(url:string){
         if (url){
             try {
+                // TODO 暂时不开放音效
                 // SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
             } catch (e) {
                 recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
@@ -246,14 +256,64 @@ module fight{
     }
 
     /**
-     * 生成角色
+     * 生成战斗角色数据
+     * @param obj   角色数据
+     * @param pos   角色位置
+     * @param side  角色所有边
+     * @returns {FightRoleData[]}
      */
-    export function createRole(){
-        // var factory = new egret.MovieClipDataFactory()
-        // let dataRes:any = RES.getRes(name + "_json");
-        // let textureRes:any = RES.getRes(name + "_png");
-        // factory.mcDataSet = dataRes;
-        // factory.texture = textureRes;
-        // return new egret.MovieClip(factory.generateMovieClipData(name));
+    export function generateFightHeroDataArr(obj:any[], pos:number[], side:number) {
+        let result:FightRoleData[] = [];
+        let keys = Object.keys(obj);
+        for (let i = 0; i < keys.length; i++) {
+            let roleData = new FightRoleData();
+            let key = keys[i];
+            roleData.parse(obj[key], +key);
+            roleData.side = side;
+            roleData.pos = 0;
+            for (let j = 0; !!pos && j < pos.length; j++) {
+                if (roleData.id == pos[j]) {
+                    roleData.pos = j;
+                    break;
+                }
+            }
+            result.push(roleData);
+        }
+        return result;
+    }
+
+    /**
+     * 获取战斗角色所需的资源
+     * @param roleDataArr
+     */
+    export function getFightNeedRes(roleDataArr:FightRoleData[]){
+        let resPath:string[] = [];
+        for (let i = 0; i < roleDataArr.length; i++) {
+            let roleData = roleDataArr[i];
+            let roleConfig:RoleConfig;
+            if (isHero(roleData.id)) {
+                roleConfig = Config.HeroData[roleData.id];
+            } else {
+                roleConfig = Config.EnemyData[roleData.id];
+            }
+            pushResToArr(roleConfig.resource, resPath);
+            let skill:string[] = [].concat(roleConfig.skill, roleConfig.begin_skill);
+            for (let j = 0; j < skill.length; j++) {
+                if (!!skill[j]) {
+                    let skillConfig = Config.SkillData[skill[j]];
+                    pushResToArr(skillConfig.scource_effect, resPath);
+                    pushResToArr(skillConfig.target_effect, resPath);
+                }
+            }
+        }
+        return resPath;
+    }
+
+    function pushResToArr(value:any, arr:any[]) {
+        if (!!value) {
+            if (arr.indexOf(value + "_png") < 0) {
+                arr.push(value + "_png", value + "_json");
+            }
+        }
     }
 }

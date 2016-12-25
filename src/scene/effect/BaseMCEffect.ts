@@ -1,5 +1,5 @@
 /**
- * Created by honghong on 2016/11/24.
+ * Created by hh on 2016/11/24.
  */
 class BaseMCEffect extends egret.DisplayObjectContainer {
     private mc:egret.MovieClip;
@@ -35,7 +35,7 @@ class BaseMCEffect extends egret.DisplayObjectContainer {
             this.frameBacks[curFrame]();
             delete this.frameBacks[curFrame];
         }
-        return true;
+        return false;
     }
 
     public set back(value:Function) {
@@ -64,11 +64,13 @@ class BaseMCEffect extends egret.DisplayObjectContainer {
                 this.frameBacks[key] || this.frameBacks[key]();
             }
         }
+        if (this.mc){
+            this.mc.removeEventListener(egret.Event.COMPLETE, this.dispose, this);
+            if (this.mc.parent)
+                this.mc.parent.removeChild(this.mc);
+            this.mc = null;
+        }
 
-        this.mc.removeEventListener(egret.Event.COMPLETE, this.dispose, this);
-        if (this.mc.parent)
-            this.mc.parent.removeChild(this.mc);
-        // this.mc = null;
         if (this.parent) {
             this.parent.removeChild(this);
         }

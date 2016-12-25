@@ -61,7 +61,8 @@ class FightRoleData extends RoleData {
     }
 
     public turnBegin(){
-        this.reduceBuff();
+        if (this.turnCount > 0)
+            this.reduceBuff();
         this.turnCount++;
         this.physicalAtk = BigNum.mul(this.physicalAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
         this.magicAtk = BigNum.mul(this.magicAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
@@ -73,25 +74,28 @@ class FightRoleData extends RoleData {
      */
     public getSkillId(){
         let arr = this.config.skill_trigger_order;
-        let result:number = arr[arr.length - 1];
+        let skillArr = arr.filter((value)=>{return value > 0});
+        let result:number = skillArr[skillArr.length - 1];
         if (this.canSelectSkill) {
-            const len = arr.length;
+            const len = skillArr.length;
             for (let i = 0 ; i < len ; ++i) {
-                let skillId = arr[i];
+                let skillId = skillArr[i];
                 let skillInfo = Config.SkillData[skillId];
-                let triggerId:string|number = skillInfo.trigger_chance || 0;
-                let triggerInfo = Config.TriggerChanceData[triggerId];
-                if (!triggerInfo) {
-                    fight.recordLog(`技能${skillId} 触发串${triggerId} 出错了`, 50);
-                } else {
-                    let triggerArr = triggerInfo['type_'+ this.triggerChanceType];
-                    if (!triggerArr) {
-                        fight.recordLog(`串${triggerId} 没有类型${this.triggerChanceType}`, 50);
+                if (skillInfo){
+                    let triggerId:string|number = skillInfo.trigger_chance;
+                    let triggerInfo = Config.TriggerChanceData[triggerId];
+                    if (!triggerInfo) {
+                        fight.recordLog(`技能${skillId} 触发串${triggerId} 出错了`, 50);
                     } else {
-                        let totalSkillCount = triggerArr.length;
-                        if (triggerArr[(this.turnCount - 1) % totalSkillCount] == 1) {
-                            result = skillId;
-                            break;
+                        let triggerArr = triggerInfo['type_'+ this.triggerChanceType];
+                        if (!triggerArr) {
+                            fight.recordLog(`串${triggerId} 没有类型${this.triggerChanceType}`, 50);
+                        } else {
+                            let totalSkillCount = triggerArr.length;
+                            if (triggerArr[(this.turnCount - 1) % totalSkillCount] == 1) {
+                                result = skillId;
+                                break;
+                            }
                         }
                     }
                 }
@@ -205,7 +209,12 @@ class FightRoleData extends RoleData {
 
     // 回血
     public backBlood() {
-        this.changeHP(BigNum.mul(this.maxHP, this.getBuffPlusValue(BuffTypeEnum.ADD_BLOOD)));
+        var addHP = BigNum.mul(this.maxHP, this.getBuffPlusValue(BuffTypeEnum.ADD_BLOOD));
+        if (BigNum.greater(fight.DIE_HP, addHP)) {
+            if (!this.isExistBuff(BuffTypeEnum.FORBIDDEN_ADD_BLOOD)) {
+                this.curHP = BigNum.add(this.curHP, addHP);
+            }
+        }
     }
 
     // 掉血(中毒后)
@@ -216,23 +225,10 @@ class FightRoleData extends RoleData {
             let hurt = BigNum.sub(buffs[i].magicAtk, this.magicDef);
             hurt = BigNum.mul(hurt, buffs[i].value);
             if (BigNum.greaterOrEqual(hurt, 0)) {
-                this.changeHP(BigNum.mul(hurt,  -1));
+                this.curHP = BigNum.sub(this.curHP, hurt);
             } else {
                 console.warn("中毒后，伤害应该大于0");
             }
-        }
-    }
-
-    // 加血(最好要直接掉curHP)
-    public changeHP(hp:any){
-        if (hp > 0) {
-            if (!this.isExistBuff(BuffTypeEnum.FORBIDDEN_ADD_BLOOD)) {
-                this.curHP = BigNum.add(this.curHP, hp);
-                this.curHP = BigNum.min(this.curHP, this.maxHP);
-            }
-        } else {
-            this.curHP = BigNum.add(this.curHP, hp);
-            // this.curHP += hp;
         }
     }
 
@@ -242,7 +238,7 @@ class FightRoleData extends RoleData {
      * @param type
      * @returns {boolean}
      */
-    private isExistBuff(type:number|string) {
+    public isExistBuff(type:number|string) {
         let result = false;
         if (this.buffInfo[type]) {
             result = this.buffInfo[type].length > 0;
@@ -272,7 +268,7 @@ class FightRoleData extends RoleData {
      * @param type
      * @returns {number}
      */
-    private getBuffMultiValue(type:number|string) {
+    public getBuffMultiValue(type:number|string) {
         let result = 1;
         let buffs = this.buffInfo[type];
         let len = buffs ? buffs.length : 0;
@@ -287,7 +283,7 @@ class FightRoleData extends RoleData {
      * @param type
      * @returns {number}
      */
-    // private getBuffIndexValue(type:number|string) {
+    // public getBuffIndexValue(type:number|string) {
     //     let result = 1;
     //     let buffs = this.buffInfo[type];
     //     let len = buffs ? buffs.length : 0;
@@ -321,7 +317,7 @@ class FightRoleData extends RoleData {
             } else if (type == BuffTypeEnum.MAGIC_DEF){
                 this.magicDef = BigNum.mul(this.magicDef, value);
             } else if (type == BuffTypeEnum.LIFE) {
-                this.curHP = BigNum.mul(this.curHP, 1 + value);
+                this._curHP = BigNum.mul(this._curHP, 1 + value);
                 this.maxHP = BigNum.mul(this.maxHP, 1 + value);
             } else if (type == BuffTypeEnum.CHANGE_DODGE) {
                 this.dodgeChance = Math.min(this.dodgeChance + value, 1);

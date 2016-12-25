@@ -1,0 +1,197 @@
+{
+	"101": {
+		"point": 30,
+		"reward_1": [
+			"3",
+			"0",
+			"100"
+		],
+		"id": 101,
+		"off": 8,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 4
+	},
+	"102": {
+		"point": 30,
+		"reward_1": [
+			"2",
+			"0",
+			"200"
+		],
+		"id": 102,
+		"off": 8,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 4
+	},
+	"103": {
+		"point": 30,
+		"reward_1": [
+			"3",
+			"0",
+			"101"
+		],
+		"id": 103,
+		"off": 8,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 4
+	},
+	"104": {
+		"point": 30,
+		"reward_1": [
+			"2",
+			"0",
+			"201"
+		],
+		"id": 104,
+		"off": 7,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 3.5
+	},
+	"201": {
+		"point": 60,
+		"reward_1": [
+			"2",
+			"0",
+			"202"
+		],
+		"id": 201,
+		"off": 6,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 3
+	},
+	"202": {
+		"point": 60,
+		"reward_1": [
+			"3",
+			"0",
+			"103"
+		],
+		"id": 202,
+		"off": 6,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 3
+	},
+	"203": {
+		"point": 60,
+		"reward_1": [
+			"2",
+			"0",
+			"203"
+		],
+		"id": 203,
+		"off": 6,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 3
+	},
+	"204": {
+		"point": 60,
+		"reward_1": [
+			"3",
+			"0",
+			"104"
+		],
+		"id": 204,
+		"off": 5,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 2.5
+	},
+	"205": {
+		"point": 60,
+		"reward_1": [
+			"2",
+			"0",
+			"204"
+		],
+		"id": 205,
+		"off": 5,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 2.5
+	},
+	"302": {
+		"point": 120,
+		"reward_1": [
+			"2",
+			"0",
+			"205"
+		],
+		"id": 302,
+		"off": 3,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 1.5
+	},
+	"303": {
+		"point": 120,
+		"reward_1": [
+			"3",
+			"0",
+			"106"
+		],
+		"id": 303,
+		"off": 3,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 1.5
+	},
+	"304": {
+		"point": 120,
+		"reward_1": [
+			"2",
+			"0",
+			"206"
+		],
+		"id": 304,
+		"off": 2,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 1
+	},
+	"105": {
+		"point": 30,
+		"reward_1": [
+			"3",
+			"0",
+			"102"
+		],
+		"id": 105,
+		"off": 7,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 3.5
+	},
+	"301": {
+		"point": 120,
+		"reward_1": [
+			"3",
+			"0",
+			"105"
+		],
+		"id": 301,
+		"off": 3,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 1.5
+	},
+	"305": {
+		"point": 120,
+		"reward_1": [
+			"3",
+			"0",
+			"107"
+		],
+		"id": 305,
+		"off": 2,
+		"point_diamond": 150,
+		"diamond": 300,
+		"point_off": 1
+	}
+}

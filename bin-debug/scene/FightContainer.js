@@ -9,8 +9,8 @@ var FightContainer = (function (_super) {
         if (type === void 0) { type = FightTypeEnum.PVE; }
         _super.call(this);
         this.meanWhileStep = 1;
-        this.leftRoles = Array(9);
-        this.rightRoles = Array(9);
+        this.leftRoles = Array(fight.ROLE_UP_LIMIT);
+        this.rightRoles = Array(fight.ROLE_UP_LIMIT);
         this.roles = [this.leftRoles, this.rightRoles];
         this.state = FightStateEnum.Wait;
         this.type = FightTypeEnum.PVE;
@@ -19,23 +19,35 @@ var FightContainer = (function (_super) {
         this.fightSteps = [];
         this.elements = [];
         this.autoFight = false;
+        this.bunch = "a";
         this.moveCount = 0;
         this.type = type;
+        var offY = fight.PVE_SCENE_OFF;
+        ;
         if (type == FightTypeEnum.PVE) {
             this.prospectLayer = new PVEProspect();
+            this.prospectLayer.y = offY;
             this.addChild(this.prospectLayer);
             this.middleGroundLayer = new PVEMiddleGround();
+            this.middleGroundLayer.y = offY;
             this.addChild(this.middleGroundLayer);
         }
+        else {
+            offY = fight.PVP_SCENE_OFF;
+        }
         this.roleLayer = new eui.Group();
+        this.roleLayer.y = offY;
         this.addChild(this.roleLayer);
         this.damageEffLayer = new eui.Group();
+        this.damageEffLayer.y = offY;
         this.addChild(this.damageEffLayer);
         if (type == FightTypeEnum.PVE) {
             this.foregroundLayer = new PVEForeground();
+            this.foregroundLayer.y = offY;
             this.addChild(this.foregroundLayer);
         }
         this.fontEffLayer = new eui.Group();
+        this.fontEffLayer.y = offY;
         this.addChild(this.fontEffLayer);
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.addEventListener("role_die", this.onRoleDie, this, true);
@@ -43,15 +55,16 @@ var FightContainer = (function (_super) {
     }
     var d = __define,c=FightContainer,p=c.prototype;
     /**
-     * 开始战斗
+     * 战斗布署
      * @param data  角色的数据
-     * @param auto
-     * @param level
+     * @param auto  是否自己开战(只对pve有用)
+     * @param level 场景等级(只对pve有用)
      */
-    p.startFight = function (data, auto, level) {
+    p.fightDeployment = function (data, auto, level) {
         if (auto === void 0) { auto = false; }
         if (level === void 0) { level = 1; }
         this.autoFight = auto;
+        this.bunch = fight.randomSkillTriggerBunch();
         this.elements = [];
         var arr = data.concat();
         for (var i = 0; i < arr.length; i++) {
@@ -65,6 +78,10 @@ var FightContainer = (function (_super) {
             this.middleGroundLayer.level = level;
             this.prospectLayer.level = level;
         }
+        else {
+            this.reset();
+            this.tweenRemoveRoleComplete();
+        }
         this.level = level;
     };
     p.addRoles = function (elements, withTween) {
@@ -73,11 +90,11 @@ var FightContainer = (function (_super) {
         this.moveCount = 0;
         for (var i = 0; i < arr.length; i++) {
             var roleData = arr[i];
-            var role = FightRoleFactory.createRole(this, roleData);
+            var role = new FightRole(this, roleData);
             var side = roleData.side - 1;
             var pos = roleData.pos;
             this.roles[side][pos] = role;
-            if (!!withTween) {
+            if (withTween) {
                 var tox = role.x;
                 if (roleData.side == FightSideEnum.LEFT_SIDE) {
                     role.x = fight.WIDTH * -0.5 + role.x;
@@ -85,7 +102,7 @@ var FightContainer = (function (_super) {
                 else {
                     role.x = fight.WIDTH * 0.5 + role.x;
                 }
-                egret.Tween.get(role).to({ x: tox }, 500).
+                egret.Tween.get(role).to({ x: tox }, fight.MIDDLE_GROUND_MOVE_TIME).
                     call(function () { _this.roleMoveComplete(); }, this);
             }
         }
@@ -99,7 +116,7 @@ var FightContainer = (function (_super) {
                 zIndex++;
             }
             if (this.roles[1][index]) {
-                this.roles[0][index].zIndex = zIndex;
+                this.roles[1][index].zIndex = zIndex;
                 this.roleLayer.addChild(this.roles[1][index]);
                 zIndex++;
             }
@@ -108,7 +125,11 @@ var FightContainer = (function (_super) {
             this.start();
         }
     };
-    p.start = function () {
+    /**
+     * 开始战斗
+     * @param steps
+     */
+    p.start = function (steps) {
         if (!this.elements || this.elements.length <= 0) {
             console.log("请添加元素后，再开始战斗");
             return;
@@ -116,11 +137,15 @@ var FightContainer = (function (_super) {
         if (this.state != FightStateEnum.Fight) {
             this.state = FightStateEnum.Fight;
             this.autoFight = false;
-            this.dataGenerator = new FightProcessGenerator();
-            this.dataGenerator.addSceneDataVec(this.elements.concat());
-            this.fightSteps = this.dataGenerator.generateData();
+            if (steps) {
+                this.fightSteps = steps.concat();
+            }
+            else {
+                this.dataGenerator = new FightProcessGenerator();
+                this.dataGenerator.addSceneDataVec(this.elements.concat());
+                this.fightSteps = this.dataGenerator.generateData(this.bunch);
+            }
             this.steps = this.fightSteps.concat();
-            fight.recordLog(this.steps, fight.LOG_FIGHT_INFO);
             this.startStep();
         }
     };
@@ -147,8 +172,10 @@ var FightContainer = (function (_super) {
         }
     };
     p.onRoleDataUpdate = function () {
-        this.fightSteps = this.dataGenerator.updateGenerateData();
-        this.steps = this.fightSteps.concat();
+        if (this.type == FightTypeEnum.PVE) {
+            this.fightSteps = this.dataGenerator.updateGenerateData();
+            this.steps = this.fightSteps.concat();
+        }
     };
     p.doStep = function (data, delay) {
         var startRole = this.getRoleByStr(data.pos);
@@ -160,7 +187,7 @@ var FightContainer = (function (_super) {
         if (this.meanWhileStep <= 0)
             egret.setTimeout(function () {
                 _this.startStep();
-            }, null, 10);
+            }, null, fight.STEP_DELAY_TIME);
     };
     p.onRoleDie = function (e) {
         var role = e.data;
@@ -207,6 +234,9 @@ var FightContainer = (function (_super) {
     p.getStepCount = function () {
         return this.steps.length;
     };
+    p.getTriggerChanceType = function () {
+        return this.bunch;
+    };
     /**
      * 得到step
      */
@@ -222,7 +252,7 @@ var FightContainer = (function (_super) {
             result[i] = 0;
         }
         for (var i = 0; i < this.elements.length; i++) {
-            if (this.elements[i].isHero) {
+            if (!this.elements[i].isHero) {
                 var pos = this.elements[i].pos;
                 result[pos] = +(this.elements[i].id);
             }
@@ -302,6 +332,8 @@ var FightContainer = (function (_super) {
         }
         if (fontEff) {
             this.fontEffLayer.addChild(fontEff);
+            fontEff.x = content.x || 0;
+            fontEff.y = content.y || 0;
             fontEff.show(content);
         }
     };
@@ -345,6 +377,7 @@ var FightContainer = (function (_super) {
     };
     p.dispose = function () {
         this.reset();
+        this.removeEventListener(ContextEvent.ROLE_DATA_UPDATE, this.onRoleDataUpdate, this);
         this.removeEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.removeEventListener("role_die", this.onRoleDie, this, true);
     };

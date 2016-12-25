@@ -1,7 +1,7 @@
 /**
- * Created by hh on 16/12/23.
+ * Created by Administrator on 2016/12/23.
  */
-class FightRoleFactory {
+class FightRoleFactory{
     private static map = {};
 
     public static createRole(fightContainer:FightContainer, roleData:FightRoleData) {
@@ -18,9 +18,9 @@ class FightRoleFactory {
     }
 
     public static freeRole(role:FightRole) {
-        if (!FightRoleFactory.map[role.roleData.config.id]) {
-            FightRoleFactory.map[role.roleData.config.id] = [];
+        if (!FightRoleFactory.map[role.roleData.id]) {
+            FightRoleFactory.map[role.roleData.id] = [];
         }
-        FightRoleFactory.map[role.roleData.config.id].push(role);
+        FightRoleFactory.map[role.roleData.id].push(role);
     }
 }

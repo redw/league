@@ -120,7 +120,7 @@ var FightRole = (function (_super) {
                 for (var i = 0; i < len; i++) {
                     var targetEff = new BaseMCEffect(this.curSkill.target_effect, i);
                     targetEff.back = function (index) {
-                        _this.updateTarget(_this.targets[index], true);
+                        _this.addHPEff(_this.targets[index]);
                         count_1++;
                         if (count_1 >= len) {
                             _this.nextStep();
@@ -137,15 +137,17 @@ var FightRole = (function (_super) {
     };
     p.startDamage = function (ratio, updateHP) {
         if (this.curSkill) {
-            this.isTriggerDamage = true;
             var actionType = this.curSkill.action_type;
             if (actionType == fight.ATTACK_ACTION_AREA) {
+                this.isTriggerDamage = true;
                 this.showAreaEff();
             }
             else if (actionType == fight.ATTACK_ACTION_MISSLE) {
+                this.isTriggerDamage = true;
                 this.showBulletEff();
             }
             else if (actionType == fight.ATTACK_ACTION_TURN) {
+                this.isTriggerDamage = true;
                 this.showTurnEff();
             }
             else {
@@ -188,12 +190,12 @@ var FightRole = (function (_super) {
         var _this = this;
         if (this.checkDamageEff()) {
             this.isPlayingDamage = true;
-            var damageEff = new BaseMCEffect(this.curSkill.scource_effect, null, false);
+            var damageEff_1 = new BaseMCEffect(this.curSkill.scource_effect, null, false);
             var frameArr = String(this.curSkill.effect_damage_frame || "").split(",");
             var total_2 = frameArr.length;
             var count_2 = 0;
             for (var i = 0; i < total_2; i++) {
-                damageEff.registerFrameBack(function () {
+                damageEff_1.registerFrameBack(function () {
                     fight.playSound(_this.curSkill.scource_effect);
                     count_2++;
                     if (count_2 >= total_2) {
@@ -204,30 +206,32 @@ var FightRole = (function (_super) {
                     }
                 }, +frameArr[i]);
             }
-            var offPoint = this.roleData.config.shoot_point || [0, 0];
-            damageEff.x = this.x + (Number(offPoint.x) || 0);
-            damageEff.y = this.y - this.roleData.config.modle_height * 0.5 + (Number(offPoint.y) || 0);
+            var offPoint = this.curSkill.shoot_point || [0, 0];
+            damageEff_1.x = this.x + (Number(offPoint[0]) || 0);
+            damageEff_1.y = this.y - this.roleData.config.modle_height * 0.5 + (Number(offPoint[1]) || 0);
             var targetPoint = new egret.Point();
             var outPoint = new egret.Point();
             if (this.roleData.side == FightSideEnum.LEFT_SIDE) {
                 targetPoint.x = 360;
                 targetPoint.y = 330;
                 outPoint.x = 580;
-                damageEff.scaleX = -1;
+                damageEff_1.scaleX = -1;
             }
             else {
                 targetPoint.x = 120;
                 targetPoint.y = 330;
                 outPoint.x = -100;
-                damageEff.scaleX = 1;
+                damageEff_1.scaleX = 1;
             }
-            var angle = Math.atan2(targetPoint.y - damageEff.y, targetPoint.x - damageEff.x);
-            damageEff.rotation = angle * 180 / Math.PI;
-            outPoint.y = damageEff.y + (targetPoint.x - damageEff.x) * Math.tan(angle);
-            egret.Tween.get(damageEff).to({ x: outPoint.x, y: outPoint.y }, 500).call(function () {
+            var angle = Math.atan2(targetPoint.y - damageEff_1.y, targetPoint.x - damageEff_1.x);
+            damageEff_1.rotation = angle * 180 / Math.PI;
+            outPoint.y = damageEff_1.y + (targetPoint.x - damageEff_1.x) * Math.tan(angle);
+            egret.Tween.get(damageEff_1).to({ x: outPoint.x, y: outPoint.y }, 500).call(function () {
+                if (damageEff_1.parent)
+                    damageEff_1.parent.removeChild(damageEff_1);
                 _this.isPlayingDamage = false;
             }, this);
-            this.fightContainer.showDamageEff(damageEff);
+            this.fightContainer.showDamageEff(damageEff_1);
         }
     };
     p.showBulletEff = function () {
@@ -250,9 +254,9 @@ var FightRole = (function (_super) {
                 var _loop_1 = function(i) {
                     var target = self_1.targets[i];
                     var damageEff = new BaseMCEffect(damageEffSource_1, null, false);
-                    var offPoint = self_1.roleData.config.shoot_point || [0, 0];
-                    damageEff.x = self_1.x + (Number(offPoint.x) || 0);
-                    damageEff.y = self_1.y - self_1.roleData.config.modle_height * 0.5 + (Number(offPoint.y) || 0);
+                    var offPoint = self_1.curSkill.shoot_point || [0, 0];
+                    damageEff.x = self_1.x + (Number(offPoint[0]) || 0);
+                    damageEff.y = self_1.y - self_1.roleData.config.modle_height * 0.5 + (Number(offPoint[1]) || 0);
                     var tox = target.x;
                     var toy = target.y - (target.roleData.config.modle_height * 0.5);
                     egret.Tween.get(damageEff).to({ x: tox, y: toy }, fight.BULLET_RUN_TIME).call(function () {
@@ -281,6 +285,7 @@ var FightRole = (function (_super) {
         if (!this.curSkill || !this.curSkill.scource_effect) {
             fight.recordLog("\u6280\u80FD" + this.curSkill.id + "\u8D44\u6E90source_effect\u6CA1\u914D\u7F6E", fight.LOG_FIGHT_WARN);
             result = false;
+            this.triggerFrameMap = {};
             this.updateTargets();
             this.nextStep();
         }
@@ -308,7 +313,7 @@ var FightRole = (function (_super) {
                     target.addChild(targetEff);
                 }
                 if (isDodge) {
-                    this.fightContainer.flyTxt({ str: "闪避", x: this.x, y: this.y + this.roleData.config.modle_height * -1 }, FightFontEffEnum.SYSTEM);
+                    this.fightContainer.flyTxt({ str: "闪避", x: target.x, y: target.y + target.roleData.config.modle_height * -1 }, FightFontEffEnum.SYSTEM);
                 }
                 else {
                     if (isBlock) {
@@ -341,11 +346,12 @@ var FightRole = (function (_super) {
                         }
                     }
                 }
+                console.log(damage, updateHP);
                 if (updateHP) {
                     target.updateHP(hitInfo.hp);
                 }
                 else {
-                    target.updateHP(BigNum.sub(target.roleData.curHP, damage));
+                    target.roleData.curHP = BigNum.sub(target.roleData.curHP, damage);
                 }
             }
         }
@@ -356,7 +362,7 @@ var FightRole = (function (_super) {
             var point = fight.getNearFightPoint(this, this.targets);
             var tween = egret.Tween.get(this);
             var frameCount = this.curSkill.damage_frame - this.curSkill.jump_frame;
-            var frameRate = 24;
+            var frameRate = this.body.frameRate || 24;
             var time = frameCount / frameRate * 1000;
             tween.to({ x: point.x, y: point.y }, time);
         }
@@ -403,8 +409,8 @@ var FightRole = (function (_super) {
     p.attack = function () {
         if (this.curSkill) {
             this.waiting = false;
-            this.isPlayingAction = true;
             this.fightContainer.bringRoleToSelfZPos(this, this.targets);
+            this.isPlayingAction = true;
             if (fight.playFrameLabel(this.curSkill.action, this.body, 1, this.roleData.config.resource)) {
                 this.body.addEventListener(egret.Event.COMPLETE, this.attackComplete, this);
             }
@@ -459,17 +465,14 @@ var FightRole = (function (_super) {
             role.updateHP(this.reportItem.target[i].hp);
         }
     };
-    p.updateTarget = function (role, isAddHPEff) {
-        if (isAddHPEff === void 0) { isAddHPEff = false; }
+    p.addHPEff = function (role) {
         var result = false;
         for (var i = 0; i < this.reportItem.target.length; i++) {
             if (this.reportItem.target[i].pos == fight.getRolePosDes(role)) {
                 result = true;
-                if (isAddHPEff) {
-                    var off = BigNum.sub(this.reportItem.target[i].hp, role.roleData.curHP);
-                    if (BigNum.greater(off, 0)) {
-                        this.fightContainer.flyTxt({ str: MathUtil.easyNumber(off), x: role.x, y: role.y + role.roleData.config.modle_height * -1 }, FightFontEffEnum.ADD_HP);
-                    }
+                var off = BigNum.sub(this.reportItem.target[i].hp, role.roleData.curHP);
+                if (BigNum.greater(off, 0)) {
+                    this.fightContainer.flyTxt({ str: MathUtil.easyNumber(off), x: role.x, y: role.y + role.roleData.config.modle_height * -1 }, FightFontEffEnum.ADD_HP);
                 }
                 role.updateHP(this.reportItem.target[i].hp);
                 break;
@@ -479,24 +482,22 @@ var FightRole = (function (_super) {
     };
     /**
      * 更新对象血量
-     * @param hurt
+     * @param hp
      * @param needDispatcherEvent
      * @returns {boolean}
      */
-    p.updateHP = function (hurt, needDispatcherEvent) {
+    p.updateHP = function (hp, needDispatcherEvent) {
         var _this = this;
         if (needDispatcherEvent === void 0) { needDispatcherEvent = true; }
         var die = false;
-        this.roleData.curHP = hurt;
-        this.roleData.curHP = BigNum.max(0, this.roleData.curHP);
+        this.roleData.curHP = hp;
         var ratio = +(BigNum.div(this.roleData.curHP, this.roleData.maxHP)) || 0;
         this.lifeBar.setRatio(ratio);
-        if (BigNum.greaterOrEqual(0, this.roleData.curHP)) {
-            fight.recordLog("\u89D2\u8272" + fight.getRolePosDes(this) + "\u6B7B\u4EA1", fight.LOG_FIGHT_ROLE_DIE);
+        if (BigNum.greater(fight.DIE_HP, this.roleData.curHP)) {
             if (needDispatcherEvent) {
                 egret.setTimeout(function () {
                     _this.dispatchEventWith("role_die", true, _this);
-                }, this, 1000);
+                }, this, 500);
             }
             die = true;
         }
@@ -510,7 +511,6 @@ var FightRole = (function (_super) {
             for (var i = frames_1.length; i--;) {
                 var funName = obj[frames_1[i]];
                 var triggerFrameArr = String(this.curSkill[frames_1[i]] || "").split(",");
-                triggerFrameArr = [triggerFrameArr[0]];
                 var triggerCount = triggerFrameArr.length;
                 for (var j = 0; j < triggerCount; j++) {
                     var triggerFrame = +triggerFrameArr[j];
@@ -528,7 +528,7 @@ var FightRole = (function (_super) {
                     }
                 }
             }
-            var oneStepComplete = this.isIdle;
+            var oneStepComplete = this.waiting;
             for (var i = 0; i < this.targets.length; i++) {
                 oneStepComplete = (oneStepComplete && (this.targets[i].waiting || !this.targets[i].parent));
             }
@@ -563,7 +563,6 @@ var FightRole = (function (_super) {
             this.parent.removeChild(this);
         }
         this.body.stop();
-        FightRoleFactory.freeRole(this);
     };
     FightRole.createMovieClip = function (name) {
         if (FightRole.inst == null) {
