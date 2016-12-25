@@ -54,6 +54,7 @@ var game_file_list = [
 	"bin-debug/scene/effect/FontOtherEff.js",
 	"bin-debug/scene/effect/FontPhysicalAtkEff.js",
 	"bin-debug/scene/effect/FontSystemEff.js",
+	"bin-debug/scene/effect/MCEff.js",
 	"bin-debug/utils/BigNum.js",
 	"bin-debug/utils/DisplayUtil.js",
 	"bin-debug/utils/MathUtils.js",

@@ -308,7 +308,7 @@ var FightRole = (function (_super) {
                 var isBlock = hitInfo.block;
                 var isDodge = hitInfo.dodge;
                 if (!!this.curSkill.target_effect) {
-                    var targetEff = new BaseMCEffect(this.curSkill.target_effect);
+                    var targetEff = new MCEff(this.curSkill.target_effect);
                     targetEff.y = (target.roleData.config.modle_height) * -0.5;
                     target.addChild(targetEff);
                 }

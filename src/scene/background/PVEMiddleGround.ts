@@ -1,8 +1,5 @@
 /**
- * Created by Administrator on 2016/12/21.
- */
-/**
- * PVE 中景
+ * Created by hh on 2016/12/21.
  */
 class PVEMiddleGround extends PVEBackGround {
 

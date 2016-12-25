@@ -1,8 +1,5 @@
 /**
- * Created by Administrator on 2016/12/21.
- */
-/**
- * PVE 近景
+ * Created by hh on 2016/12/21.
  */
 var PVEForeground = (function (_super) {
     __extends(PVEForeground, _super);

@@ -317,7 +317,7 @@ class FightRole extends egret.DisplayObjectContainer {
                 let isBlock = hitInfo.block;
                 let isDodge = hitInfo.dodge;
                 if (!!this.curSkill.target_effect) {
-                    let targetEff = new BaseMCEffect(this.curSkill.target_effect);
+                    let targetEff = new MCEff(this.curSkill.target_effect);
                     targetEff.y = (target.roleData.config.modle_height) * -0.5;
                     target.addChild(targetEff);
                 }
@@ -494,7 +494,7 @@ class FightRole extends egret.DisplayObjectContainer {
      */
     public updateHP(hp:string, needDispatcherEvent:boolean=true){
         let die:boolean = false;
-        this.roleData.curHP = hp;
+        this.roleData.curHP = hp
         let ratio = +(BigNum.div(this.roleData.curHP, this.roleData.maxHP)) || 0;
         this.lifeBar.setRatio(ratio);
         if (BigNum.greater(fight.DIE_HP, this.roleData.curHP)) {

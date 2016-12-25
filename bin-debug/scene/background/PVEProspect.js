@@ -1,8 +1,5 @@
 /**
- * Created by Administrator on 2016/12/21.
- */
-/**
- * PVE 远景
+ * Created by hh on 2016/12/21.
  */
 var PVEProspect = (function (_super) {
     __extends(PVEProspect, _super);
