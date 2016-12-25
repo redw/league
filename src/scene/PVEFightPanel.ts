@@ -61,7 +61,6 @@ class PVEFightPanel extends egret.DisplayObjectContainer {
         this.myHeroArr = fight.dataModel.getMyPVEHeroArr();
         this.monsterArr = StageConfig.getMonster(Config.StageData[level]);
         let resGroupRes = fight.getFightNeedRes([].concat(this.myHeroArr, this.monsterArr));
-        console.log(resGroupRes, "...");
         RES.createGroup("scene" + this.level, resGroupRes);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
         RES.loadGroup("scene" + this.level);
