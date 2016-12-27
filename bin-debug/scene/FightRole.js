@@ -7,6 +7,7 @@ var FightRole = (function (_super) {
     __extends(FightRole, _super);
     function FightRole(fightContainer, roleData) {
         _super.call(this);
+        this.isDead = false;
         this.isTriggerDamage = false;
         this.isPlayingDamage = false;
         this.isPlayingAction = false;
@@ -21,18 +22,23 @@ var FightRole = (function (_super) {
         this.roleData = roleData;
         egret.startTick(this.onTick, this);
     };
-    /**
-     * 构建角色
-     */
     p.initRole = function () {
         var shadowBitmap = new egret.Bitmap(RES.getRes("role_shadow_png"));
         shadowBitmap.y = -20;
         shadowBitmap.x = shadowBitmap.width * -0.5;
         this.addChild(shadowBitmap);
+        this.buffContainer0 = new egret.DisplayObjectContainer();
+        this.addChild(this.buffContainer0);
         this.body = FightRole.createMovieClip(this.roleData.config.resource + "");
         this.addChild(this.body);
         this.body.scaleX = (this.roleData.side == FightSideEnum.RIGHT_SIDE) ? 1 : -1;
-        this.lifeBar = new LifeBar(this.roleData.isHero);
+        this.buffContainer1 = new egret.DisplayObjectContainer();
+        this.buffContainer1.y = -0.5 * this.roleData.config.modle_height;
+        this.addChild(this.buffContainer1);
+        this.buffContainer2 = new egret.DisplayObjectContainer();
+        this.buffContainer2.y = -this.roleData.config.modle_height;
+        this.addChild(this.buffContainer2);
+        this.lifeBar = new BloodBar(this.roleData.side);
         this.lifeBar.x = -30;
         this.lifeBar.y = -(this.roleData.config.modle_height) - 10;
         this.addChild(this.lifeBar);
@@ -42,11 +48,6 @@ var FightRole = (function (_super) {
         this.y = point.y;
         this.idle();
     };
-    /**
-     * 战斗
-     * @param data
-     * @param delay
-     */
     p.fight = function (data, delay) {
         var _this = this;
         this.reportItem = data;
@@ -65,12 +66,10 @@ var FightRole = (function (_super) {
             this.doAction();
         }
     };
-    /**
-     * 执行角色行为
-     */
     p.doAction = function () {
         var skillId = this.reportItem.skillId;
         this.curSkill = Config.SkillData[skillId];
+        // TODO 播放技能特效
         fight.verifyActiveSkill(this.curSkill);
         // 如果被眩晕
         if (this.reportItem.vertigo) {
@@ -96,6 +95,7 @@ var FightRole = (function (_super) {
                 if (fight.needMoveAttack(action)) {
                     var targets = this.targets;
                     var point = fight.getNearFightPoint(this, targets);
+                    // TODO 添加沙尘效果
                     var tween = egret.Tween.get(this);
                     tween.to({ x: point.x, y: point.y }, fight.MOVE_TIME);
                     tween.call(this.attack, this);
@@ -106,7 +106,6 @@ var FightRole = (function (_super) {
             }
         }
     };
-    // 加血
     p.addHP = function () {
         var _this = this;
         var len = this.targets.length;
@@ -135,8 +134,11 @@ var FightRole = (function (_super) {
             this.nextStep();
         }
     };
-    p.startDamage = function (ratio, updateHP) {
+    p.startDamage = function (cur, total) {
         if (this.curSkill) {
+            if (this.curSkill.shake_type) {
+                new ShakeScreenEff(this.fightContainer).startShake();
+            }
             var actionType = this.curSkill.action_type;
             if (actionType == fight.ATTACK_ACTION_AREA) {
                 this.isTriggerDamage = true;
@@ -151,7 +153,7 @@ var FightRole = (function (_super) {
                 this.showTurnEff();
             }
             else {
-                this.showHitEff(ratio, updateHP);
+                this.showHitEff(cur, total);
             }
         }
         else {
@@ -170,13 +172,8 @@ var FightRole = (function (_super) {
                 damageEff.registerFrameBack(function () {
                     fight.playSound(_this.curSkill.scource_effect);
                     current_1++;
-                    if (current_1 >= total_1) {
-                        _this.isPlayingDamage = false;
-                        _this.showHitEff(1 / total_1);
-                    }
-                    else {
-                        _this.showHitEff(1 / total_1, false);
-                    }
+                    _this.isPlayingDamage = current_1 < total_1;
+                    _this.showHitEff(current_1, total_1);
                 }, +frameArr[i]);
             }
             var offPoint = (!!this.curSkill.area_effect_point) ? this.curSkill.area_effect_point.split(",") : [0, 0];
@@ -198,12 +195,7 @@ var FightRole = (function (_super) {
                 damageEff_1.registerFrameBack(function () {
                     fight.playSound(_this.curSkill.scource_effect);
                     count_2++;
-                    if (count_2 >= total_2) {
-                        _this.showHitEff(1 / total_2);
-                    }
-                    else {
-                        _this.showHitEff(1 / total_2, false);
-                    }
+                    _this.showHitEff(count_2, total_2);
                 }, +frameArr[i]);
             }
             var offPoint = this.curSkill.shoot_point || [0, 0];
@@ -241,12 +233,12 @@ var FightRole = (function (_super) {
             var self_1 = this;
             var damageEffSourceArr = this.curSkill.scource_effect.split(",");
             var damageEffSource_1 = damageEffSourceArr[0];
-            var bulletCount_1 = +damageEffSourceArr[1] || 1;
+            var bulletCount = +damageEffSourceArr[1] || 1;
             self_1.isPlayingDamage = true;
-            var totalCount_1 = len_1 * bulletCount_1;
+            var totalCount_1 = len_1 * bulletCount;
             var turn = 0;
             var turnCountArr_1 = [];
-            for (var i = 0; i < bulletCount_1; i++) {
+            for (var i = 0; i < bulletCount; i++) {
                 turnCountArr_1[i] = 0;
             }
             function attack(round) {
@@ -263,7 +255,7 @@ var FightRole = (function (_super) {
                         damageEff.dispose();
                         turnCountArr_1[round]++;
                         count++;
-                        self_1.showHitEff(1 / bulletCount_1, turnCountArr_1[round] >= len_1, target);
+                        self_1.showHitEff(turnCountArr_1[round], len_1, target);
                         if (count >= totalCount_1) {
                             self_1.isPlayingDamage = false;
                         }
@@ -274,7 +266,7 @@ var FightRole = (function (_super) {
                     _loop_1(i);
                 }
             }
-            for (var i = 0; i < bulletCount_1; i++) {
+            for (var i = 0; i < bulletCount; i++) {
                 egret.setTimeout(attack, null, delay, turn++);
                 delay += fight.BULLET_RUN_DELAY_TIME;
             }
@@ -294,21 +286,21 @@ var FightRole = (function (_super) {
     /**
      * 显示受击效果
      */
-    p.showHitEff = function (ratio, updateHP, role) {
-        if (ratio === void 0) { ratio = 1; }
-        if (updateHP === void 0) { updateHP = true; }
+    p.showHitEff = function (cur, total, role) {
+        if (cur === void 0) { cur = 1; }
+        if (total === void 0) { total = 1; }
         if (role === void 0) { role = null; }
         var len = this.targets.length;
         for (var i = 0; i < len; i++) {
             var target = this.targets[i];
             if (!role || target == role) {
                 var hitInfo = this.reportItem.target[i];
-                var damage = BigNum.mul(hitInfo.damage, ratio);
+                var damage = BigNum.mul(hitInfo.damage, cur / total);
                 var damageNum = MathUtil.easyNumber(damage);
                 var isBlock = hitInfo.block;
                 var isDodge = hitInfo.dodge;
                 if (!!this.curSkill.target_effect) {
-                    var targetEff = new MCEff(this.curSkill.target_effect);
+                    var targetEff = new BaseMCEffect(this.curSkill.target_effect);
                     targetEff.y = (target.roleData.config.modle_height) * -0.5;
                     target.addChild(targetEff);
                 }
@@ -346,13 +338,8 @@ var FightRole = (function (_super) {
                         }
                     }
                 }
-                console.log(damage, updateHP);
-                if (updateHP) {
-                    target.updateHP(hitInfo.hp);
-                }
-                else {
-                    target.roleData.curHP = BigNum.sub(target.roleData.curHP, damage);
-                }
+                var showDamage = BigNum.mul((total - cur) / total, hitInfo.damage);
+                target.updateHP(BigNum.add(hitInfo.hp, showDamage));
             }
         }
     };
@@ -374,11 +361,6 @@ var FightRole = (function (_super) {
         this.waiting = true;
         fight.playFrameLabel("idle", this.body, -1, this.roleData.config.id);
     };
-    d(p, "isIdle"
-        ,function () {
-            return this.waiting;
-        }
-    );
     p.hit = function () {
         this.waiting = false;
         if (fight.playFrameLabel("attacked", this.body, 1, this.roleData.config.id)) {
@@ -437,17 +419,17 @@ var FightRole = (function (_super) {
         }
     };
     p.selfInjury = function () {
-        var _this = this;
-        if (this.updateHP(this.reportItem.hp, false)) {
-            this.dispatchEventWith("role_one_step_complete", true);
-            this.idle();
-            egret.setTimeout(function () {
-                _this.dispatchEventWith("role_die", true, _this);
-            }, this, 1000);
-        }
-        else {
-            this.idle();
-        }
+        this.updateHP(this.reportItem.hp);
+        this.idle();
+        // if (this.updateHP(this.reportItem.hp, false)){
+        //     this.dispatchEventWith("role_one_step_complete", true);
+        //     this.idle();
+        //     egret.setTimeout(()=>{
+        //         this.dispatchEventWith("role_die", true, this);
+        //     }, this, 1000);
+        // } else {
+        //     this.idle();
+        // }
     };
     p.retreat = function () {
         var _this = this;
@@ -483,48 +465,47 @@ var FightRole = (function (_super) {
     /**
      * 更新对象血量
      * @param hp
-     * @param needDispatcherEvent
-     * @returns {boolean}
      */
-    p.updateHP = function (hp, needDispatcherEvent) {
-        var _this = this;
-        if (needDispatcherEvent === void 0) { needDispatcherEvent = true; }
-        var die = false;
-        this.roleData.curHP = hp;
-        var ratio = +(BigNum.div(this.roleData.curHP, this.roleData.maxHP)) || 0;
-        this.lifeBar.setRatio(ratio);
-        if (BigNum.greater(fight.DIE_HP, this.roleData.curHP)) {
-            if (needDispatcherEvent) {
-                egret.setTimeout(function () {
-                    _this.dispatchEventWith("role_die", true, _this);
-                }, this, 500);
-            }
-            die = true;
+    p.updateHP = function (hp) {
+        if (!BigNum.equal(this.roleData.curHP, hp)) {
+            this.roleData.curHP = hp;
+            var ratio = +(BigNum.div(this.roleData.curHP, this.roleData.maxHP)) || 0;
+            this.lifeBar.setProgress(ratio);
+            this.dispatchEventWith("role_hp_change", true);
         }
-        return die;
+        this.isDead = (BigNum.greater(fight.DIE_HP, this.roleData.curHP));
     };
     p.onTick = function () {
+        var currentFrame = this.body.currentFrame;
         if (this.curSkill) {
-            var currentFrame = this.body.currentFrame;
             var obj = FightRole.FRAME_EVENT_MAP;
-            var frames_1 = Object.keys(obj);
-            for (var i = frames_1.length; i--;) {
-                var funName = obj[frames_1[i]];
-                var triggerFrameArr = String(this.curSkill[frames_1[i]] || "").split(",");
-                var triggerCount = triggerFrameArr.length;
-                for (var j = 0; j < triggerCount; j++) {
-                    var triggerFrame = +triggerFrameArr[j];
-                    if (currentFrame == triggerFrame) {
-                        if (this[funName]) {
-                            if (!this.triggerFrameMap) {
-                                this.triggerFrameMap = {};
-                            }
-                            if (!this.triggerFrameMap[triggerFrame]) {
-                                this.triggerFrameMap[triggerFrame] = true;
-                                this[funName](1 / triggerCount, j + 1 >= triggerCount);
-                                break;
-                            }
-                        }
+            var keys = Object.keys(obj);
+            var funName = null;
+            var index = 0;
+            var total = void 0;
+            for (var i = 0; i < keys.length; i++) {
+                var key = keys[i];
+                var triggerFrameArr = String(this.curSkill[key] || "").split(",");
+                total = triggerFrameArr.length;
+                for (var j = 0; j < total; j++) {
+                    if (Number(triggerFrameArr[j]) === currentFrame) {
+                        funName = obj[key];
+                        index = j;
+                        break;
+                    }
+                }
+                if (funName) {
+                    break;
+                }
+            }
+            if (funName) {
+                if (this[funName]) {
+                    if (!this.triggerFrameMap) {
+                        this.triggerFrameMap = {};
+                    }
+                    if (!this.triggerFrameMap[currentFrame]) {
+                        this.triggerFrameMap[currentFrame] = true;
+                        this[funName](index + 1, total);
                     }
                 }
             }
@@ -535,6 +516,9 @@ var FightRole = (function (_super) {
             if (oneStepComplete && !!this.triggerFrameMap && !this.isPlayingDamage && !this.isPlayingAction) {
                 this.nextStep();
             }
+        }
+        if (this.isDead) {
+            this.dispatchEventWith("role_die", true, this);
         }
         return false;
     };

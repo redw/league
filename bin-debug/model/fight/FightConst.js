@@ -29,8 +29,8 @@ var FightSideEnum;
 var fight;
 (function (fight) {
     fight.TEST_BUNCH = null;
-    fight.TEST_OTHER_HERO = null;
-    fight.TEST_SELF_HERO = [101];
+    fight.TEST_OTHER_HERO = [201, 202, 203, 204, 205, 206];
+    fight.TEST_SELF_HERO = [101, 102, 103, 104, 105, 107];
     fight.WIDTH = 480;
     fight.HEIGHT = 460;
     fight.ROLE_UP_LIMIT = 9;

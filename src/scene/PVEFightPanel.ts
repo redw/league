@@ -8,12 +8,18 @@ class PVEFightPanel extends egret.DisplayObjectContainer {
     private fightDropContainer:FightDropContainer;
     private myHeroArr:any;
     private monsterArr:any;
+    private monsterBloorBar:BloodBar;
 
     public constructor() {
         super();
 
         this.fightContainer = new FightContainer();
         this.addChild(this.fightContainer);
+
+        this.monsterBloorBar = new BloodBar(FightSideEnum.RIGHT_SIDE,5,2.5);
+        this.monsterBloorBar.x = 100;
+        this.monsterBloorBar.y = 120;
+        // this.addChild(this.monsterBloorBar);
 
         this.levelLabel = new eui.Label();
         this.levelLabel.textAlign = "center";
@@ -29,6 +35,8 @@ class PVEFightPanel extends egret.DisplayObjectContainer {
     }
 
     private onFightEnd() {
+        this.level++;
+        this.startLevel(this.level);
         // let enemyIds:number[] = this.fightContainer.getMonsterArr();
         // Http.inst.send(CmdID.FIGHT_SYNC, {
         //     area: UserProxy.inst.curArea,
@@ -54,7 +62,7 @@ class PVEFightPanel extends egret.DisplayObjectContainer {
         // }
 
         this.level = level;
-        this.levelLabel.text = "Stage:" + level;
+        this.levelLabel.text = "等级:" + level;
         this.fightDropContainer.startLevel();
 
         // UserProxy.inst.fightData.syncPVEFormation();

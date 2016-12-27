@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,pvp_blood_png,pvp_blood_bar_png,pvp_blood_enemy_png,pvp_blood_white_png,drop_coin_png,drop_gold_png,drop_pantao_png,drop_shenfu_png,drop_wuzhishan_png,drop_yueguangbaohe_png,fight_config_json,n2_pve_item_json,hp_png,hp_fnt,physical_damage_fnt,physical_damage_png,magical_damage_png,magical_damage_fnt,other_png,other_fnt,role_shadow_png,n2_pve_stage_json",
+			"keys": "n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,drop_coin_png,drop_gold_png,drop_pantao_png,drop_shenfu_png,drop_wuzhishan_png,drop_yueguangbaohe_png,fight_config_json,n2_pve_item_json,hp_png,hp_fnt,physical_damage_fnt,physical_damage_png,magical_damage_png,magical_damage_fnt,other_png,other_fnt,role_shadow_png,n2_pve_stage_json,link_map_png,pvp_blood_background_png,pvp_blood_hit_png,buff_foot_json,buff_foot_png,buff_frozen_json,buff_frozen_png,buff_head_json,buff_head_png,n2_hero_star_json,n2_invite_day_json",
 			"name": "preload"
 		},
 		{
@@ -1418,6 +1418,61 @@
 			"url": "tables/n2_pve_stage.json",
 			"type": "json",
 			"name": "n2_pve_stage_json"
+		},
+		{
+			"name": "link_map_png",
+			"type": "image",
+			"url": "assets/link_map.png"
+		},
+		{
+			"name": "pvp_blood_background_png",
+			"type": "image",
+			"url": "assets/pvp_blood_background.png"
+		},
+		{
+			"name": "pvp_blood_hit_png",
+			"type": "image",
+			"url": "assets/pvp_blood_hit.png"
+		},
+		{
+			"name": "buff_foot_json",
+			"type": "json",
+			"url": "assets/buff/buff_foot.json"
+		},
+		{
+			"name": "buff_foot_png",
+			"type": "image",
+			"url": "assets/buff/buff_foot.png"
+		},
+		{
+			"name": "buff_frozen_json",
+			"type": "json",
+			"url": "assets/buff/buff_frozen.json"
+		},
+		{
+			"name": "buff_frozen_png",
+			"type": "image",
+			"url": "assets/buff/buff_frozen.png"
+		},
+		{
+			"name": "buff_head_json",
+			"type": "json",
+			"url": "assets/buff/buff_head.json"
+		},
+		{
+			"name": "buff_head_png",
+			"type": "image",
+			"url": "assets/buff/buff_head.png"
+		},
+		{
+			"name": "n2_hero_star_json",
+			"type": "json",
+			"url": "tables/n2_hero_star.json"
+		},
+		{
+			"name": "n2_invite_day_json",
+			"type": "json",
+			"url": "tables/n2_invite_day.json"
 		}
 	]
 }

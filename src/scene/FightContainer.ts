@@ -30,9 +30,10 @@ class FightContainer extends egret.DisplayObjectContainer {
     public constructor(type:number = FightTypeEnum.PVE) {
         super();
         this.type = type;
-        let offY = fight.PVE_SCENE_OFF;;
+        let offY = 0;
         if (type == FightTypeEnum.PVE) {
             this.prospectLayer = new PVEProspect();
+            offY = fight.PVE_SCENE_OFF;
             this.prospectLayer.y = offY;
             this.addChild(this.prospectLayer);
 
@@ -59,6 +60,11 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.fontEffLayer = new eui.Group();
         this.fontEffLayer.y = offY;
         this.addChild(this.fontEffLayer);
+
+        if (type == FightTypeEnum.PVE) {
+            this.addChild(new BloodWarnEff(fight.WIDTH, fight.HEIGHT));
+            this.addEventListener("role_hp_change", this.onRoleHPChange, this, true);
+        }
 
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.addEventListener("role_die", this.onRoleDie, this, true);
@@ -205,7 +211,13 @@ class FightContainer extends egret.DisplayObjectContainer {
 
     private onRoleDie(e:egret.Event) {
         let role:FightRole = e.data;
+        console.log("onroledie", role.roleData.side + "_" + role.roleData.pos);
         this.roleDie(role);
+    }
+
+    private onRoleHPChange(e:egret.Event) {
+        let ratio = this.getSideLifeProgress(FightSideEnum.LEFT_SIDE);
+        // TODO 血条
     }
 
     public roleDie(role:FightRole) {
@@ -253,6 +265,10 @@ class FightContainer extends egret.DisplayObjectContainer {
         return this.steps.length;
     }
 
+    /**
+     * 得到触发的串
+     * @returns {string}
+     */
     public getTriggerChanceType(){
         return this.bunch;
     }
@@ -391,6 +407,23 @@ class FightContainer extends egret.DisplayObjectContainer {
         } else {
             this.addRoles(this.elements, true);
         }
+    }
+
+    private getSideLifeProgress(side:number) {
+        let ratio:number = 0;
+        let totalLife:string = "0";
+        let curLife:string = "0";
+        let roleArr = this.roles[side - 1];
+        let len = roleArr ? roleArr.length : 0;
+        for (let i = 0; i < len; i++) {
+            let role = roleArr[i];
+            if (role) {
+                totalLife = BigNum.add(totalLife, role.roleData.maxHP);
+                curLife = BigNum.add(curLife, role.roleData.curHP);
+            }
+        }
+        ratio = +(BigNum.div(curLife, totalLife));
+        return ratio;
     }
 
     public reset() {

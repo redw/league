@@ -33,4 +33,5 @@ class SkillConfig {
     "shoot_point":string[];
     "missle_speed":number;
      "area_effect_point":string;
+     "shake_type":number;
 }

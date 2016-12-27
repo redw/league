@@ -22,10 +22,10 @@ var FightContainer = (function (_super) {
         this.bunch = "a";
         this.moveCount = 0;
         this.type = type;
-        var offY = fight.PVE_SCENE_OFF;
-        ;
+        var offY = 0;
         if (type == FightTypeEnum.PVE) {
             this.prospectLayer = new PVEProspect();
+            offY = fight.PVE_SCENE_OFF;
             this.prospectLayer.y = offY;
             this.addChild(this.prospectLayer);
             this.middleGroundLayer = new PVEMiddleGround();
@@ -49,6 +49,10 @@ var FightContainer = (function (_super) {
         this.fontEffLayer = new eui.Group();
         this.fontEffLayer.y = offY;
         this.addChild(this.fontEffLayer);
+        if (type == FightTypeEnum.PVE) {
+            this.addChild(new BloodWarnEff(fight.WIDTH, fight.HEIGHT));
+            this.addEventListener("role_hp_change", this.onRoleHPChange, this, true);
+        }
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.addEventListener("role_die", this.onRoleDie, this, true);
         this.addEventListener(ContextEvent.ROLE_DATA_UPDATE, this.onRoleDataUpdate, this);
@@ -191,7 +195,12 @@ var FightContainer = (function (_super) {
     };
     p.onRoleDie = function (e) {
         var role = e.data;
+        console.log("onroledie", role.roleData.side + "_" + role.roleData.pos);
         this.roleDie(role);
+    };
+    p.onRoleHPChange = function (e) {
+        var ratio = this.getSideLifeProgress(FightSideEnum.LEFT_SIDE);
+        // TODO 血条
     };
     p.roleDie = function (role) {
         var side = role.roleData.side - 1;
@@ -234,6 +243,10 @@ var FightContainer = (function (_super) {
     p.getStepCount = function () {
         return this.steps.length;
     };
+    /**
+     * 得到触发的串
+     * @returns {string}
+     */
     p.getTriggerChanceType = function () {
         return this.bunch;
     };
@@ -359,6 +372,22 @@ var FightContainer = (function (_super) {
         else {
             this.addRoles(this.elements, true);
         }
+    };
+    p.getSideLifeProgress = function (side) {
+        var ratio = 0;
+        var totalLife = "0";
+        var curLife = "0";
+        var roleArr = this.roles[side - 1];
+        var len = roleArr ? roleArr.length : 0;
+        for (var i = 0; i < len; i++) {
+            var role = roleArr[i];
+            if (role) {
+                totalLife = BigNum.add(totalLife, role.roleData.maxHP);
+                curLife = BigNum.add(curLife, role.roleData.curHP);
+            }
+        }
+        ratio = +(BigNum.div(curLife, totalLife));
+        return ratio;
     };
     p.reset = function () {
         this.fightSteps = [];

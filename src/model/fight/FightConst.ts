@@ -28,8 +28,8 @@ enum FightSideEnum{
 
 module fight{
     export const TEST_BUNCH:string = null;
-    export const TEST_OTHER_HERO = null;
-    export const TEST_SELF_HERO = [101];
+    export const TEST_OTHER_HERO = [201,202,203,204,205,206];
+    export const TEST_SELF_HERO = [101,102,103,104,105,107];
 
     export const WIDTH:number = 480;
     export const HEIGHT:number = 460;
