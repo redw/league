@@ -19,14 +19,14 @@ class FightDropContainer extends egret.DisplayObjectContainer{
     }
 
     public startLevel(){
-        // let dropIds = UserProxy.inst.fightData.generateDrop();
-        // for (let i = 0; i < dropIds.length; i++) {
-        //     let dropItem = new DropItem();
-        //     dropItem.x = 200;
-        //     dropItem.y = 80 + 160 * i;
-        //     dropItem.config = Config.DropData[dropIds[i]];
-        //     this.propContainer.addChild(dropItem);
-        // }
+        let dropIds = UserProxy.inst.fightData.generateDrop();
+        for (let i = 0; i < dropIds.length; i++) {
+            let dropItem = new DropItem();
+            dropItem.x = 200;
+            dropItem.y = 80 + 160 * i;
+            dropItem.config = Config.DropData[dropIds[i]];
+            this.propContainer.addChild(dropItem);
+        }
     }
 }
 

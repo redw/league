@@ -1,6 +1,6 @@
 {
-  "hero":[101,106,107,108,109,110,0,0,0],
-  "monster":[208,209,0,0,0,207,0,0,0],
+  "left_roles":[101,102,103,104,105,106,0,0,0],
+  "right_roles":[208,209,210,211,212,213,0,0,0],
   "meanwhile_fight_delay_time":500,
   "can_meanwhile_fight":false,
   "retreat_time":150,

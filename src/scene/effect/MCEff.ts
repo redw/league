@@ -1,5 +1,5 @@
 /**
- * Created by wanhong on 16/12/25.
+ * Created by hh on 16/12/25.
  */
 class MCEff extends egret.DisplayObjectContainer {
     private mc:egret.MovieClip;
@@ -19,7 +19,7 @@ class MCEff extends egret.DisplayObjectContainer {
      * @param scope
      * @param param
      */
-    public registerBack(frame:number, fun:Function, scope:Object, param:any){
+    public registerBack(frame:number, fun:Function, scope:Object, param:any=null){
         var totalFrame = this.mc.totalFrames;
         if (!this.frameBacks) {
             this.frameBacks = Array(totalFrame);
@@ -64,9 +64,9 @@ class MCEff extends egret.DisplayObjectContainer {
     private onEnterFrame(){
         let curFrame = this.mc.currentFrame;
         if (this.frameBacks[curFrame]) {
-            var fun = this.frameBacks[curFrame][0];
-            var scope = this.frameBacks[curFrame][1];
-            var param = this.frameBacks[curFrame][2];
+            let fun = this.frameBacks[curFrame][0];
+            let scope = this.frameBacks[curFrame][1];
+            let param = this.frameBacks[curFrame][2];
             fun.call(scope, param);
             this.frameBacks[curFrame] = null;
         }
@@ -74,6 +74,7 @@ class MCEff extends egret.DisplayObjectContainer {
     }
 
     private onComplete() {
+        this.dispatchEventWith(egret.Event.COMPLETE);
         if (this.mc) {
             this.triggerFunArr();
             this.mc.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);

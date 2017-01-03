@@ -27,13 +27,23 @@ enum FightSideEnum{
 }
 
 module fight{
-    export const TEST_BUNCH:string = null;
-    export const TEST_OTHER_HERO = [201,202,203,204,205,206];
-    export const TEST_SELF_HERO = [101,102,103,104,105,107];
 
-    export const WIDTH:number = 480;
-    export const HEIGHT:number = 460;
+    export let TEST_BUNCH:string = "a";
+    export let TEST_OTHER_HERO = [403,411,417,418,420,422,0,0,0];
+    export let TEST_SELF_HERO = [101,102,103,104,105,106,0,0,0];
+    export let TEST_RANDOM:boolean = false;
+    export let TEST_DATA:boolean = false;
+    export let TEST_ROLE:any[];
+
+    export let WIDTH:number = 480;
+    export let HEIGHT:number = 460;
+    // pve场景偏移
+    export const PVE_SCENE_OFF:number = 0;
+    // pvp 场景偏移
+    export const PVP_SCENE_OFF:number = 100;
+    // 角色上限
     export const ROLE_UP_LIMIT:number = 9;
+    export const ROLE_SHADOW_OFF:number = -20;
     // 判断角色死亡的血量上限
     export const DIE_HP:number = 1;
 
@@ -54,27 +64,24 @@ module fight{
     // 子弹间间隔
     export let BULLET_RUN_DELAY_TIME:number = 50;
     // 死亡延迟时间
-    export let DIE_DELAY_TIME:number = 1000;
+    export let DIE_DELAY_TIME:number = 300;
     // 生命条缓动时间
     export let LIFE_BAR_TWEEN_TIME:number = 200;
 
     // 战斗步骤上限
-    export const STEP_UP_LIMIT:number = 50;
-    /** pve场景偏移 */
-    export const PVE_SCENE_OFF:number = -60;
-    /** pvp 场景偏移 */
-    export const PVP_SCENE_OFF:number = 100;
+    export const STEP_UP_LIMIT:number = 100;
 
     export const ATTACK_ACTION_NORMAL:string = "normal_attack";
     export const ATTACK_ACTION_ROW:string = "row_attack";
     export const ATTACK_ACTION_JUMP:string = "jump_attack";
+    export const ATTACK_ACTION_JUMP_AREA:string = "jump_area";
     export const ATTACK_ACTION_AREA:string = "area";
     export const ATTACK_ACTION_TURN:string = "turn";
+    export const ATTACK_ACTION_BOMB:string = "bomb";
     export const ATTACK_ACTION_MISSLE:string = "missle";
     export const ATTACK_ACTION_NO_MISSLE:string = "no_missle";
 
     export const LOG_FIGHT_INFO:number = 1;
-    export const LOG_FIGHT_REPORT:number = 2;
     export const LOG_FIGHT_STEP_START:number = 5;
     export const LOG_FIGHT_ROLE_DIE:number = 10;
     export const LOG_FIGHT_STEP_END:number = 15;
@@ -94,14 +101,14 @@ module fight{
     export let AREA_POS:egret.Point[] = [new egret.Point(360, 230), new egret.Point(120, 230)];
     export let POS_MAP:egret.Point[][] = [
         [
-            new egret.Point(160, 250), new egret.Point(160, 320), new egret.Point(160, 400),
-            new egret.Point(80, 250), new egret.Point(80, 320), new egret.Point(80, 400),
-            new egret.Point(40, 250), new egret.Point(40, 320), new egret.Point(40, 400),
+            new egret.Point(160, 200), new egret.Point(160, 270), new egret.Point(160, 350),
+            new egret.Point(80, 200), new egret.Point(80, 270), new egret.Point(80, 350),
+            new egret.Point(40, 200), new egret.Point(40, 270), new egret.Point(40, 350),
         ],
         [
-            new egret.Point(320, 250), new egret.Point(320, 320), new egret.Point(320, 400),
-            new egret.Point(400, 250), new egret.Point(400, 320), new egret.Point(400, 400),
-            new egret.Point(440, 250), new egret.Point(440, 320), new egret.Point(440, 400),
+            new egret.Point(320, 200), new egret.Point(320, 270), new egret.Point(320, 350),
+            new egret.Point(400, 200), new egret.Point(400, 270), new egret.Point(400, 350),
+            new egret.Point(440, 200), new egret.Point(440, 270), new egret.Point(440, 350),
         ]
     ];
 }

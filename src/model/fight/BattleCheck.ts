@@ -18,7 +18,7 @@ module fight{
             let clientItem = clientArr[i];
             let serverItem = serverArr[i];
             let ok:boolean = true;
-            for (let j = 0; j < props.length; j++) {
+            for (let j = 0; j < props.length - 1; j++) {
                 let prop = props[j];
                 if (!checkProp(clientItem[prop], serverItem[prop])) {
                     ok = false;
@@ -29,14 +29,18 @@ module fight{
             }
             if (ok) {
                 let clientTarget = clientItem.target || [];
-                let serverTarget = serverItem.target;
-                for (let k = 0; k < clientTarget.length; k++) {
-                    for (let j = 0; j < props.length - 1; j++) {
-                        let prop = props[j];
-                        if (!checkProp(clientTarget[k][prop], serverTarget[k][prop])) {
-                            result = false;
-                            console.warn(`step:${i},pos:${clientTarget[k]["pos"]},,prop:${prop},client:${String(clientTarget[k][prop])},server:${String(serverTarget[k][prop])}`);
-                            break;
+                let serverTarget = serverItem.target || [];
+                if (clientTarget.length != serverTarget.length) {
+                    console.warn(`step:${i},prop:targetCount,client:${clientTarget.length},server:${serverTarget.length}`);
+                } else {
+                    for (let k = 0; k < clientTarget.length; k++) {
+                        for (let j = 0; j < props.length - 1; j++) {
+                            let prop = props[j];
+                            if (!checkProp(clientTarget[k][prop], serverTarget[k][prop])) {
+                                result = false;
+                                console.warn(`step:${i},pos:${clientTarget[k]["pos"]},prop:${prop},client:${String(clientTarget[k][prop])},server:${String(serverTarget[k][prop])}`);
+                                break;
+                            }
                         }
                     }
                 }
@@ -56,10 +60,10 @@ module fight{
          * @returns {boolean}
          */
     function checkProp(clientValue:any, serverValue:any){
-        if (typeof clientValue == "number" && typeof serverValue == "number") {
+        if (parseInt(clientValue) === clientValue && parseInt(serverValue) === serverValue) {
             return clientValue == serverValue;
         }
-        if (Array.isArray(clientValue)) {
+        if (Array.isArray(serverValue)) {
             return true;
         }
         let value0:string = String(clientValue);
@@ -69,11 +73,10 @@ module fight{
         } else {
             let value0Arr = value0.split(",");
             let value1Arr = value1.split(",");
-            if (value0Arr.length > 1) {
+            if (value0Arr.length > 1 || value1Arr.length > 1) {
                 return false;
             } else {
-                value1 = BigNum.max(0, value1);
-                return MathUtil.easyNumber(value0) == MathUtil.easyNumber(value1);
+                return BigNum.equal(Number(clientValue), BigNum.max(0, Number(serverValue))) || MathUtil.easyNumber(Number(clientValue)) == MathUtil.easyNumber(Number(serverValue));
             }
         }
     }

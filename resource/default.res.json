@@ -1,16 +1,16 @@
 {
 	"groups": [
 		{
-			"keys": "n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,drop_coin_png,drop_gold_png,drop_pantao_png,drop_shenfu_png,drop_wuzhishan_png,drop_yueguangbaohe_png,fight_config_json,n2_pve_item_json,hp_png,hp_fnt,physical_damage_fnt,physical_damage_png,magical_damage_png,magical_damage_fnt,other_png,other_fnt,role_shadow_png,n2_pve_stage_json,link_map_png,pvp_blood_background_png,pvp_blood_hit_png,buff_foot_json,buff_foot_png,buff_frozen_json,buff_frozen_png,buff_head_json,buff_head_png,n2_hero_star_json,n2_invite_day_json",
+			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,link_map_png,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png,target_effect_png,target_effect_json,missle_effect_png,missle_effect_json,hp_effect_png,hp_effect_json,dust_effect_png,dust_effect_json,death_effect_png,death_effect_json,area_effect_png,area_effect_json",
 			"name": "preload"
-		},
-		{
-			"keys": "buff_clean_png,buff_clean_json,attack_target_png,attack_target_json,attack_missle_png,attack_missle_json,224_jiutanguai_png,224_jiutanguai_json,224_atk_target_png,224_atk_target_json,223_dieyao_png,223_dieyao_json,223_atk_missle_png,223_atk_missle_json,222_huangfeng_png,222_huangfeng_json,222_atk_target_png,222_atk_target_json,222_atk_missle_png,222_atk_missle_json,221_yuguai_png,221_yuguai_json,221_atk_target_png,221_atk_target_json,220_sheguai_png,220_sheguai_json,219_jianxia_png,219_jianxia_json,219_atk_target_png,219_atk_target_json,215_langguai_png,215_langguai_json,214_dipi_png,214_dipi_json,214_atk_target_png,214_atk_target_json,213_xiaozuanfeng_png,213_xiaozuanfeng_json,213_atk_target_png,213_atk_target_json,213_atk_missle_png,213_atk_missle_json,212_guipopo_png,212_guipopo_json,212_atk_target_png,212_atk_target_json,212_atk_missle_png,212_atk_missle_json,211_guichengxiang_png,211_guichengxiang_json,211_atk_target_png,211_atk_target_json,211_atk_missle_png,211_atk_missle_json,210_tianbing_png,210_tianbing_json,210_atk_target_png,210_atk_target_json,209_tianjiang_png,209_tianjiang_json,208_hamaguai_png,208_hamaguai_json,207_shiziguai_png,207_shiziguai_json,206_caoyao_png,206_caoyao_json,206_atk_target_png,206_atk_target_json,206_atk_missle_png,206_atk_missle_json,205_shuyao_png,205_shuyao_json,205_atk_target_png,205_atk_target_json,205_atk_missle_png,205_atk_missle_json,204_shixiang_png,204_shixiang_json,203_guijiang_png,203_guijiang_json,203_atk_missle_png,203_atk_missle_json,202_jiaolong_png,202_jiaolong_json,202_atk_target_png,202_atk_target_json,202_atk_missle_png,202_atk_missle_json,201_bangkejing_png,201_bangkejing_json,201_atk_target_png,201_atk_target_json,201_atk_missle_png,201_atk_missle_json,122_nezha_png,122_nezha_json,117_skill_source_png,117_skill_source_json,117_baiwuchang_png,117_baiwuchang_json,117_atk_target_png,117_atk_target_json,117_atk_missle_png,117_atk_missle_json,116_skill_source_png,116_skill_source_json,116_heiwuchang_png,116_heiwuchang_json,116_atk_target_png,116_atk_target_json,116_atk_missle_png,116_atk_missle_json,113_skill_source_png,113_skill_source_json,113_nvwang_png,113_nvwang_json,113_atk_target_png,113_atk_target_json,113_atk_missle_png,113_atk_missle_json,112_kongquegongzhu_png,112_kongquegongzhu_json,112_atk_target_png,112_atk_target_json,112_atk_missle_png,112_atk_missle_json,111_xiezijing_png,111_xiezijing_json,111_atk_target_png,111_atk_target_json,111_atk_missle_png,111_atk_missle_json,110_yutujing_png,110_yutujing_json,110_skill_source_png,110_skill_source_json,110_atk_target_png,110_atk_target_json,110_atk_missle_png,110_atk_missle_json,109_skill_target_png,109_skill_target_json,109_erlangshen_png,109_erlangshen_json,109_atk_target_png,109_atk_target_json,108_tieshangongzhu_png,108_tieshangongzhu_json,107_honghaier_png,107_honghaier_json,107_atk_target_png,107_atk_target_json,105_xiaobailong_png,105_xiaobailong_json,105_skill_target_png,105_skill_target_json,104_skill_source_png,104_skill_source_json,104_shaheshang_png,104_shaheshang_json,104_atk_target_png,104_atk_target_json,103_bajie_png,103_bajie_json,102_tangseng_png,102_tangseng_json,102_skill_source_png,102_skill_source_json,102_atk_target_png,102_atk_target_json,102_atk_missle_png,102_atk_missle_json,101_wukong_png,101_wukong_json,114_atk_missle_png,114_atk_target_png,114_xiwangmu_png,114_atk_missle_json,114_atk_target_json,114_xiwangmu_json,104_atk_skill_source_png,104_atk_skill_source_json",
-			"name": "hero"
 		},
 		{
 			"keys": "",
 			"name": "main"
+		},
+		{
+			"keys": "103_bajie_json,102_tangseng_png,102_tangseng_json,102_skill_source_png,102_skill_source_json,102_skill_1_source_png,102_skill_1_source_json,102_attack_target_png,102_attack_target_json,102_attack_missle_png,102_attack_missle_json,102_atk_target_png,102_atk_target_json,102_atk_missle_png,102_atk_missle_json,101_wukong_png,101_wukong_json,110_atk_missle_png,110_atk_missle_json,109_skill_target_png,109_skill_target_json,109_skill_1_target_png,109_skill_1_target_json,109_erlangshen_png,109_erlangshen_json,109_attack_target_png,109_attack_target_json,109_atk_target_png,109_atk_target_json,108_tieshangongzhu_png,108_tieshangongzhu_json,107_honghaier_png,107_honghaier_json,107_attack_target_png,107_attack_target_json,107_atk_target_png,107_atk_target_json,106_skill_1_target_png,106_skill_1_target_json,106_niumowang_png,106_niumowang_json,106_attack_target_png,106_attack_target_json,105_xiaobailong_png,105_xiaobailong_json,105_skill_target_png,105_skill_target_json,105_skill_1_target_png,105_skill_1_target_json,104_skill_source_png,104_skill_source_json,104_skill_1_source_png,104_skill_1_source_json,104_shaheshang_png,104_shaheshang_json,104_attack_target_png,104_attack_target_json,104_atk_target_png,104_atk_target_json,104_atk_skill_source_png,104_atk_skill_source_json,103_bajie_png,117_attack_missle_png,117_attack_missle_json,117_atk_target_png,117_atk_target_json,117_atk_missle_png,117_atk_missle_json,116_skill_source_png,116_skill_source_json,116_skill_1_source_png,116_skill_1_source_json,116_heiwuchang_png,116_heiwuchang_json,116_attack_target_png,116_attack_target_json,116_attack_missle_png,116_attack_missle_json,116_atk_target_png,116_atk_target_json,116_atk_missle_png,116_atk_missle_json,115_zixiaxianzi_png,115_zixiaxianzi_json,115_skill_1_target_png,115_skill_1_target_json,115_skill_1_missle_png,115_skill_1_missle_json,115_attack_target_png,115_attack_target_json,114_xiwangmu_png,114_xiwangmu_json,114_attack_target_png,114_attack_target_json,114_attack_missle_png,114_attack_missle_json,114_atk_target_png,114_atk_target_json,114_atk_missle_png,114_atk_missle_json,113_skill_source_png,113_skill_source_json,113_skill_1_missle_png,113_skill_1_missle_json,113_nvwang_png,113_nvwang_json,113_attack_target_png,113_attack_target_json,113_attack_missle_png,113_attack_missle_json,113_atk_target_png,113_atk_target_json,113_atk_missle_png,113_atk_missle_json,112_kongquegongzhu_png,112_kongquegongzhu_json,112_attack_target_png,112_attack_target_json,112_attack_missle_png,112_attack_missle_json,112_atk_target_png,112_atk_target_json,112_atk_missle_png,112_atk_missle_json,111_xiezijing_png,111_xiezijing_json,111_attack_target_png,111_attack_target_json,111_attack_missle_png,111_attack_missle_json,111_atk_target_png,111_atk_target_json,111_atk_missle_png,111_atk_missle_json,110_yutujing_png,110_yutujing_json,110_skill_source_png,110_skill_source_json,110_skill_1_source_png,110_skill_1_source_json,110_attack_target_png,110_attack_target_json,110_attack_missle_png,110_attack_missle_json,110_atk_target_png,110_atk_target_json,130_pangu_png,130_pangu_json,129_skill_1_source_png,129_skill_1_source_json,129_nvwa_png,129_nvwa_json,129_attack_target_png,129_attack_target_json,128_skill_1_target_png,128_skill_1_target_json,128_skill_1_missle_png,128_skill_1_missle_json,128_houyi_png,128_houyi_json,128_attack_target_png,128_attack_target_json,128_attack_missle_png,128_attack_missle_json,127_skill_1_target_png,127_skill_1_target_json,127_skill_1_missle_png,127_skill_1_missle_json,127_change_png,127_change_json,127_attack_target_png,127_attack_target_json,127_attack_missle_png,127_attack_missle_json,126_rulai_png,126_rulai_json,126_attack_source_png,126_attack_source_json,125_yanluowang_png,125_yanluowang_json,125_attack_target_png,125_attack_target_json,125_attack_missle_png,125_attack_missle_json,124_skill_1_target_png,124_skill_1_target_json,124_skill_1_source_png,124_skill_1_source_json,124_jiangziya_png,124_jiangziya_json,124_attack_target_png,124_attack_target_json,124_attack_missle_2_png,124_attack_missle_2_json,124_attack_missle_1_png,124_attack_missle_1_json,123_sudaji_png,123_sudaji_json,123_skill_1_source_png,123_skill_1_source_json,123_attack_target_png,123_attack_target_json,123_attack_missle_png,123_attack_missle_json,122_skill_1_target_png,122_skill_1_target_json,122_nezha_png,122_nezha_json,122_attack_target_png,122_attack_target_json,121_skill_1_target_png,121_skill_1_target_json,121_skill_1_missle_png,121_skill_1_missle_json,121_jinchidapeng_png,121_jinchidapeng_json,121_attack_target_png,121_attack_target_json,121_attack_missle_png,121_attack_missle_json,120_yinjiaodawang_png,120_yinjiaodawang_json,120_attack_target_png,120_attack_target_json,119_skill_1_target_png,119_skill_1_target_json,119_jinjiaodawang_png,119_jinjiaodawang_json,119_attack_target_png,119_attack_target_json,118_skill_1_source_png,118_skill_1_source_json,118_donghailongwang_png,118_donghailongwang_json,118_attack_target_png,118_attack_target_json,118_attack_missle_png,118_attack_missle_json,117_skill_source_png,117_skill_source_json,117_skill_1_source_png,117_skill_1_source_json,117_baiwuchang_png,117_baiwuchang_json,117_attack_target_png,117_attack_target_json,210_tianbing_png,210_tianbing_json,210_atk_target_png,210_atk_target_json,209_tianjiang_png,209_tianjiang_json,208_hamaguai_png,208_hamaguai_json,207_shiziguai_png,207_shiziguai_json,206_caoyao_png,206_caoyao_json,206_atk_target_png,206_atk_target_json,206_atk_missle_png,206_atk_missle_json,205_shuyao_png,205_shuyao_json,205_atk_target_png,205_atk_target_json,205_atk_missle_png,205_atk_missle_json,204_shixiang_png,204_shixiang_json,203_guijiang_png,203_guijiang_json,203_atk_missle_png,203_atk_missle_json,202_jiaolong_png,202_jiaolong_json,202_atk_target_png,202_atk_target_json,202_atk_missle_png,202_atk_missle_json,201_bangkejing_png,201_bangkejing_json,201_atk_target_png,201_atk_target_json,201_atk_missle_png,201_atk_missle_json,skill_4_target_png,skill_4_target_json,skill_3_target_png,skill_3_target_json,skill_2_target_png,skill_2_target_json,skill_1_target_png,skill_1_target_json,buff_hp_png,buff_hp_json,buff_clean_png,buff_clean_json,attack_target_png,attack_target_json,attack_missle_png,attack_missle_json,224_jiutanguai_png,224_jiutanguai_json,224_atk_target_png,224_atk_target_json,223_dieyao_png,223_dieyao_json,223_atk_missle_png,223_atk_missle_json,222_huangfeng_png,222_huangfeng_json,222_atk_target_png,222_atk_target_json,222_atk_missle_png,222_atk_missle_json,221_yuguai_png,221_yuguai_json,221_atk_target_png,221_atk_target_json,220_sheguai_png,220_sheguai_json,219_jianxia_png,219_jianxia_json,219_atk_target_png,219_atk_target_json,215_langguai_png,215_langguai_json,214_dipi_png,214_dipi_json,214_atk_target_png,214_atk_target_json,213_xiaozuanfeng_png,213_xiaozuanfeng_json,213_atk_target_png,213_atk_target_json,213_atk_missle_png,213_atk_missle_json,212_guipopo_png,212_guipopo_json,212_atk_target_png,212_atk_target_json,212_atk_missle_png,212_atk_missle_json,211_guichengxiang_png,211_guichengxiang_json,211_atk_target_png,211_atk_target_json,211_atk_missle_png,211_atk_missle_json",
+			"name": "role"
 		}
 	],
 	"resources": [
@@ -215,6 +215,656 @@
 			"name": "n2_weapon_suit_json"
 		},
 		{
+			"url": "config/fight_config.json",
+			"type": "json",
+			"name": "fight_config_json"
+		},
+		{
+			"url": "tables/n2_pve_item.json",
+			"type": "json",
+			"name": "n2_pve_item_json"
+		},
+		{
+			"url": "assets/scene/desert_1.png",
+			"type": "image",
+			"name": "desert_1_png"
+		},
+		{
+			"url": "assets/scene/desert_2.png",
+			"type": "image",
+			"name": "desert_2_png"
+		},
+		{
+			"url": "assets/scene/desert_3.png",
+			"type": "image",
+			"name": "desert_3_png"
+		},
+		{
+			"url": "assets/scene/fire_1.png",
+			"type": "image",
+			"name": "fire_1_png"
+		},
+		{
+			"url": "assets/scene/fire_2.png",
+			"type": "image",
+			"name": "fire_2_png"
+		},
+		{
+			"url": "assets/scene/fire_3.png",
+			"type": "image",
+			"name": "fire_3_png"
+		},
+		{
+			"url": "assets/scene/fire_mountain_1.png",
+			"type": "image",
+			"name": "fire_mountain_1_png"
+		},
+		{
+			"url": "assets/scene/fire_mountain_2.png",
+			"type": "image",
+			"name": "fire_mountain_2_png"
+		},
+		{
+			"url": "assets/scene/fire_mountain_3.png",
+			"type": "image",
+			"name": "fire_mountain_3_png"
+		},
+		{
+			"url": "assets/scene/flower_mountain_1.png",
+			"type": "image",
+			"name": "flower_mountain_1_png"
+		},
+		{
+			"url": "assets/scene/flower_mountain_2.png",
+			"type": "image",
+			"name": "flower_mountain_2_png"
+		},
+		{
+			"url": "assets/scene/flower_mountain_3.png",
+			"type": "image",
+			"name": "flower_mountain_3_png"
+		},
+		{
+			"url": "assets/scene/fly_stone_1.png",
+			"type": "image",
+			"name": "fly_stone_1_png"
+		},
+		{
+			"url": "assets/scene/fly_stone_2.png",
+			"type": "image",
+			"name": "fly_stone_2_png"
+		},
+		{
+			"url": "assets/scene/fly_stone_3.png",
+			"type": "image",
+			"name": "fly_stone_3_png"
+		},
+		{
+			"url": "assets/scene/forest_1.png",
+			"type": "image",
+			"name": "forest_1_png"
+		},
+		{
+			"url": "assets/scene/forest_2.png",
+			"type": "image",
+			"name": "forest_2_png"
+		},
+		{
+			"url": "assets/scene/forest_3.png",
+			"type": "image",
+			"name": "forest_3_png"
+		},
+		{
+			"url": "assets/scene/golden_1.png",
+			"type": "image",
+			"name": "golden_1_png"
+		},
+		{
+			"url": "assets/scene/golden_2.png",
+			"type": "image",
+			"name": "golden_2_png"
+		},
+		{
+			"url": "assets/scene/golden_3.png",
+			"type": "image",
+			"name": "golden_3_png"
+		},
+		{
+			"url": "assets/scene/gost_1.png",
+			"type": "image",
+			"name": "gost_1_png"
+		},
+		{
+			"url": "assets/scene/gost_2.png",
+			"type": "image",
+			"name": "gost_2_png"
+		},
+		{
+			"url": "assets/scene/gost_3.png",
+			"type": "image",
+			"name": "gost_3_png"
+		},
+		{
+			"url": "assets/scene/ice_lake_1.png",
+			"type": "image",
+			"name": "ice_lake_1_png"
+		},
+		{
+			"url": "assets/scene/ice_lake_2.png",
+			"type": "image",
+			"name": "ice_lake_2_png"
+		},
+		{
+			"url": "assets/scene/ice_lake_3.png",
+			"type": "image",
+			"name": "ice_lake_3_png"
+		},
+		{
+			"url": "assets/scene/pvp_1.png",
+			"type": "image",
+			"name": "pvp_1_png"
+		},
+		{
+			"url": "assets/scene/pvp_2.png",
+			"type": "image",
+			"name": "pvp_2_png"
+		},
+		{
+			"url": "assets/scene/pvp_3.png",
+			"type": "image",
+			"name": "pvp_3_png"
+		},
+		{
+			"url": "assets/scene/pvp_4.png",
+			"type": "image",
+			"name": "pvp_4_png"
+		},
+		{
+			"url": "assets/scene/water_1.png",
+			"type": "image",
+			"name": "water_1_png"
+		},
+		{
+			"url": "assets/scene/water_2.png",
+			"type": "image",
+			"name": "water_2_png"
+		},
+		{
+			"url": "assets/scene/water_3.png",
+			"type": "image",
+			"name": "water_3_png"
+		},
+		{
+			"url": "assets/scene/wood_1.png",
+			"type": "image",
+			"name": "wood_1_png"
+		},
+		{
+			"url": "assets/scene/wood_2.png",
+			"type": "image",
+			"name": "wood_2_png"
+		},
+		{
+			"url": "assets/scene/wood_3.png",
+			"type": "image",
+			"name": "wood_3_png"
+		},
+		{
+			"url": "tables/n2_pve_stage.json",
+			"type": "json",
+			"name": "n2_pve_stage_json"
+		},
+		{
+			"url": "tables/n2_act_weaponfb.json",
+			"type": "json",
+			"name": "n2_act_weaponfb_json"
+		},
+		{
+			"url": "tables/n2_daily_fruit.json",
+			"type": "json",
+			"name": "n2_daily_fruit_json"
+		},
+		{
+			"url": "tables/n2_daily_tree.json",
+			"type": "json",
+			"name": "n2_daily_tree_json"
+		},
+		{
+			"url": "tables/n2_hero_jadecost.json",
+			"type": "json",
+			"name": "n2_hero_jadecost_json"
+		},
+		{
+			"url": "tables/n2_off_buy.json",
+			"type": "json",
+			"name": "n2_off_buy_json"
+		},
+		{
+			"url": "tables/n2_off_pro.json",
+			"type": "json",
+			"name": "n2_off_pro_json"
+		},
+		{
+			"url": "tables/n2_off_shop.json",
+			"type": "json",
+			"name": "n2_off_shop_json"
+		},
+		{
+			"url": "tables/n2_pvp_data.json",
+			"type": "json",
+			"name": "n2_pvp_data_json"
+		},
+		{
+			"url": "tables/n2_pvp_point.json",
+			"type": "json",
+			"name": "n2_pvp_point_json"
+		},
+		{
+			"url": "tables/n2_shop.json",
+			"type": "json",
+			"name": "n2_shop_json"
+		},
+		{
+			"url": "assets/scene/desert_1.png",
+			"type": "image",
+			"name": "desert_12_png"
+		},
+		{
+			"url": "assets/scene/desert_2.png",
+			"type": "image",
+			"name": "desert_22_png"
+		},
+		{
+			"url": "assets/scene/desert_3.png",
+			"type": "image",
+			"name": "desert_32_png"
+		},
+		{
+			"url": "assets/scene/fire_1.png",
+			"type": "image",
+			"name": "fire_12_png"
+		},
+		{
+			"url": "assets/scene/fire_2.png",
+			"type": "image",
+			"name": "fire_22_png"
+		},
+		{
+			"url": "assets/scene/fire_3.png",
+			"type": "image",
+			"name": "fire_32_png"
+		},
+		{
+			"url": "assets/scene/fire_mountain_1.png",
+			"type": "image",
+			"name": "fire_mountain_12_png"
+		},
+		{
+			"url": "assets/scene/fire_mountain_2.png",
+			"type": "image",
+			"name": "fire_mountain_22_png"
+		},
+		{
+			"url": "assets/scene/fire_mountain_3.png",
+			"type": "image",
+			"name": "fire_mountain_32_png"
+		},
+		{
+			"url": "assets/scene/flower_mountain_1.png",
+			"type": "image",
+			"name": "flower_mountain_12_png"
+		},
+		{
+			"url": "assets/scene/flower_mountain_2.png",
+			"type": "image",
+			"name": "flower_mountain_22_png"
+		},
+		{
+			"url": "assets/scene/flower_mountain_3.png",
+			"type": "image",
+			"name": "flower_mountain_32_png"
+		},
+		{
+			"url": "assets/scene/fly_stone_1.png",
+			"type": "image",
+			"name": "fly_stone_12_png"
+		},
+		{
+			"url": "assets/scene/fly_stone_2.png",
+			"type": "image",
+			"name": "fly_stone_22_png"
+		},
+		{
+			"url": "assets/scene/fly_stone_3.png",
+			"type": "image",
+			"name": "fly_stone_32_png"
+		},
+		{
+			"url": "assets/scene/forest_1.png",
+			"type": "image",
+			"name": "forest_12_png"
+		},
+		{
+			"url": "assets/scene/forest_2.png",
+			"type": "image",
+			"name": "forest_22_png"
+		},
+		{
+			"url": "assets/scene/forest_3.png",
+			"type": "image",
+			"name": "forest_32_png"
+		},
+		{
+			"url": "assets/scene/golden_1.png",
+			"type": "image",
+			"name": "golden_12_png"
+		},
+		{
+			"url": "assets/scene/golden_2.png",
+			"type": "image",
+			"name": "golden_22_png"
+		},
+		{
+			"url": "assets/scene/golden_3.png",
+			"type": "image",
+			"name": "golden_32_png"
+		},
+		{
+			"url": "assets/scene/gost_1.png",
+			"type": "image",
+			"name": "gost_12_png"
+		},
+		{
+			"url": "assets/scene/gost_2.png",
+			"type": "image",
+			"name": "gost_22_png"
+		},
+		{
+			"url": "assets/scene/gost_3.png",
+			"type": "image",
+			"name": "gost_32_png"
+		},
+		{
+			"url": "assets/scene/ice_lake_1.png",
+			"type": "image",
+			"name": "ice_lake_12_png"
+		},
+		{
+			"url": "assets/scene/ice_lake_2.png",
+			"type": "image",
+			"name": "ice_lake_22_png"
+		},
+		{
+			"url": "assets/scene/ice_lake_3.png",
+			"type": "image",
+			"name": "ice_lake_32_png"
+		},
+		{
+			"url": "assets/scene/pvp_1.png",
+			"type": "image",
+			"name": "pvp_12_png"
+		},
+		{
+			"url": "assets/scene/pvp_2.png",
+			"type": "image",
+			"name": "pvp_22_png"
+		},
+		{
+			"url": "assets/scene/pvp_3.png",
+			"type": "image",
+			"name": "pvp_32_png"
+		},
+		{
+			"url": "assets/scene/pvp_4.png",
+			"type": "image",
+			"name": "pvp_42_png"
+		},
+		{
+			"url": "assets/scene/water_1.png",
+			"type": "image",
+			"name": "water_12_png"
+		},
+		{
+			"url": "assets/scene/water_2.png",
+			"type": "image",
+			"name": "water_22_png"
+		},
+		{
+			"url": "assets/scene/water_3.png",
+			"type": "image",
+			"name": "water_32_png"
+		},
+		{
+			"url": "assets/scene/wood_1.png",
+			"type": "image",
+			"name": "wood_12_png"
+		},
+		{
+			"url": "assets/scene/wood_2.png",
+			"type": "image",
+			"name": "wood_22_png"
+		},
+		{
+			"url": "assets/scene/wood_3.png",
+			"type": "image",
+			"name": "wood_32_png"
+		},
+		{
+			"url": "tables/n2_achievement.json",
+			"type": "json",
+			"name": "n2_achievement2_json"
+		},
+		{
+			"url": "tables/n2_act_activity.json",
+			"type": "json",
+			"name": "n2_act_activity2_json"
+		},
+		{
+			"url": "tables/n2_act_addbuy.json",
+			"type": "json",
+			"name": "n2_act_addbuy2_json"
+		},
+		{
+			"url": "tables/n2_act_addcost.json",
+			"type": "json",
+			"name": "n2_act_addcost2_json"
+		},
+		{
+			"url": "tables/n2_act_drawhero.json",
+			"type": "json",
+			"name": "n2_act_drawhero2_json"
+		},
+		{
+			"url": "tables/n2_act_poster.json",
+			"type": "json",
+			"name": "n2_act_poster2_json"
+		},
+		{
+			"url": "tables/n2_act_pvp.json",
+			"type": "json",
+			"name": "n2_act_pvp2_json"
+		},
+		{
+			"url": "tables/n2_act_singlebuy.json",
+			"type": "json",
+			"name": "n2_act_singlebuy2_json"
+		},
+		{
+			"url": "tables/n2_act_word.json",
+			"type": "json",
+			"name": "n2_act_word2_json"
+		},
+		{
+			"url": "tables/n2_basedata.json",
+			"type": "json",
+			"name": "n2_basedata2_json"
+		},
+		{
+			"url": "tables/n2_buff.json",
+			"type": "json",
+			"name": "n2_buff2_json"
+		},
+		{
+			"url": "tables/n2_card.json",
+			"type": "json",
+			"name": "n2_card2_json"
+		},
+		{
+			"url": "tables/n2_daily_fund.json",
+			"type": "json",
+			"name": "n2_daily_fund2_json"
+		},
+		{
+			"url": "tables/n2_daily_senddiamond.json",
+			"type": "json",
+			"name": "n2_daily_senddiamond2_json"
+		},
+		{
+			"url": "tables/n2_daily_signin.json",
+			"type": "json",
+			"name": "n2_daily_signin2_json"
+		},
+		{
+			"url": "tables/n2_firstblood.json",
+			"type": "json",
+			"name": "n2_firstblood2_json"
+		},
+		{
+			"url": "tables/n2_friendship.json",
+			"type": "json",
+			"name": "n2_friendship2_json"
+		},
+		{
+			"url": "tables/n2_hero.json",
+			"type": "json",
+			"name": "n2_hero2_json"
+		},
+		{
+			"url": "tables/n2_hero_draw.json",
+			"type": "json",
+			"name": "n2_hero_draw2_json"
+		},
+		{
+			"url": "tables/n2_hero_drawgroup.json",
+			"type": "json",
+			"name": "n2_hero_drawgroup2_json"
+		},
+		{
+			"url": "tables/n2_hero_drawtimes.json",
+			"type": "json",
+			"name": "n2_hero_drawtimes2_json"
+		},
+		{
+			"url": "tables/n2_hero_skill.json",
+			"type": "json",
+			"name": "n2_hero_skill2_json"
+		},
+		{
+			"url": "tables/n2_hero_talent.json",
+			"type": "json",
+			"name": "n2_hero_talent2_json"
+		},
+		{
+			"url": "tables/n2_invite.json",
+			"type": "json",
+			"name": "n2_invite2_json"
+		},
+		{
+			"url": "tables/n2_makemoney.json",
+			"type": "json",
+			"name": "n2_makemoney2_json"
+		},
+		{
+			"url": "tables/n2_mission.json",
+			"type": "json",
+			"name": "n2_mission2_json"
+		},
+		{
+			"url": "tables/n2_monster.json",
+			"type": "json",
+			"name": "n2_monster2_json"
+		},
+		{
+			"url": "tables/n2_monster_fb.json",
+			"type": "json",
+			"name": "n2_monster_fb2_json"
+		},
+		{
+			"url": "tables/n2_monster_lvup.json",
+			"type": "json",
+			"name": "n2_monster_lvup2_json"
+		},
+		{
+			"url": "tables/n2_pve_enemy.json",
+			"type": "json",
+			"name": "n2_pve_enemy2_json"
+		},
+		{
+			"url": "tables/n2_pve_item.json",
+			"type": "json",
+			"name": "n2_pve_item2_json"
+		},
+		{
+			"url": "tables/n2_pve_stage.json",
+			"type": "json",
+			"name": "n2_pve_stage2_json"
+		},
+		{
+			"url": "tables/n2_pvelv.json",
+			"type": "json",
+			"name": "n2_pvelv2_json"
+		},
+		{
+			"url": "tables/n2_reward.json",
+			"type": "json",
+			"name": "n2_reward2_json"
+		},
+		{
+			"url": "tables/n2_sevenday.json",
+			"type": "json",
+			"name": "n2_sevenday2_json"
+		},
+		{
+			"url": "tables/n2_task.json",
+			"type": "json",
+			"name": "n2_task2_json"
+		},
+		{
+			"url": "tables/n2_trigger_chance.json",
+			"type": "json",
+			"name": "n2_trigger_chance2_json"
+		},
+		{
+			"url": "tables/n2_weapon.json",
+			"type": "json",
+			"name": "n2_weapon2_json"
+		},
+		{
+			"url": "tables/n2_weapon_fb.json",
+			"type": "json",
+			"name": "n2_weapon_fb2_json"
+		},
+		{
+			"url": "tables/n2_weapon_fbop.json",
+			"type": "json",
+			"name": "n2_weapon_fbop2_json"
+		},
+		{
+			"url": "tables/n2_weapon_group.json",
+			"type": "json",
+			"name": "n2_weapon_group2_json"
+		},
+		{
+			"url": "tables/n2_weapon_suit.json",
+			"type": "json",
+			"name": "n2_weapon_suit2_json"
+		},
+		{
+			"url": "config/fight_config.json",
+			"type": "json",
+			"name": "fight_config2_json"
+		},
+		{
 			"url": "assets/hero/101_wukong.json",
 			"type": "json",
 			"name": "101_wukong_json"
@@ -243,6 +893,36 @@
 			"url": "assets/hero/102_atk_target.png",
 			"type": "image",
 			"name": "102_atk_target_png"
+		},
+		{
+			"url": "assets/hero/102_attack_missle.json",
+			"type": "json",
+			"name": "102_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/102_attack_missle.png",
+			"type": "image",
+			"name": "102_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/102_attack_target.json",
+			"type": "json",
+			"name": "102_attack_target_json"
+		},
+		{
+			"url": "assets/hero/102_attack_target.png",
+			"type": "image",
+			"name": "102_attack_target_png"
+		},
+		{
+			"url": "assets/hero/102_skill_1_source.json",
+			"type": "json",
+			"name": "102_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/102_skill_1_source.png",
+			"type": "image",
+			"name": "102_skill_1_source_png"
 		},
 		{
 			"url": "assets/hero/102_skill_source.json",
@@ -275,6 +955,16 @@
 			"name": "103_bajie_png"
 		},
 		{
+			"url": "assets/hero/104_atk_skill_source.json",
+			"type": "json",
+			"name": "104_atk_skill_source_json"
+		},
+		{
+			"url": "assets/hero/104_atk_skill_source.png",
+			"type": "image",
+			"name": "104_atk_skill_source_png"
+		},
+		{
 			"url": "assets/hero/104_atk_target.json",
 			"type": "json",
 			"name": "104_atk_target_json"
@@ -283,6 +973,16 @@
 			"url": "assets/hero/104_atk_target.png",
 			"type": "image",
 			"name": "104_atk_target_png"
+		},
+		{
+			"url": "assets/hero/104_attack_target.json",
+			"type": "json",
+			"name": "104_attack_target_json"
+		},
+		{
+			"url": "assets/hero/104_attack_target.png",
+			"type": "image",
+			"name": "104_attack_target_png"
 		},
 		{
 			"url": "assets/hero/104_shaheshang.json",
@@ -295,6 +995,16 @@
 			"name": "104_shaheshang_png"
 		},
 		{
+			"url": "assets/hero/104_skill_1_source.json",
+			"type": "json",
+			"name": "104_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/104_skill_1_source.png",
+			"type": "image",
+			"name": "104_skill_1_source_png"
+		},
+		{
 			"url": "assets/hero/104_skill_source.json",
 			"type": "json",
 			"name": "104_skill_source_json"
@@ -303,6 +1013,16 @@
 			"url": "assets/hero/104_skill_source.png",
 			"type": "image",
 			"name": "104_skill_source_png"
+		},
+		{
+			"url": "assets/hero/105_skill_1_target.json",
+			"type": "json",
+			"name": "105_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/105_skill_1_target.png",
+			"type": "image",
+			"name": "105_skill_1_target_png"
 		},
 		{
 			"url": "assets/hero/105_skill_target.json",
@@ -325,6 +1045,36 @@
 			"name": "105_xiaobailong_png"
 		},
 		{
+			"url": "assets/hero/106_attack_target.json",
+			"type": "json",
+			"name": "106_attack_target_json"
+		},
+		{
+			"url": "assets/hero/106_attack_target.png",
+			"type": "image",
+			"name": "106_attack_target_png"
+		},
+		{
+			"url": "assets/hero/106_niumowang.json",
+			"type": "json",
+			"name": "106_niumowang_json"
+		},
+		{
+			"url": "assets/hero/106_niumowang.png",
+			"type": "image",
+			"name": "106_niumowang_png"
+		},
+		{
+			"url": "assets/hero/106_skill_1_target.json",
+			"type": "json",
+			"name": "106_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/106_skill_1_target.png",
+			"type": "image",
+			"name": "106_skill_1_target_png"
+		},
+		{
 			"url": "assets/hero/107_atk_target.json",
 			"type": "json",
 			"name": "107_atk_target_json"
@@ -333,6 +1083,16 @@
 			"url": "assets/hero/107_atk_target.png",
 			"type": "image",
 			"name": "107_atk_target_png"
+		},
+		{
+			"url": "assets/hero/107_attack_target.json",
+			"type": "json",
+			"name": "107_attack_target_json"
+		},
+		{
+			"url": "assets/hero/107_attack_target.png",
+			"type": "image",
+			"name": "107_attack_target_png"
 		},
 		{
 			"url": "assets/hero/107_honghaier.json",
@@ -365,6 +1125,16 @@
 			"name": "109_atk_target_png"
 		},
 		{
+			"url": "assets/hero/109_attack_target.json",
+			"type": "json",
+			"name": "109_attack_target_json"
+		},
+		{
+			"url": "assets/hero/109_attack_target.png",
+			"type": "image",
+			"name": "109_attack_target_png"
+		},
+		{
 			"url": "assets/hero/109_erlangshen.json",
 			"type": "json",
 			"name": "109_erlangshen_json"
@@ -373,6 +1143,16 @@
 			"url": "assets/hero/109_erlangshen.png",
 			"type": "image",
 			"name": "109_erlangshen_png"
+		},
+		{
+			"url": "assets/hero/109_skill_1_target.json",
+			"type": "json",
+			"name": "109_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/109_skill_1_target.png",
+			"type": "image",
+			"name": "109_skill_1_target_png"
 		},
 		{
 			"url": "assets/hero/109_skill_target.json",
@@ -403,6 +1183,36 @@
 			"url": "assets/hero/110_atk_target.png",
 			"type": "image",
 			"name": "110_atk_target_png"
+		},
+		{
+			"url": "assets/hero/110_attack_missle.json",
+			"type": "json",
+			"name": "110_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/110_attack_missle.png",
+			"type": "image",
+			"name": "110_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/110_attack_target.json",
+			"type": "json",
+			"name": "110_attack_target_json"
+		},
+		{
+			"url": "assets/hero/110_attack_target.png",
+			"type": "image",
+			"name": "110_attack_target_png"
+		},
+		{
+			"url": "assets/hero/110_skill_1_source.json",
+			"type": "json",
+			"name": "110_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/110_skill_1_source.png",
+			"type": "image",
+			"name": "110_skill_1_source_png"
 		},
 		{
 			"url": "assets/hero/110_skill_source.json",
@@ -445,6 +1255,26 @@
 			"name": "111_atk_target_png"
 		},
 		{
+			"url": "assets/hero/111_attack_missle.json",
+			"type": "json",
+			"name": "111_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/111_attack_missle.png",
+			"type": "image",
+			"name": "111_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/111_attack_target.json",
+			"type": "json",
+			"name": "111_attack_target_json"
+		},
+		{
+			"url": "assets/hero/111_attack_target.png",
+			"type": "image",
+			"name": "111_attack_target_png"
+		},
+		{
 			"url": "assets/hero/111_xiezijing.json",
 			"type": "json",
 			"name": "111_xiezijing_json"
@@ -473,6 +1303,26 @@
 			"url": "assets/hero/112_atk_target.png",
 			"type": "image",
 			"name": "112_atk_target_png"
+		},
+		{
+			"url": "assets/hero/112_attack_missle.json",
+			"type": "json",
+			"name": "112_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/112_attack_missle.png",
+			"type": "image",
+			"name": "112_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/112_attack_target.json",
+			"type": "json",
+			"name": "112_attack_target_json"
+		},
+		{
+			"url": "assets/hero/112_attack_target.png",
+			"type": "image",
+			"name": "112_attack_target_png"
 		},
 		{
 			"url": "assets/hero/112_kongquegongzhu.json",
@@ -505,6 +1355,26 @@
 			"name": "113_atk_target_png"
 		},
 		{
+			"url": "assets/hero/113_attack_missle.json",
+			"type": "json",
+			"name": "113_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/113_attack_missle.png",
+			"type": "image",
+			"name": "113_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/113_attack_target.json",
+			"type": "json",
+			"name": "113_attack_target_json"
+		},
+		{
+			"url": "assets/hero/113_attack_target.png",
+			"type": "image",
+			"name": "113_attack_target_png"
+		},
+		{
 			"url": "assets/hero/113_nvwang.json",
 			"type": "json",
 			"name": "113_nvwang_json"
@@ -515,6 +1385,16 @@
 			"name": "113_nvwang_png"
 		},
 		{
+			"url": "assets/hero/113_skill_1_missle.json",
+			"type": "json",
+			"name": "113_skill_1_missle_json"
+		},
+		{
+			"url": "assets/hero/113_skill_1_missle.png",
+			"type": "image",
+			"name": "113_skill_1_missle_png"
+		},
+		{
 			"url": "assets/hero/113_skill_source.json",
 			"type": "json",
 			"name": "113_skill_source_json"
@@ -523,6 +1403,96 @@
 			"url": "assets/hero/113_skill_source.png",
 			"type": "image",
 			"name": "113_skill_source_png"
+		},
+		{
+			"url": "assets/hero/114_atk_missle.json",
+			"type": "json",
+			"name": "114_atk_missle_json"
+		},
+		{
+			"url": "assets/hero/114_atk_missle.png",
+			"type": "image",
+			"name": "114_atk_missle_png"
+		},
+		{
+			"url": "assets/hero/114_atk_target.json",
+			"type": "json",
+			"name": "114_atk_target_json"
+		},
+		{
+			"url": "assets/hero/114_atk_target.png",
+			"type": "image",
+			"name": "114_atk_target_png"
+		},
+		{
+			"url": "assets/hero/114_attack_missle.json",
+			"type": "json",
+			"name": "114_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/114_attack_missle.png",
+			"type": "image",
+			"name": "114_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/114_attack_target.json",
+			"type": "json",
+			"name": "114_attack_target_json"
+		},
+		{
+			"url": "assets/hero/114_attack_target.png",
+			"type": "image",
+			"name": "114_attack_target_png"
+		},
+		{
+			"url": "assets/hero/114_xiwangmu.json",
+			"type": "json",
+			"name": "114_xiwangmu_json"
+		},
+		{
+			"url": "assets/hero/114_xiwangmu.png",
+			"type": "image",
+			"name": "114_xiwangmu_png"
+		},
+		{
+			"url": "assets/hero/115_attack_target.json",
+			"type": "json",
+			"name": "115_attack_target_json"
+		},
+		{
+			"url": "assets/hero/115_attack_target.png",
+			"type": "image",
+			"name": "115_attack_target_png"
+		},
+		{
+			"url": "assets/hero/115_skill_1_missle.json",
+			"type": "json",
+			"name": "115_skill_1_missle_json"
+		},
+		{
+			"url": "assets/hero/115_skill_1_missle.png",
+			"type": "image",
+			"name": "115_skill_1_missle_png"
+		},
+		{
+			"url": "assets/hero/115_skill_1_target.json",
+			"type": "json",
+			"name": "115_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/115_skill_1_target.png",
+			"type": "image",
+			"name": "115_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/115_zixiaxianzi.json",
+			"type": "json",
+			"name": "115_zixiaxianzi_json"
+		},
+		{
+			"url": "assets/hero/115_zixiaxianzi.png",
+			"type": "image",
+			"name": "115_zixiaxianzi_png"
 		},
 		{
 			"url": "assets/hero/116_atk_missle.json",
@@ -545,6 +1515,26 @@
 			"name": "116_atk_target_png"
 		},
 		{
+			"url": "assets/hero/116_attack_missle.json",
+			"type": "json",
+			"name": "116_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/116_attack_missle.png",
+			"type": "image",
+			"name": "116_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/116_attack_target.json",
+			"type": "json",
+			"name": "116_attack_target_json"
+		},
+		{
+			"url": "assets/hero/116_attack_target.png",
+			"type": "image",
+			"name": "116_attack_target_png"
+		},
+		{
 			"url": "assets/hero/116_heiwuchang.json",
 			"type": "json",
 			"name": "116_heiwuchang_json"
@@ -553,6 +1543,16 @@
 			"url": "assets/hero/116_heiwuchang.png",
 			"type": "image",
 			"name": "116_heiwuchang_png"
+		},
+		{
+			"url": "assets/hero/116_skill_1_source.json",
+			"type": "json",
+			"name": "116_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/116_skill_1_source.png",
+			"type": "image",
+			"name": "116_skill_1_source_png"
 		},
 		{
 			"url": "assets/hero/116_skill_source.json",
@@ -585,6 +1585,26 @@
 			"name": "117_atk_target_png"
 		},
 		{
+			"url": "assets/hero/117_attack_missle.json",
+			"type": "json",
+			"name": "117_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/117_attack_missle.png",
+			"type": "image",
+			"name": "117_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/117_attack_target.json",
+			"type": "json",
+			"name": "117_attack_target_json"
+		},
+		{
+			"url": "assets/hero/117_attack_target.png",
+			"type": "image",
+			"name": "117_attack_target_png"
+		},
+		{
 			"url": "assets/hero/117_baiwuchang.json",
 			"type": "json",
 			"name": "117_baiwuchang_json"
@@ -593,6 +1613,16 @@
 			"url": "assets/hero/117_baiwuchang.png",
 			"type": "image",
 			"name": "117_baiwuchang_png"
+		},
+		{
+			"url": "assets/hero/117_skill_1_source.json",
+			"type": "json",
+			"name": "117_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/117_skill_1_source.png",
+			"type": "image",
+			"name": "117_skill_1_source_png"
 		},
 		{
 			"url": "assets/hero/117_skill_source.json",
@@ -605,6 +1635,156 @@
 			"name": "117_skill_source_png"
 		},
 		{
+			"url": "assets/hero/118_attack_missle.json",
+			"type": "json",
+			"name": "118_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/118_attack_missle.png",
+			"type": "image",
+			"name": "118_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/118_attack_target.json",
+			"type": "json",
+			"name": "118_attack_target_json"
+		},
+		{
+			"url": "assets/hero/118_attack_target.png",
+			"type": "image",
+			"name": "118_attack_target_png"
+		},
+		{
+			"url": "assets/hero/118_donghailongwang.json",
+			"type": "json",
+			"name": "118_donghailongwang_json"
+		},
+		{
+			"url": "assets/hero/118_donghailongwang.png",
+			"type": "image",
+			"name": "118_donghailongwang_png"
+		},
+		{
+			"url": "assets/hero/118_skill_1_source.json",
+			"type": "json",
+			"name": "118_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/118_skill_1_source.png",
+			"type": "image",
+			"name": "118_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/119_attack_target.json",
+			"type": "json",
+			"name": "119_attack_target_json"
+		},
+		{
+			"url": "assets/hero/119_attack_target.png",
+			"type": "image",
+			"name": "119_attack_target_png"
+		},
+		{
+			"url": "assets/hero/119_jinjiaodawang.json",
+			"type": "json",
+			"name": "119_jinjiaodawang_json"
+		},
+		{
+			"url": "assets/hero/119_jinjiaodawang.png",
+			"type": "image",
+			"name": "119_jinjiaodawang_png"
+		},
+		{
+			"url": "assets/hero/119_skill_1_target.json",
+			"type": "json",
+			"name": "119_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/119_skill_1_target.png",
+			"type": "image",
+			"name": "119_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/120_attack_target.json",
+			"type": "json",
+			"name": "120_attack_target_json"
+		},
+		{
+			"url": "assets/hero/120_attack_target.png",
+			"type": "image",
+			"name": "120_attack_target_png"
+		},
+		{
+			"url": "assets/hero/120_yinjiaodawang.json",
+			"type": "json",
+			"name": "120_yinjiaodawang_json"
+		},
+		{
+			"url": "assets/hero/120_yinjiaodawang.png",
+			"type": "image",
+			"name": "120_yinjiaodawang_png"
+		},
+		{
+			"url": "assets/hero/121_attack_missle.json",
+			"type": "json",
+			"name": "121_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/121_attack_missle.png",
+			"type": "image",
+			"name": "121_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/121_attack_target.json",
+			"type": "json",
+			"name": "121_attack_target_json"
+		},
+		{
+			"url": "assets/hero/121_attack_target.png",
+			"type": "image",
+			"name": "121_attack_target_png"
+		},
+		{
+			"url": "assets/hero/121_jinchidapeng.json",
+			"type": "json",
+			"name": "121_jinchidapeng_json"
+		},
+		{
+			"url": "assets/hero/121_jinchidapeng.png",
+			"type": "image",
+			"name": "121_jinchidapeng_png"
+		},
+		{
+			"url": "assets/hero/121_skill_1_missle.json",
+			"type": "json",
+			"name": "121_skill_1_missle_json"
+		},
+		{
+			"url": "assets/hero/121_skill_1_missle.png",
+			"type": "image",
+			"name": "121_skill_1_missle_png"
+		},
+		{
+			"url": "assets/hero/121_skill_1_target.json",
+			"type": "json",
+			"name": "121_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/121_skill_1_target.png",
+			"type": "image",
+			"name": "121_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/122_attack_target.json",
+			"type": "json",
+			"name": "122_attack_target_json"
+		},
+		{
+			"url": "assets/hero/122_attack_target.png",
+			"type": "image",
+			"name": "122_attack_target_png"
+		},
+		{
 			"url": "assets/hero/122_nezha.json",
 			"type": "json",
 			"name": "122_nezha_json"
@@ -613,6 +1793,306 @@
 			"url": "assets/hero/122_nezha.png",
 			"type": "image",
 			"name": "122_nezha_png"
+		},
+		{
+			"url": "assets/hero/122_skill_1_target.json",
+			"type": "json",
+			"name": "122_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/122_skill_1_target.png",
+			"type": "image",
+			"name": "122_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/123_attack_missle.json",
+			"type": "json",
+			"name": "123_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/123_attack_missle.png",
+			"type": "image",
+			"name": "123_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/123_attack_target.json",
+			"type": "json",
+			"name": "123_attack_target_json"
+		},
+		{
+			"url": "assets/hero/123_attack_target.png",
+			"type": "image",
+			"name": "123_attack_target_png"
+		},
+		{
+			"url": "assets/hero/123_skill_1_source.json",
+			"type": "json",
+			"name": "123_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/123_skill_1_source.png",
+			"type": "image",
+			"name": "123_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/123_sudaji.json",
+			"type": "json",
+			"name": "123_sudaji_json"
+		},
+		{
+			"url": "assets/hero/123_sudaji.png",
+			"type": "image",
+			"name": "123_sudaji_png"
+		},
+		{
+			"url": "assets/hero/124_attack_missle_1.json",
+			"type": "json",
+			"name": "124_attack_missle_1_json"
+		},
+		{
+			"url": "assets/hero/124_attack_missle_1.png",
+			"type": "image",
+			"name": "124_attack_missle_1_png"
+		},
+		{
+			"url": "assets/hero/124_attack_missle_2.json",
+			"type": "json",
+			"name": "124_attack_missle_2_json"
+		},
+		{
+			"url": "assets/hero/124_attack_missle_2.png",
+			"type": "image",
+			"name": "124_attack_missle_2_png"
+		},
+		{
+			"url": "assets/hero/124_attack_target.json",
+			"type": "json",
+			"name": "124_attack_target_json"
+		},
+		{
+			"url": "assets/hero/124_attack_target.png",
+			"type": "image",
+			"name": "124_attack_target_png"
+		},
+		{
+			"url": "assets/hero/124_jiangziya.json",
+			"type": "json",
+			"name": "124_jiangziya_json"
+		},
+		{
+			"url": "assets/hero/124_jiangziya.png",
+			"type": "image",
+			"name": "124_jiangziya_png"
+		},
+		{
+			"url": "assets/hero/124_skill_1_source.json",
+			"type": "json",
+			"name": "124_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/124_skill_1_source.png",
+			"type": "image",
+			"name": "124_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/124_skill_1_target.json",
+			"type": "json",
+			"name": "124_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/124_skill_1_target.png",
+			"type": "image",
+			"name": "124_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/125_attack_missle.json",
+			"type": "json",
+			"name": "125_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/125_attack_missle.png",
+			"type": "image",
+			"name": "125_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/125_attack_target.json",
+			"type": "json",
+			"name": "125_attack_target_json"
+		},
+		{
+			"url": "assets/hero/125_attack_target.png",
+			"type": "image",
+			"name": "125_attack_target_png"
+		},
+		{
+			"url": "assets/hero/125_yanluowang.json",
+			"type": "json",
+			"name": "125_yanluowang_json"
+		},
+		{
+			"url": "assets/hero/125_yanluowang.png",
+			"type": "image",
+			"name": "125_yanluowang_png"
+		},
+		{
+			"url": "assets/hero/126_attack_source.json",
+			"type": "json",
+			"name": "126_attack_source_json"
+		},
+		{
+			"url": "assets/hero/126_attack_source.png",
+			"type": "image",
+			"name": "126_attack_source_png"
+		},
+		{
+			"url": "assets/hero/126_rulai.json",
+			"type": "json",
+			"name": "126_rulai_json"
+		},
+		{
+			"url": "assets/hero/126_rulai.png",
+			"type": "image",
+			"name": "126_rulai_png"
+		},
+		{
+			"url": "assets/hero/127_attack_missle.json",
+			"type": "json",
+			"name": "127_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/127_attack_missle.png",
+			"type": "image",
+			"name": "127_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/127_attack_target.json",
+			"type": "json",
+			"name": "127_attack_target_json"
+		},
+		{
+			"url": "assets/hero/127_attack_target.png",
+			"type": "image",
+			"name": "127_attack_target_png"
+		},
+		{
+			"url": "assets/hero/127_change.json",
+			"type": "json",
+			"name": "127_change_json"
+		},
+		{
+			"url": "assets/hero/127_change.png",
+			"type": "image",
+			"name": "127_change_png"
+		},
+		{
+			"url": "assets/hero/127_skill_1_missle.json",
+			"type": "json",
+			"name": "127_skill_1_missle_json"
+		},
+		{
+			"url": "assets/hero/127_skill_1_missle.png",
+			"type": "image",
+			"name": "127_skill_1_missle_png"
+		},
+		{
+			"url": "assets/hero/127_skill_1_target.json",
+			"type": "json",
+			"name": "127_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/127_skill_1_target.png",
+			"type": "image",
+			"name": "127_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/128_attack_missle.json",
+			"type": "json",
+			"name": "128_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/128_attack_missle.png",
+			"type": "image",
+			"name": "128_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/128_attack_target.json",
+			"type": "json",
+			"name": "128_attack_target_json"
+		},
+		{
+			"url": "assets/hero/128_attack_target.png",
+			"type": "image",
+			"name": "128_attack_target_png"
+		},
+		{
+			"url": "assets/hero/128_houyi.json",
+			"type": "json",
+			"name": "128_houyi_json"
+		},
+		{
+			"url": "assets/hero/128_houyi.png",
+			"type": "image",
+			"name": "128_houyi_png"
+		},
+		{
+			"url": "assets/hero/128_skill_1_missle.json",
+			"type": "json",
+			"name": "128_skill_1_missle_json"
+		},
+		{
+			"url": "assets/hero/128_skill_1_missle.png",
+			"type": "image",
+			"name": "128_skill_1_missle_png"
+		},
+		{
+			"url": "assets/hero/128_skill_1_target.json",
+			"type": "json",
+			"name": "128_skill_1_target_json"
+		},
+		{
+			"url": "assets/hero/128_skill_1_target.png",
+			"type": "image",
+			"name": "128_skill_1_target_png"
+		},
+		{
+			"url": "assets/hero/129_attack_target.json",
+			"type": "json",
+			"name": "129_attack_target_json"
+		},
+		{
+			"url": "assets/hero/129_attack_target.png",
+			"type": "image",
+			"name": "129_attack_target_png"
+		},
+		{
+			"url": "assets/hero/129_nvwa.json",
+			"type": "json",
+			"name": "129_nvwa_json"
+		},
+		{
+			"url": "assets/hero/129_nvwa.png",
+			"type": "image",
+			"name": "129_nvwa_png"
+		},
+		{
+			"url": "assets/hero/129_skill_1_source.json",
+			"type": "json",
+			"name": "129_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/129_skill_1_source.png",
+			"type": "image",
+			"name": "129_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/130_pangu.json",
+			"type": "json",
+			"name": "130_pangu_json"
+		},
+		{
+			"url": "assets/hero/130_pangu.png",
+			"type": "image",
+			"name": "130_pangu_png"
 		},
 		{
 			"url": "assets/hero/201_atk_missle.json",
@@ -1085,394 +2565,894 @@
 			"name": "buff_clean_png"
 		},
 		{
-			"url": "assets/pvp_blood.png",
-			"type": "image",
-			"name": "pvp_blood_png"
-		},
-		{
-			"url": "assets/pvp_blood_bar.png",
-			"type": "image",
-			"name": "pvp_blood_bar_png"
-		},
-		{
-			"url": "assets/pvp_blood_enemy.png",
-			"type": "image",
-			"name": "pvp_blood_enemy_png"
-		},
-		{
-			"url": "assets/pvp_blood_white.png",
-			"type": "image",
-			"name": "pvp_blood_white_png"
-		},
-		{
-			"url": "config/fight_config.json",
+			"url": "assets/hero/buff_hp.json",
 			"type": "json",
-			"name": "fight_config_json"
+			"name": "buff_hp_json"
 		},
 		{
-			"url": "assets/fight/drop_coin.png",
+			"url": "assets/hero/buff_hp.png",
 			"type": "image",
-			"name": "drop_coin_png"
+			"name": "buff_hp_png"
 		},
 		{
-			"url": "assets/fight/drop_gold.png",
-			"type": "image",
-			"name": "drop_gold_png"
-		},
-		{
-			"url": "assets/fight/drop_pantao.png",
-			"type": "image",
-			"name": "drop_pantao_png"
-		},
-		{
-			"url": "assets/fight/drop_shenfu.png",
-			"type": "image",
-			"name": "drop_shenfu_png"
-		},
-		{
-			"url": "assets/fight/drop_wuzhishan.png",
-			"type": "image",
-			"name": "drop_wuzhishan_png"
-		},
-		{
-			"url": "assets/fight/drop_yueguangbaohe.png",
-			"type": "image",
-			"name": "drop_yueguangbaohe_png"
-		},
-		{
-			"url": "tables/n2_pve_item.json",
+			"url": "assets/hero/skill_1_target.json",
 			"type": "json",
-			"name": "n2_pve_item_json"
+			"name": "skill_1_target_json"
 		},
 		{
-			"url": "assets/hero/114_atk_missle.png",
+			"url": "assets/hero/skill_1_target.png",
 			"type": "image",
-			"name": "114_atk_missle_png"
+			"name": "skill_1_target_png"
 		},
 		{
-			"url": "assets/hero/114_atk_target.png",
-			"type": "image",
-			"name": "114_atk_target_png"
-		},
-		{
-			"url": "assets/hero/114_xiwangmu.png",
-			"type": "image",
-			"name": "114_xiwangmu_png"
-		},
-		{
-			"url": "assets/hero/114_atk_missle.json",
+			"url": "assets/hero/skill_2_target.json",
 			"type": "json",
-			"name": "114_atk_missle_json"
+			"name": "skill_2_target_json"
 		},
 		{
-			"url": "assets/hero/114_atk_target.json",
-			"type": "json",
-			"name": "114_atk_target_json"
-		},
-		{
-			"url": "assets/hero/114_xiwangmu.json",
-			"type": "json",
-			"name": "114_xiwangmu_json"
-		},
-		{
-			"url": "assets/hero/104_atk_skill_source.png",
+			"url": "assets/hero/skill_2_target.png",
 			"type": "image",
-			"name": "104_atk_skill_source_png"
+			"name": "skill_2_target_png"
 		},
 		{
-			"url": "assets/hero/104_atk_skill_source.json",
+			"url": "assets/hero/skill_3_target.json",
 			"type": "json",
-			"name": "104_atk_skill_source_json"
+			"name": "skill_3_target_json"
 		},
 		{
-			"url": "assets/hp.png",
+			"url": "assets/hero/skill_3_target.png",
 			"type": "image",
-			"name": "hp_png"
+			"name": "skill_3_target_png"
 		},
 		{
-			"url": "assets/hp.fnt",
+			"url": "assets/hero/skill_4_target.json",
+			"type": "json",
+			"name": "skill_4_target_json"
+		},
+		{
+			"url": "assets/hero/skill_4_target.png",
+			"type": "image",
+			"name": "skill_4_target_png"
+		},
+		{
+			"url": "assets/proload/blood_stage.png",
+			"type": "image",
+			"name": "blood_stage_png"
+		},
+		{
+			"url": "assets/proload/blood_stage_background.png",
+			"type": "image",
+			"name": "blood_stage_background_png"
+		},
+		{
+			"url": "assets/proload/boss_stage_title.png",
+			"type": "image",
+			"name": "boss_stage_title_png"
+		},
+		{
+			"url": "assets/proload/buff.fnt",
+			"type": "font",
+			"name": "buff_fnt"
+		},
+		{
+			"url": "assets/proload/buff.png",
+			"type": "image",
+			"name": "buff_png"
+		},
+		{
+			"url": "assets/proload/danger.png",
+			"type": "image",
+			"name": "danger_png"
+		},
+		{
+			"url": "assets/proload/hp.fnt",
 			"type": "font",
 			"name": "hp_fnt"
 		},
 		{
-			"url": "assets/physical_damage.fnt",
-			"type": "font",
-			"name": "physical_damage_fnt"
-		},
-		{
-			"url": "assets/physical_damage.png",
+			"url": "assets/proload/hp.png",
 			"type": "image",
-			"name": "physical_damage_png"
+			"name": "hp_png"
 		},
 		{
-			"url": "assets/magical_damage.png",
+			"url": "assets/proload/link_map.png",
 			"type": "image",
-			"name": "magical_damage_png"
+			"name": "link_map_png"
 		},
 		{
-			"url": "assets/magical_damage.fnt",
+			"url": "assets/proload/magical_damage.fnt",
 			"type": "font",
 			"name": "magical_damage_fnt"
 		},
 		{
-			"url": "assets/other.png",
+			"url": "assets/proload/magical_damage.png",
 			"type": "image",
-			"name": "other_png"
+			"name": "magical_damage_png"
 		},
 		{
-			"url": "assets/other.fnt",
+			"url": "assets/proload/other.fnt",
 			"type": "font",
 			"name": "other_fnt"
 		},
 		{
-			"url": "assets/role_shadow.png",
+			"url": "assets/proload/other.png",
+			"type": "image",
+			"name": "other_png"
+		},
+		{
+			"url": "assets/proload/physical_damage.fnt",
+			"type": "font",
+			"name": "physical_damage_fnt"
+		},
+		{
+			"url": "assets/proload/physical_damage.png",
+			"type": "image",
+			"name": "physical_damage_png"
+		},
+		{
+			"url": "assets/proload/pvp_blood.png",
+			"type": "image",
+			"name": "pvp_blood_png"
+		},
+		{
+			"url": "assets/proload/pvp_blood_background.png",
+			"type": "image",
+			"name": "pvp_blood_background_png"
+		},
+		{
+			"url": "assets/proload/pvp_blood_bar.png",
+			"type": "image",
+			"name": "pvp_blood_bar_png"
+		},
+		{
+			"url": "assets/proload/pvp_blood_enemy.png",
+			"type": "image",
+			"name": "pvp_blood_enemy_png"
+		},
+		{
+			"url": "assets/proload/pvp_blood_hit.png",
+			"type": "image",
+			"name": "pvp_blood_hit_png"
+		},
+		{
+			"url": "assets/proload/pvp_blood_white.png",
+			"type": "image",
+			"name": "pvp_blood_white_png"
+		},
+		{
+			"url": "assets/proload/role_shadow.png",
 			"type": "image",
 			"name": "role_shadow_png"
 		},
 		{
-			"url": "assets/scene/desert_1.png",
+			"url": "assets/hero/201_attack_missl.png",
 			"type": "image",
-			"name": "desert_1_png"
+			"name": "201_attack_missl_png"
 		},
 		{
-			"url": "assets/scene/desert_2.png",
+			"url": "assets/hero/201_attack_target.png",
 			"type": "image",
-			"name": "desert_2_png"
+			"name": "201_attack_target_png"
 		},
 		{
-			"url": "assets/scene/desert_3.png",
+			"url": "assets/hero/202_attack_missle.png",
 			"type": "image",
-			"name": "desert_3_png"
+			"name": "202_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/fire_1.png",
+			"url": "assets/hero/202_attack_target.png",
 			"type": "image",
-			"name": "fire_1_png"
+			"name": "202_attack_target_png"
 		},
 		{
-			"url": "assets/scene/fire_2.png",
+			"url": "assets/hero/203_attack_missle.png",
 			"type": "image",
-			"name": "fire_2_png"
+			"name": "203_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/fire_3.png",
+			"url": "assets/hero/205_attack_missle.png",
 			"type": "image",
-			"name": "fire_3_png"
+			"name": "205_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/fire_mountain_1.png",
+			"url": "assets/hero/205_attack_target.png",
 			"type": "image",
-			"name": "fire_mountain_1_png"
+			"name": "205_attack_target_png"
 		},
 		{
-			"url": "assets/scene/fire_mountain_2.png",
+			"url": "assets/hero/206_attack_missle.png",
 			"type": "image",
-			"name": "fire_mountain_2_png"
+			"name": "206_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/fire_mountain_3.png",
+			"url": "assets/hero/206_attack_target.png",
 			"type": "image",
-			"name": "fire_mountain_3_png"
+			"name": "206_attack_target_png"
 		},
 		{
-			"url": "assets/scene/flower_mountain_1.png",
+			"url": "assets/hero/210_attack_target.png",
 			"type": "image",
-			"name": "flower_mountain_1_png"
+			"name": "210_attack_target_png"
 		},
 		{
-			"url": "assets/scene/flower_mountain_2.png",
+			"url": "assets/hero/211_attack_missle.png",
 			"type": "image",
-			"name": "flower_mountain_2_png"
+			"name": "211_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/flower_mountain_3.png",
+			"url": "assets/hero/212_attack_missle.png",
 			"type": "image",
-			"name": "flower_mountain_3_png"
+			"name": "212_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/fly_stone_1.png",
+			"url": "assets/hero/212_attack_target.png",
 			"type": "image",
-			"name": "fly_stone_1_png"
+			"name": "212_attack_target_png"
 		},
 		{
-			"url": "assets/scene/fly_stone_2.png",
+			"url": "assets/hero/213_attack_missle.png",
 			"type": "image",
-			"name": "fly_stone_2_png"
+			"name": "213_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/fly_stone_3.png",
+			"url": "assets/hero/213_attack_target.png",
 			"type": "image",
-			"name": "fly_stone_3_png"
+			"name": "213_attack_target_png"
 		},
 		{
-			"url": "assets/scene/forest_1.png",
+			"url": "assets/hero/214_attack_target.png",
 			"type": "image",
-			"name": "forest_1_png"
+			"name": "214_attack_target_png"
 		},
 		{
-			"url": "assets/scene/forest_2.png",
+			"url": "assets/hero/216_attack_missle.png",
 			"type": "image",
-			"name": "forest_2_png"
+			"name": "216_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/forest_3.png",
+			"url": "assets/hero/216_attack_target.png",
 			"type": "image",
-			"name": "forest_3_png"
+			"name": "216_attack_target_png"
 		},
 		{
-			"url": "assets/scene/golden_1.png",
+			"url": "assets/hero/216_zhizhu.png",
 			"type": "image",
-			"name": "golden_1_png"
+			"name": "216_zhizhu_png"
 		},
 		{
-			"url": "assets/scene/golden_2.png",
+			"url": "assets/hero/217_attack_missle.png",
 			"type": "image",
-			"name": "golden_2_png"
+			"name": "217_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/golden_3.png",
+			"url": "assets/hero/217_attack_target.png",
 			"type": "image",
-			"name": "golden_3_png"
+			"name": "217_attack_target_png"
 		},
 		{
-			"url": "assets/scene/gost_1.png",
+			"url": "assets/hero/217_nvfeizei.png",
 			"type": "image",
-			"name": "gost_1_png"
+			"name": "217_nvfeizei_png"
 		},
 		{
-			"url": "assets/scene/gost_2.png",
+			"url": "assets/hero/218_attack_missle.png",
 			"type": "image",
-			"name": "gost_2_png"
+			"name": "218_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/gost_3.png",
+			"url": "assets/hero/218_qiangdao.png",
 			"type": "image",
-			"name": "gost_3_png"
+			"name": "218_qiangdao_png"
 		},
 		{
-			"url": "assets/scene/ice_lake_1.png",
+			"url": "assets/hero/219_attack_target.png",
 			"type": "image",
-			"name": "ice_lake_1_png"
+			"name": "219_attack_target_png"
 		},
 		{
-			"url": "assets/scene/ice_lake_2.png",
+			"url": "assets/hero/221_attack_target.png",
 			"type": "image",
-			"name": "ice_lake_2_png"
+			"name": "221_attack_target_png"
 		},
 		{
-			"url": "assets/scene/ice_lake_3.png",
+			"url": "assets/hero/222_attack_missle.png",
 			"type": "image",
-			"name": "ice_lake_3_png"
+			"name": "222_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/pvp_1.png",
+			"url": "assets/hero/222_attack_target.png",
 			"type": "image",
-			"name": "pvp_1_png"
+			"name": "222_attack_target_png"
 		},
 		{
-			"url": "assets/scene/pvp_2.png",
+			"url": "assets/hero/223_attack_missle.png",
 			"type": "image",
-			"name": "pvp_2_png"
+			"name": "223_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/pvp_3.png",
+			"url": "assets/hero/224_attack_target.png",
 			"type": "image",
-			"name": "pvp_3_png"
+			"name": "224_attack_target_png"
 		},
 		{
-			"url": "assets/scene/pvp_4.png",
+			"url": "assets/hero/225_attack_missle.png",
 			"type": "image",
-			"name": "pvp_4_png"
+			"name": "225_attack_missle_png"
 		},
 		{
-			"url": "assets/scene/water_1.png",
+			"url": "assets/hero/225_guichai.png",
 			"type": "image",
-			"name": "water_1_png"
+			"name": "225_guichai_png"
 		},
 		{
-			"url": "assets/scene/water_2.png",
+			"url": "assets/hero/226_attack_target.png",
 			"type": "image",
-			"name": "water_2_png"
+			"name": "226_attack_target_png"
 		},
 		{
-			"url": "assets/scene/water_3.png",
+			"url": "assets/hero/226_niaoyao.png",
 			"type": "image",
-			"name": "water_3_png"
+			"name": "226_niaoyao_png"
 		},
 		{
-			"url": "assets/scene/wood_1.png",
+			"url": "assets/hero/227_attack_target.png",
 			"type": "image",
-			"name": "wood_1_png"
+			"name": "227_attack_target_png"
 		},
 		{
-			"url": "assets/scene/wood_2.png",
+			"url": "assets/hero/227_xiabing.png",
 			"type": "image",
-			"name": "wood_2_png"
+			"name": "227_xiabing_png"
 		},
 		{
-			"url": "assets/scene/wood_3.png",
+			"url": "assets/hero/228_attack_missle.png",
 			"type": "image",
-			"name": "wood_3_png"
+			"name": "228_attack_missle_png"
 		},
 		{
-			"url": "tables/n2_pve_stage.json",
+			"url": "assets/hero/228_jiadaoshi.png",
+			"type": "image",
+			"name": "228_jiadaoshi_png"
+		},
+		{
+			"url": "assets/hero/229_attack_target.png",
+			"type": "image",
+			"name": "229_attack_target_png"
+		},
+		{
+			"url": "assets/hero/229_eseng.png",
+			"type": "image",
+			"name": "229_eseng_png"
+		},
+		{
+			"url": "assets/hero/230_attack_missle.png",
+			"type": "image",
+			"name": "230_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/230_attack_target.png",
+			"type": "image",
+			"name": "230_attack_target_png"
+		},
+		{
+			"url": "assets/hero/230_dengguai.png",
+			"type": "image",
+			"name": "230_dengguai_png"
+		},
+		{
+			"url": "assets/hero/301_attack_target.png",
+			"type": "image",
+			"name": "301_attack_target_png"
+		},
+		{
+			"url": "assets/hero/301_jinganghama.png",
+			"type": "image",
+			"name": "301_jinganghama_png"
+		},
+		{
+			"url": "assets/hero/301_skill_1_source.png",
+			"type": "image",
+			"name": "301_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/302_attack_target.png",
+			"type": "image",
+			"name": "302_attack_target_png"
+		},
+		{
+			"url": "assets/hero/302_qingmulongwang.png",
+			"type": "image",
+			"name": "302_qingmulongwang_png"
+		},
+		{
+			"url": "assets/hero/302_skill_1_source.png",
+			"type": "image",
+			"name": "302_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/303_attack_source.png",
+			"type": "image",
+			"name": "303_attack_source_png"
+		},
+		{
+			"url": "assets/hero/303_shenlanmoshe.png",
+			"type": "image",
+			"name": "303_shenlanmoshe_png"
+		},
+		{
+			"url": "assets/hero/303_skill_1_source.png",
+			"type": "image",
+			"name": "303_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/304_attack_missle.png",
+			"type": "image",
+			"name": "304_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/304_huoyanshanhun.png",
+			"type": "image",
+			"name": "304_huoyanshanhun_png"
+		},
+		{
+			"url": "assets/hero/304_skill_1_source.png",
+			"type": "image",
+			"name": "304_skill_1_source_png"
+		},
+		{
+			"url": "assets/hero/305_duobimanwang.png",
+			"type": "image",
+			"name": "305_duobimanwang_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_ball.png",
+			"type": "image",
+			"name": "draw_ball_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_common_effect.png",
+			"type": "image",
+			"name": "draw_common_effect_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_icon_shine.png",
+			"type": "image",
+			"name": "draw_icon_shine_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_one_effect.png",
+			"type": "image",
+			"name": "draw_one_effect_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_role_change.png",
+			"type": "image",
+			"name": "draw_role_change_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_ten_effect.png",
+			"type": "image",
+			"name": "draw_ten_effect_png"
+		},
+		{
+			"url": "assets/effect/draw/draw_ten_light.png",
+			"type": "image",
+			"name": "draw_ten_light_png"
+		},
+		{
+			"url": "assets/effect/fight/area_effect.png",
+			"type": "image",
+			"name": "area_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/death_effect.png",
+			"type": "image",
+			"name": "death_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/dust_effect.png",
+			"type": "image",
+			"name": "dust_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/hp_effect.png",
+			"type": "image",
+			"name": "hp_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/missle_effect.png",
+			"type": "image",
+			"name": "missle_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/target_effect.png",
+			"type": "image",
+			"name": "target_effect_png"
+		},
+		{
+			"url": "assets/effect/fruit/fruit_action.png",
+			"type": "image",
+			"name": "fruit_action_png"
+		},
+		{
+			"url": "assets/effect/fruit/fruit_alive.png",
+			"type": "image",
+			"name": "fruit_alive_png"
+		},
+		{
+			"url": "assets/effect/fruit/fruit_leaf.png",
+			"type": "image",
+			"name": "fruit_leaf_png"
+		},
+		{
+			"url": "assets/effect/fruit/tree_shake.png",
+			"type": "image",
+			"name": "tree_shake_png"
+		},
+		{
+			"url": "assets/hero/201_attack_missl.json",
 			"type": "json",
-			"name": "n2_pve_stage_json"
+			"name": "201_attack_missl_json"
 		},
 		{
-			"name": "link_map_png",
-			"type": "image",
-			"url": "assets/link_map.png"
-		},
-		{
-			"name": "pvp_blood_background_png",
-			"type": "image",
-			"url": "assets/pvp_blood_background.png"
-		},
-		{
-			"name": "pvp_blood_hit_png",
-			"type": "image",
-			"url": "assets/pvp_blood_hit.png"
-		},
-		{
-			"name": "buff_foot_json",
+			"url": "assets/hero/201_attack_target.json",
 			"type": "json",
-			"url": "assets/buff/buff_foot.json"
+			"name": "201_attack_target_json"
 		},
 		{
-			"name": "buff_foot_png",
-			"type": "image",
-			"url": "assets/buff/buff_foot.png"
-		},
-		{
-			"name": "buff_frozen_json",
+			"url": "assets/hero/202_attack_missle.json",
 			"type": "json",
-			"url": "assets/buff/buff_frozen.json"
+			"name": "202_attack_missle_json"
 		},
 		{
-			"name": "buff_frozen_png",
-			"type": "image",
-			"url": "assets/buff/buff_frozen.png"
-		},
-		{
-			"name": "buff_head_json",
+			"url": "assets/hero/202_attack_target.json",
 			"type": "json",
-			"url": "assets/buff/buff_head.json"
+			"name": "202_attack_target_json"
 		},
 		{
-			"name": "buff_head_png",
-			"type": "image",
-			"url": "assets/buff/buff_head.png"
-		},
-		{
-			"name": "n2_hero_star_json",
+			"url": "assets/hero/203_attack_missle.json",
 			"type": "json",
-			"url": "tables/n2_hero_star.json"
+			"name": "203_attack_missle_json"
 		},
 		{
-			"name": "n2_invite_day_json",
+			"url": "assets/hero/205_attack_missle.json",
 			"type": "json",
-			"url": "tables/n2_invite_day.json"
+			"name": "205_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/205_attack_target.json",
+			"type": "json",
+			"name": "205_attack_target_json"
+		},
+		{
+			"url": "assets/hero/206_attack_missle.json",
+			"type": "json",
+			"name": "206_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/206_attack_target.json",
+			"type": "json",
+			"name": "206_attack_target_json"
+		},
+		{
+			"url": "assets/hero/210_attack_target.json",
+			"type": "json",
+			"name": "210_attack_target_json"
+		},
+		{
+			"url": "assets/hero/211_attack_missle.json",
+			"type": "json",
+			"name": "211_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/212_attack_missle.json",
+			"type": "json",
+			"name": "212_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/212_attack_target.json",
+			"type": "json",
+			"name": "212_attack_target_json"
+		},
+		{
+			"url": "assets/hero/213_attack_missle.json",
+			"type": "json",
+			"name": "213_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/213_attack_target.json",
+			"type": "json",
+			"name": "213_attack_target_json"
+		},
+		{
+			"url": "assets/hero/214_attack_target.json",
+			"type": "json",
+			"name": "214_attack_target_json"
+		},
+		{
+			"url": "assets/hero/216_attack_missle.json",
+			"type": "json",
+			"name": "216_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/216_attack_target.json",
+			"type": "json",
+			"name": "216_attack_target_json"
+		},
+		{
+			"url": "assets/hero/216_zhizhu.json",
+			"type": "json",
+			"name": "216_zhizhu_json"
+		},
+		{
+			"url": "assets/hero/217_attack_missle.json",
+			"type": "json",
+			"name": "217_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/217_attack_target.json",
+			"type": "json",
+			"name": "217_attack_target_json"
+		},
+		{
+			"url": "assets/hero/217_nvfeizei.json",
+			"type": "json",
+			"name": "217_nvfeizei_json"
+		},
+		{
+			"url": "assets/hero/218_attack_missle.json",
+			"type": "json",
+			"name": "218_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/218_qiangdao.json",
+			"type": "json",
+			"name": "218_qiangdao_json"
+		},
+		{
+			"url": "assets/hero/219_attack_target.json",
+			"type": "json",
+			"name": "219_attack_target_json"
+		},
+		{
+			"url": "assets/hero/221_attack_target.json",
+			"type": "json",
+			"name": "221_attack_target_json"
+		},
+		{
+			"url": "assets/hero/222_attack_missle.json",
+			"type": "json",
+			"name": "222_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/222_attack_target.json",
+			"type": "json",
+			"name": "222_attack_target_json"
+		},
+		{
+			"url": "assets/hero/223_attack_missle.json",
+			"type": "json",
+			"name": "223_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/224_attack_target.json",
+			"type": "json",
+			"name": "224_attack_target_json"
+		},
+		{
+			"url": "assets/hero/225_attack_missle.json",
+			"type": "json",
+			"name": "225_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/225_guichai.json",
+			"type": "json",
+			"name": "225_guichai_json"
+		},
+		{
+			"url": "assets/hero/226_attack_target.json",
+			"type": "json",
+			"name": "226_attack_target_json"
+		},
+		{
+			"url": "assets/hero/226_niaoyao.json",
+			"type": "json",
+			"name": "226_niaoyao_json"
+		},
+		{
+			"url": "assets/hero/227_attack_target.json",
+			"type": "json",
+			"name": "227_attack_target_json"
+		},
+		{
+			"url": "assets/hero/227_xiabing.json",
+			"type": "json",
+			"name": "227_xiabing_json"
+		},
+		{
+			"url": "assets/hero/228_attack_missle.json",
+			"type": "json",
+			"name": "228_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/228_jiadaoshi.json",
+			"type": "json",
+			"name": "228_jiadaoshi_json"
+		},
+		{
+			"url": "assets/hero/229_attack_target.json",
+			"type": "json",
+			"name": "229_attack_target_json"
+		},
+		{
+			"url": "assets/hero/230_attack_missle.json",
+			"type": "json",
+			"name": "230_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/229_eseng.json",
+			"type": "json",
+			"name": "229_eseng_json"
+		},
+		{
+			"url": "assets/hero/230_attack_target.json",
+			"type": "json",
+			"name": "230_attack_target_json"
+		},
+		{
+			"url": "assets/hero/230_dengguai.json",
+			"type": "json",
+			"name": "230_dengguai_json"
+		},
+		{
+			"url": "assets/hero/301_attack_target.json",
+			"type": "json",
+			"name": "301_attack_target_json"
+		},
+		{
+			"url": "assets/hero/301_jinganghama.json",
+			"type": "json",
+			"name": "301_jinganghama_json"
+		},
+		{
+			"url": "assets/hero/301_skill_1_source.json",
+			"type": "json",
+			"name": "301_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/302_attack_target.json",
+			"type": "json",
+			"name": "302_attack_target_json"
+		},
+		{
+			"url": "assets/hero/302_qingmulongwang.json",
+			"type": "json",
+			"name": "302_qingmulongwang_json"
+		},
+		{
+			"url": "assets/hero/302_skill_1_source.json",
+			"type": "json",
+			"name": "302_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/303_attack_source.json",
+			"type": "json",
+			"name": "303_attack_source_json"
+		},
+		{
+			"url": "assets/hero/303_shenlanmoshe.json",
+			"type": "json",
+			"name": "303_shenlanmoshe_json"
+		},
+		{
+			"url": "assets/hero/303_skill_1_source.json",
+			"type": "json",
+			"name": "303_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/304_attack_missle.json",
+			"type": "json",
+			"name": "304_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/304_huoyanshanhun.json",
+			"type": "json",
+			"name": "304_huoyanshanhun_json"
+		},
+		{
+			"url": "assets/hero/304_skill_1_source.json",
+			"type": "json",
+			"name": "304_skill_1_source_json"
+		},
+		{
+			"url": "assets/hero/305_duobimanwang.json",
+			"type": "json",
+			"name": "305_duobimanwang_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_ball.json",
+			"type": "json",
+			"name": "draw_ball_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_common_effect.json",
+			"type": "json",
+			"name": "draw_common_effect_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_icon_shine.json",
+			"type": "json",
+			"name": "draw_icon_shine_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_one_effect.json",
+			"type": "json",
+			"name": "draw_one_effect_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_role_change.json",
+			"type": "json",
+			"name": "draw_role_change_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_ten_effect.json",
+			"type": "json",
+			"name": "draw_ten_effect_json"
+		},
+		{
+			"url": "assets/effect/draw/draw_ten_light.json",
+			"type": "json",
+			"name": "draw_ten_light_json"
+		},
+		{
+			"url": "assets/effect/fight/area_effect.json",
+			"type": "json",
+			"name": "area_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/death_effect.json",
+			"type": "json",
+			"name": "death_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/dust_effect.json",
+			"type": "json",
+			"name": "dust_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/hp_effect.json",
+			"type": "json",
+			"name": "hp_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/missle_effect.json",
+			"type": "json",
+			"name": "missle_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/target_effect.json",
+			"type": "json",
+			"name": "target_effect_json"
+		},
+		{
+			"url": "assets/effect/fruit/fruit_action.json",
+			"type": "json",
+			"name": "fruit_action_json"
+		},
+		{
+			"url": "assets/effect/fruit/fruit_alive.json",
+			"type": "json",
+			"name": "fruit_alive_json"
+		},
+		{
+			"url": "assets/effect/fruit/fruit_leaf.json",
+			"type": "json",
+			"name": "fruit_leaf_json"
+		},
+		{
+			"url": "assets/effect/fruit/tree_shake.json",
+			"type": "json",
+			"name": "tree_shake_json"
 		}
 	]
 }

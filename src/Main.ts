@@ -65,14 +65,19 @@ class Main extends egret.DisplayObjectContainer {
      * 创建游戏场景
      * Create a game scene
      */
-    private pveScene:PVEFightPanel;
+    private pveScene:PVEScenePanel;
 
     private createGameScene():void {
         Config.init();
+        CmdID.initCmd();
 
-        this.pveScene = new PVEFightPanel();
+        this.pveScene = new PVEScenePanel();
         this.addChild(this.pveScene);
         this.pveScene.startLevel(1);
+
+        let mainview = new MainView();
+        this.addChild(mainview);
+
     }
 }
 

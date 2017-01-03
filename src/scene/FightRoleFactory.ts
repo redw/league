@@ -18,9 +18,9 @@ class FightRoleFactory{
     }
 
     public static freeRole(role:FightRole) {
-        if (!FightRoleFactory.map[role.roleData.id]) {
-            FightRoleFactory.map[role.roleData.id] = [];
+        if (!FightRoleFactory.map[role.id]) {
+            FightRoleFactory.map[role.id] = [];
         }
-        FightRoleFactory.map[role.roleData.id].push(role);
+        FightRoleFactory.map[role.id].push(role);
     }
 }

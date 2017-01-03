@@ -11,6 +11,7 @@ class FightProcessGenerator {
     private orders: FightRoleData[];
     private index:number = 0;
     private turn:number = 0;
+    private rightTotalLife:string;
 
     private static SkillTargetFunMap = {
         "one1":"getTarget",
@@ -50,6 +51,20 @@ class FightProcessGenerator {
         }
     }
 
+    /**
+     * 添加战斗角色数据
+     * @param left  左边角色数据
+     * @param right 右边角色数据
+     */
+    public addSceneDataArr(left:FightRoleData[], right:FightRoleData[]) {
+        this.reset();
+        for (let i = 0; i < left.length; i++) {
+            this.addSceneData(left[i]);
+        }
+        for (let i = 0; i < right.length; i++) {
+            this.addSceneData(right[i]);
+        }
+    }
 
     public addSceneDataVec(roleVec:FightRoleData[]) {
         this.reset();
@@ -65,12 +80,8 @@ class FightProcessGenerator {
     private addSceneData(role:FightRoleData) {
         let side = role.side - 1;
         let pos = role.pos;
-        if (this.allTeam[side][pos]) {
-            fight.recordLog("不要重复添加角色数据", fight.LOG_FIGHT_WARN);
-        } else {
-            this.allTeam[side][pos] = role;
-            this.roles.push(role);
-        }
+        this.allTeam[side][pos] = role;
+        this.roles.push(role);
     }
 
     /**
@@ -88,7 +99,7 @@ class FightProcessGenerator {
         this.addBeginBuff(this.roles);
         while (!this.checkEnd() && this.index <= fight.STEP_UP_LIMIT) {
             if (this.index >= fight.STEP_UP_LIMIT) {
-                fight.recordLog("战斗步数超过了上限,数所有问题了", fight.LOG_FIGHT_WARN);
+                fight.recordLog("战斗步数超过了上限,数所有问题了", fight.LOG_FIGHT_ERROR);
                 break;
             }
             if (this.orders.length == 0 && !this.checkEnd()) {
@@ -110,7 +121,7 @@ class FightProcessGenerator {
         let result:FightReportItem[] = [];
         while (!this.checkEnd() && this.index <= fight.STEP_UP_LIMIT) {
             if (this.index >= fight.STEP_UP_LIMIT) {
-                fight.recordLog(`战斗步数超过了${fight.STEP_UP_LIMIT},数所有问题了`, fight.LOG_FIGHT_WARN);
+                fight.recordLog(`战斗步数超过了${fight.STEP_UP_LIMIT},数所有问题了`, fight.LOG_FIGHT_ERROR);
                 break;
             }
             if (this.orders.length == 0 && !this.checkEnd()) {
@@ -140,13 +151,23 @@ class FightProcessGenerator {
             let len = beginSkillArr ? beginSkillArr.length : 0;
             for (let j = 0; j < len; j++) {
                 let skillId = beginSkillArr[j];
-                if (skillId) {
+                if (!!skillId) {
                     if (role.isSkillActive(skillId)) {
                         let skillConfig = Config.SkillData[skillId];
                         let buffId = skillConfig.buff_id;
                         role.addBuff(buffId);
                     }
                 }
+            }
+        }
+
+        this.rightTotalLife = "0";
+        let arr = this.allTeam[FightSideEnum.RIGHT_SIDE - 1];
+        let len = arr ? arr.length : 0;
+        for (let i = 0; i < len; i++) {
+            let roleData = arr[i];
+            if (roleData) {
+                this.rightTotalLife = BigNum.add(this.rightTotalLife, roleData.maxHP);
             }
         }
     }
@@ -180,13 +201,14 @@ class FightProcessGenerator {
      */
     private damageCore(startRole:FightRoleData, targets:FightRoleData[], skillInfo:SkillConfig, index:number, round:number) {
         let len = targets.length;
-        let isAddHP = skillInfo.target_group == "friend";
+        let isAddHP = fight.isAddHPSkill(skillInfo);
+        let isFriendSkill = skillInfo.target_group == "friend";   // 友方技能不考虑防御
         let isPhyAtk = skillInfo.damage_type == "physical";
         let isMagicAtk = skillInfo.damage_type == "magical";
         let cri = startRole.isCri();
         let criDamage = cri ? (startRole.critDamage): 1;
 
-        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(startRole) + "发动攻击", fight.LOG_FIGHT_REPORT);
+        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(startRole) + "发动攻击", fight.LOG_FIGHT_INFO);
         let result:FightReportItem = <FightReportItem>{
             skillId:skillInfo.id,
             target:[],
@@ -206,46 +228,47 @@ class FightProcessGenerator {
                 let atk, def;
                 item.damage = "0";
                 result.target.push(item);
-                target.physicalDef = BigNum.mul(target.physicalDef, 1 + target.getBuffPlusValue(BuffTypeEnum.DEF_MORE_MORE));
-                target.magicDef = BigNum.mul(target.magicDef, 1 + target.getBuffPlusValue(BuffTypeEnum.DEF_MORE_MORE));
+                target.physicalDef = BigNum.mul(target.physicalDef, target.getBuffMultiValue(BuffTypeEnum.DEF_MORE_MORE));
+                target.magicDef = BigNum.mul(target.magicDef, target.getBuffMultiValue(BuffTypeEnum.DEF_MORE_MORE));
                 if (isPhyAtk) {
                     atk = startRole.physicalAtk;
-                    def = target.physicalDef;
+                    def = isFriendSkill ?  0 :target.physicalDef;
                 } else {
                     atk = startRole.magicAtk;
-                    def = target.magicDef;
+                    def = isFriendSkill ? 0 : target.magicDef;
                 }
+                startRole.physicalAtk = BigNum.mul(startRole.physicalAtk, startRole.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
+                startRole.magicAtk = BigNum.mul(startRole.magicAtk, startRole.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
                 // 如果对象加血
                 if (isAddHP) {
                     let addHP = BigNum.mul(atk, Math.abs(skillInfo.damage) * criDamage);
-                    target.curHP = (BigNum.add(target.curHP, addHP));
-                    target.curHP = (BigNum.min(target.curHP, target.maxHP));
+                    target.curHP = BigNum.add(target.curHP, addHP);
                     item.hp = target.curHP;
                     item.addHP = addHP;
-                    fight.recordLog("第" + index + "步角色" +  fight.getRolePosDes(target) + "加血" + addHP, fight.LOG_FIGHT_REPORT);
+                    fight.recordLog("第" + index + "步角色" +  fight.getRolePosDes(target) + "加血" + addHP, 0);
                     if (!!skillInfo.buff_id) {
                         target.addBuff(skillInfo.buff_id, startRole);
                     }
                 } else {
-                    item.dodge = target.isDodge();
-                    item.block = target.isBlock();
+                    item.dodge = target.isDodge() && !!skillInfo.is_dodge;
+                    item.block = target.isBlock() && !!skillInfo.is_block;
                     if (item.dodge) {
                         // 如果被闪避了
-                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时闪避了", fight.LOG_FIGHT_REPORT);
+                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时闪避了", 0);
                     } else {
                         let ratio = 1;
                         if (target.isInvincible) {
                             ratio = 0;
                             item.invincible = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时无敌", fight.LOG_FIGHT_REPORT);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时无敌", 0);
                         } else if (isPhyAtk && target.freePhysicalAtk) {
                             ratio = 0;
                             item.isFreePhysicalAtk = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时物免", fight.LOG_FIGHT_REPORT);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时物免", 0);
                         } else if (isMagicAtk && target.freeMagicAtk) {
                             ratio = 0;
                             item.isFreeMagicAtk = true;
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时魔免", fight.LOG_FIGHT_REPORT);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时魔免", 0);
                         }
 
                         // 计算伤害
@@ -264,27 +287,28 @@ class FightProcessGenerator {
 
                         // 攻击要害, 对象对敌人造成伤害时，将伤害值*(1+敌人缺失生命值/敌人生命上限 * value)
                         let lackRatio = BigNum.div(BigNum.sub(target.maxHP,target.curHP), target.maxHP);
-                        lackRatio = BigNum.mul(lackRatio, target.getBuffPlusValue(BuffTypeEnum.ATTACK_KEY));
+                        lackRatio = BigNum.mul(lackRatio, startRole.getBuffPlusValue(BuffTypeEnum.ATTACK_KEY));
                         hurt = BigNum.mul(hurt, BigNum.add(1, lackRatio));
 
                         // 下马威 对象对敌人造成伤害时，将伤害值*(1+敌人生命值/敌人生命上限 * value)
                         lackRatio = BigNum.div(target.curHP, target.maxHP);
-                        lackRatio = BigNum.mul(lackRatio, target.getBuffPlusValue(BuffTypeEnum.XIA_MA_WEI));
+                        lackRatio = BigNum.mul(lackRatio, startRole.getBuffPlusValue(BuffTypeEnum.XIA_MA_WEI));
                         hurt = BigNum.mul(hurt, BigNum.add(1, lackRatio));
 
-                        target.curHP = (BigNum.sub(target.curHP, hurt));
+                        target.curHP = BigNum.sub(target.curHP, hurt);
                         item.damage = hurt;
                         item.hp = target.curHP;
-                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时失血" + hurt + "当前血量" + target.curHP + "最大血量" + target.maxHP, fight.LOG_FIGHT_REPORT);
+                        fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击时失血" + hurt + "当前血量" + target.curHP + "最大血量" + target.maxHP, fight.LOG_FIGHT_INFO);
 
                         let outHurtBack = BigNum.mul(backOutHurtRatio, hurt);
                         let backHurt = BigNum.mul(backHurtRatio, hurt);
-                        startRole.curHP = (BigNum.sub(BigNum.add(startRole.curHP, outHurtBack), backHurt));
+                        startRole.curHP = BigNum.add(startRole.curHP, outHurtBack);
+                        startRole.curHP = BigNum.sub(startRole.curHP, backHurt);
                         result.damage = BigNum.add(backHurt, outHurtBack);
                         result.hp = startRole.curHP;
 
                         if (BigNum.greater(fight.DIE_HP, target.curHP)){
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击死亡", fight.LOG_FIGHT_ROLE_DIE);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "被攻击死亡", 1);
                             killCount++;
                             this.removeRole(target);
                         } else {
@@ -293,7 +317,7 @@ class FightProcessGenerator {
                             }
                         }
                         if (BigNum.greater(fight.DIE_HP, startRole.curHP)) {
-                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "反弹死亡", fight.LOG_FIGHT_ROLE_DIE);
+                            fight.recordLog("第" + index + "步角色" + fight.getRolePosDes(target) + "反弹死亡", 1);
                             this.removeRole(startRole);
                         }
                     }
@@ -302,7 +326,7 @@ class FightProcessGenerator {
             }
 
             let addKillHP = BigNum.mul(startRole.maxHP, startRole.getBuffPlusValue(BuffTypeEnum.BLOOD_MORE_MORE));
-            startRole.curHP = (BigNum.add(startRole.curHP, BigNum.mul(addKillHP, killCount)));
+            startRole.curHP = BigNum.add(startRole.curHP, BigNum.mul(addKillHP, killCount));
             if (killCount > 0 && startRole.isExistBuff(BuffTypeEnum.KILL_MORE_MORE)) {
                 startRole.physicalAtk = BigNum.mul(startRole.physicalAtk, startRole.getBuffMultiValue(BuffTypeEnum.KILL_MORE_MORE) * killCount);
                 startRole.magicAtk = BigNum.mul(startRole.magicAtk, startRole.getBuffMultiValue(BuffTypeEnum.KILL_MORE_MORE) * killCount);
@@ -347,7 +371,7 @@ class FightProcessGenerator {
             }
         }
         if (this.allTeam[side][pos] == null) {
-            fight.recordLog("角色不应该为空,移除角色或发生错误", fight.LOG_FIGHT_WARN);
+            fight.recordLog("角色不应该为空,移除角色或发生错误", 1);
         }
         this.allTeam[side][pos] = null;
     }
@@ -477,7 +501,7 @@ class FightProcessGenerator {
     public getMySideTargets(obj: {pos: number, side: number}) {
         let result = [];
         let team = this.allTeam[obj.side - 1];
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        for (let i = 0; i < 9; i++) {
             if (team[i]) {
                 result.push(team[i]);
             }
@@ -489,7 +513,7 @@ class FightProcessGenerator {
     public getOtherSideTargets(obj: {pos: number, side: number}) {
         let result = [];
         let team = this.allTeam[2 - obj.side];
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        for (let i = 0; i < 9; i++) {
             if (team[i]) {
                 result.push(team[i]);
             }
@@ -506,7 +530,7 @@ class FightProcessGenerator {
                 if (!result) {
                     result = (team[i]);
                 } else {
-                    if (BigNum.greater(team[i].curHP, result.curHP)) {
+                    if (BigNum.greater(Number(team[i].curHP), Number(result.curHP))) {
                         result = team[i];
                     }
                 }
@@ -519,12 +543,12 @@ class FightProcessGenerator {
     public getLeaseHPTarget(obj: {pos: number, side: number}) {
         let result:FightRoleData = null;
         let team = this.allTeam[2 - obj.side];
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        for (let i = 0; i < 9; i++) {
             if (team[i]) {
                 if (!result) {
                     result = (team[i]);
                 } else {
-                    if (BigNum.less(team[i].curHP, result.curHP)) {
+                    if (BigNum.less(Number(team[i].curHP), Number(result.curHP))) {
                         result = team[i];
                     }
                 }
@@ -537,12 +561,12 @@ class FightProcessGenerator {
     public getSelfSideLeaseHPTarget(obj:{pos: number, side: number}) {
         let result:FightRoleData = null;
         let team = this.allTeam[obj.side - 1];
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        for (let i = 0; i < 9; i++) {
             if (team[i]) {
                 if (!result) {
                     result = team[i];
                 } else {
-                    if (BigNum.less(team[i].curHP, result.curHP)) {
+                    if (BigNum.less(Number(team[i].curHP), Number(result.curHP))) {
                         result = team[i];
                     }
                 }
@@ -555,12 +579,12 @@ class FightProcessGenerator {
     public getMostPhyAtkTarget(obj: {pos: number, side: number}) {
         let result:FightRoleData = null;
         let team = this.allTeam[2 - obj.side];
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        for (let i = 0; i < 9; i++) {
             if (team[i]) {
                 if (!result) {
                     result = (team[i]);
                 } else {
-                    if (BigNum.greater(team[i].physicalAtk, result.physicalAtk)) {
+                    if (BigNum.greater(Number(team[i].physicalAtk), Number(result.physicalAtk))) {
                         result = team[i];
                     }
                 }
@@ -573,12 +597,12 @@ class FightProcessGenerator {
     public getLeaseMagicAtkTarget(obj: {pos: number, side: number}) {
         let result:FightRoleData = null;
         let team = this.allTeam[2 - obj.side];
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        for (let i = 0; i < 9; i++) {
             if (team[i]) {
                 if (!result) {
                     result = (team[i]);
                 } else {
-                    if (BigNum.greater(team[i].magicAtk, result.magicAtk)) {
+                    if (BigNum.greater(Number(team[i].magicAtk), Number(result.magicAtk))) {
                         result = team[i];
                     }
                 }
@@ -593,10 +617,14 @@ class FightProcessGenerator {
         return [result];
     }
 
+    public getRightTotalLife() {
+        return this.rightTotalLife;
+    }
+
     // 重置
     private reset() {
-        this.leftTeam = Array(fight.ROLE_UP_LIMIT);
-        this.rightTeam = Array(fight.ROLE_UP_LIMIT);
+        this.leftTeam = Array(9);
+        this.rightTeam = Array(9);
         this.orders = [];
         this.roles = [];
     }

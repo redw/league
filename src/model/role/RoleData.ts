@@ -10,6 +10,8 @@ class RoleData {
     protected _curHP:string;     // 当前血量
     public maxHP:string;         // 最大血量
     public config:RoleConfig;    // 角色配置数据
+    public starPiece:number;    //碎片
+    public skill:number;        //解锁技能
 
     public level:number;
     public starLevel:number;
@@ -20,6 +22,9 @@ class RoleData {
         this.level = obj["lv"] || 0;
         this.starLevel = obj["star"] || 1;
         this.strengthenLevel = obj["enhanceLv"] || 0;
+        this.starPiece = obj["starPiece"] || 0;
+        this.skill = obj["skill"] || 0;
+
         let getPropFun = "";
         if (fight.isHero(this.id)) {
             this.config = Config.HeroData[this.id];
@@ -85,9 +90,11 @@ class RoleData {
         return this._curHP;
     }
 
-    public set curHP(value:string) {
-        this._curHP = value;
-        this._curHP = BigNum.clamp(this._curHP, 0, this.maxHP);
+    public set curHP(value:string){
+        if (this._curHP != value) {
+            this._curHP = value;
+            this._curHP = BigNum.clamp(this._curHP, 0, this.maxHP);
+        }
     }
 
     /**

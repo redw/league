@@ -33,5 +33,7 @@ class RoleConfig {
     "modle_height":number;
     "group": number;
     "boss": number;
-    "shoot_point":string[];
+    "dead_frame":number;
+    "quality":string;
+    "slogan":string;
 }

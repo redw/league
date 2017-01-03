@@ -1,5 +1,8 @@
 /**
- * Created by hh on 2016/12/21.
+ * Created by Administrator on 2016/12/21.
+ */
+/**
+ * PVE 中景
  */
 class PVEMiddleGround extends PVEBackGround {
 
@@ -8,8 +11,8 @@ class PVEMiddleGround extends PVEBackGround {
     }
 
     protected getSceneResourcePath(level:number){
-        let sceneIndex:string = Config.StageData[level].map;
-        return "resource/assets/scene/" + sceneIndex + "_" + 2 + ".png";
+        let name:string = Config.StageData[level].map;
+        return URLConfig.getSceneResURL(name, 2);
     }
 
     // 缓动

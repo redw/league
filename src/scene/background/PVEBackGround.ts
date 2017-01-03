@@ -2,9 +2,6 @@
  * Created by hh on 2016/12/21.
  */
 class PVEBackGround extends egret.DisplayObjectContainer {
-    public static WIDTH:number = 480;
-    public static HEIGHT:number = 460;
-
     protected background:AutoBitmap = new AutoBitmap();
     protected freeBackground:AutoBitmap = new AutoBitmap();
     private moveCompleteCount:number = 0;
@@ -25,7 +22,7 @@ class PVEBackGround extends egret.DisplayObjectContainer {
                 this._level = value;
                 let off = 0;
                 if (value % 2 == 0) {
-                    off = -PVEBackGround.WIDTH;
+                    off = -fight.WIDTH;
                 }
                 this.background.source = this.getSceneResourcePath(value);
                 this.background.x = off;
@@ -35,28 +32,28 @@ class PVEBackGround extends egret.DisplayObjectContainer {
             }
             let addOff:number = 0;
             if (value > this._level) {
-                this.curX -= PVEBackGround.WIDTH;
-                addOff = PVEBackGround.WIDTH * -1;
+                this.curX -= fight.WIDTH;
+                addOff = fight.WIDTH * -1;
             }
             else {
-                this.curX += PVEBackGround.WIDTH;
-                addOff = PVEBackGround.WIDTH;
+                this.curX += fight.WIDTH;
+                addOff = fight.WIDTH;
             }
 
-            if (this.curX < -PVEBackGround.WIDTH || this.curX > 0) {
+            if (this.curX < -fight.WIDTH || this.curX > 0) {
                 let curBitmap = this.background;
                 let bitmap;
-                if (this.curX < -PVEBackGround.WIDTH) {
+                if (this.curX < -fight.WIDTH) {
                     bitmap = this.getFreeBitmap();
                     this.addChild(bitmap);
-                    bitmap.x = PVEBackGround.WIDTH;
+                    bitmap.x = fight.WIDTH;
                     this.curX = 0;
                 }
                 if (this.curX > 0) {
                     bitmap = this.getFreeBitmap();
                     this.addChild(bitmap);
-                    bitmap.x = -PVEBackGround.WIDTH * 2;
-                    this.curX = -PVEBackGround.WIDTH;
+                    bitmap.x = -fight.WIDTH * 2;
+                    this.curX = -fight.WIDTH;
                 }
                 bitmap.source = this.getSceneResourcePath(value);
 

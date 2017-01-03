@@ -17,7 +17,6 @@ class EventManager extends egret.EventDispatcher
     }
 
     //----------------------------------------//
-
     public dispatch(type:string, data:any = null):void
     {
         this.dispatchEventWith(type, false, data);

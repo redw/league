@@ -34,4 +34,5 @@ class SkillConfig {
     "missle_speed":number;
      "area_effect_point":string;
      "shake_type":number;
+     "move_position":number[];
 }

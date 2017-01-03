@@ -43,12 +43,12 @@ module fight{
     }
 
     /**
-     * 验证主动配置
+     * 验证主动技能
      * @param value
      */
     export function verifyActiveSkill(value:SkillConfig) {
         if (value.type == "passive") {
-            recordLog(`技能${value.id}主动与被动技能配置错误`,fight.LOG_FIGHT_WARN);
+            recordLog(`技能${value.id}应该是主动配置`,fight.LOG_FIGHT_WARN);
         }
         if (!value.trigger_chance || value.trigger_chance > 1) {
             recordLog(`技能${value.id}的串配置错误`,fight.LOG_FIGHT_WARN);
@@ -63,8 +63,8 @@ module fight{
             recordLog(`技能${value.id}的跳跃攻击没有配跳跃帧`,fight.LOG_FIGHT_WARN);
         }
         if (value.action_type == fight.ATTACK_ACTION_AREA || value.action_type == fight.ATTACK_ACTION_TURN) {
-            if (!value.effect_damage_frame) {
-                recordLog(`技能${value.id}的${value.action_type}攻击没有配效果伤害帧`,fight.LOG_FIGHT_WARN);
+            if (!Number(value.effect_damage_frame)) {
+                recordLog(`技能${value.id}的${value.action_type}攻击伤害帧配置错误`,fight.LOG_FIGHT_WARN);
             }
         }
     }
@@ -82,7 +82,7 @@ module fight{
      * 是否是加血技能
      */
     export function isAddHPSkill(value:SkillConfig){
-        return value && value.target_group == "friend"
+        return value && value.damage < 0;
     }
 
     /**
@@ -106,15 +106,15 @@ module fight{
      */
     export function getNearFightPoint(role:FightRole, targets:FightRole[]){
         let curRole = targets[0];
-        let minValue = Math.abs(role.roleData.pos - curRole.roleData.pos);
+        let minValue = Math.abs(role.pos - curRole.pos);
         for (let i = 1; i < targets.length; i++) {
-            let curValue = Math.abs(role.roleData.pos - curRole.roleData.pos);
+            let curValue = Math.abs(role.pos - curRole.pos);
             if (curValue < minValue) {
                 curRole = targets[i];
             }
         }
-        let point = getRoleInitPoint(curRole.roleData);
-        if (role.roleData.side == FightSideEnum.RIGHT_SIDE) {
+        let point = getRoleInitPoint(curRole);
+        if (role.side == FightSideEnum.RIGHT_SIDE) {
             point.x += MOVE_ATTACK_OFF;
         } else {
             point.x -= MOVE_ATTACK_OFF;
@@ -187,7 +187,7 @@ module fight{
                 recordLog(`播放资源${id}帧${label}错误`, LOG_FIGHT_WARN);
             }
         } else {
-            recordLog(`资源${id} 不存在在帧标签`, LOG_FIGHT_WARN);
+            recordLog(`资源${id} 不存在帧标签${label}`, LOG_FIGHT_WARN);
         }
         return result;
     }
@@ -243,11 +243,15 @@ module fight{
         }
     }
 
-    export function playSound(url:string){
+    export function playSound(url:string, isMusicEff:boolean=true){
         if (url){
             try {
-                // TODO 暂时不开放音效
-                // SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+                // if (isMusicEff) {
+                //     SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+                // } else {
+                //     SoundManager.inst.musicSwitch = true;
+                //     SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
+                // }
             } catch (e) {
                 recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
             }
@@ -307,6 +311,23 @@ module fight{
             }
         }
         return resPath;
+    }
+
+    export function randomReq(){
+        let arr = UserProxy.inst.fightData.getRandomBattleRoleArr();
+        let tp = ArrayUtil.randomUniqueValue(["a", "b", "c", "d", "e"]);
+        let mypos = ArrayUtil.createArr(9, 0);
+        let oppos = ArrayUtil.createArr(9, 0);
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].side == 1) {
+                mypos[arr[i].pos] = arr[i].id;
+            } else {
+                oppos[arr[i].pos] = arr[i].id;
+            }
+        }
+        fight.TEST_BUNCH = tp;
+        fight.TEST_ROLE = arr.concat();
+        Http.inst.send("test", {mypos:JSON.stringify(mypos), oppos:JSON.stringify(oppos), tp:tp});
     }
 
     function pushResToArr(value:any, arr:any[]) {

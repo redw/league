@@ -7,6 +7,7 @@ class StageConfig {
     "monster":string[];
     "id": number;
     "map":string;
+    "bgm":string;
 
     public static getMonster(config:StageConfig){
         let result:{id:number, pos:number, side:number}[] = [];

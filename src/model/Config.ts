@@ -6,7 +6,6 @@ class Config extends egret.HashObject {
     static EnemyData:any;
     static SkillData:any;
     static BuffData:any;
-    static BaseData:any;
     static StageData:any;
     static FightConfig:any;
     static DropData:any;
@@ -41,6 +40,11 @@ class Config extends egret.HashObject {
         fight.DIE_DELAY_TIME = +Config.FightConfig.die_delay_time;
         // 生命条缓动时间
         fight.LIFE_BAR_TWEEN_TIME = +Config.FightConfig.life_bar_tween_time;
+
+        if (Config.FightConfig.left_roles)
+            fight.TEST_SELF_HERO = Config.FightConfig.left_roles.concat();
+        if (Config.FightConfig.right_roles)
+            fight.TEST_OTHER_HERO = Config.FightConfig.right_roles.concat();
 
         if (Config.FightConfig.area_right_pos) {
             let arr = Config.FightConfig.area_right_pos.split(",");

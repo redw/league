@@ -12,13 +12,17 @@ class BaseMCEffect extends egret.DisplayObjectContainer {
         super();
         this.param = param;
         this.autoDisAppear = autoDisAppear;
-        if (!!value) {
+        if (value) {
             this.source = value;
         }
     }
 
     public registerFrameBack(fun:Function, frame:number){
-        var totalFrame = this.mc.totalFrames;
+        if (!this.mc) {
+            fun(this.param);
+            return;
+        }
+        let totalFrame = this.mc.totalFrames;
         if (!this.frameBacks) {
             this.frameBacks = Array(totalFrame);
             egret.startTick(this.onTick, this);

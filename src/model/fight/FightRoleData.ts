@@ -64,8 +64,8 @@ class FightRoleData extends RoleData {
         if (this.turnCount > 0)
             this.reduceBuff();
         this.turnCount++;
-        this.physicalAtk = BigNum.mul(this.physicalAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
-        this.magicAtk = BigNum.mul(this.magicAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
+        // this.physicalAtk = BigNum.mul(this.physicalAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
+        // this.magicAtk = BigNum.mul(this.magicAtk, this.getBuffMultiValue(BuffTypeEnum.ATK_MORE_MORE));
     }
 
     /**
@@ -209,11 +209,9 @@ class FightRoleData extends RoleData {
 
     // 回血
     public backBlood() {
-        var addHP = BigNum.mul(this.maxHP, this.getBuffPlusValue(BuffTypeEnum.ADD_BLOOD));
-        if (BigNum.greater(fight.DIE_HP, addHP)) {
-            if (!this.isExistBuff(BuffTypeEnum.FORBIDDEN_ADD_BLOOD)) {
-                this.curHP = BigNum.add(this.curHP, addHP);
-            }
+        let addHP = BigNum.mul(this.maxHP, this.getBuffPlusValue(BuffTypeEnum.ADD_BLOOD));
+        if (!this.isExistBuff(BuffTypeEnum.FORBIDDEN_ADD_BLOOD)) {
+            this.curHP = BigNum.add(this._curHP, addHP);
         }
     }
 
@@ -225,12 +223,13 @@ class FightRoleData extends RoleData {
             let hurt = BigNum.sub(buffs[i].magicAtk, this.magicDef);
             hurt = BigNum.mul(hurt, buffs[i].value);
             if (BigNum.greaterOrEqual(hurt, 0)) {
-                this.curHP = BigNum.sub(this.curHP, hurt);
+                this.curHP = BigNum.add(this.curHP, hurt);
             } else {
                 console.warn("中毒后，伤害应该大于0");
             }
         }
     }
+
 
     /**
      * 是否存在buff
@@ -328,14 +327,23 @@ class FightRoleData extends RoleData {
             } else if (type == BuffTypeEnum.CHANGE_CRIT_HURT) {
                 this.critDamage += value;
             } else {
-                if (!this.buffInfo[type]) {
-                    this.buffInfo[type] = [];
-                }
-                if (type == BuffTypeEnum.POISONING) {
-                    this.buffInfo[type].push({id:obj.id, duration:obj.duration, value:obj.value, magicAtk:role.magicAtk, turn:0});
-                } else {
-                    this.buffInfo[type].push({id:obj.id, duration:obj.duration, value:obj.value, turn:0});
-                }
+                // if (!this.buffInfo[type]) {
+                //     this.buffInfo[type] = [];
+                // }
+                // if (type == BuffTypeEnum.POISONING) {
+                //     this.buffInfo[type].push({id:obj.id, duration:obj.duration, value:obj.value, magicAtk:role.magicAtk});
+                // } else {
+                //     this.buffInfo[type].push({id:obj.id, duration:obj.duration, value:obj.value});
+                // }
+            }
+
+            if (!this.buffInfo[type]) {
+                this.buffInfo[type] = [];
+            }
+            if (type == BuffTypeEnum.POISONING) {
+                this.buffInfo[type].push({id:obj.id, duration:obj.duration, value:obj.value, magicAtk:role.magicAtk});
+            } else {
+                this.buffInfo[type].push({id:obj.id, duration:obj.duration, value:obj.value});
             }
         } else {
             console.error("没有buffID:" + buffID + "配置");

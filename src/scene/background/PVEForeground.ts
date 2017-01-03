@@ -1,5 +1,8 @@
 /**
- * Created by hh on 2016/12/21.
+ * Created by Administrator on 2016/12/21.
+ */
+/**
+ * PVE 近景
  */
 class PVEForeground extends PVEBackGround{
 
@@ -10,17 +13,17 @@ class PVEForeground extends PVEBackGround{
 
     private checkResHeight(){
         if (this.background.height > 0) {
-            this.background.y = PVEBackGround.HEIGHT - this.background.height;
+            this.background.y = fight.HEIGHT - this.background.height;
         }
         if (this.freeBackground.height > 0) {
-            this.freeBackground.y = PVEBackGround.HEIGHT - this.freeBackground.height;
+            this.freeBackground.y = fight.HEIGHT - this.freeBackground.height;
         }
         return false;
     }
 
     protected getSceneResourcePath(level:number){
-        let sceneIndex:string = Config.StageData[level].map;
-        return "resource/assets/scene/" + sceneIndex + "_" + 1 + ".png";
+        let name:string = Config.StageData[level].map;
+        return URLConfig.getSceneResURL(name, 1);
     }
 
     // 缓动
