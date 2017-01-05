@@ -15,6 +15,17 @@ class HeroVO{
         this.parse(value);
     }
 
+    public parse(value:any) {
+        if (value) {
+            this.id = value.id;
+            this.level = value["lv"] || 0;
+            this.starLevel = value["star"] || 0;
+            this.strengthenLevel = value["enhanceLv"] || 0;
+            this.starPiece = value["starPiece"] || 0;
+            this.skill = value["skill"] || 0;
+        }
+    }
+
     public get id(){
         return this._id;
     }
@@ -220,14 +231,5 @@ class HeroVO{
         // }
         // total = BigNum.mul(total,addShip);
         // return total;
-    }
-
-    public parse(obj:any) {
-        this.id = obj.id;
-        this.level = obj["lv"] || 0;
-        this.starLevel = obj["star"] || 1;
-        this.strengthenLevel = obj["enhanceLv"] || 0;
-        this.starPiece = obj["starPiece"] || 0;
-        this.skill = obj["skill"] || 0;
     }
 }

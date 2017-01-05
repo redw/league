@@ -26,11 +26,48 @@ enum FightSideEnum{
     RIGHT_SIDE
 }
 
-module fight{
+enum BuffTypeEnum
+{
+    PHYSICAL_ATK = 1,                               // 物攻
+    MAGIC_ATK,                                      // 魔攻
+    PHYSICAL_DEF,                                   // 物防
+    MAGIC_DEF,                                      // 魔防
+    HURT_OUT,                                       // 伤害输出
+    HURT,                                           // 伤害
+    BACK_HURT,                                      // 伤害反弹
+    BACK_HURT_OUT,                                  // 伤害输出反弹
+    VERTIGO,                                        // 眩晕
+    ADD_BLOOD,                                      // 回血
+    POISONING,                                      // 中毒
+    HIDE,                                           // 隐匿
+    INVINCIBLE,                                     // 无敌
+    FREE_PHYSICAL,                                  // 物免
+    FREE_MAGIC,                                     // 魔免
+    ATK_MORE_MORE,                                  // 越来越(物攻/魔攻)
+    KILL_MORE_MORE,                                 // 越来越(击杀)
+    BLOOD_MORE_MORE,                                // 越来越(血量)
+    SEAL_MAGIC,                                     // 封魔
+    DEF_MORE_MORE,                                  // 越来越(物防/魔防)
+    FORBIDDEN_ADD_BLOOD,                            // 冰封生命
+    ATTACK_KEY,                                     // 攻击要害
+    XIA_MA_WEI,                                     // 下马威
+    FIRE_WILL,                                      // 火的意志
+    TO_BOSS,                                        // 成为boss
+    CHANGE_DODGE,                                   // 改变闪避率
+    CHANGE_BLOCK,                                   // 改变格档率
+    CHANGE_CRIT,                                    // 改变暴击率
+    CHANGE_CRIT_HURT,                               // 改变暴击伤害
+    LIFE                                            // 生命
+}
 
-    export let TEST_BUNCH:string = "a";
-    export let TEST_OTHER_HERO = [403,411,417,418,420,422,0,0,0];
-    export let TEST_SELF_HERO = [101,102,103,104,105,106,0,0,0];
+module fight{
+    // export const TEST_BUNCH:string = "c";
+    // export const TEST_OTHER_HERO = [213,203,0,226,207,218,0,0,0];
+    // export const TEST_SELF_HERO = [127,125,112,0,116,121,0,0,0];
+
+    export const TEST_BUNCH:string = "c";
+    export const TEST_OTHER_HERO = [413,410,408,417,416,419,0,0,0];
+    export const TEST_SELF_HERO = null;
     export let TEST_RANDOM:boolean = false;
     export let TEST_DATA:boolean = false;
     export let TEST_ROLE:any[];

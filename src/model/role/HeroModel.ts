@@ -5,7 +5,7 @@ class HeroModel extends ModelDict{
     private pveHeroArr = [];
     private tempHeroArr = [];
     constructor(){
-        super(RoleData, "ROLE_DATA");
+        super(HeroVO, "ROLE_DATA");
     }
 
     /**
@@ -22,9 +22,9 @@ class HeroModel extends ModelDict{
      * @returns {Array}
      */
     public getHeroIds():number[]{
-        var result = [];
-        var keys = this.getKeys();
-        for (var i = 0; i < keys.length; i++) {
+        let result = [];
+        let keys = this.getKeys();
+        for (let i = 0; i < keys.length; i++) {
             result.push(keys[i]);
         }
         return result;
@@ -36,5 +36,20 @@ class HeroModel extends ModelDict{
      */
     public parseHeroList(obj:any){
         this.parse(obj);
+    }
+
+    /**
+     * 刷新英雄属性
+     * @param id
+     */
+    public refresh(id:number=0) {
+        // if (id > 0) {
+        //     this.getHeroData(id).refresh();
+        // } else {
+        //     let ids = this.getHeroIds();
+        //     for (let i = 0; i < ids.length; i++) {
+        //         this.getHeroData(ids[i]).refresh();
+        //     }
+        // }
     }
 }

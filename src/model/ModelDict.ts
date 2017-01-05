@@ -19,10 +19,16 @@ class ModelDict extends egret.HashObject{
             let key = keys[i];
             if (this.containsKey(key)) {
                 let item:any = this.getValue(key);
-                item.parse(value[key], key);
+                if (!value[key].id) {
+                    value[key].id = key;
+                }
+                item.parse(value[key]);
             } else {
                 let item = new this.itemC();
-                item.parse(value[key], key);
+                if (!value[key].id) {
+                    value[key].id = key;
+                }
+                item.parse(value[key]);
                 this.add(key, item);
             }
         }
@@ -119,4 +125,6 @@ class ModelDict extends egret.HashObject{
     public clear():void {
         this.content = Object.create(null);
     }
+
+
 }

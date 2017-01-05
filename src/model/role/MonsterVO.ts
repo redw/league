@@ -21,29 +21,35 @@ class MonsterVO{
     }
 
     public parse(value:any) {
-        if ("id" in value)
+        if (value) {
             this.id = value.id;
-        else
-            this.id = value;
+            this.level = value.level;
+        }
     }
 
     public get phyAtk(){
-        return this.config.physical_atk + "";
+        return this.getValue(this.config.physical_atk);
     }
 
     public get phyDef(){
-        return this.config.physical_def + "";
+        return this.getValue(this.config.physical_def);
     }
 
     public get magAtk(){
-        return this.config.magical_atk + "";
+        return this.getValue(this.config.magical_atk);
     }
 
     public get magDef() {
-        return this.config.magical_def + "";
+        return this.getValue(this.config.magical_def);
     }
 
     public get maxHP(){
-        return this.config.hp + "";
+        return this.getValue(this.config.hp);
+    }
+
+    private getValue(value:number){
+        let ratio = +Config.BaseData[59].value;
+        let level = this.level;
+        return value * Math.pow(ratio, level) + "";
     }
 }

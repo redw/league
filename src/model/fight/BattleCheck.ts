@@ -30,7 +30,7 @@ module fight{
             if (ok) {
                 let clientTarget = clientItem.target || [];
                 let serverTarget = serverItem.target || [];
-                if (clientTarget.length != serverTarget.length) {
+                if (clientTarget.length != serverTarget.length && clientTarget.length > 0) {
                     console.warn(`step:${i},prop:targetCount,client:${clientTarget.length},server:${serverTarget.length}`);
                 } else {
                     for (let k = 0; k < clientTarget.length; k++) {
@@ -64,7 +64,8 @@ module fight{
             return clientValue == serverValue;
         }
         if (Array.isArray(serverValue)) {
-            return true;
+            if (clientValue.length == 0) return true;
+            return String(clientValue.sort()) == String(serverValue.sort());
         }
         let value0:string = String(clientValue);
         let value1:string = String(serverValue);
@@ -76,7 +77,11 @@ module fight{
             if (value0Arr.length > 1 || value1Arr.length > 1) {
                 return false;
             } else {
-                return BigNum.equal(Number(clientValue), BigNum.max(0, Number(serverValue))) || MathUtil.easyNumber(Number(clientValue)) == MathUtil.easyNumber(Number(serverValue));
+                return BigNum.equal(Number(clientValue), BigNum.max(0, Number(serverValue))) ||
+                    MathUtil.easyNumber(Number(clientValue)) == MathUtil.easyNumber(Number(serverValue)) ||
+                    BigNum.equal(clientValue, serverValue) ||
+                    BigNum.greater(BigNum.sub(clientValue, serverValue), 0.00001) && BigNum.greater(0, BigNum.sub(clientValue, serverValue)) ||
+                    BigNum.greater(BigNum.sub(serverValue, clientValue), 0.00001) && BigNum.greater(0, BigNum.sub(serverValue, clientValue));
             }
         }
     }

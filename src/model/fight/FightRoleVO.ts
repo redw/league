@@ -20,9 +20,9 @@ class FightRoleVO{
     public blockChanceArr:number[];
     public dodgeChanceArr:number[];
     private buffInfo:any = {};                      // 类型 -> [id, count......]
-    private dodgeChance:number;
-    private blockChance:number;
-    private critChance:number;
+    private dodgeChance:number = 0;
+    private blockChance:number = 0;
+    private critChance:number = 0;
     public critDamage:number = 0;
 
     public constructor(value?:{id:number, pos:number, side:number}){
@@ -39,6 +39,10 @@ class FightRoleVO{
             } else {
                 this.config = Config.EnemyData[this.id];
             }
+            this.critChance = this.config.crit_chance;
+            this.critDamage = this.config.crit_damage;
+            this.blockChance = this.config.block_chance;
+            this.dodgeChance = this.config.dodge_chance;
         }
     }
 
