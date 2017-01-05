@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2016/11/30.
+ * Created by hh on 2016/11/30.
  */
 module fight{
     /**
@@ -102,9 +102,10 @@ module fight{
      * 得到近战攻击玩家时的攻击位置
      * @param role
      * @param targets
+     * @param skill
      * @returns {Point}
      */
-    export function getNearFightPoint(role:FightRole, targets:FightRole[]){
+    export function getNearFightPoint(role:FightRole, targets:FightRole[], skill:SkillConfig){
         let curRole = targets[0];
         let minValue = Math.abs(role.pos - curRole.pos);
         for (let i = 1; i < targets.length; i++) {
@@ -114,11 +115,13 @@ module fight{
             }
         }
         let point = getRoleInitPoint(curRole);
+        let offPoint = (skill && skill.move_position) || [0, 0];
         if (role.side == FightSideEnum.RIGHT_SIDE) {
-            point.x += MOVE_ATTACK_OFF;
+            point.x += (MOVE_ATTACK_OFF + (+offPoint[0]));
         } else {
-            point.x -= MOVE_ATTACK_OFF;
+            point.x -= (MOVE_ATTACK_OFF + (+offPoint[0]));
         }
+        point.y += (+offPoint[1]);
         return point;
     }
 
@@ -143,7 +146,8 @@ module fight{
             egret.error(content);
         } else if (level >= LOG_FIGHT_WARN) {
             egret.warn(content);
-        } else {
+        }
+        else {
             egret.log(content);
         }
     }
@@ -165,7 +169,8 @@ module fight{
     export function needRetreat(action:string){
         return action == fight.ATTACK_ACTION_NORMAL ||
             action == fight.ATTACK_ACTION_JUMP ||
-            action == fight.ATTACK_ACTION_ROW;
+            action == fight.ATTACK_ACTION_ROW ||
+            action == fight.ATTACK_ACTION_JUMP_AREA;
     }
 
     /**
@@ -184,7 +189,7 @@ module fight{
                 mc.gotoAndPlay(label, count);
             } catch (e) {
                 result = false;
-                recordLog(`播放资源${id}帧${label}错误`, LOG_FIGHT_WARN);
+                recordLog(`资源${id}帧${label}错误`, LOG_FIGHT_WARN);
             }
         } else {
             recordLog(`资源${id} 不存在帧标签${label}`, LOG_FIGHT_WARN);
@@ -313,6 +318,14 @@ module fight{
         return resPath;
     }
 
+    function pushResToArr(value:any, arr:any[]) {
+        if (!!value) {
+            if (arr.indexOf(value + "_png") < 0) {
+                arr.push(value + "_png", value + "_json");
+            }
+        }
+    }
+
     export function randomReq(){
         let arr = UserProxy.inst.fightData.getRandomBattleRoleArr();
         let tp = ArrayUtil.randomUniqueValue(["a", "b", "c", "d", "e"]);
@@ -328,13 +341,5 @@ module fight{
         fight.TEST_BUNCH = tp;
         fight.TEST_ROLE = arr.concat();
         Http.inst.send("test", {mypos:JSON.stringify(mypos), oppos:JSON.stringify(oppos), tp:tp});
-    }
-
-    function pushResToArr(value:any, arr:any[]) {
-        if (!!value) {
-            if (arr.indexOf(value + "_png") < 0) {
-                arr.push(value + "_png", value + "_json");
-            }
-        }
     }
 }

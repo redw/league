@@ -4,15 +4,15 @@
 class FightRoleFactory{
     private static map = {};
 
-    public static createRole(fightContainer:FightContainer, roleData:FightRoleData) {
-        let arr = FightRoleFactory.map[roleData.config.id];
+    public static createRole(fightContainer:FightContainer, vo:FightRoleVO) {
+        let arr = FightRoleFactory.map[vo.id];
         let role:FightRole;
         if (arr && arr.length > 0) {
             role = arr.shift();
-            role.active(fightContainer, roleData);
+            role.active(fightContainer, vo);
             role.idle();
         } else {
-            role = new FightRole(fightContainer, roleData);
+            role = new FightRole(fightContainer, vo);
         }
         return role;
     }

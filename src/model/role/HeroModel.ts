@@ -14,7 +14,7 @@ class HeroModel extends ModelDict{
      * @returns {RoleData}
      */
     public getHeroData(id:string|number) {
-        return <RoleData>this.getValue(id);
+        return <HeroVO>this.getValue(id);
     }
 
     /**

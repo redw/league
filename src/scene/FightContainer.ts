@@ -31,44 +31,32 @@ class FightContainer extends egret.DisplayObjectContainer {
     public constructor(type:number = FightTypeEnum.PVE) {
         super();
         this.type = type;
-        let offY = 0;
         if (type == FightTypeEnum.PVE) {
             this.prospectLayer = new PVEProspect();
-            offY = fight.PVE_SCENE_OFF;
-            this.prospectLayer.y = offY;
             this.addChild(this.prospectLayer);
 
             this.middleGroundLayer = new PVEMiddleGround();
-            this.middleGroundLayer.y = offY;
             this.addChild(this.middleGroundLayer);
-        } else {
-            offY = fight.PVP_SCENE_OFF;
         }
 
         this.dustLayer = new eui.Group();
-        this.dustLayer.y = offY;
         this.addChild(this.dustLayer);
 
         this.roleLayer = new eui.Group();
-        this.roleLayer.y = offY;
         this.addChild(this.roleLayer);
 
         this.damageEffLayer = new eui.Group();
-        this.damageEffLayer.y = offY;
         this.addChild(this.damageEffLayer);
 
         if (type == FightTypeEnum.PVE) {
             this.foregroundLayer = new PVEForeground();
-            this.foregroundLayer.y = offY;
             this.addChild(this.foregroundLayer);
 
             this.transitionLayer = new PVETransitionEff();
-            this.transitionLayer.y = offY;
             this.addChild(this.transitionLayer);
         }
 
         this.fontEffLayer = new eui.Group();
-        this.fontEffLayer.y = offY;
         this.addChild(this.fontEffLayer);
 
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
@@ -100,7 +88,7 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.level = level;
     }
 
-    private addRoles(elements:FightRoleData[], withTween:boolean){
+    private addRoles(elements:FightRoleVO[], withTween:boolean){
         let arr = elements;
         this.moveCount = 0;
         for (let i = 0; i < arr.length; i++) {
@@ -156,11 +144,10 @@ class FightContainer extends egret.DisplayObjectContainer {
                     this.fightSteps = steps.concat();
                 } else {
                     this.dataGenerator = new FightProcessGenerator();
-                    let roleArr:FightRoleData[] = [];
+                    let roleArr:FightRoleVO[] = [];
                     let arr = this.originalElements;
                     for (let i = 0; i < arr.length; i++) {
-                        let roleData = new FightRoleData();
-                        roleData.parse(arr[i], arr[i].id);
+                        let roleData = this.createFightVo(arr[i]);
                         roleArr.push(roleData);
                     }
                     this.dataGenerator.addSceneDataVec(roleArr);
@@ -362,10 +349,9 @@ class FightContainer extends egret.DisplayObjectContainer {
 
     private tweenRemoveRoleComplete(){
         let arr = this.originalElements;
-        let roleArr:FightRoleData[] = [];
+        let roleArr:FightRoleVO[] = [];
         for (let i = 0; i < arr.length; i++) {
-            let roleData = new FightRoleData();
-            roleData.parse(arr[i], arr[i].id);
+            let roleData = this.createFightVo(arr[i]);
             roleArr.push(roleData);
         }
         if (this.level < 0 || this.type != FightTypeEnum.PVE) {
@@ -373,6 +359,28 @@ class FightContainer extends egret.DisplayObjectContainer {
         } else {
             this.addRoles(roleArr, true);
         }
+    }
+
+    /**
+     * 创建战斗角色vo
+     * @param value 包含side,pos及lv等属性
+     */
+    private createFightVo(value:any) {
+        let fightVO:FightRoleVO;
+        if (this.type == FightTypeEnum.PVE) {
+            if (fight.isHero(value.id)){
+                let heroVO = new HeroVO(value);
+                fightVO = new FightRoleVO(value);
+                fightVO.copyProp(heroVO);
+            } else {
+                let monsterVO = new MonsterVO(value);
+                fightVO = new FightRoleVO(value);
+                fightVO.copyProp(monsterVO);
+            }
+        } else {
+
+        }
+        return fightVO;
     }
 
     public getCurTotalLife(side:number) {
@@ -421,8 +429,7 @@ class FightContainer extends egret.DisplayObjectContainer {
         let eff = new MoveDustEff();
         eff.x = value.x;
         eff.y = value.y;
-        eff.scaleY = value.side == FightSideEnum.RIGHT_SIDE ? -1 : 1;
-        this.dustLayer.addChild(eff);
+        this.showEff(this.dustLayer, eff, value);
     }
 
     /**
@@ -431,8 +438,18 @@ class FightContainer extends egret.DisplayObjectContainer {
      * @param value
      */
     public showDamageEff(eff:egret.DisplayObject, value:{side:number}) {
-        eff.scaleY = value.side == FightSideEnum.RIGHT_SIDE ? -1 : 1;
-        this.damageEffLayer.addChild(eff);
+        this.showEff(this.damageEffLayer, eff, value);
+    }
+
+    public showEff(parent:egret.DisplayObjectContainer, eff:egret.DisplayObject, value:any){
+        if (parent && eff && value) {
+            if (typeof value == "number") {
+                eff.scaleX = value;
+            } else {
+                eff.scaleX = value.side == FightSideEnum.RIGHT_SIDE ? -1 : 1;
+            }
+            parent.addChild(eff);
+        }
     }
 
     /**

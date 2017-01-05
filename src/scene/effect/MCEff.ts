@@ -19,7 +19,7 @@ class MCEff extends egret.DisplayObjectContainer {
      * @param scope
      * @param param
      */
-    public registerBack(frame:number, fun:Function, scope:Object, param:any=null){
+    public registerBack(frame:number, fun:Function, scope:Object=null, param:any=null){
         var totalFrame = this.mc.totalFrames;
         if (!this.frameBacks) {
             this.frameBacks = Array(totalFrame);
