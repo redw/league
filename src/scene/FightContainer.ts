@@ -17,7 +17,8 @@ class FightContainer extends egret.DisplayObjectContainer {
     private dataGenerator:FightProcessGenerator;
     private autoFight:boolean = false;
 
-    private shadeScreenEff:ShakeScreenEff;
+    private warnEff:FightWarnEff;
+    private shakeScreenEff:ShakeScreenEff;
     private fontEffLayer:eui.Group;
     private damageEffLayer:eui.Group;
     private roleLayer:eui.Group;
@@ -27,6 +28,10 @@ class FightContainer extends egret.DisplayObjectContainer {
     private prospectLayer:PVEProspect;
     private transitionLayer:PVETransitionEff;
     private bunch:string = "a";
+
+    public leftTotalLife:string = "1";      // 左方总生命
+    public rightTotalLife:string = "1";     // 右方总生命
+    public oldLifeRatio:number = 1;         // 生命进度条
 
     public constructor(type:number = FightTypeEnum.PVE) {
         super();
@@ -61,6 +66,8 @@ class FightContainer extends egret.DisplayObjectContainer {
 
         this.addEventListener("role_one_step_complete", this.onOneStepComplete, this, true);
         this.addEventListener("role_die", this.onRoleDie, this, true);
+        this.addEventListener("role_hp_change", this.onRoleHPChange, this, true);
+        this.addEventListener("fight_ready_complete", this.onReadyComplete, this, true);
         this.addEventListener(ContextEvent.ROLE_DATA_UPDATE, this.onRoleDataUpdate, this);
     }
 
@@ -71,7 +78,7 @@ class FightContainer extends egret.DisplayObjectContainer {
      * @param level 场景等级(只对pve有用)
      */
     public fightDeployment(data:{id:number, pos:number, side:number}[], auto:boolean = false, level:number = 1) {
-        this.shadeScreenEff && this.shadeScreenEff.stopShake();
+        this.shakeScreenEff && this.shakeScreenEff.stopShake();
         this.autoFight = auto;
         this.bunch = fight.randomSkillTriggerBunch();
         this.originalElements = data.concat();
@@ -144,16 +151,12 @@ class FightContainer extends egret.DisplayObjectContainer {
                     this.fightSteps = steps.concat();
                 } else {
                     this.dataGenerator = new FightProcessGenerator();
-                    let roleArr:FightRoleVO[] = [];
+
                     let arr = this.originalElements;
-                    for (let i = 0; i < arr.length; i++) {
-                        let roleData = this.createFightVo(arr[i]);
-                        roleArr.push(roleData);
-                    }
+                    let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
                     this.dataGenerator.addSceneDataVec(roleArr);
                     this.fightSteps = this.dataGenerator.generateData(this.bunch);
-                    console.log("战斗步骤:", this.fightSteps.concat());
-                    this.dispatchEventWith("fight_ready_complete", true, this.dataGenerator.getRightTotalLife());
+                    this.dispatchEventWith("fight_ready_complete", true, [this.dataGenerator.getLeftTotalLife(), this.dataGenerator.getRightTotalLife()]);
                 }
                 this.steps = this.fightSteps.concat();
                 this.startStep();
@@ -215,6 +218,7 @@ class FightContainer extends egret.DisplayObjectContainer {
         let pos = role.pos;
         delete this.roles[side][pos];
         role.dispose();
+        FightRoleFactory.freeRole(role);
     }
 
     public getRoleByStr(str:string) {
@@ -349,38 +353,12 @@ class FightContainer extends egret.DisplayObjectContainer {
 
     private tweenRemoveRoleComplete(){
         let arr = this.originalElements;
-        let roleArr:FightRoleVO[] = [];
-        for (let i = 0; i < arr.length; i++) {
-            let roleData = this.createFightVo(arr[i]);
-            roleArr.push(roleData);
-        }
+        let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
         if (this.level < 0 || this.type != FightTypeEnum.PVE) {
             this.addRoles(roleArr, false);
         } else {
             this.addRoles(roleArr, true);
         }
-    }
-
-    /**
-     * 创建战斗角色vo
-     * @param value 包含side,pos及lv等属性
-     */
-    private createFightVo(value:any) {
-        let fightVO:FightRoleVO;
-        if (this.type == FightTypeEnum.PVE) {
-            if (fight.isHero(value.id)){
-                let heroVO = new HeroVO(value);
-                fightVO = new FightRoleVO(value);
-                fightVO.copyProp(heroVO);
-            } else {
-                let monsterVO = new MonsterVO(value);
-                fightVO = new FightRoleVO(value);
-                fightVO.copyProp(monsterVO);
-            }
-        } else {
-
-        }
-        return fightVO;
     }
 
     public getCurTotalLife(side:number) {
@@ -414,10 +392,10 @@ class FightContainer extends egret.DisplayObjectContainer {
      */
     public startShake(){
         if (this.type == FightTypeEnum.PVE) {
-            if (!this.shadeScreenEff) {
-                this.shadeScreenEff = new ShakeScreenEff(this);
+            if (!this.shakeScreenEff) {
+                this.shakeScreenEff = new ShakeScreenEff(this);
             }
-            this.shadeScreenEff.startShake();
+            this.shakeScreenEff.startShake();
         }
     }
 
@@ -502,6 +480,27 @@ class FightContainer extends egret.DisplayObjectContainer {
                 delete this.rightRoles[i];
             }
         }
+    }
+
+    private onRoleHPChange(){
+        let curTotalLife = this.getCurTotalLife(FightSideEnum.LEFT_SIDE);
+        let ratio:number = +BigNum.div(curTotalLife, this.leftTotalLife);
+        if (ratio <= 0.3 && this.oldLifeRatio < ratio) {
+            if (!this.warnEff) {
+                this.warnEff = new FightWarnEff(this);
+            }
+            this.warnEff.show();
+        } else {
+            if (this.warnEff) {
+                this.warnEff.hide();
+            }
+        }
+        this.oldLifeRatio = ratio;
+    }
+
+    private onReadyComplete(e:egret.Event) {
+        this.leftTotalLife = e.data[0] || "1";
+        this.rightTotalLife = e.data[1] || "1";
     }
 
     public dispose() {

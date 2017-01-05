@@ -255,7 +255,7 @@ class FightRole extends egret.DisplayObjectContainer {
             let target = this.targets[i];
             if (!role || target == role) {
                 let hitInfo = this.reportItem.target[i];
-                let damage = BigNum.mul(hitInfo.damage, index / total);
+                let damage = BigNum.mul(hitInfo.damage, 1 / total);
                 let damageNum = MathUtil.easyNumber(damage);
                 if (this.curSkill.target_effect) {
                     let targetEff = new BaseMCEffect(this.curSkill.target_effect);
@@ -388,6 +388,8 @@ class FightRole extends egret.DisplayObjectContainer {
                     damageEff.y = self.y - self.roleData.config.modle_height * 0.5 + (Number(offPoint[1]) || 0);
                     let tox = target.x;
                     let toy = target.y - (target.roleData.config.modle_height * 0.5);
+                    damageEff.scaleX = self.roleData.side == FightSideEnum.LEFT_SIDE ? -1 : 1;
+                    damageEff.rotation = Math.atan2(tox - damageEff.y, tox - damageEff.x) * 180 / Math.PI;
                     egret.Tween.get(damageEff).to({x:tox, y:toy}, fight.BULLET_RUN_TIME).call(
                         ()=>{
                             damageEff.dispose();

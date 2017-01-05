@@ -20,9 +20,9 @@ class MCEff extends egret.DisplayObjectContainer {
      * @param param
      */
     public registerBack(frame:number, fun:Function, scope:Object=null, param:any=null){
-        var totalFrame = this.mc.totalFrames;
+        let totalFrame = this.mc.totalFrames;
         if (!this.frameBacks) {
-            this.frameBacks = Array(totalFrame);
+            this.frameBacks = Array(totalFrame + 1);
         }
         if (frame >= totalFrame || frame == 0) {
             frame = totalFrame;
@@ -31,11 +31,10 @@ class MCEff extends egret.DisplayObjectContainer {
     }
 
     private triggerFun(frame:number){
-        let len = this.frameBacks.length;
         if (this.frameBacks[frame]) {
-            var fun = this.frameBacks[frame][0];
-            var scope = this.frameBacks[frame][1];
-            var param = this.frameBacks[frame][2];
+            let fun = this.frameBacks[frame][0];
+            let scope = this.frameBacks[frame][1];
+            let param = this.frameBacks[frame][2];
             fun.call(scope, param);
             this.frameBacks[frame] = null;
         }
@@ -49,12 +48,13 @@ class MCEff extends egret.DisplayObjectContainer {
     }
 
     public set source(value:string) {
+        // TODO 创建mc
         this.mc = FightRole.createMovieClip(value);
         if (!this.mc || this.mc.totalFrames == 0) {
             this.onComplete();
         } else {
-            this.mc.gotoAndPlay(1, 1);
             this.mc.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
+            this.mc.gotoAndPlay(1, 1);
             if (this.autoDisAppear)
                 this.mc.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
             this.addChild(this.mc);
@@ -83,7 +83,6 @@ class MCEff extends egret.DisplayObjectContainer {
                 this.mc.parent.removeChild(this.mc);
             this.mc = null;
         }
-
         if (this.parent) {
             this.parent.removeChild(this);
         }

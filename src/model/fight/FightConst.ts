@@ -65,9 +65,9 @@ module fight{
     // export const TEST_OTHER_HERO = [213,203,0,226,207,218,0,0,0];
     // export const TEST_SELF_HERO = [127,125,112,0,116,121,0,0,0];
 
-    export const TEST_BUNCH:string = "c";
-    export const TEST_OTHER_HERO = [413,410,408,417,416,419,0,0,0];
-    export const TEST_SELF_HERO = null;
+    export let TEST_BUNCH:string = "c";
+    export let TEST_OTHER_HERO = [413,410,408,417,416,419,0,0,0];
+    export let TEST_SELF_HERO = [102,0,0,0,0,0,0,0,0];
     export let TEST_RANDOM:boolean = false;
     export let TEST_DATA:boolean = false;
     export let TEST_ROLE:any[];

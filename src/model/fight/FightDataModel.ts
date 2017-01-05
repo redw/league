@@ -126,6 +126,26 @@ class FightDataModel extends egret.HashObject {
         return heroArr;
     }
 
+    public getRandomBattleRoleArr(){
+        let count = 3 + Math.floor(Math.random() * 4);
+        let leftRoleIds = [101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130];
+        let rightRoleIds = [201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230];
+        let leftPoss = [0,1,2,3,4,5];
+        let rightPoss = [0,1,2,3,4,5];
+        let leftRoleArr = [];
+        let rightRoleArr = [];
+        for (let i = 0; i < count; i++) {
+            let leftId = ArrayUtil.randomUniqueValue(leftRoleIds);
+            let leftPos = ArrayUtil.randomUniqueValue(leftPoss);
+            leftRoleArr.push({id:leftId, side:FightSideEnum.LEFT_SIDE, pos:leftPos});
+
+            let rightId = ArrayUtil.randomUniqueValue(rightRoleIds);
+            let rightPos = ArrayUtil.randomUniqueValue(rightPoss);
+            rightRoleArr.push({id:rightId, side:FightSideEnum.RIGHT_SIDE, pos:rightPos});
+        }
+        return [].concat(leftRoleArr, rightRoleArr);
+    }
+
     /**
      * 生成掉落
      */

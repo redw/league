@@ -48,7 +48,8 @@ class MonsterVO{
     }
 
     private getValue(value:number){
-        let ratio = +Config.BaseData[59].value;
+        // let ratio = +Config.BaseData[59].value;
+        let ratio = 1;
         let level = this.level;
         return value * Math.pow(ratio, level) + "";
     }

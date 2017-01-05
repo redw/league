@@ -11,6 +11,7 @@ class FightProcessGenerator {
     private index:number = 0;
     private turn:number = 0;
     private rightTotalLife:string;
+    private leftTotalLife:string;
 
     private static SkillTargetFunMap = {
         "one1":"getTarget",
@@ -158,15 +159,26 @@ class FightProcessGenerator {
             }
         }
 
-        this.rightTotalLife = "0";
-        let arr = this.allTeam[FightSideEnum.RIGHT_SIDE - 1];
+        this.leftTotalLife = "0";
+        let arr = this.allTeam[FightSideEnum.LEFT_SIDE - 1];
         let len = arr ? arr.length : 0;
+        for (let i = 0; i < len; i++) {
+            let roleData = arr[i];
+            if (roleData) {
+                this.leftTotalLife = BigNum.add(this.leftTotalLife, roleData.maxHP);
+            }
+        }
+
+        this.rightTotalLife = "0";
+        arr = this.allTeam[FightSideEnum.RIGHT_SIDE - 1];
+        len = arr ? arr.length : 0;
         for (let i = 0; i < len; i++) {
             let roleData = arr[i];
             if (roleData) {
                 this.rightTotalLife = BigNum.add(this.rightTotalLife, roleData.maxHP);
             }
         }
+        console.log(this.leftTotalLife, this.rightTotalLife, "------------------------------------------------");
     }
 
     private generateItem(result:FightReportItem[]){
@@ -618,6 +630,10 @@ class FightProcessGenerator {
 
     public getRightTotalLife() {
         return this.rightTotalLife;
+    }
+
+    public getLeftTotalLife(){
+        return this.leftTotalLife;
     }
 
     // 重置

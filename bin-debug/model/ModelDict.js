@@ -17,11 +17,17 @@ var ModelDict = (function (_super) {
             var key = keys[i];
             if (this.containsKey(key)) {
                 var item = this.getValue(key);
-                item.parse(value[key], key);
+                if (!value[key].id) {
+                    value[key].id = key;
+                }
+                item.parse(value[key]);
             }
             else {
                 var item = new this.itemC();
-                item.parse(value[key], key);
+                if (!value[key].id) {
+                    value[key].id = key;
+                }
+                item.parse(value[key]);
                 this.add(key, item);
             }
         }

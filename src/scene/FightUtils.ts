@@ -1,9 +1,10 @@
 /**
+ * 战斗处理中的一些工具方法
  * Created by hh on 2016/11/30.
  */
 module fight{
     /**
-     * 得到角色的描述信息
+     * 得到角色的站位
      * @param role RoleData或FightRole
      * @returns {string}
      */
@@ -79,13 +80,6 @@ module fight{
     }
 
     /**
-     * 是否是加血技能
-     */
-    export function isAddHPSkill(value:SkillConfig){
-        return value && value.damage < 0;
-    }
-
-    /**
      * 是否是boss
      * @param roleId
      * @returns {boolean}
@@ -99,6 +93,13 @@ module fight{
     }
 
     /**
+     * 是否是加血技能
+     */
+    export function isAddHPSkill(value:SkillConfig){
+        return value && value.damage < 0;
+    }
+
+    /**
      * 得到近战攻击玩家时的攻击位置
      * @param role
      * @param targets
@@ -109,7 +110,7 @@ module fight{
         let curRole = targets[0];
         let minValue = Math.abs(role.pos - curRole.pos);
         for (let i = 1; i < targets.length; i++) {
-            let curValue = Math.abs(role.pos - curRole.pos);
+            let curValue = Math.abs(role.pos - targets[i].pos);
             if (curValue < minValue) {
                 curRole = targets[i];
             }
@@ -269,42 +270,90 @@ module fight{
      * @param obj   角色数据
      * @param pos   角色位置
      * @param side  角色所有边
-     * @returns {FightRoleData[]}
+     * @returns {FightRoleVO[]}
      */
-    export function generateFightHeroDataArr(obj:any[], pos:number[], side:number) {
-        let result:FightRoleData[] = [];
+    export function generatePVPFightHeroVOArr(obj:any[], pos:number[], side:number) {
+        let result:FightRoleVO[] = [];
         let keys = Object.keys(obj);
         for (let i = 0; i < keys.length; i++) {
-            let roleData = new FightRoleData();
+            let fightRoleVO = new FightRoleVO();
             let key = keys[i];
-            roleData.parse(obj[key], +key);
-            roleData.side = side;
-            roleData.pos = 0;
+            if (!obj[key].id) {
+                obj[key].id = +key;
+            }
+            fightRoleVO.parse(obj[key]);
+            fightRoleVO.side = side;
+            fightRoleVO.pos = 0;
+            let heroVO = new HeroVO(obj[key]);
+            fightRoleVO.copyProp(heroVO);
             for (let j = 0; !!pos && j < pos.length; j++) {
-                if (roleData.id == pos[j]) {
-                    roleData.pos = j;
+                if (fightRoleVO.id == pos[j]) {
+                    fightRoleVO.pos = j;
                     break;
                 }
             }
-            result.push(roleData);
+            result.push(fightRoleVO);
         }
         return result;
+    }
+
+    /**
+     * 生成战斗角色数据数组
+     * @returns {FightRoleVO[]}
+     */
+    export function generateFightRoleVOArr(value:{id:number, pos:number, side:number}[]) {
+        let result:FightRoleVO[] = [];
+        let keys = Object.keys(value);
+        for (let i = 0; i < keys.length; i++) {
+            let key = keys[i];
+            let fightRoleVO = generateFightRoleVO(value[key]);
+            result.push(fightRoleVO)
+        }
+        return result;
+    }
+
+    /**
+     * 生成战斗角色数据
+     * @returns {FightRoleVO}
+     */
+    export function generateFightRoleVO(value:{id:number, pos:number, side:number}){
+        let result = new FightRoleVO(value);
+        if (fight.isHero(value.id)) {
+            let heroVO = new HeroVO(value);
+            result.copyProp(heroVO);
+        } else {
+            let monsterVO = new MonsterVO(value);
+            result.copyProp(monsterVO);
+        }
+        return result;
+    }
+
+    export function randomReq(){
+        let arr = UserProxy.inst.fightData.getRandomBattleRoleArr();
+        let tp = ArrayUtil.randomUniqueValue(["a", "b", "c", "d", "e"]);
+        let mypos = ArrayUtil.createArr(9, 0);
+        let oppos = ArrayUtil.createArr(9, 0);
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].side == 1) {
+                mypos[arr[i].pos] = arr[i].id;
+            } else {
+                oppos[arr[i].pos] = arr[i].id;
+            }
+        }
+        fight.TEST_BUNCH = tp;
+        fight.TEST_ROLE = arr.concat();
+        Http.inst.send("test", {mypos:JSON.stringify(mypos), oppos:JSON.stringify(oppos), tp:tp});
     }
 
     /**
      * 获取战斗角色所需的资源
      * @param roleDataArr
      */
-    export function getFightNeedRes(roleDataArr:FightRoleData[]){
+    export function getFightNeedRes(roleDataArr:{id:number}[]){
         let resPath:string[] = [];
         for (let i = 0; i < roleDataArr.length; i++) {
             let roleData = roleDataArr[i];
-            let roleConfig:RoleConfig;
-            if (isHero(roleData.id)) {
-                roleConfig = Config.HeroData[roleData.id];
-            } else {
-                roleConfig = Config.EnemyData[roleData.id];
-            }
+            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
             pushResToArr(roleConfig.resource, resPath);
             let skill:string[] = [].concat(roleConfig.skill, roleConfig.begin_skill);
             for (let j = 0; j < skill.length; j++) {
@@ -324,22 +373,5 @@ module fight{
                 arr.push(value + "_png", value + "_json");
             }
         }
-    }
-
-    export function randomReq(){
-        let arr = UserProxy.inst.fightData.getRandomBattleRoleArr();
-        let tp = ArrayUtil.randomUniqueValue(["a", "b", "c", "d", "e"]);
-        let mypos = ArrayUtil.createArr(9, 0);
-        let oppos = ArrayUtil.createArr(9, 0);
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i].side == 1) {
-                mypos[arr[i].pos] = arr[i].id;
-            } else {
-                oppos[arr[i].pos] = arr[i].id;
-            }
-        }
-        fight.TEST_BUNCH = tp;
-        fight.TEST_ROLE = arr.concat();
-        Http.inst.send("test", {mypos:JSON.stringify(mypos), oppos:JSON.stringify(oppos), tp:tp});
     }
 }
