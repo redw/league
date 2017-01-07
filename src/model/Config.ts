@@ -24,6 +24,8 @@ class Config extends egret.HashObject {
 
         // 同时出战的时间间隔
         fight.MEANWHILE_FIGHT_DELAY_TIME = +Config.FightConfig.meanwhile_fight_delay_time;
+        // 完成一步的时间间隔
+        fight.STEP_DELAY_TIME = +Config.FightConfig.step_delay_time;
         // 能否同时出战
         fight.CAN_MEANWHILE_FIGHT = Boolean(Config.FightConfig.can_meanwhile_fight);
         // 回退的时间间隔
@@ -40,6 +42,8 @@ class Config extends egret.HashObject {
         fight.DIE_DELAY_TIME = +Config.FightConfig.die_delay_time;
         // 生命条缓动时间
         fight.LIFE_BAR_TWEEN_TIME = +Config.FightConfig.life_bar_tween_time;
+        // 运行模式
+        fight.RUN_METHOD = +Config.FightConfig.run_method;
 
         if (Config.FightConfig.left_roles)
             fight.TEST_SELF_HERO = Config.FightConfig.left_roles.concat();

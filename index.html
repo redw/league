@@ -44,6 +44,49 @@
 	<script egret="game" src="bin-debug/component/LoadingUI.js"></script>
 	<script egret="game" src="bin-debug/component/RoleHPBar.js"></script>
 	<script egret="game" src="bin-debug/events/ContextEvent.js"></script>
+	<script egret="game" src="bin-debug/fight/PVEFightScene.js"></script>
+	<script egret="game" src="bin-debug/fight/PVPFightPanel.js"></script>
+	<script egret="game" src="bin-debug/fight/background/PVEBackGround.js"></script>
+	<script egret="game" src="bin-debug/fight/background/PVEForeground.js"></script>
+	<script egret="game" src="bin-debug/fight/background/PVEMiddleGround.js"></script>
+	<script egret="game" src="bin-debug/fight/background/PVEProspect.js"></script>
+	<script egret="game" src="bin-debug/fight/background/PVETransitionEff.js"></script>
+	<script egret="game" src="bin-debug/fight/core/BattleCheck.js"></script>
+	<script egret="game" src="bin-debug/fight/core/FightConst.js"></script>
+	<script egret="game" src="bin-debug/fight/core/FightProcessGenerator.js"></script>
+	<script egret="game" src="bin-debug/fight/core/FightRoleFactory.js"></script>
+	<script egret="game" src="bin-debug/fight/core/FightUtils.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/BaseMCEffect.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/BloodWarnEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/BossIncomingEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/FightWarnEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/MCEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/MoveDustEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/NewChapterEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/RoleDieEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/RoleSkillEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/ShakeScreenEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/font/FontAddHPEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/font/FontMagicAtkEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/font/FontOtherEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/font/FontPhysicalAtkEff.js"></script>
+	<script egret="game" src="bin-debug/fight/effect/font/FontSystemEff.js"></script>
+	<script egret="game" src="bin-debug/fight/model/FightDataModel.js"></script>
+	<script egret="game" src="bin-debug/model/ModelDict.js"></script>
+	<script egret="game" src="bin-debug/fight/model/HeroModel.js"></script>
+	<script egret="game" src="bin-debug/fight/model/config/BuffConfig.js"></script>
+	<script egret="game" src="bin-debug/fight/model/config/DropConfig.js"></script>
+	<script egret="game" src="bin-debug/fight/model/config/FightReportItem.js"></script>
+	<script egret="game" src="bin-debug/fight/model/config/RoleConfig.js"></script>
+	<script egret="game" src="bin-debug/fight/model/config/SkillConfig.js"></script>
+	<script egret="game" src="bin-debug/fight/model/config/StageConfig.js"></script>
+	<script egret="game" src="bin-debug/fight/model/vo/FightRoleVO.js"></script>
+	<script egret="game" src="bin-debug/fight/model/vo/HeroVO.js"></script>
+	<script egret="game" src="bin-debug/fight/model/vo/MonsterVO.js"></script>
+	<script egret="game" src="bin-debug/fight/view/FightContainer.js"></script>
+	<script egret="game" src="bin-debug/fight/view/FightDropContainer.js"></script>
+	<script egret="game" src="bin-debug/fight/view/FightRole.js"></script>
+	<script egret="game" src="bin-debug/fight/view/StageProgress.js"></script>
 	<script egret="game" src="bin-debug/manager/AssetAdapter.js"></script>
 	<script egret="game" src="bin-debug/manager/BaseSound.js"></script>
 	<script egret="game" src="bin-debug/manager/EventManager.js"></script>
@@ -52,65 +95,22 @@
 	<script egret="game" src="bin-debug/manager/ThemeAdapter.js"></script>
 	<script egret="game" src="bin-debug/model/Config.js"></script>
 	<script egret="game" src="bin-debug/model/Global.js"></script>
-	<script egret="game" src="bin-debug/model/ModelDict.js"></script>
 	<script egret="game" src="bin-debug/model/URLConfig.js"></script>
 	<script egret="game" src="bin-debug/model/UserProxy.js"></script>
-	<script egret="game" src="bin-debug/model/buff/BuffConfig.js"></script>
-	<script egret="game" src="bin-debug/model/fight/BattleCheck.js"></script>
-	<script egret="game" src="bin-debug/model/fight/FightConst.js"></script>
-	<script egret="game" src="bin-debug/model/fight/FightDataModel.js"></script>
-	<script egret="game" src="bin-debug/model/fight/FightDropConfig.js"></script>
-	<script egret="game" src="bin-debug/model/fight/FightReportItem.js"></script>
-	<script egret="game" src="bin-debug/model/fight/FightRoleVO.js"></script>
-	<script egret="game" src="bin-debug/model/fight/StageConfig.js"></script>
-	<script egret="game" src="bin-debug/model/role/HeroModel.js"></script>
-	<script egret="game" src="bin-debug/model/role/HeroVO.js"></script>
-	<script egret="game" src="bin-debug/model/role/MonsterVO.js"></script>
-	<script egret="game" src="bin-debug/model/role/RoleConfig.js"></script>
-	<script egret="game" src="bin-debug/model/skill/SkillConfig.js"></script>
-	<script egret="game" src="bin-debug/model/test/StageData.js"></script>
 	<script egret="game" src="bin-debug/net/BaseCmd.js"></script>
 	<script egret="game" src="bin-debug/net/CmdID.js"></script>
 	<script egret="game" src="bin-debug/net/Http.js"></script>
 	<script egret="game" src="bin-debug/net/NetEnterCmd.js"></script>
 	<script egret="game" src="bin-debug/net/NetFightCmd.js"></script>
 	<script egret="game" src="bin-debug/net/TestCmd.js"></script>
-	<script egret="game" src="bin-debug/scene/FightContainer.js"></script>
-	<script egret="game" src="bin-debug/scene/FightDropContainer.js"></script>
-	<script egret="game" src="bin-debug/scene/FightProcessGenerator.js"></script>
-	<script egret="game" src="bin-debug/scene/FightRole.js"></script>
-	<script egret="game" src="bin-debug/scene/FightRoleFactory.js"></script>
-	<script egret="game" src="bin-debug/scene/FightUtils.js"></script>
-	<script egret="game" src="bin-debug/scene/PVEFightContainer.js"></script>
-	<script egret="game" src="bin-debug/scene/StageProgress.js"></script>
-	<script egret="game" src="bin-debug/scene/background/PVEBackGround.js"></script>
-	<script egret="game" src="bin-debug/scene/background/PVEForeground.js"></script>
-	<script egret="game" src="bin-debug/scene/background/PVEMiddleGround.js"></script>
-	<script egret="game" src="bin-debug/scene/background/PVEProspect.js"></script>
-	<script egret="game" src="bin-debug/scene/background/PVETransitionEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/BaseMCEffect.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/BloodWarnEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/BossIncomingEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/FightWarnEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/MCEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/MoveDustEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/NewChapterEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/RoleDieEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/RoleSkillEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/ShakeScreenEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/font/FontAddHPEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/font/FontMagicAtkEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/font/FontOtherEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/font/FontPhysicalAtkEff.js"></script>
-	<script egret="game" src="bin-debug/scene/effect/font/FontSystemEff.js"></script>
 	<script egret="game" src="bin-debug/utils/ArrayUtil.js"></script>
 	<script egret="game" src="bin-debug/utils/BigNum.js"></script>
 	<script egret="game" src="bin-debug/utils/DisplayUtil.js"></script>
 	<script egret="game" src="bin-debug/utils/MathUtils.js"></script>
-	<script egret="game" src="bin-debug/view/main/MainView.js"></script>
 	<!--game_files_end-->
 </head>
 <body>
+	<img src="http://vs5.bdstatic.com/browse_static/v3/search/page/play_231cc54.png">
 
     <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
          data-entry-class="Main"
@@ -133,6 +133,7 @@
          * }
          **/
         egret.runEgret({renderMode:"webgl", audioType:0});
+
     </script>
 </body>
 </html>

@@ -74,10 +74,6 @@ class Main extends egret.DisplayObjectContainer {
         this.pveScene = new PVEScenePanel();
         this.addChild(this.pveScene);
         this.pveScene.startLevel(1);
-
-        let mainview = new MainView();
-        this.addChild(mainview);
-
     }
 }
 
