@@ -16,7 +16,7 @@
   "fore_ground_move_time":"400",
   "middle_ground_move_time":"500",
   "back_ground_move_time":"600",
-  "run_method":1,
+  "run_method":-1,
   "left_role_pos":[[160,250], [160, 320], [160, 400],
               [80, 250], [80, 320], [80, 400],
               [40, 250], [40, 320], [40, 400]],
