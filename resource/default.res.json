@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,link_map_png,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png,target_effect_png,target_effect_json,missle_effect_png,missle_effect_json,hp_effect_png,hp_effect_json,dust_effect_png,dust_effect_json,death_effect_png,death_effect_json,area_effect_png,area_effect_json",
+			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,link_map_png,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png,target_effect_png,target_effect_json,missle_effect_png,missle_effect_json,hp_effect_png,hp_effect_json,dust_effect_png,dust_effect_json,death_effect_png,death_effect_json,area_effect_png,area_effect_json,skill_source_png,skill_source_json",
 			"name": "preload"
 		},
 		{
@@ -3453,6 +3453,51 @@
 			"url": "assets/effect/fruit/tree_shake.json",
 			"type": "json",
 			"name": "tree_shake_json"
+		},
+		{
+			"url": "assets/hero/.DS_Store",
+			"type": "bin",
+			"name": "_DS_Store"
+		},
+		{
+			"url": "assets/hero/201_attack_missle.png",
+			"type": "image",
+			"name": "201_attack_missle_png"
+		},
+		{
+			"url": "assets/hero/211_attack_target.png",
+			"type": "image",
+			"name": "211_attack_target_png"
+		},
+		{
+			"url": "assets/hero/death.png",
+			"type": "image",
+			"name": "death_png"
+		},
+		{
+			"url": "assets/hero/skill_source.png",
+			"type": "image",
+			"name": "skill_source_png"
+		},
+		{
+			"url": "assets/hero/201_attack_missle.json",
+			"type": "json",
+			"name": "201_attack_missle_json"
+		},
+		{
+			"url": "assets/hero/211_attack_target.json",
+			"type": "json",
+			"name": "211_attack_target_json"
+		},
+		{
+			"url": "assets/hero/death.json",
+			"type": "json",
+			"name": "death_json"
+		},
+		{
+			"url": "assets/hero/skill_source.json",
+			"type": "json",
+			"name": "skill_source_json"
 		}
 	]
 }

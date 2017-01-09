@@ -1,95 +1,95 @@
 {
 	"3200": {
 		"id": 3200,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"14000": {
 		"id": 14000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"450": {
 		"id": 450,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"17000": {
 		"id": 17000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"10500": {
 		"id": 10500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"8500": {
 		"id": 8500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"19500": {
 		"id": 19500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"200": {
 		"id": 200,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"11000": {
 		"id": 11000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"7500": {
 		"id": 7500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"13500": {
 		"id": 13500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"17500": {
 		"id": 17500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"16500": {
 		"id": 16500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"3600": {
 		"id": 3600,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"8000": {
 		"id": 8000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"4050": {
 		"id": 4050,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"19000": {
 		"id": 19000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"4500": {
 		"id": 4500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"18500": {
 		"id": 18500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"7000": {
 		"id": 7000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"5000": {
 		"id": 5000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"2450": {
 		"id": 2450,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"16000": {
 		"id": 16000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"20": {
 		"id": 20,
@@ -97,63 +97,63 @@
 	},
 	"15500": {
 		"id": 15500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"800": {
 		"id": 800,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"10000": {
 		"id": 10000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"1250": {
 		"id": 1250,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"1800": {
 		"id": 1800,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"100": {
 		"id": 100,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"12500": {
 		"id": 12500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"1000": {
 		"id": 1000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"600": {
 		"id": 600,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"18000": {
 		"id": 18000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"300": {
 		"id": 300,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"1500": {
 		"id": 1500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"13000": {
 		"id": 13000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"2800": {
 		"id": 2800,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"12000": {
 		"id": 12000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"50": {
 		"id": 50,
@@ -161,42 +161,42 @@
 	},
 	"15000": {
 		"id": 15000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"2100": {
 		"id": 2100,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"6500": {
 		"id": 6500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"9500": {
 		"id": 9500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"6000": {
 		"id": 6000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"9000": {
 		"id": 9000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"20000": {
 		"id": 20000,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"5500": {
 		"id": 5500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"11500": {
 		"id": 11500,
-		"draw_group": 6
+		"draw_group": 9
 	},
 	"14500": {
 		"id": 14500,
-		"draw_group": 6
+		"draw_group": 9
 	}
 }

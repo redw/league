@@ -1,180 +1,199 @@
 {
 	"1": {
-		"disc": "获得 200元宝",
-		"reward_1": null,
-		"sort": 4,
 		"price": 2,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 2元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 10,
+		"reward_1": null,
 		"icon": 4,
 		"id": 1,
-		"reward_2": null
+		"disc": "获得 200元宝",
+		"name": "充值 2元"
 	},
 	"2": {
-		"disc": "赠送 8%，总共获得 648元宝",
-		"reward_1": null,
-		"sort": 5,
 		"price": 6,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 6元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 11,
+		"reward_1": null,
 		"icon": 5,
 		"id": 2,
-		"reward_2": null
+		"disc": "赠送 8%，总共获得 648元宝",
+		"name": "充值 6元"
 	},
 	"3": {
-		"disc": "赠送 10%，总共获得 3300元宝",
-		"reward_1": null,
-		"sort": 6,
 		"price": 30,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 30元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 12,
+		"reward_1": null,
 		"icon": 6,
 		"id": 3,
-		"reward_2": null
+		"disc": "赠送 10%，总共获得 3300元宝",
+		"name": "充值 30元"
 	},
 	"4": {
-		"disc": "赠送 15%，总共获得 5750元宝",
-		"reward_1": null,
-		"sort": 7,
 		"price": 50,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 50元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 13,
+		"reward_1": null,
 		"icon": 7,
 		"id": 4,
-		"reward_2": null
+		"disc": "赠送 15%，总共获得 5750元宝",
+		"name": "充值 50元"
 	},
 	"5": {
-		"disc": "赠送 20%，总共获得 11760元宝",
-		"reward_1": null,
-		"sort": 8,
 		"price": 98,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 98元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 14,
+		"reward_1": null,
 		"icon": 8,
 		"id": 5,
-		"reward_2": null
+		"disc": "赠送 20%，总共获得 11760元宝",
+		"name": "充值 98元"
 	},
 	"6": {
-		"disc": "赠送 25%，总共获得 24750元宝",
-		"reward_1": null,
-		"sort": 9,
 		"price": 198,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 198元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 15,
+		"reward_1": null,
 		"icon": 9,
 		"id": 6,
-		"reward_2": null
+		"disc": "赠送 25%，总共获得 24750元宝",
+		"name": "充值 198元"
 	},
 	"7": {
-		"disc": "赠送 30%，总共获得 84240元宝",
-		"reward_1": null,
-		"sort": 10,
 		"price": 648,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "充值 648元",
-		"type": 1,
 		"daytimes": 0,
-		"reward_3": null,
+		"type": 1,
+		"sort": 16,
+		"reward_1": null,
 		"icon": 10,
 		"id": 7,
-		"reward_2": null
+		"disc": "赠送 30%，总共获得 84240元宝",
+		"name": "充值 648元"
 	},
 	"8": {
-		"disc": "装备材料，金、木、水、火、土，各x 1000",
-		"reward_1": [
-			"9",
-			"0",
-			"1000"
-		],
-		"sort": 1,
-		"price": 2000,
-		"reward_5": [
-			"13",
-			"0",
-			"1000"
-		],
-		"reward_4": [
-			"12",
-			"0",
-			"1000"
-		],
-		"name": "特大材料包",
+		"price": 1000,
+		"daytimes": 5,
 		"type": 2,
-		"daytimes": 1,
-		"reward_3": [
-			"11",
+		"sort": 1,
+		"reward_1": [
+			"22",
 			"0",
-			"1000"
+			"10"
 		],
 		"icon": 1,
 		"id": 8,
-		"reward_2": [
-			"10",
-			"0",
-			"1000"
-		]
+		"disc": "升星丹 x10",
+		"name": "一袋升星丹"
 	},
 	"9": {
-		"disc": "伙伴碎片x 50",
-		"reward_1": [
-			"7",
-			"101",
-			"50"
-		],
-		"sort": 2,
-		"price": 2000,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "伙伴礼包",
+		"price": 1000,
+		"daytimes": 3,
 		"type": 2,
-		"daytimes": 1,
-		"reward_3": null,
+		"sort": 4,
+		"reward_1": [
+			"106",
+			"14",
+			"5"
+		],
 		"icon": 2,
 		"id": 9,
-		"reward_2": null
+		"disc": "随机紫色伙伴碎片 x5",
+		"name": "随机紫将元神袋"
 	},
 	"10": {
-		"disc": "伙伴碎片x 50",
-		"reward_1": [
-			"7",
-			"102",
-			"50"
-		],
-		"sort": 3,
-		"price": 2000,
-		"reward_5": null,
-		"reward_4": null,
-		"name": "伙伴礼包",
+		"price": 1500,
+		"daytimes": 3,
 		"type": 2,
-		"daytimes": 1,
-		"reward_3": null,
+		"sort": 3,
+		"reward_1": [
+			"105",
+			"15",
+			"5"
+		],
 		"icon": 3,
 		"id": 10,
-		"reward_2": null
+		"disc": "随机橙色伙伴碎片 x5",
+		"name": "随机橙将元神袋"
+	},
+	"11": {
+		"price": 500,
+		"daytimes": 1,
+		"type": 2,
+		"sort": 5,
+		"reward_1": [
+			"17",
+			"0",
+			"1"
+		],
+		"icon": 1,
+		"id": 11,
+		"disc": "历史最高金之秘境的奖励 x1",
+		"name": "秘境金精袋"
+	},
+	"12": {
+		"price": 500,
+		"daytimes": 1,
+		"type": 2,
+		"sort": 6,
+		"reward_1": [
+			"18",
+			"0",
+			"1"
+		],
+		"icon": 1,
+		"id": 12,
+		"disc": "历史最高木之秘境的奖励 x1",
+		"name": "秘境木精袋"
+	},
+	"13": {
+		"price": 500,
+		"daytimes": 1,
+		"type": 2,
+		"sort": 7,
+		"reward_1": [
+			"19",
+			"0",
+			"1"
+		],
+		"icon": 1,
+		"id": 13,
+		"disc": "历史最高水之秘境的奖励 x1",
+		"name": "秘境水精袋"
+	},
+	"14": {
+		"price": 500,
+		"daytimes": 1,
+		"type": 2,
+		"sort": 8,
+		"reward_1": [
+			"20",
+			"0",
+			"1"
+		],
+		"icon": 1,
+		"id": 14,
+		"disc": "历史最高火之秘境的奖励 x1",
+		"name": "秘境火精袋"
+	},
+	"15": {
+		"price": 500,
+		"daytimes": 1,
+		"type": 2,
+		"sort": 9,
+		"reward_1": [
+			"21",
+			"0",
+			"1"
+		],
+		"icon": 1,
+		"id": 15,
+		"disc": "历史最高土之秘境的奖励 x1",
+		"name": "秘境土精袋"
 	}
 }

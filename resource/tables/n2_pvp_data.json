@@ -84,12 +84,12 @@
 		"memo": "名次奖励"
 	},
 	"10": {
-		"value": 1.2,
+		"value": 1.3,
 		"id": 10,
 		"memo": "PVP英雄属性=HERO表里的5个基础属性*（填写值^星级）"
 	},
 	"11": {
-		"value": 1.2,
+		"value": 1.3,
 		"id": 11,
 		"memo": "PVP英雄战力=hero表里的battle_point*（填写值^星级）"
 	},

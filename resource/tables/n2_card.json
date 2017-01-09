@@ -1,34 +1,34 @@
 {
 	"1": {
-		"off_time": 120,
-		"name": "月卡",
-		"makemoney_dps": 0.2,
-		"weapon_fb": 1,
-		"price": 28,
-		"circle_time": 240,
-		"weapon_num": 0,
-		"id": 1,
 		"off_dps": 0.1,
+		"circle_time": 240,
+		"weapon_fb": 1,
+		"weapon_num": 0,
+		"off_time": 120,
+		"price": 28,
+		"makemoney_dps": 0.2,
+		"id": 1,
 		"reward_1": [
 			"3",
 			"0",
 			"200"
-		]
+		],
+		"name": "月卡"
 	},
 	"2": {
-		"off_time": 120,
-		"name": "终身卡",
-		"makemoney_dps": 0.3,
-		"weapon_fb": 1,
-		"price": 88,
-		"circle_time": 240,
-		"weapon_num": 1,
-		"id": 2,
 		"off_dps": 0.2,
+		"circle_time": 240,
+		"weapon_fb": 1,
+		"weapon_num": 1,
+		"off_time": 120,
+		"price": 88,
+		"makemoney_dps": 0.3,
+		"id": 2,
 		"reward_1": [
 			"3",
 			"0",
 			"300"
-		]
+		],
+		"name": "终身卡"
 	}
 }

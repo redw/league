@@ -98,3 +98,4 @@ var MathUtil;
     }
     MathUtil.easyNumber = easyNumber;
 })(MathUtil || (MathUtil = {}));
+//# sourceMappingURL=MathUtils.js.map
