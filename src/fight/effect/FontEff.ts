@@ -37,14 +37,15 @@ class FontEff extends egret.DisplayObjectContainer {
         this.bitmapText.x = this.bitmapText.width * -0.5;
 
         egret.Tween.get(this).
-        to({y:this.y - 60}, 600, egret.Ease.cubicIn).
-        to({alpha:0.4}, 400).call(
+        to({y:this.y - 60,alpha:0.4}, 1000, fight.fontEase).call(
             ()=>{
                 this.dispose();
             },
             this
         );
     }
+
+    // easeInOutElastic
 
     public dispose(){
         egret.Tween.removeTweens(this);
