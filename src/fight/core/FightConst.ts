@@ -11,7 +11,7 @@ enum FightStateEnum{
 enum FightTypeEnum {
     PVE = 1,
     PVP,
-    DUP
+    BOSS
 }
 
 enum FightFontEffEnum{
@@ -62,7 +62,7 @@ enum BuffTypeEnum
 }
 
 module fight{
-    export let TEST_BUNCH:string = "d";
+    export let TEST_BUNCH:string = null;
     export let TEST_OTHER_HERO = null;
     export let TEST_SELF_HERO = null;
     export let RUN_METHOD:number = 1;
@@ -80,11 +80,11 @@ module fight{
     export const DIE_HP:number = 1;
 
     // 同时出战的时间间隔
-    export let MEANWHILE_FIGHT_DELAY_TIME:number = 200;
+    export let MEANWHILE_FIGHT_DELAY_TIME:number = 0;
     // 完成一步的时间间隔
-    export let STEP_DELAY_TIME:number = 10;
+    export let STEP_DELAY_TIME:number = 200;
     // 能否同时出战
-    export let CAN_MEANWHILE_FIGHT:boolean = false;
+    export let CAN_MEANWHILE_FIGHT:boolean = true;
     // 回退的时间间隔
     export let RETREAT_TIME:number = 150;
     // 移动的时间
@@ -92,11 +92,11 @@ module fight{
     // 移动攻击时,距离目标点的位置
     export let MOVE_ATTACK_OFF:number = 100;
     // 子弹飞行时间
-    export let BULLET_RUN_TIME:number = 100;
+    export let BULLET_RUN_TIME:number = 300;
     // 子弹间间隔
-    export let BULLET_RUN_DELAY_TIME:number = 50;
+    export let BULLET_RUN_DELAY_TIME:number = 200;
     // 死亡延迟时间
-    export let DIE_DELAY_TIME:number = 300;
+    export let DIE_DELAY_TIME:number = 600;
     // 生命条缓动时间
     export let LIFE_BAR_TWEEN_TIME:number = 200;
 
@@ -135,19 +135,20 @@ module fight{
     export const FONT_OTHER:string = "other_fnt";
 
     // 前后端检测的属性
-    export let CHECK_PROP:string = "id,pos,skillId,round,phyAtk,phyDef,magAtk,magDef,hp,target";
+    export let CHECK_PROP:string = "id,pos,skillId,round,phyAtk,phyDef,magAtk,magDef,hp,maxhp,target";
 
-    export let AREA_POS:egret.Point[] = [new egret.Point(360, 230), new egret.Point(120, 230)];
+    export let AREA_POS:egret.Point[] = [new egret.Point(380, 330), new egret.Point(100, 330)];
+
     export let POS_MAP:egret.Point[][] = [
         [
-            new egret.Point(160, 200), new egret.Point(160, 270), new egret.Point(160, 350),
-            new egret.Point(80, 200), new egret.Point(80, 270), new egret.Point(80, 350),
-            new egret.Point(40, 200), new egret.Point(40, 270), new egret.Point(40, 350),
+            new egret.Point(130,260), new egret.Point(130, 340), new egret.Point(130, 420),
+            new egret.Point(60, 260), new egret.Point(60, 340), new egret.Point(60, 420),
+            new egret.Point(0, 240), new egret.Point(0, 320), new egret.Point(0, 400),
         ],
         [
-            new egret.Point(320, 200), new egret.Point(320, 270), new egret.Point(320, 350),
-            new egret.Point(400, 200), new egret.Point(400, 270), new egret.Point(400, 350),
-            new egret.Point(440, 200), new egret.Point(440, 270), new egret.Point(440, 350),
+            new egret.Point(350, 260), new egret.Point(350, 340), new egret.Point(350, 420),
+            new egret.Point(420, 260), new egret.Point(420, 340), new egret.Point(420, 420),
+            new egret.Point(480, 240), new egret.Point(480, 320), new egret.Point(480, 400),
         ]
     ];
 }

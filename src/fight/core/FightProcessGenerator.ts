@@ -223,6 +223,7 @@ class FightProcessGenerator {
             skillId:skillInfo.id,
             target:[],
             cri: cri,
+            maxhp:startRole.maxHP,
             round: round,
             index: index
         };
@@ -237,6 +238,7 @@ class FightProcessGenerator {
                 let item:FightReportTargetItem = <FightReportTargetItem>{};
                 let atk, def;
                 item.damage = "0";
+                item.maxhp = target.maxHP;
                 result.target.push(item);
                 target.phyDef = BigNum.mul(target.phyDef, target.getBuffMultiValue(BuffTypeEnum.DEF_MORE_MORE));
                 target.magDef = BigNum.mul(target.magDef, target.getBuffMultiValue(BuffTypeEnum.DEF_MORE_MORE));

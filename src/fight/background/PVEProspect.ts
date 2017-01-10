@@ -6,8 +6,8 @@
  */
 class PVEProspect extends PVEBackGround{
 
-    public constructor(){
-        super();
+    public constructor(hasTween:boolean=true){
+        super(hasTween);
     }
 
     protected getSceneResourcePath(level:number){

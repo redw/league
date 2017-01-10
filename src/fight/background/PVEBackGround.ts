@@ -7,9 +7,11 @@ class PVEBackGround extends egret.DisplayObjectContainer {
     private moveCompleteCount:number = 0;
     private _level:number = -1;
     private curX:number = 0;
+    protected hasTween:boolean = false;
 
-    public constructor(){
+    public constructor(hasTween:boolean=true){
         super();
+        this.hasTween = hasTween;
     }
 
     protected getSceneResourcePath(level:number){
@@ -17,7 +19,7 @@ class PVEBackGround extends egret.DisplayObjectContainer {
     }
 
     public set level(value:number) {
-        if (this._level != value) {
+        if (this._level != value || !this.hasTween) {
             if (this._level == -1) {
                 this._level = value;
                 let off = 0;
@@ -68,11 +70,7 @@ class PVEBackGround extends egret.DisplayObjectContainer {
 
     // 缓动
     protected move(off:number=0){
-        let tween = egret.Tween.get(this.background);
-        tween.to({x:(this.background.x + off)}, 500).call(this.moveComplete, this, [this.background]);
 
-        tween = egret.Tween.get(this.freeBackground);
-        tween.to({x:(this.freeBackground.x + off)}, 500).call(this.moveComplete, this, [this.freeBackground]);
     }
 
     // 当移动完成后,把不在可视范围内的图片删除

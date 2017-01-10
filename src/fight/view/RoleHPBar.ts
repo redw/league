@@ -35,18 +35,27 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.hitBitmap.y = 1;
         this.hitBitmap.visible = false;
         this.addChild(this.hitBitmap);
+
+        this.effBitmap = new AutoBitmap();
+        this.effBitmap.x = 1;
+        this.effBitmap.y = 1;
+        this.effBitmap.visible = false;
+        this.addChild(this.effBitmap);
     }
 
     public setProgress(value:number){
         let w = MathUtil.clamp(value,0,1) * (RoleHPBar.WIDTH - 2);
         this.hpBitmap.width = w;
         this.hitBitmap.width = w;
+        this.effBitmap.width = 1;
         if (this.side == FightSideEnum.LEFT_SIDE) {
             this.hpBitmap.x = 1;
             this.hitBitmap.x = 1;
+            this.effBitmap.x = 1;
         } else {
             this.hpBitmap.x = RoleHPBar.WIDTH - w - 1;
             this.hitBitmap.x = RoleHPBar.WIDTH - w - 1;
+            this.effBitmap.x = RoleHPBar.WIDTH - w - 1;
         }
         this.hitBitmap.visible = true;
         this.hitBitmap.alpha = 0.8;
@@ -56,6 +65,7 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         tween.call(()=>{
             egret.Tween.removeTweens(this.hitBitmap);
             this.hpBitmap.visible = true;
+            this.effBitmap.visible = true;
             this.hitBitmap.visible = false;
         }, this);
         this.hpBitmap.visible = false;

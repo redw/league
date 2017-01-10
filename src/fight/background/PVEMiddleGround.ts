@@ -6,8 +6,8 @@
  */
 class PVEMiddleGround extends PVEBackGround {
 
-    public constructor(){
-        super();
+    public constructor(hasTween:boolean=true){
+        super(hasTween);
         egret.startTick(this.checkResHeight, this);
     }
 

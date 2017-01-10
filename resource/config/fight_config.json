@@ -1,6 +1,6 @@
 {
   "left_roles":[113, 0,0,0,113,0,0,0,0],
-  "right_roles":[113,113,0,113,0,0,0,0,0],
+  "right_roles":[209,0,203,201,210,202,0,0,0],
   "meanwhile_fight_delay_time":500,
   "step_delay_time":20,
   "can_meanwhile_fight":false,

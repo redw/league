@@ -30,6 +30,8 @@ class FightReportItem{
     pos:string;
     /** 血量 */
     hp:string;
+    /** 最大血量 */
+    maxhp:string;
     /** 伤害 */
     damage:string;
     /** 物攻 */
@@ -73,6 +75,8 @@ class FightReportTargetItem {
     pos:string;
     /** 血量 */
     hp:string;
+    /** 最大血量 */
+    maxhp:string;
     /** 伤害 */
     damage:string;
     /** 物攻 */
