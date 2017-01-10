@@ -62,9 +62,9 @@ enum BuffTypeEnum
 }
 
 module fight{
-    export let TEST_BUNCH:string = null;
-    export let TEST_OTHER_HERO = null;
-    export let TEST_SELF_HERO = null;
+    export let TEST_BUNCH:string = "d";
+    export let TEST_OTHER_HERO = [0, 0, 217, 222, 201, 207];
+    export let TEST_SELF_HERO = [113,113,0,0,0,0];
     export let RUN_METHOD:number = 1;
 
     export let WIDTH:number = 480;
@@ -103,6 +103,12 @@ module fight{
     // 战斗步骤上限
     export const STEP_UP_LIMIT:number = 100;
     export const ROUND_LIMIT:number = 20;
+
+    export const ROLE_ACTION_IDLE:string = "idle";
+    export const ROLE_ACTION_BLOCK:string = "block";
+    export const ROLE_ACTION_ATTACK:string = "attack";
+    export const ROLE_ACTION_SKILL:string = "skill_1"
+    export const ROLE_ACTION_ATTACKED:string = "attacked"
 
     export const ATTACK_ACTION_NORMAL:string = "normal_attack";
     export const ATTACK_ACTION_ROW:string = "row_attack";

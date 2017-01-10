@@ -21,7 +21,7 @@ class SkillConfig {
     one_cond: number;
     name: string;
     tip: string;
-    damage_frame: number;
+    damage_frame: string;
     is_dodge: number;
     trigger_chance: number;
     action: string;
