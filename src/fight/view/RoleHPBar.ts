@@ -1,6 +1,6 @@
 /**
  * 角色血条栏
- * Created by Administrator on 2016/12/26.
+ * Created by hh on 2016/12/26.
  */
 class RoleHPBar extends egret.DisplayObjectContainer {
     private side:number;
@@ -46,7 +46,14 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.addChild(this.effBitmap);
     }
 
-    public setProgress(value:number){
+    public update(cur:string, max:string) {
+        let ratio = +(BigNum.div(cur, max)) || 0;
+        let isDie = BigNum.greater(fight.DIE_HP, cur);
+        this.setProgress(ratio, isDie);
+
+    }
+
+    public setProgress(value:number, isDie:boolean){
         let w = MathUtil.clamp(value,0,1) * (RoleHPBar.WIDTH - 2);
         this.hpBitmap.width = w;
         this.hitBitmap.width = this.oldProgress * (RoleHPBar.WIDTH - 2);
@@ -64,14 +71,22 @@ class RoleHPBar extends egret.DisplayObjectContainer {
         this.hitBitmap.visible = true;
         this.hitBitmap.alpha = 0.8;
         let tween = egret.Tween.get(this.hitBitmap);
-        tween.to({alpha:1}, 200);
-        tween.to({alpha:0.4}, 200);
+        tween.to({alpha:1}, 80);
+        tween.to({alpha:0.4}, 80);
+        if (isDie) {
+            tween.to({alpha:1}, 200);
+            tween.to({alpha:0.4}, 200);
+            tween.to({alpha:1}, 200);
+            tween.to({alpha:0.4}, 200);
+            tween.to({alpha:1}, 200);
+            tween.to({alpha:0.4}, 200);
+        }
         tween.call(()=>{
             egret.Tween.removeTweens(this.hitBitmap);
             this.hpBitmap.visible = true;
             this.effBitmap.visible = true;
             this.hitBitmap.visible = false;
-            if (value <= 0) {
+            if (isDie) {
                 this.isCanRemove = true;
             }
         }, this);

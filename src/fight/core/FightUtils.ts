@@ -143,13 +143,13 @@ module fight {
      * @param level
      */
     export function recordLog(content:any, level:number = 0) {
-        if (level >= LOG_FIGHT_ERROR) {
-            egret.error(content);
-        } else if (level >= LOG_FIGHT_WARN) {
-            egret.warn(content);
-        } else {
-            egret.log(content);
-        }
+        // if (level >= LOG_FIGHT_ERROR) {
+        //     egret.error(content);
+        // } else if (level >= LOG_FIGHT_WARN) {
+        //     egret.warn(content);
+        // } else {
+        //     egret.log(content);
+        // }
     }
 
     /**

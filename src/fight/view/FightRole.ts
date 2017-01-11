@@ -54,6 +54,13 @@ class FightRole extends egret.DisplayObjectContainer {
         if (this.roleData.config == null) {
             this.roleData.config = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
         }
+        let point = fight.getRoleInitPoint(this.roleData);
+        this.x = point.x;
+        this.y = point.y;
+        // 暂先处理血量为当家血量
+        if (this.lifeBar) {
+            this.lifeBar.setProgress(1, false);
+        }
         egret.startTick(this.onTick, this);
     }
 
@@ -88,10 +95,6 @@ class FightRole extends egret.DisplayObjectContainer {
         this.lifeBar.y = -(this.roleData.config.modle_height) - RoleHPBar.HEIGHT - 2;
         this.addChild(this.lifeBar);
         this.updateHP(this.curHP);
-
-        let point = fight.getRoleInitPoint(this.roleData);
-        this.x = point.x;
-        this.y = point.y;
 
         this.idle();
     }
@@ -161,10 +164,8 @@ class FightRole extends egret.DisplayObjectContainer {
         let source = showInfo[0];
         let self = this;
         if (source) {
-            let eff = new BaseMCEffect(source);
-            eff.registerFrameBack(()=>{
-                self.doAction();
-            }, 0);
+            let eff = new MCEff(source);
+            eff.registerBack(0, this.doAction, this, null);
             eff.y = (this.roleData.config.modle_height) * -0.5;
             this.fightContainer.showFreeSkillEff(this, eff, needMode);
         } else {
@@ -176,22 +177,16 @@ class FightRole extends egret.DisplayObjectContainer {
         for (let i = 0; i < this.reportItem.target.length; i++) {
             let role = this.fightContainer.getRoleByStr(this.reportItem.target[i].pos);
             role.maxHP = this.reportItem.target[i].maxhp;
-            role.updateHP(this.reportItem.target[i].hp, true);
+            role.updateHP(this.reportItem.target[i].hp);
         }
     }
 
-    public updateHP(hp:string,forceDie:boolean=true){
+    public updateHP(hp:string){
         if (this.curHP) {
             if (!BigNum.equal(this.curHP, hp)) {
                 this.curHP = hp;
-                let ratio = +(BigNum.div(this.curHP, this.maxHP)) || 0;
-                this.lifeBar.setProgress(ratio);
+                this.lifeBar.update(this.curHP, this.maxHP);
                 this.dispatchEventWith("role_hp_change", true);
-                if (forceDie) {
-                    if (BigNum.greater(fight.DIE_HP, this.curHP)) {
-                        // this.onRoleDie();
-                    }
-                }
             }
         }
     }
@@ -644,25 +639,27 @@ class FightRole extends egret.DisplayObjectContainer {
         }
 
         // 处理角色死亡效果
-        if (BigNum.greater(fight.DIE_HP, this.roleData.curHP) && this.parent && !this.isPlayingDie && this.lifeBar.isCanRemove) {
-            if (!this.roleData.config.dead_frame) {
-                this.isPlayingDie = true;
-                fight.recordLog(`角色${this.roleData.id}没有配死亡帧`, fight.LOG_FIGHT_WARN);
-                egret.setTimeout(()=>{
-                    this.onRoleDie();
-                }, this, fight.DIE_DELAY_TIME);
-            } else {
-                // TODO 处理死亡帧
-                // if (currentFrame >= this.roleData.config.dead_frame) {
-                this.isPlayingDie = true;
-                let dieEff = new RoleDieEff();
-                dieEff.scaleX = this.side == FightSideEnum.LEFT_SIDE ? -1 : 1;
-                dieEff.addEventListener(egret.Event.COMPLETE, this.onRoleDie, this);
-                this.addChild(dieEff);
-                this.idle();
-                this.body.stop();
-                egret.stopTick(this.onTick, this);
-                // }
+        if (BigNum.greater(fight.DIE_HP, this.roleData.curHP)) {
+            if (this.parent && !this.isPlayingDie && this.lifeBar.isCanRemove) {
+                if (!this.roleData.config.dead_frame) {
+                    this.isPlayingDie = true;
+                    fight.recordLog(`角色${this.roleData.id}没有配死亡帧`, fight.LOG_FIGHT_WARN);
+                    egret.setTimeout(()=> {
+                        this.onRoleDie();
+                    }, this, fight.DIE_DELAY_TIME);
+                } else {
+                    // TODO 处理死亡帧
+                    // if (currentFrame >= this.roleData.config.dead_frame) {
+                    this.isPlayingDie = true;
+                    let dieEff = new RoleDieEff();
+                    dieEff.scaleX = this.side == FightSideEnum.LEFT_SIDE ? -1 : 1;
+                    dieEff.addEventListener(egret.Event.COMPLETE, this.onRoleDie, this);
+                    this.addChild(dieEff);
+                    this.idle();
+                    this.body.stop();
+                    egret.stopTick(this.onTick, this);
+                    // }
+                }
             }
         }
 

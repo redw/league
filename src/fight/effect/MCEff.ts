@@ -57,8 +57,7 @@ class MCEff extends egret.DisplayObjectContainer {
             this.mc.scaleX = this._scaleX;
             this.mc.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             this.mc.gotoAndPlay(1, 1);
-            if (this.autoDisAppear)
-                this.mc.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
+            this.mc.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
             this.addChild(this.mc);
         }
     }
@@ -77,8 +76,14 @@ class MCEff extends egret.DisplayObjectContainer {
 
     private onComplete() {
         this.dispatchEventWith(egret.Event.COMPLETE);
+        this.triggerFunArr();
+        if (this.autoDisAppear) {
+            this.dispose();
+        }
+    }
+
+    public dispose(){
         if (this.mc) {
-            this.triggerFunArr();
             this.mc.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             this.mc.removeEventListener(egret.Event.COMPLETE, this.onComplete, this);
             if (this.mc.parent)

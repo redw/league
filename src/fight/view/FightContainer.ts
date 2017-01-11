@@ -125,7 +125,6 @@ class FightContainer extends egret.DisplayObjectContainer {
     private addRoles(elements:FightRoleVO[], withTween:boolean){
         let arr = elements;
         this.moveCount = 0;
-        console.log(elements, ".................................");
         for (let i = 0; i < arr.length; i++) {
             let roleData = arr[i];
             let role = FightRoleFactory.createRole(this, roleData);
@@ -141,7 +140,9 @@ class FightContainer extends egret.DisplayObjectContainer {
                     role.x = fight.WIDTH * 0.5 + role.x;
                 }
                 egret.Tween.get(role).to({x:tox}, fight.MIDDLE_GROUND_MOVE_TIME).
-                call(()=>{this.roleMoveComplete();}, this);
+                call(()=>{
+                    egret.Tween.removeTweens(role);
+                    this.roleMoveComplete();}, this);
             }
         }
         let orders = fight.ROLE_Z_INDEX_ARR;
@@ -450,7 +451,7 @@ class FightContainer extends egret.DisplayObjectContainer {
     private tweenRemoveRoleComplete(){
         let arr = this.originalElements;
         let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
-        if (this.type != FightTypeEnum.PVP) {
+        if (this.type == FightTypeEnum.PVP) {
             this.addRoles(roleArr, false);
         } else {
             this.addRoles(roleArr, true);

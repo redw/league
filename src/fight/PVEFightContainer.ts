@@ -32,7 +32,6 @@ class PVEScenePanel extends egret.DisplayObjectContainer {
     }
 
     private onFightEnd() {
-
         this.level++;
         this.startLevel(this.level);
         return;

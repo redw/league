@@ -62,7 +62,7 @@ enum BuffTypeEnum
 }
 
 module fight{
-    export let TEST_BUNCH:string = null;
+    export let TEST_BUNCH:string = "b";
     export let TEST_OTHER_HERO = null;
     export let TEST_SELF_HERO = null;
     export let RUN_METHOD:number = 1;
