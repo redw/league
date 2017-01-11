@@ -1,14 +1,17 @@
 /**
+ * 角色血条栏
  * Created by Administrator on 2016/12/26.
  */
 class RoleHPBar extends egret.DisplayObjectContainer {
+    private side:number;
     private backGround:AutoBitmap;
     private hitBitmap:AutoBitmap;
     private hpBitmap:AutoBitmap;
     private effBitmap:AutoBitmap;
-    private side:number;
     public static WIDTH:number = 62;
     public static HEIGHT:number = 8;
+    public isCanRemove:boolean = false;
+    private oldProgress:number = 1;
 
     public constructor(side:number=FightSideEnum.LEFT_SIDE)
     {
@@ -46,7 +49,8 @@ class RoleHPBar extends egret.DisplayObjectContainer {
     public setProgress(value:number){
         let w = MathUtil.clamp(value,0,1) * (RoleHPBar.WIDTH - 2);
         this.hpBitmap.width = w;
-        this.hitBitmap.width = w;
+        this.hitBitmap.width = this.oldProgress * (RoleHPBar.WIDTH - 2);
+        this.oldProgress = MathUtil.clamp(value,0,1);
         this.effBitmap.width = 1;
         if (this.side == FightSideEnum.LEFT_SIDE) {
             this.hpBitmap.x = 1;
@@ -67,6 +71,9 @@ class RoleHPBar extends egret.DisplayObjectContainer {
             this.hpBitmap.visible = true;
             this.effBitmap.visible = true;
             this.hitBitmap.visible = false;
+            if (value <= 0) {
+                this.isCanRemove = true;
+            }
         }, this);
         this.hpBitmap.visible = false;
     }

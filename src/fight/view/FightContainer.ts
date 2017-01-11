@@ -1,43 +1,43 @@
 /**
  * 战斗角色容器
- *
  * @author hh
  */
 class FightContainer extends egret.DisplayObjectContainer {
-    private meanWhileStep:number = 1;
+    private bunch:string = "a";                                                 // 串
+    public result:number = 0;                                                   // 战斗结果
+    private level:number = -1;                                                  // 战斗配置id(pvp战斗无视)
+    private steps:any[] = [];                                                   // 战斗步骤(副本)
+    private autoFight:boolean = false;                                          // 是否自动战斗
+    private type:number = FightTypeEnum.PVE;                                    // 战斗类型
+    private dataGenerator:FightProcessGenerator;                                // 战斗过程生成器(如果需前端算)
+
+    private state:number = FightStateEnum.Wait;                                 // 战斗状态
+    public oldLifeRatio:number = 1;                                             // 生命进度条
+    private isHeroDataUpdate:boolean = false;                                   // 英雄数据是否变化
+    private initRoleCount:number = 0;                                           // 初始角色数量
+    private meanWhileStep:number = 1;                                           // 同时可出战的步数
+    public leftTotalLife:string = "1";                                          // 左方总生命
+    public rightTotalLife:string = "1";                                         // 右方总生命
+    private fightSteps:any[] = [];                                              // 战斗步骤
+
+    private warnEff:FightWarnEff;                                               // 血量不足20%时的警告效果
+    private shakeScreenEff:ShakeScreenEff;                                      // 震屏效果
+    private fontEffLayer:eui.Group;                                             // 文字效果层
+    private damageEffLayer:eui.Group;                                           // 伤害层
+    private roleLayer:eui.Group;                                                // 角色层
+    private grayLayer:egret.Shape;                                              // 灰色层
+    private dustLayer:eui.Group;                                                // 灰尘层
+    private foregroundLayer:PVEForeground;                                      // 前景层
+    private middleGroundLayer:PVEMiddleGround;                                  // 中景层
+    private prospectLayer:PVEProspect;                                          // 远景层
+    private transitionLayer:PVETransitionEff;                                   // 场景切换层
+    private leftAreaCont:egret.DisplayObjectContainer;                          // 左侧area效果层
+    private rightAreaCont:egret.DisplayObjectContainer;                         // 右侧area效果层
+
+    private originalElements:{id:number, side:number, pos:number}[] = [];
     private leftRoles:FightRole[] = Array(fight.ROLE_UP_LIMIT);
     private rightRoles:FightRole[] = Array(fight.ROLE_UP_LIMIT);
     private roles:FightRole[][] = [this.leftRoles, this.rightRoles];
-    private state:number = FightStateEnum.Wait;
-    private type:number = FightTypeEnum.PVE;
-    private level:number = -1;
-    private steps:any[] = [];
-    private fightSteps:any[] = [];
-    private originalElements:{id:number, side:number, pos:number}[] = [];
-    private dataGenerator:FightProcessGenerator;
-    private autoFight:boolean = false;
-
-    private warnEff:FightWarnEff;                   // 血量不足30时的警告效果
-    private shakeScreenEff:ShakeScreenEff;          // 震屏效果
-    private fontEffLayer:eui.Group;                 // 文字效果层
-    private damageEffLayer:eui.Group;               // 伤害层
-    private roleLayer:eui.Group;                    // 角色层
-    private grayLayer:egret.Shape;                  // 灰色层
-    private dustLayer:eui.Group;                    // 灰尘层
-    private foregroundLayer:PVEForeground;          // 前景层
-    private middleGroundLayer:PVEMiddleGround;      // 中景层
-    private prospectLayer:PVEProspect;              // 远景层
-    private transitionLayer:PVETransitionEff;       // 场景切换层
-    private leftAreaCont:egret.DisplayObjectContainer;
-    private rightAreaCont:egret.DisplayObjectContainer;
-
-    private bunch:string = "a";
-    public leftTotalLife:string = "1";      // 左方总生命
-    public rightTotalLife:string = "1";     // 右方总生命
-    public oldLifeRatio:number = 1;         // 生命进度条
-    public result:number = 0;               // 战斗结果
-
-    private isHeroDataUpdate:boolean = false;
 
     public constructor(type:number = FightTypeEnum.PVE) {
         super();
@@ -67,10 +67,8 @@ class FightContainer extends egret.DisplayObjectContainer {
             this.foregroundLayer = new PVEForeground(hasTween);
             this.addChild(this.foregroundLayer);
 
-            if (type == FightTypeEnum.PVE) {
-                this.transitionLayer = new PVETransitionEff();
-                this.addChild(this.transitionLayer);
-            }
+            this.transitionLayer = new PVETransitionEff({x:fight.WIDTH, y:fight.HEIGHT});
+            this.addChild(this.transitionLayer);
         }
 
         this.fontEffLayer = new eui.Group();
@@ -103,7 +101,9 @@ class FightContainer extends egret.DisplayObjectContainer {
             this.foregroundLayer.level = level;
             this.middleGroundLayer.level = level;
             this.prospectLayer.level = level;
-            this.transitionLayer.level = level;
+            if (this.level < 0 || Config.StageData[this.level].map != Config.StageData[level].map) {
+                this.transitionLayer.level = level;
+            }
         } else if (this.type == FightTypeEnum.PVP) {
             this.reset();
             this.bornRoles();
@@ -117,12 +117,19 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.level = level;
     }
 
+    /**
+     * 添加角色
+     * @param elements
+     * @param withTween
+     */
     private addRoles(elements:FightRoleVO[], withTween:boolean){
         let arr = elements;
         this.moveCount = 0;
+        console.log(elements, ".................................");
         for (let i = 0; i < arr.length; i++) {
             let roleData = arr[i];
-            let role = new FightRole(this, roleData);
+            let role = FightRoleFactory.createRole(this, roleData);
+            this.initRoleCount++;
             let side = roleData.side - 1;
             let pos = roleData.pos;
             this.roles[side][pos] = role;
@@ -137,8 +144,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 call(()=>{this.roleMoveComplete();}, this);
             }
         }
-
-        let orders = [0,3,6,1,4,7,2,5,8];
+        let orders = fight.ROLE_Z_INDEX_ARR;
         let zIndex = 0;
         for (let i = 0; i < orders.length; i++) {
             let index = orders[i];
@@ -202,7 +208,9 @@ class FightContainer extends egret.DisplayObjectContainer {
                 console.log("步骤:", this.steps)
                 console.groupEnd();
 
-                this.startStep();
+                if (this.type != FightTypeEnum.PVP) {
+                    this.startStep();
+                }
             }
         }
     }
@@ -387,7 +395,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 ()=>{
                     this.roleLayer.x = 0;
                     this.reset();
-                    egret.setTimeout(()=>{this.tweenRemoveRoleComplete();}, this, 100)
+                    egret.setTimeout(()=>{this.tweenRemoveRoleComplete();}, this, fight.MIDDLE_GROUND_MOVE_TIME)
                 },
                 this
             )
@@ -400,14 +408,43 @@ class FightContainer extends egret.DisplayObjectContainer {
     private bornRoles(){
         let arr = this.originalElements;
         let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
+        let self = this;
         for (let i = 0; i < roleArr.length; i++) {
-
+            if (roleArr[i]) {
+                egret.setTimeout((index)=>{
+                    let eff = new MCEff("role_born");
+                    this.bornRole(roleArr[index]);
+                    eff.x = fight.getRoleInitPoint(roleArr[index]).x;
+                    eff.y = fight.getRoleInitPoint(roleArr[index]).y;
+                    this.roleLayer.addChild(eff);
+                }, this, i * 200, i);
+            }
         }
-
     }
 
-    private bornRole(){
+    private bornRole(roleData:FightRoleVO){
+        let role = new FightRole(this, roleData);
+        let side = roleData.side - 1;
+        let pos = roleData.pos;
+        this.roles[side][pos] = role;
+        this.roleLayer.addChild(role);
+        let sideRoles = this.roles[side].concat();
 
+        let zIndexArr = fight.ROLE_Z_INDEX_ARR;
+        role["z__index"] = zIndexArr[pos];
+        sideRoles.sort((a, b)=>{return a["z__index"] - b["z__index"]});
+        sideRoles = sideRoles.filter((value)=>{return !!value});
+        for (let i = 0; i < sideRoles.length; i++) {
+            if (sideRoles[i].parent) {
+                sideRoles[i].parent.removeChild(sideRoles[i]);
+            }
+            this.roleLayer.addChild(sideRoles[i]);
+            sideRoles[i].idle();
+        }
+        this.initRoleCount++;
+        if (this.initRoleCount >= this.originalElements.length) {
+            egret.setTimeout(this.startStep, this, 200);
+        }
     }
 
     private tweenRemoveRoleComplete(){
