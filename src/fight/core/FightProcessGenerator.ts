@@ -644,6 +644,52 @@ class FightProcessGenerator {
         return this.leftTotalLife;
     }
 
+    /**
+     * 攻击力翻翻
+     * @param side
+     */
+    public doubleSideAtk(side:number) {
+        let roleArr = this.roles;
+        for (let i = 0; i < roleArr.length; i++) {
+            if (roleArr[i] && roleArr[i].side == side) {
+                roleArr[i].phyAtk = BigNum.mul(roleArr[i].phyAtk, 2);
+                roleArr[i].magAtk = BigNum.mul(roleArr[i].magAtk, 2);
+            }
+        }
+    }
+
+    /**
+     * 回复生命
+     * @param side
+     * @param ratio
+     */
+    public recoverySideBlood(side:number, ratio:number=0.5) {
+        let roleArr = this.roles;
+        for (let i = 0; i < roleArr.length; i++) {
+            if (roleArr[i] && roleArr[i].side == side) {
+                roleArr[i].curHP = BigNum.add(roleArr[i].curHP, BigNum.mul(roleArr[i].maxHP, ratio));
+                roleArr[i].curHP = BigNum.min(roleArr[i].curHP, roleArr[i].maxHP);
+            }
+        }
+    }
+
+    public doPalmHurt(side:number){
+        let roleArr = this.roles;
+        for (let i = 0; i < roleArr.length; i++) {
+            if (roleArr[i] && roleArr[i].side == side) {
+                if (roleArr[i].id <= 300) {
+                    roleArr[i].curHP = "0e0";
+                } else {
+                    roleArr[i].curHP = BigNum.sub(roleArr[i].curHP, BigNum.mul(roleArr[i].maxHP, 0.2));
+                }
+                if (BigNum.greater(fight.DIE_HP, roleArr[i].curHP)) {
+                    this.removeRole(roleArr[i]);
+                    i--;
+                }
+            }
+        }
+    }
+
     // 重置
     private reset() {
         for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {

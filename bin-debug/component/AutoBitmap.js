@@ -5,17 +5,16 @@
  */
 var AutoBitmap = (function (_super) {
     __extends(AutoBitmap, _super);
-    function AutoBitmap() {
+    function AutoBitmap(value) {
         _super.call(this);
+        if (value) {
+            this.source = value;
+        }
     }
     var d = __define,c=AutoBitmap,p=c.prototype;
-    d(p, "source"
-        ,function () {
-            return this._source;
-        }
+    d(p, "source",undefined
         ,function (value) {
             var _this = this;
-            this._source = value;
             if (typeof (value) == "string") {
                 if (RES.hasRes(value)) {
                     RES.getResAsync(value, function (res) {
@@ -36,3 +35,4 @@ var AutoBitmap = (function (_super) {
     return AutoBitmap;
 }(egret.Bitmap));
 egret.registerClass(AutoBitmap,'AutoBitmap');
+//# sourceMappingURL=AutoBitmap.js.map

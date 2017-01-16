@@ -4,6 +4,6 @@
  */
 class RoleDieEff extends MCEff{
     public constructor(){
-        super("death_effect", true);
+        super("death_effect");
     }
 }

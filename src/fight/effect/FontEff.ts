@@ -4,12 +4,12 @@
 class FontEff extends egret.DisplayObjectContainer {
     protected bitmapText:egret.BitmapText = new egret.BitmapText();
 
-    constructor(fntname:string, letterSpacing:number=-3) {
+    constructor(fntName:string) {
         super();
         this.bitmapText = new egret.BitmapText();
         this.addChild(this.bitmapText);
-        this.bitmapText.font = RES.getRes(fntname);
-        this.bitmapText.letterSpacing = letterSpacing;
+        this.bitmapText.font = RES.getRes(fntName);
+        this.bitmapText.letterSpacing = -3;
     }
 
     public show(content:any){
@@ -37,15 +37,13 @@ class FontEff extends egret.DisplayObjectContainer {
         this.bitmapText.x = this.bitmapText.width * -0.5;
 
         egret.Tween.get(this).
-        to({y:this.y - 60,alpha:0.4}, 1000, fight.fontEase).call(
+        to({y:this.y - 60, alpha:0.4}, 800 * scale, egret.Ease.cubicIn).call(
             ()=>{
                 this.dispose();
             },
             this
         );
     }
-
-    // easeInOutElastic
 
     public dispose(){
         egret.Tween.removeTweens(this);

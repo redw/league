@@ -1,249 +1,262 @@
 {
 	"1": {
 		"type_child": 1,
-		"name": "邀请好友 1 次",
-		"task_type": 1,
+		"next_id": 2,
 		"task_parm": 1,
+		"task_type": 1,
 		"reward_1": [
-			"6",
+			"7",
 			"101",
 			"1"
 		],
 		"id": 1,
-		"next_id": 2
+		"name": "邀请好友 1 次"
 	},
 	"2": {
 		"type_child": 2,
-		"name": "邀请好友 3 次",
-		"task_type": 1,
+		"next_id": 0,
 		"task_parm": 3,
+		"task_type": 1,
 		"reward_1": [
-			"6",
+			"7",
 			"101",
 			"1"
 		],
 		"id": 2,
-		"next_id": 0
+		"name": "邀请好友 3 次"
 	},
 	"3": {
 		"type_child": 1,
-		"name": "充值任意金额",
-		"task_type": 2,
+		"next_id": 4,
 		"task_parm": 2,
+		"task_type": 2,
 		"reward_1": [
 			"102",
 			"8",
 			"1"
 		],
 		"id": 3,
-		"next_id": 4
+		"name": "充值任意金额"
 	},
 	"4": {
 		"type_child": 2,
-		"name": "充值任意金额",
-		"task_type": 2,
+		"next_id": 5,
 		"task_parm": 6,
+		"task_type": 2,
 		"reward_1": [
 			"102",
 			"8",
 			"1"
 		],
 		"id": 4,
-		"next_id": 5
+		"name": "充值任意金额"
 	},
 	"5": {
 		"type_child": 3,
-		"name": "充值任意金额",
-		"task_type": 2,
+		"next_id": 6,
 		"task_parm": 30,
+		"task_type": 2,
 		"reward_1": [
 			"102",
 			"8",
 			"2"
 		],
 		"id": 5,
-		"next_id": 6
+		"name": "充值任意金额"
 	},
 	"6": {
 		"type_child": 4,
-		"name": "充值任意金额",
-		"task_type": 2,
+		"next_id": 0,
 		"task_parm": 98,
+		"task_type": 2,
 		"reward_1": [
 			"102",
 			"8",
 			"6"
 		],
 		"id": 6,
-		"next_id": 0
+		"name": "充值任意金额"
 	},
 	"7": {
 		"type_child": 1,
-		"name": "升级巡山 10 级",
+		"next_id": 0,
+		"task_parm": 20,
 		"task_type": 3,
-		"task_parm": 10,
 		"reward_1": [
 			"5",
 			"0",
 			"1"
 		],
 		"id": 7,
-		"next_id": 0
+		"name": "升级巡山 20 级"
 	},
 	"8": {
 		"type_child": 1,
-		"name": "摇钱树 3 次",
-		"task_type": 4,
+		"next_id": 0,
 		"task_parm": 3,
+		"task_type": 4,
 		"reward_1": [
-			"2",
-			"0",
-			"2"
+			"7",
+			"119",
+			"1"
 		],
 		"id": 8,
-		"next_id": 0
+		"name": "摇钱树 3 次"
 	},
 	"9": {
 		"type_child": 1,
-		"name": "升级伙伴 10 级",
+		"next_id": 0,
+		"task_parm": 10,
 		"task_type": 5,
-		"task_parm": 10,
-		"reward_1": [
-			"14",
-			"0",
-			"1"
-		],
-		"id": 9,
-		"next_id": 0
-	},
-	"10": {
-		"type_child": 1,
-		"name": "强化伙伴 10 级",
-		"task_type": 6,
-		"task_parm": 10,
 		"reward_1": [
 			"5",
 			"0",
 			"1"
 		],
+		"id": 9,
+		"name": "升级伙伴 10 级"
+	},
+	"10": {
+		"type_child": 1,
+		"next_id": 0,
+		"task_parm": 10,
+		"task_type": 6,
+		"reward_1": [
+			"5",
+			"0",
+			"2"
+		],
 		"id": 10,
-		"next_id": 0
+		"name": "强化伙伴 10 级"
 	},
 	"11": {
 		"type_child": 1,
-		"name": "进行寻仙 5 次",
-		"task_type": 7,
+		"next_id": 0,
 		"task_parm": 5,
+		"task_type": 7,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
 		"id": 11,
-		"next_id": 0
+		"name": "进行寻仙 5 次"
 	},
 	"12": {
 		"type_child": 1,
-		"name": "闯过10 关",
-		"task_type": 8,
+		"next_id": 0,
 		"task_parm": 10,
+		"task_type": 8,
 		"reward_1": [
-			"7",
-			"119",
-			"1"
+			"2",
+			"0",
+			"2"
 		],
 		"id": 12,
-		"next_id": 0
+		"name": "闯过10 关"
 	},
 	"13": {
 		"type_child": 1,
-		"name": "在秘境胜利 3 次",
-		"task_type": 10,
+		"next_id": 0,
 		"task_parm": 3,
+		"task_type": 10,
 		"reward_1": [
 			"14",
 			"0",
 			"1"
 		],
 		"id": 13,
-		"next_id": 0
+		"name": "在秘境胜利 3 次"
 	},
 	"14": {
 		"type_child": 1,
-		"name": "进行轮回 1 次",
-		"task_type": 11,
+		"next_id": 0,
 		"task_parm": 1,
+		"task_type": 11,
 		"reward_1": [
 			"5",
 			"0",
 			"2"
 		],
 		"id": 14,
-		"next_id": 0
+		"name": "进行轮回 1 次"
 	},
 	"15": {
 		"type_child": 1,
-		"name": "好友互赠 5 次",
-		"task_type": 12,
+		"next_id": 16,
 		"task_parm": 5,
+		"task_type": 12,
 		"reward_1": [
 			"22",
 			"0",
 			"5"
 		],
 		"id": 15,
-		"next_id": 16
+		"name": "好友互赠 5 次"
 	},
 	"16": {
 		"type_child": 2,
-		"name": "好友互赠 10 次",
-		"task_type": 12,
+		"next_id": 0,
 		"task_parm": 10,
+		"task_type": 12,
 		"reward_1": [
 			"22",
 			"0",
-			"10"
+			"5"
 		],
 		"id": 16,
-		"next_id": 0
+		"name": "好友互赠 10 次"
 	},
 	"17": {
 		"type_child": 1,
-		"name": "完成捉妖 5 次",
-		"task_type": 9,
+		"next_id": 18,
 		"task_parm": 5,
+		"task_type": 9,
 		"reward_1": [
 			"3",
 			"0",
 			"50"
 		],
 		"id": 17,
-		"next_id": 18
+		"name": "完成捉妖 5 次"
 	},
 	"18": {
 		"type_child": 2,
-		"name": "完成捉妖 10 次",
-		"task_type": 9,
+		"next_id": 0,
 		"task_parm": 10,
+		"task_type": 9,
 		"reward_1": [
 			"3",
 			"0",
 			"50"
 		],
 		"id": 18,
-		"next_id": 0
+		"name": "完成捉妖 10 次"
 	},
 	"19": {
 		"type_child": 1,
-		"name": "场景点击10 次",
-		"task_type": 13,
+		"next_id": 0,
 		"task_parm": 10,
+		"task_type": 13,
 		"reward_1": [
 			"2",
 			"0",
-			"1"
+			"1.5"
 		],
 		"id": 19,
-		"next_id": 0
+		"name": "场景点击 10 次"
+	},
+	"20": {
+		"type_child": 1,
+		"next_id": 0,
+		"task_parm": 5,
+		"task_type": 14,
+		"reward_1": [
+			"14",
+			"0",
+			"1"
+		],
+		"id": 20,
+		"name": "进行比武 5场"
 	}
 }

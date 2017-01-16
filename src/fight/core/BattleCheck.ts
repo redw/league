@@ -5,6 +5,9 @@
 module fight{
     export function check(clientObj, serverObj) {
         let result = true;
+        if (!clientObj || !serverObj || clientObj.length == 0 || serverObj.length == 0) {
+            return result;
+        }
         let clientArr = clientObj.concat();
         let serverArr = serverObj.concat();
         console.group("------------报告检测-------------");

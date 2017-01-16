@@ -1,17 +1,18 @@
 /**
+ * mc效果
  * Created by hh on 16/12/25.
  */
 class MCEff extends egret.DisplayObjectContainer {
     private mc:egret.MovieClip;
-    private autoDisAppear:boolean = false;
+    public autoDisAppear:boolean = false;
     private _scaleX:number = 1;
     private frameBacks = [];
 
-    public constructor(value?:string, autoDisAppear:boolean=true, scaleX:number = 1){
+    public constructor(value:string, autoDisAppear:boolean=true, scaleX:number = 1){
         super();
         this.autoDisAppear = autoDisAppear;
-        this._scaleX = scaleX;
         this.source = value;
+        this._scaleX = scaleX;
     }
 
     /**
@@ -22,12 +23,8 @@ class MCEff extends egret.DisplayObjectContainer {
      * @param param
      */
     public registerBack(frame:number, fun:Function, scope:Object=null, param:any=null){
-        let totalFrame = this.mc.totalFrames;
-        if (!this.frameBacks) {
-            this.frameBacks = Array(totalFrame + 1);
-        }
-        if (frame >= totalFrame || frame == 0) {
-            frame = totalFrame;
+        if (this.frameBacks) {
+            this.frameBacks = [];
         }
         this.frameBacks[frame] = [fun, scope, param];
     }
@@ -44,22 +41,43 @@ class MCEff extends egret.DisplayObjectContainer {
 
     private triggerFunArr(){
         let len = this.frameBacks.length;
-        for (let i = 1; i <= len; i++) {
+        for (let i = 0; i <= len; i++) {
             this.triggerFun(i);
         }
     }
 
     public set source(value:string) {
         this.mc = FightRole.createMovieClip(value);
-        if (!this.mc || this.mc.totalFrames == 0) {
-            this.onComplete();
-        } else {
-            this.mc.scaleX = this._scaleX;
-            this.mc.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
-            this.mc.gotoAndPlay(1, 1);
-            this.mc.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
-            this.addChild(this.mc);
-        }
+        egret.callLater(()=>{
+            if (!this.mc || this.mc.totalFrames == 0) {
+                this.onComplete();
+            } else {
+                let totalFrame = this.mc.totalFrames;
+                if (this.frameBacks) {
+                    let keys = Object.keys(this.frameBacks);
+                    for (let i = 0; i < keys.length; i++) {
+                        let key = +keys[i];
+                        if (key <= 0 || key > totalFrame) {
+                            let callInfo = this.frameBacks[key];
+                            delete this.frameBacks[key];
+                            this.frameBacks[totalFrame] = callInfo;
+                        }
+                    }
+                }
+
+                this.mc.scaleX = this._scaleX;
+                this.mc.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
+
+                if (this.autoDisAppear) {
+                    this.mc.gotoAndPlay(1, 1);
+                    this.mc.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
+                } else {
+                    this.mc.gotoAndPlay(1, -1);
+                }
+
+                this.addChild(this.mc);
+            }
+        }, null);
     }
 
     private onEnterFrame(){
@@ -76,14 +94,8 @@ class MCEff extends egret.DisplayObjectContainer {
 
     private onComplete() {
         this.dispatchEventWith(egret.Event.COMPLETE);
-        this.triggerFunArr();
-        if (this.autoDisAppear) {
-            this.dispose();
-        }
-    }
-
-    public dispose(){
         if (this.mc) {
+            this.triggerFunArr();
             this.mc.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             this.mc.removeEventListener(egret.Event.COMPLETE, this.onComplete, this);
             if (this.mc.parent)
@@ -94,5 +106,13 @@ class MCEff extends egret.DisplayObjectContainer {
             this.parent.removeChild(this);
         }
         this.frameBacks = [];
+    }
+
+    public getMC(){
+        return this.mc;
+    }
+
+    public dispose(){
+        this.onComplete();
     }
 }

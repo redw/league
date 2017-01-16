@@ -2,13 +2,13 @@
  * 战斗里的一些工具方法
  * Created by hh on 2016/11/30.
  */
-module fight {
+module fight{
     /**
      * 得到角色的描述信息
      * @param role RoleData或FightRole
      * @returns {string}
      */
-    export function getRolePosDes(role:any) {
+    export function getRolePosDes(role:any){
         let result = "";
         let arr = [];
         if (role.length >= 1) {
@@ -33,7 +33,7 @@ module fight {
      * @param value 排或列
      * @returns {[number,number,number]}
      */
-    export function getCommonOrders(value:number) {
+    export function getCommonOrders(value: number) {
         if (value == 1) {
             return [1, 0, 2];
         } else if (value == 2) {
@@ -48,24 +48,26 @@ module fight {
      * @param value
      */
     export function verifyActiveSkill(value:SkillConfig) {
-        if (value.type == "passive") {
-            recordLog(`技能${value.id}应该是主动配置`, fight.LOG_FIGHT_WARN);
-        }
-        if (!value.trigger_chance || value.trigger_chance > 1) {
-            recordLog(`技能${value.id}的串配置错误`, fight.LOG_FIGHT_WARN);
-        }
-        if (!value.repeat || value.repeat > 5) {
-            recordLog(`技能${value.id}的repeat配置错误`, fight.LOG_FIGHT_WARN);
-        }
-        if (!value.damage_frame) {
-            recordLog(`技能${value.id}没有配伤害帧`, fight.LOG_FIGHT_WARN);
-        }
-        if (value.action_type == fight.ATTACK_ACTION_JUMP && !value.jump_frame) {
-            recordLog(`技能${value.id}的跳跃攻击没有配跳跃帧`, fight.LOG_FIGHT_WARN);
-        }
-        if (value.action_type == fight.ATTACK_ACTION_AREA || value.action_type == fight.ATTACK_ACTION_TURN) {
-            if (!Number(value.effect_damage_frame)) {
-                recordLog(`技能${value.id}的${value.action_type}攻击伤害帧配置错误`, fight.LOG_FIGHT_WARN);
+        if (value) {
+            if (value.type == "passive") {
+                recordLog(`技能${value.id}应该是主动配置`,fight.LOG_FIGHT_WARN);
+            }
+            if (!value.trigger_chance || value.trigger_chance > 1) {
+                recordLog(`技能${value.id}的串配置错误`,fight.LOG_FIGHT_WARN);
+            }
+            if (!value.repeat || value.repeat > 5) {
+                recordLog(`技能${value.id}的repeat配置错误`,fight.LOG_FIGHT_WARN);
+            }
+            if (!value.damage_frame) {
+                recordLog(`技能${value.id}没有配伤害帧`,fight.LOG_FIGHT_WARN);
+            }
+            if (value.action_type == fight.ATTACK_ACTION_JUMP && !value.jump_frame) {
+                recordLog(`技能${value.id}的跳跃攻击没有配跳跃帧`,fight.LOG_FIGHT_WARN);
+            }
+            if (value.action_type == fight.ATTACK_ACTION_AREA || value.action_type == fight.ATTACK_ACTION_TURN) {
+                if (!Number(value.effect_damage_frame)) {
+                    recordLog(`技能${value.id}的${value.action_type}攻击伤害帧配置错误`,fight.LOG_FIGHT_WARN);
+                }
             }
         }
     }
@@ -75,7 +77,7 @@ module fight {
      * @param roleId
      * @returns {boolean}
      */
-    export function isHero(roleId:number) {
+    export function isHero(roleId:number){
         return roleId < 200;
     }
 
@@ -95,7 +97,7 @@ module fight {
     /**
      * 是否是加血技能
      */
-    export function isAddHPSkill(value:SkillConfig) {
+    export function isAddHPSkill(value:SkillConfig){
         return value && value.damage < 0;
     }
 
@@ -106,17 +108,22 @@ module fight {
      * @param skill
      * @returns {Point}
      */
-    export function getNearFightPoint(role:FightRole, targets:FightRole[], skill:SkillConfig) {
-        let curRole = targets[0];
-        let minValue = Math.abs(role.pos - curRole.pos);
-        for (let i = 1; i < targets.length; i++) {
-            let curValue = Math.abs(role.pos - targets[i].pos);
-            if (curValue < minValue) {
-                curRole = targets[i];
-            }
-        }
-        let point = getRoleInitPoint(curRole);
+    export function getNearFightPoint(role:FightRole, targets:FightRole[], skill:SkillConfig){
+        let point = new egret.Point();
         let offPoint = (skill && skill.move_position) || [0, 0];
+        if (skill.action_type == fight.ATTACK_ACTION_ROW) {
+            point = getRoleInitPoint({side:3-role.side, pos:role.pos % 3});
+        } else {
+            let curRole = targets[0];
+            let minValue = Math.abs(role.pos - curRole.pos);
+            for (let i = 1; i < targets.length; i++) {
+                let curValue = Math.abs(role.pos - targets[i].pos);
+                if (curValue < minValue) {
+                    curRole = targets[i];
+                }
+            }
+            point = getRoleInitPoint(curRole);
+        }
         if (role.side == FightSideEnum.RIGHT_SIDE) {
             point.x += (MOVE_ATTACK_OFF + (+offPoint[0]));
         } else {
@@ -131,7 +138,7 @@ module fight {
      * @param role  角色数据
      * @returns {Point}
      */
-    export function getRoleInitPoint(role:{side:number, pos:number}) {
+    export function  getRoleInitPoint(role:{side:number, pos:number}){
         let side = role.side - 1;
         let pos = role.pos;
         return POS_MAP[side][pos].clone();
@@ -142,21 +149,21 @@ module fight {
      * @param content
      * @param level
      */
-    export function recordLog(content:any, level:number = 0) {
-        // if (level >= LOG_FIGHT_ERROR) {
-        //     egret.error(content);
-        // } else if (level >= LOG_FIGHT_WARN) {
-        //     egret.warn(content);
-        // } else {
-        //     egret.log(content);
-        // }
+    export function recordLog(content:any, level:number=0){
+        if (level >= LOG_FIGHT_ERROR) {
+             console.error(content);
+        } else if (level >= LOG_FIGHT_WARN) {
+             console.warn(content);
+        } else {
+            console.log(content);
+        }
     }
 
     /**
      * 需要移动攻击
      * @param action
      */
-    export function needMoveAttack(action:string) {
+    export function needMoveAttack(action:string){
         return action == fight.ATTACK_ACTION_NORMAL ||
             action == fight.ATTACK_ACTION_ROW;
     }
@@ -166,7 +173,7 @@ module fight {
      * @param action
      * @returns {boolean}
      */
-    export function needRetreat(action:string) {
+    export function needRetreat(action:string){
         return action == fight.ATTACK_ACTION_NORMAL ||
             action == fight.ATTACK_ACTION_JUMP ||
             action == fight.ATTACK_ACTION_ROW ||
@@ -181,7 +188,7 @@ module fight {
      * @param id
      * @returns {boolean}   成功播放,返回true,否则返回false
      */
-    export function playFrameLabel(label:string, mc:egret.MovieClip, count:number = 1, id:number|string = 0) {
+    export function playFrameLabel(label:string, mc:egret.MovieClip, count:number=1, id:number|string=0) {
         let result = false;
         if (mc && mc["frameLabels"] && mc["frameLabels"].indexOf(label)) {
             result = true;
@@ -201,7 +208,7 @@ module fight {
      * 随机技能触发串
      * @returns {string|string|string|string|string}
      */
-    export function randomSkillTriggerBunch() {
+    export function randomSkillTriggerBunch(){
         let bunch = ["a", "b", "c", "d", "e"];
         let index = Math.floor(Math.random() * bunch.length);
         return fight.TEST_BUNCH || bunch[index];
@@ -213,14 +220,14 @@ module fight {
      * @param content
      * @param fntname
      */
-    export function showTxt(parent:egret.DisplayObjectContainer, content:any, fntname:string) {
+    export function showTxt(parent:egret.DisplayObjectContainer, content:any, fntname:string){
         let fontEff = new FontEff(fntname);
         parent.addChild(fontEff);
         fontEff.show(content);
     }
 
-    export function playSound(url:string, isMusicEff:boolean = true) {
-        if (url) {
+    export function playSound(url:string, isMusicEff:boolean=true){
+        /*if (url){
             try {
                 // if (isMusicEff) {
                 //     SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
@@ -232,7 +239,7 @@ module fight {
                 recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
             }
 
-        }
+        }*/
     }
 
     /**
@@ -286,7 +293,7 @@ module fight {
      * 生成战斗角色数据
      * @returns {FightRoleVO}
      */
-    export function generateFightRoleVO(value:{id:number, pos:number, side:number}) {
+    export function generateFightRoleVO(value:{id:number, pos:number, side:number}){
         let result = new FightRoleVO(value);
         if (fight.isHero(value.id)) {
             let heroVO = new HeroVO(value);
@@ -299,80 +306,20 @@ module fight {
     }
 
     /**
-     * 获取战斗角色所需的资源
-     * @param roleDataArr
-     */
-    export function getFightNeedRes(roleDataArr:{id:number}[]) {
-        let resPath:string[] = [];
-        for (let i = 0; i < roleDataArr.length; i++) {
-            let roleData = roleDataArr[i];
-            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
-            pushResToArr(roleConfig.resource, resPath);
-            let skill:string[] = [].concat(roleConfig.skill, roleConfig.begin_skill);
-            for (let j = 0; j < skill.length; j++) {
-                if (!!skill[j]) {
-                    let skillConfig = Config.SkillData[skill[j]];
-                    pushResToArr(skillConfig.scource_effect, resPath);
-                    pushResToArr(skillConfig.target_effect, resPath);
-                }
-            }
-        }
-        return resPath;
-    }
-
-    function pushResToArr(value:any, arr:any[]) {
-        if (!!value) {
-            if (arr.indexOf(value + "_png") < 0) {
-                arr.push(value + "_png", value + "_json");
-            }
-        }
-    }
-
-    /**
      * 子弹缓冲方法
      * @param ratio tween的0到1的进度
      * @returns {number}
      */
-    export function bulletEase(ratio:number) {
-        let duration = fight.BULLET_RUN_TIME;
-        let x = ratio;
-        let t = ratio * duration;
-        let b = 0;
-        let c = 1;
-        let d = duration;
-        return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
-    }
-
-    export function fontEase(ratio:number) {
-        let duration = 1000;
-        let x = ratio;
-        let t = ratio * duration;
-        let b = 0;
-        let c = 1;
-        let d = duration;
-
-        var s = 1.70158;
-        var p = 0;
-        var a = c;
-        if (t == 0){
-            return b;
+    export function bulletEase(time:number){
+        return function (ratio:number) {
+            let duration = time;
+            let x = ratio;
+            let t = ratio * duration;
+            let b = 0;
+            let c = 1;
+            let d = duration;
+            return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
         }
-        if ((t /= d / 2) == 2) {
-            return b + c;
-        }
-        if (!p) {
-            p = d * (.3 * 1.5);
-        }
-        if (a < Math.abs(c)) {
-            a = c;
-            var s = p / 4
-        } else {
-            var s = p / (2 * Math.PI) * Math.asin(c / a);
-        }
-        if (t < 1) {
-            return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
-        }
-        return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b
     }
 
     /**

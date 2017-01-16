@@ -7,23 +7,23 @@
 class PVEMiddleGround extends PVEBackGround {
 
     public constructor(hasTween:boolean=true){
-        super(hasTween);
+        super(hasTween, fight.LOAD_PRIORITY_MAP_MIDDLE);
         egret.startTick(this.checkResHeight, this);
     }
 
     private checkResHeight(){
         if (this.background.height > 0) {
-            this.background.y = fight.HEIGHT - this.background.height;
+            this.background.y = (fight.HEIGHT - this.background.height) * 0.5;
         }
         if (this.freeBackground.height > 0) {
-            this.freeBackground.y = fight.HEIGHT - this.freeBackground.height;
+            this.freeBackground.y = (fight.HEIGHT - this.freeBackground.height) * 0.5;
         }
         return false;
     }
 
     protected getSceneResourcePath(level:number){
-        let sceneIndex:string = Config.StageData[level].map;
-        return "resource/assets/scene/" + sceneIndex + "_" + 2 + ".png";
+        let map:string = Config.StageData[level].map;
+        return `${map}_2_png`;
     }
 
     // 缓动

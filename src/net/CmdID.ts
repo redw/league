@@ -114,6 +114,8 @@ class CmdID extends egret.HashObject {
     public static FIGHT_PVP_BEGIN:string = "beginPVP";
     // test
     public static FIGHT_DATA_TEST:string = "test";
+    //
+    public static PROP_USE:string = "use_item";
 
     //要做协议与类的映射
     public static cmdMap: any = {};

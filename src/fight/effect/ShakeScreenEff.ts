@@ -25,9 +25,9 @@ class ShakeScreenEff{
             if (now - this.lastShakeTime >= 200) {
                 this.lastShakeTime = now;
                 this.stopShake();
-                this.groundShakeSpeed.x = 2 * type;
-                this.groundShakeSpeed.y = 2 * type;
-                this.groundShakeStrength = -3 * type;
+                this.groundShakeSpeed.x = 4;
+                this.groundShakeSpeed.y = 4;
+                this.groundShakeStrength = -6 - (type - 1) * 3;
                 egret.startTick(this.onShakeTicker, this);
             }
         }

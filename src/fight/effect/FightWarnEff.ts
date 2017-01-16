@@ -16,7 +16,6 @@ class FightWarnEff extends egret.DisplayObjectContainer{
     }
 
     public show(){
-        console.log("显示警告");
         if (!this.hasTween) {
             this.container.addChild(this);
             this.alpha = 0.8;

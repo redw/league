@@ -73,5 +73,22 @@ class Config extends egret.HashObject {
             fight.POS_MAP[1][i].x = rightPos[i][0];
             fight.POS_MAP[1][i].y = rightPos[i][1];
         }
+
+        fight.ADD_AREA_IN_INDEX = +Config.FightConfig.add_area_in_index;
+        fight.ADD_DROP_IN_INDEX = Config.FightConfig.add_drop_in_index.concat();
+
+        fight.FORE_GROUND_MOVE_TIME = +Config.FightConfig.fore_ground_move_time;
+        fight.MIDDLE_GROUND_MOVE_TIME = +Config.FightConfig.middle_ground_move_time;
+        fight.BACK_GROUND_MOVE_TIME = +Config.FightConfig.back_ground_move_time;
+
+        fight.FORE_GROUND_MOVE_DISTANCE = +Config.FightConfig.fore_ground_move_distance;
+        fight.MIDDLE_GROUND_MOVE_DISTANCE = +Config.FightConfig.middle_ground_move_distance;
+        fight.BACK_GROUND_MOVE_DISTANCE = +Config.FightConfig.back_ground_move_distance;
+
+        let dropPos = Config.FightConfig.drop_pos;
+        for (let i = 0; i < dropPos.length; i++) {
+            fight.DROP_POS[i].x = dropPos[i][0];
+            fight.DROP_POS[i].y = dropPos[i][1];
+        }
     }
 }

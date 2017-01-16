@@ -4,7 +4,7 @@
 class FightDataModel extends egret.HashObject {
     private pveHeroArr:{id:number,side:number,pos:number}[] = [];
     private nextSyncTime:number = 0;
-    private dropTimeMap:any;
+    private dropTimeMap:any = {};
     private tempHeroArr:any;
 
     public parse(value:any){
@@ -81,10 +81,19 @@ class FightDataModel extends egret.HashObject {
     }
 
     /**
-     * 得到当前PVE阵型
+     * 得到当前阵型的id数组
+     * @returns {U[]}
+     */
+    public getPVEIds(){
+        let arr = this.getPVEFormation();
+        return arr.map((value)=>{ return value.id});
+    }
+
+    /**
+     * 得到监时阵型id数组
      * @returns {number[]|any[]}
      */
-    private getPVEFormationIds(){
+    public getPVEFormationIds(){
         let result = [];
         for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
             result[i] = 0;
@@ -119,15 +128,8 @@ class FightDataModel extends egret.HashObject {
                     heroArr.push({id:fight.TEST_SELF_HERO[i], side:1, pos:i});
                 }
             }
-            if (fight.RUN_METHOD > 0) {
-                fight.TEST_OTHER_HERO = null;
-            }
-        } else if (fight.RUN_METHOD > 0){
-            let roleArr = ArrayUtil.getRandomArr(101, 130, ArrayUtil.randomUniqueValue([3,4,5,6]));
-            let posArr = [0,1,2,3,4,5];
-            for (let i = 0; i < roleArr.length; i++) {
-                heroArr.push({id:+roleArr[i], side:1, pos:ArrayUtil.randomUniqueValue(posArr)});
-            }
+        } else {
+            heroArr = this.pveHeroArr.concat();
         }
         return heroArr;
     }
@@ -137,36 +139,99 @@ class FightDataModel extends egret.HashObject {
      */
     public generateDrop(){
         let result = [];
+        return [4, 5];
+        let keys = Object.keys(Config.DropData);
+        let totalValue = 0;
+        for (let i = 0; i < keys.length; i++) {
+            totalValue +=  Config.DropData[keys[i]].chance;
+        }
+        for (let i = 0; i < 2; i++) {
+            let randomValue = Math.random();
+            if (randomValue < totalValue) {
+                let currentValue = 0;
+                let id = -1;
+                for (let j = 0; j < keys.length; j++) {
+                    let config:FightDropConfig = Config.DropData[keys[j]];
+                    if (randomValue > currentValue) {
+                        id = +keys[j];
+                        currentValue += config.chance;
+                    } else {
+                        break;
+                    }
+                }
+                if (id >= 0 && result.indexOf(id) < 0) {
+                    let time = this.dropTimeMap[id] || 0;
+                    let cd = Config.DropData[id].cd * 60;
+                    let endTime = egret.getTimer() + UserProxy.inst.server_time;
+                    if (endTime - cd >= time) {
+                        result.push(id);
+                    }
+                }
+            }
+        }
         return result;
-        // let keys = Object.keys(Config.DropData);
-        // let totalValue = 0;
-        // for (let i = 0; i < keys.length; i++) {
-        //     totalValue +=  Config.DropData[keys[i]].chance;
-        // }
-        // for (let i = 0; i < 2; i++) {
-        //     let randomValue = Math.random();
-        //     if (randomValue < totalValue) {
-        //         let currentValue = 0;
-        //         let id = -1;
-        //         for (let j = 0; j < keys.length; j++) {
-        //             let config:FightDropConfig = Config.DropData[keys[j]];
-        //             if (randomValue > currentValue) {
-        //                 id = +keys[j];
-        //                 currentValue += config.chance;
-        //             } else {
-        //                 break;
-        //             }
-        //         }
-        //         if (id >= 0 && result.indexOf(id) < 0) {
-        //             let time = this.dropTimeMap[id] || 0;
-        //             let cd = Config.DropData[id].cd * 60;
-        //             let endTime = egret.getTimer() + UserProxy.inst.server_time;
-        //             if (endTime - cd >= time) {
-        //                 result.push(id);
-        //             }
-        //         }
-        //     }
-        // }
-        // return result;
+    }
+
+    private tempLoadMonster = [];
+    public getMonster(level:number, preload:boolean=false){
+        if (preload) {
+            this.tempLoadMonster[level] = this.generateMonster(level);
+        } else {
+            if (this.tempLoadMonster[level]) {
+                return this.tempLoadMonster[level].concat();
+                delete this.tempLoadMonster[level];
+            } else {
+                return this.generateMonster(level);
+            }
+        }
+    }
+
+    private generateMonster(level:number){
+        let result:{id:number, pos:number, side:number}[] = [];
+        // TODO 测试
+        if (fight.TEST_OTHER_HERO) {
+            let monsters = fight.TEST_OTHER_HERO.concat();
+            for (let i = 0; i < monsters.length; i++) {
+                if (!!monsters[i] && +monsters[i])
+                    result.push({id:monsters[i], side:FightSideEnum.RIGHT_SIDE, pos:i});
+            }
+            return result;
+        }
+
+        let config = Config.StageData[level];
+        let monsters = config.monster.concat();
+        // 判断是否是boss关
+        if (config.id % 10 == 0) {
+            let monsters = config.monster.concat();
+            for (let i = 0; i < monsters.length; i++) {
+                if (!!monsters[i] && +monsters[i]) {
+                    result.push({id:+monsters[i], side:FightSideEnum.RIGHT_SIDE, pos:i});
+                }
+            }
+        } else {
+            const counts = config.monster_number.concat();
+            for (let i = 0; i < counts.length; i++) {
+                if (counts[i] > 0 && monsters[i]) {
+                    if (counts[i] > monsters[i].length) {
+                        counts[i] = monsters[i].length;
+                    }
+                    let tempArr = monsters[i].split(",");
+                    let count = 0;
+                    let posArr = [];
+                    do {
+                        let pos = counts[i] == 1 ? 1 : i * 3 + Math.floor(Math.random() * 3);
+                        if (posArr.indexOf(pos) < 0) {
+                            let index = Math.floor(Math.random() * tempArr.length);
+                            if (!!tempArr[index] && +tempArr[index]){
+                                result.push({id:+tempArr[index], side:FightSideEnum.RIGHT_SIDE, pos:pos});
+                                count++;
+                                posArr.push(pos);
+                            }
+                        }
+                    } while (count < counts[i]);
+                }
+            }
+        }
+        return result;
     }
 }

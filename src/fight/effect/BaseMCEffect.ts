@@ -39,7 +39,7 @@ class BaseMCEffect extends egret.DisplayObjectContainer {
     private onTick(){
         let curFrame = this.mc.currentFrame;
         if (this.frameBacks[curFrame]) {
-            this.frameBacks[curFrame]();
+            this.frameBacks[curFrame](this.param);
             delete this.frameBacks[curFrame];
         }
         return false;
@@ -57,15 +57,22 @@ class BaseMCEffect extends egret.DisplayObjectContainer {
             return;
         }
         this.mc.scaleX = this._scaleX;
-        this.mc.gotoAndPlay(1, 1);
-        if (this.autoDisAppear)
+
+        if (this.autoDisAppear) {
+            this.mc.gotoAndPlay(1, 1);
+
             this.mc.addEventListener(egret.Event.COMPLETE, this.dispose, this);
+        } else {
+            this.mc.gotoAndPlay(1, -1);
+        }
+
         this.addChild(this.mc);
     }
 
     public dispose() {
         egret.stopTick(this.onTick, this);
 
+        this.dispatchEventWith(egret.Event.COMPLETE);
         // 回调当前帧,防止跳帧?
         if (this.frameBacks) {
             for (let key in this.frameBacks) {

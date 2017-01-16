@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,link_map_png,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png,target_effect_png,target_effect_json,missle_effect_png,missle_effect_json,hp_effect_png,hp_effect_json,dust_effect_png,dust_effect_json,death_effect_png,death_effect_json,area_effect_png,area_effect_json,skill_source_png,skill_source_json",
+			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png",
 			"name": "preload"
 		},
 		{
@@ -2655,11 +2655,6 @@
 			"name": "hp_png"
 		},
 		{
-			"url": "assets/proload/link_map.png",
-			"type": "image",
-			"name": "link_map_png"
-		},
-		{
 			"url": "assets/proload/magical_damage.fnt",
 			"type": "font",
 			"name": "magical_damage_fnt"
@@ -3040,11 +3035,6 @@
 			"name": "draw_ten_light_png"
 		},
 		{
-			"url": "assets/effect/fight/area_effect.png",
-			"type": "image",
-			"name": "area_effect_png"
-		},
-		{
 			"url": "assets/effect/fight/death_effect.png",
 			"type": "image",
 			"name": "death_effect_png"
@@ -3053,21 +3043,6 @@
 			"url": "assets/effect/fight/dust_effect.png",
 			"type": "image",
 			"name": "dust_effect_png"
-		},
-		{
-			"url": "assets/effect/fight/hp_effect.png",
-			"type": "image",
-			"name": "hp_effect_png"
-		},
-		{
-			"url": "assets/effect/fight/missle_effect.png",
-			"type": "image",
-			"name": "missle_effect_png"
-		},
-		{
-			"url": "assets/effect/fight/target_effect.png",
-			"type": "image",
-			"name": "target_effect_png"
 		},
 		{
 			"url": "assets/effect/fruit/fruit_action.png",
@@ -3405,11 +3380,6 @@
 			"name": "draw_ten_light_json"
 		},
 		{
-			"url": "assets/effect/fight/area_effect.json",
-			"type": "json",
-			"name": "area_effect_json"
-		},
-		{
 			"url": "assets/effect/fight/death_effect.json",
 			"type": "json",
 			"name": "death_effect_json"
@@ -3418,21 +3388,6 @@
 			"url": "assets/effect/fight/dust_effect.json",
 			"type": "json",
 			"name": "dust_effect_json"
-		},
-		{
-			"url": "assets/effect/fight/hp_effect.json",
-			"type": "json",
-			"name": "hp_effect_json"
-		},
-		{
-			"url": "assets/effect/fight/missle_effect.json",
-			"type": "json",
-			"name": "missle_effect_json"
-		},
-		{
-			"url": "assets/effect/fight/target_effect.json",
-			"type": "json",
-			"name": "target_effect_json"
 		},
 		{
 			"url": "assets/effect/fruit/fruit_action.json",
@@ -3455,11 +3410,6 @@
 			"name": "tree_shake_json"
 		},
 		{
-			"url": "assets/hero/.DS_Store",
-			"type": "bin",
-			"name": "_DS_Store"
-		},
-		{
 			"url": "assets/hero/201_attack_missle.png",
 			"type": "image",
 			"name": "201_attack_missle_png"
@@ -3468,16 +3418,6 @@
 			"url": "assets/hero/211_attack_target.png",
 			"type": "image",
 			"name": "211_attack_target_png"
-		},
-		{
-			"url": "assets/hero/death.png",
-			"type": "image",
-			"name": "death_png"
-		},
-		{
-			"url": "assets/hero/skill_source.png",
-			"type": "image",
-			"name": "skill_source_png"
 		},
 		{
 			"url": "assets/hero/201_attack_missle.json",
@@ -3490,14 +3430,174 @@
 			"name": "211_attack_target_json"
 		},
 		{
-			"url": "assets/hero/death.json",
-			"type": "json",
-			"name": "death_json"
+			"url": "assets/effect/fight/buff_foot.png",
+			"type": "image",
+			"name": "buff_foot_png"
 		},
 		{
-			"url": "assets/hero/skill_source.json",
+			"url": "assets/effect/fight/buff_frozen.png",
+			"type": "image",
+			"name": "buff_frozen_png"
+		},
+		{
+			"url": "assets/effect/fight/buff_head.png",
+			"type": "image",
+			"name": "buff_head_png"
+		},
+		{
+			"url": "assets/effect/fight/item_appear_effect.png",
+			"type": "image",
+			"name": "item_appear_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_attack_effect.png",
+			"type": "image",
+			"name": "item_attack_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_diamond_effect.png",
+			"type": "image",
+			"name": "item_diamond_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_disappear_effect.png",
+			"type": "image",
+			"name": "item_disappear_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_gold_effect.png",
+			"type": "image",
+			"name": "item_gold_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_hp_effect.png",
+			"type": "image",
+			"name": "item_hp_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_kill_effect.png",
+			"type": "image",
+			"name": "item_kill_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_speed_effect.png",
+			"type": "image",
+			"name": "item_speed_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/lvl_up.png",
+			"type": "image",
+			"name": "lvl_up_png"
+		},
+		{
+			"url": "assets/effect/fight/role_born.png",
+			"type": "image",
+			"name": "role_born_png"
+		},
+		{
+			"url": "assets/effect/fight/skill_source.png",
+			"type": "image",
+			"name": "skill_source_png"
+		},
+		{
+			"url": "assets/effect/fight/buff_foot.json",
+			"type": "json",
+			"name": "buff_foot_json"
+		},
+		{
+			"url": "assets/effect/fight/buff_frozen.json",
+			"type": "json",
+			"name": "buff_frozen_json"
+		},
+		{
+			"url": "assets/effect/fight/buff_head.json",
+			"type": "json",
+			"name": "buff_head_json"
+		},
+		{
+			"url": "assets/effect/fight/item_appear_effect.json",
+			"type": "json",
+			"name": "item_appear_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_attack_effect.json",
+			"type": "json",
+			"name": "item_attack_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_diamond_effect.json",
+			"type": "json",
+			"name": "item_diamond_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_disappear_effect.json",
+			"type": "json",
+			"name": "item_disappear_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_gold_effect.json",
+			"type": "json",
+			"name": "item_gold_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_hp_effect.json",
+			"type": "json",
+			"name": "item_hp_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_kill_effect.json",
+			"type": "json",
+			"name": "item_kill_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/item_speed_effect.json",
+			"type": "json",
+			"name": "item_speed_effect_json"
+		},
+		{
+			"url": "assets/effect/fight/lvl_up.json",
+			"type": "json",
+			"name": "lvl_up_json"
+		},
+		{
+			"url": "assets/effect/fight/role_born.json",
+			"type": "json",
+			"name": "role_born_json"
+		},
+		{
+			"url": "assets/effect/fight/skill_source.json",
 			"type": "json",
 			"name": "skill_source_json"
+		},
+		{
+			"url": "assets/effect/fight/item_reborn_effect.png",
+			"type": "image",
+			"name": "item_reborn_effect_png"
+		},
+		{
+			"url": "assets/effect/other_effect/first_light_effect.png",
+			"type": "image",
+			"name": "first_light_effect_png"
+		},
+		{
+			"url": "assets/effect/other_effect/level_up_effect.png",
+			"type": "image",
+			"name": "level_up_effect_png"
+		},
+		{
+			"url": "assets/effect/fight/item_reborn_effect.json",
+			"type": "json",
+			"name": "item_reborn_effect_json"
+		},
+		{
+			"url": "assets/effect/other_effect/first_light_effect.json",
+			"type": "json",
+			"name": "first_light_effect_json"
+		},
+		{
+			"url": "assets/effect/other_effect/level_up_effect.json",
+			"type": "json",
+			"name": "level_up_effect_json"
 		}
 	]
 }

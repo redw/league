@@ -62,19 +62,22 @@ enum BuffTypeEnum
 }
 
 module fight{
-    export let TEST_BUNCH:string = "b";
+    import numberToBlendMode = egret.sys.numberToBlendMode;
+    export let TEST_BUNCH:string = null;
     export let TEST_OTHER_HERO = null;
     export let TEST_SELF_HERO = null;
     export let RUN_METHOD:number = 1;
 
     export let WIDTH:number = 480;
     export let HEIGHT:number = 460;
+    export let MAP_SIZE_HEIGHT:number = 520;
     // pve场景偏移
     export const PVE_SCENE_OFF:number = 0;
     // pvp 场景偏移
     export const PVP_SCENE_OFF:number = 100;
     // 角色上限
     export const ROLE_UP_LIMIT:number = 9;
+    // 阴影偏移
     export const ROLE_SHADOW_OFF:number = -20;
     // 判断角色死亡的血量上限
     export const DIE_HP:number = 1;
@@ -120,12 +123,18 @@ module fight{
     export const LOG_FIGHT_WARN:number = 50;
     export const LOG_FIGHT_ERROR:number = 100;
 
-    export let FORE_GROUND_MOVE_TIME:number = 400;
+    export let FORE_GROUND_MOVE_TIME:number = 500;
     export let MIDDLE_GROUND_MOVE_TIME:number = 500;
-    export let BACK_GROUND_MOVE_TIME:number = 650;
+    export let BACK_GROUND_MOVE_TIME:number = 500;
+
+    export let FORE_GROUND_MOVE_DISTANCE:number = 750;
+    export let MIDDLE_GROUND_MOVE_DISTANCE:number = 480;
+    export let BACK_GROUND_MOVE_DISTANCE:number = 200;
+
     export let FORE_GROUND_MOVE_EASE:string = "quintInOut";
     export let MIDDLE_GROUND_MOVE_EASE:string = "quintInOut";
     export let BACK_GROUND_MOVE_EASE:string = "quintInOut";
+
 
     export const FONT_PHYSICAL_DAMAGE:string = "physical_damage_fnt";
     export const FONT_ADD_HP:string = "hp_fnt";
@@ -133,13 +142,19 @@ module fight{
     export const FONT_STAGE:string = "stage_fnt";
     export const FONT_SYSTEM:string = "buff_fnt";
     export const FONT_OTHER:string = "other_fnt";
+    export const FONT_PVE_TITLE:string = "pve_title_fnt";
 
     // 前后端检测的属性
     export let CHECK_PROP:string = "id,pos,skillId,round,phyAtk,phyDef,magAtk,magDef,hp,maxhp,target";
 
     export let AREA_POS:egret.Point[] = [new egret.Point(380, 330), new egret.Point(100, 330)];
 
-    export const ROLE_Z_INDEX_ARR:number[] = [0,3,6,1,4,7,2,5,8]
+    // 角色z排序
+    export const ROLE_Z_INDEX_ARR:number[] = [0,3,6,1,4,7,2,5,8];
+    // 当添加角色index时,添加area容器
+    export let ADD_AREA_IN_INDEX:number = 7;
+    export let ADD_DROP_IN_INDEX:number[] = [6, 7];
+    export let DROP_POS:egret.Point[] = [new egret.Point(240, 240), new egret.Point(240, 380)];
 
     export let POS_MAP:egret.Point[][] = [
         [

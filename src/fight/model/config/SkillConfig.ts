@@ -31,7 +31,7 @@ class SkillConfig {
     dead_sound:string;
     target_point:string[];
     shoot_point:string[];
-    missle_speed:number;
+    missle_time:number;
      area_effect_point:string;
      shake_type:number;
      move_position:number[];

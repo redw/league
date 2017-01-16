@@ -7,12 +7,23 @@
 class PVEProspect extends PVEBackGround{
 
     public constructor(hasTween:boolean=true){
-        super(hasTween);
+        super(hasTween, fight.LOAD_PRIORITY_MAP_BACKGROUND);
+        egret.startTick(this.checkResHeight, this);
+    }
+
+    private checkResHeight(){
+        if (this.background.height > 0) {
+            this.background.y = (fight.HEIGHT - fight.MAP_SIZE_HEIGHT) * 0.5;
+        }
+        if (this.freeBackground.height > 0) {
+            this.freeBackground.y = (fight.HEIGHT - fight.MAP_SIZE_HEIGHT) * 0.5;
+        }
+        return false;
     }
 
     protected getSceneResourcePath(level:number){
-        let sceneIndex:string = Config.StageData[level].map;
-        return "resource/assets/scene/" + sceneIndex + "_" + 3 + ".png";
+        let map:string = Config.StageData[level].map;
+        return `${map}_3_png`;
     }
 
     // 缓动

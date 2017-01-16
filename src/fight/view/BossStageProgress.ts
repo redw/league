@@ -1,9 +1,8 @@
-import WIDTH = fight.WIDTH;
 /**
- * 关卡进度条
+ * boss关卡进度条
  * Created by hh on 2016/12/27.
  */
-class StageProgress extends egret.DisplayObjectContainer {
+class BossStageProgress extends egret.DisplayObjectContainer {
     private backGround:AutoBitmap;
     private hpBitmap:AutoBitmap;
     private WIDTH:number = 173;

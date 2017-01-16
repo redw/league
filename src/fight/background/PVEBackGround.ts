@@ -1,69 +1,56 @@
 /**
+ * PVE或BOSS战背景图
  * Created by hh on 2016/12/21.
  */
 class PVEBackGround extends egret.DisplayObjectContainer {
-    protected background:AutoBitmap = new AutoBitmap();
-    protected freeBackground:AutoBitmap = new AutoBitmap();
-    private moveCompleteCount:number = 0;
     private _level:number = -1;
-    private curX:number = 0;
+    protected priority:number = 0;
     protected hasTween:boolean = false;
+    protected background:PriorityImage;
+    protected freeBackground:PriorityImage;
 
-    public constructor(hasTween:boolean=true){
+    public constructor(hasTween:boolean=true, priority:number) {
         super();
         this.hasTween = hasTween;
+        this.priority = priority;
+        this.background = new PriorityImage(this.priority);
+        this.freeBackground = new PriorityImage(this.priority);
+        this.addChild(this.background);
+        this.addChild(this.freeBackground);
     }
 
-    protected getSceneResourcePath(level:number){
+    protected getSceneResourcePath(level:number) {
         return "";
     }
 
     public set level(value:number) {
-        if (this._level != value || !this.hasTween) {
-            if (this._level == -1) {
-                this._level = value;
-                let off = 0;
-                if (value % 2 == 0) {
-                    off = -fight.WIDTH;
-                }
-                this.background.source = this.getSceneResourcePath(value);
-                this.background.x = off;
-                this.addChild(this.background);
-                this.curX = off;
-                return;
-            }
-            let addOff:number = 0;
-            if (value > this._level) {
-                this.curX -= fight.WIDTH;
-                addOff = fight.WIDTH * -1;
-            }
-            else {
-                this.curX += fight.WIDTH;
-                addOff = fight.WIDTH;
+        if (value != this._level) {
+            let stageConfig:StageConfig = Config.StageData[value];
+            if (!stageConfig)  return;
+            this.background.source = this.getSceneResourcePath(value);
+            this.freeBackground.source = this.getSceneResourcePath(value);
+            if (value % 2 == 0) {
+                this.background.x = fight.WIDTH * -1;
+                this.freeBackground.x = fight.WIDTH;
+            } else {
+                this.background.x = 0;
+                this.freeBackground.x = fight.WIDTH * -2;
             }
 
-            if (this.curX < -fight.WIDTH || this.curX > 0) {
-                let curBitmap = this.background;
-                let bitmap;
-                if (this.curX < -fight.WIDTH) {
-                    bitmap = this.getFreeBitmap();
-                    this.addChild(bitmap);
-                    bitmap.x = fight.WIDTH;
-                    this.curX = 0;
+            let off:number = 0;
+            if (this.hasTween && this._level != -1) {
+                let prevConfig:StageConfig = Config.StageData[this._level];
+                if (stageConfig.bgm == prevConfig.bgm) {
+                    if (value > this._level) {
+                        off = fight.WIDTH * -1;
+                    } else if (value < this._level) {
+                        off = fight.WIDTH;
+                    }
                 }
-                if (this.curX > 0) {
-                    bitmap = this.getFreeBitmap();
-                    this.addChild(bitmap);
-                    bitmap.x = -fight.WIDTH * 2;
-                    this.curX = -fight.WIDTH;
-                }
-                bitmap.source = this.getSceneResourcePath(value);
-
-                this.freeBackground = curBitmap;
-                this.background = bitmap;
             }
-            this.moveCompleteCount = 0;
-            this.move(addOff);
+            if (off) {
+                this.move(off);
+            }
             this._level = value;
         }
     }
@@ -74,16 +61,7 @@ class PVEBackGround extends egret.DisplayObjectContainer {
     }
 
     // 当移动完成后,把不在可视范围内的图片删除
-    protected moveComplete(bitmap:AutoBitmap) {
-        this.moveCompleteCount++;
+    protected moveComplete(bitmap:egret.DisplayObject) {
         egret.Tween.removeTweens(bitmap);
-        if (this.moveCompleteCount >= 2) {
-
-        }
-    }
-
-    // 得到不在显示对象上的图片
-    private getFreeBitmap() {
-        return this.freeBackground;
     }
 }
