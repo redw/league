@@ -8,26 +8,19 @@ module URLConfig {
         return "resource/" + name;
     }
 
-    export function getSceneResURL(name:string, index:number) {
-        return "resource/assets/scene/" + name + "_" + index + ".png";
-    }
-
-    export function getRolePngURL(name:string) {
-        return "resource/assets/hero/" + name + "_" + ".png";
-    }
-
-    export function getRoleJsonURL(name:string) {
-        return "resource/assets/hero/" + name + "_" + ".json";
-    }
-
     // 音乐
     export function getSoundURL(name: string): string {
-        return "resource/sound/" + name + ".mp3";
+        return "resource/assets/sound/" + name + ".mp3";
     }
 
     // 角色资源
     export function getRoleEffectURL(name:string) {
         return "resource/gui/hero";
+    }
+
+    // 得到道具资源效果
+    export function getPropEffectURL(name:string) {
+        return "resource/gui/effect/fight/" + name;
     }
 
     // 特效

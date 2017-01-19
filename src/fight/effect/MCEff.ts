@@ -7,6 +7,7 @@ class MCEff extends egret.DisplayObjectContainer {
     public autoDisAppear:boolean = false;
     private _scaleX:number = 1;
     private frameBacks = [];
+    private _source:string = "";
 
     public constructor(value:string, autoDisAppear:boolean=true, scaleX:number = 1){
         super();
@@ -23,7 +24,7 @@ class MCEff extends egret.DisplayObjectContainer {
      * @param param
      */
     public registerBack(frame:number, fun:Function, scope:Object=null, param:any=null){
-        if (this.frameBacks) {
+        if (!this.frameBacks || this.frameBacks.length == 0) {
             this.frameBacks = [];
         }
         this.frameBacks[frame] = [fun, scope, param];
@@ -46,7 +47,17 @@ class MCEff extends egret.DisplayObjectContainer {
         }
     }
 
+    public get source(){
+        return this._source;
+    }
+
     public set source(value:string) {
+        this._source = value;
+        // let dataRes:any = RES.getRes(value + "_json");
+        // let textureRes:any = RES.getRes(value + "_png");
+        // if (!dataRes || !textureRes) {
+        //     return;
+        // }
         this.mc = FightRole.createMovieClip(value);
         egret.callLater(()=>{
             if (!this.mc || this.mc.totalFrames == 0) {
@@ -95,13 +106,14 @@ class MCEff extends egret.DisplayObjectContainer {
     private onComplete() {
         this.dispatchEventWith(egret.Event.COMPLETE);
         if (this.mc) {
-            this.triggerFunArr();
+
             this.mc.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             this.mc.removeEventListener(egret.Event.COMPLETE, this.onComplete, this);
             if (this.mc.parent)
                 this.mc.parent.removeChild(this.mc);
             this.mc = null;
         }
+        this.triggerFunArr();
         if (this.parent) {
             this.parent.removeChild(this);
         }

@@ -301,9 +301,10 @@ class FightRoleVO{
         if (obj) {
             let type = obj.effect;
             let value  = obj.value;
-            // 如果是boss,并且to_boss为0
-            if (!!this.config.boss && !obj.to_boss) {
-                return;
+            // 如果是boss,并且to_boss为0?
+            if (!obj.to_boss) {
+                if (this.isExistBuff(BuffTypeEnum.TO_BOSS))
+                    return;
             }
             if (type == BuffTypeEnum.PHYSICAL_ATK) {
                 this.phyAtk = BigNum.mul(this.phyAtk, value);

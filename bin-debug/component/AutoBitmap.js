@@ -35,4 +35,3 @@ var AutoBitmap = (function (_super) {
     return AutoBitmap;
 }(egret.Bitmap));
 egret.registerClass(AutoBitmap,'AutoBitmap');
-//# sourceMappingURL=AutoBitmap.js.map

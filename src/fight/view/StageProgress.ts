@@ -8,6 +8,7 @@ class StageProgress extends egret.DisplayObjectContainer {
     private hpBitmap:AutoBitmap;
     private WIDTH:number = 173;
     private levelImg:egret.BitmapText;
+    private maskLayer:egret.Shape;
 
     public constructor()
     {
@@ -20,6 +21,9 @@ class StageProgress extends egret.DisplayObjectContainer {
         this.hpBitmap = new AutoBitmap();
         this.hpBitmap.source = "blood_stage_png";
         this.addChild(this.hpBitmap);
+
+        this.maskLayer = new egret.Shape();
+        this.addChild(this.maskLayer);
 
         this.levelImg = new egret.BitmapText();
         this.levelImg.x = 60;
@@ -35,8 +39,19 @@ class StageProgress extends egret.DisplayObjectContainer {
     }
 
     public setProgress(value:number){
+        // let w = MathUtil.clamp(value,0,1) * this.WIDTH;
+        // this.hpBitmap.width = w;
+        // this.hpBitmap.x = this.WIDTH - w;
+
+        if (!this.hpBitmap.mask) {
+            this.hpBitmap.mask = this.maskLayer;
+        }
         let w = MathUtil.clamp(value,0,1) * this.WIDTH;
-        this.hpBitmap.width = w;
-        this.hpBitmap.x = this.WIDTH - w;
+
+        this.maskLayer.x = this.WIDTH - w;
+        this.maskLayer.graphics.clear();
+        this.maskLayer.graphics.beginFill(0x0, 1);
+        this.maskLayer.graphics.drawRect(0, 0, w, this.hpBitmap.height);
+        this.maskLayer.graphics.endFill();
     }
 }

@@ -11,7 +11,7 @@
 
 class DropItem extends egret.DisplayObjectContainer {
     private propEff:MCEff;
-    private _dropId:number = 0;
+    private _dropId:number = -1;
 
     public constructor(){
         super();
@@ -36,16 +36,19 @@ class DropItem extends egret.DisplayObjectContainer {
 
     public set dropId(value:number) {
         if (this._dropId != value) {
-            this._dropId = value;
             if (value) {
                 this.touchEnabled = false;
                 let eff = new MCEff("item_appear_effect");
                 eff.addEventListener(egret.Event.COMPLETE, this.showProp, this);
                 this.addChild(eff);
             } else {
-
+                if (this.propEff) {
+                    this.propEff.dispose();
+                    this.propEff = null;
+                }
             }
         }
+        this._dropId = value;
     }
 
     public  get dropId(){

@@ -10,6 +10,7 @@ class BuddhaPalmEff extends egret.DisplayObjectContainer{
 
         this.mc = FightRole.createMovieClip("126_attack_source");
         this.addChild(this.mc);
+
         this.mc.addEventListener(egret.MovieClipEvent.COMPLETE, this.onIdle, this);
         this.mc.gotoAndPlay("up", 1);
     }

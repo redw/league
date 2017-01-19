@@ -29,11 +29,11 @@ class PVEMiddleGround extends PVEBackGround {
     // 缓动
     protected move(off:number=0){
         let tween = egret.Tween.get(this.background);
-        tween.to({x:(this.background.x + off)}, fight.MIDDLE_GROUND_MOVE_TIME, egret.Ease[fight.MIDDLE_GROUND_MOVE_EASE]).
+        tween.to({x:(this.background.x + off)}, fight.MIDDLE_GROUND_MOVE_TIME).
         call(this.moveComplete, this, [this.background]);
 
         tween = egret.Tween.get(this.freeBackground);
-        tween.to({x:(this.freeBackground.x + off)}, fight.MIDDLE_GROUND_MOVE_TIME, egret.Ease[fight.MIDDLE_GROUND_MOVE_EASE]).
+        tween.to({x:(this.freeBackground.x + off)}, fight.MIDDLE_GROUND_MOVE_TIME).
         call(this.moveComplete, this, [this.freeBackground]);
     }
 }

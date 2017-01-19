@@ -62,10 +62,9 @@ enum BuffTypeEnum
 }
 
 module fight{
-    import numberToBlendMode = egret.sys.numberToBlendMode;
     export let TEST_BUNCH:string = null;
-    export let TEST_OTHER_HERO = null;
-    export let TEST_SELF_HERO = null;
+    export let TEST_OTHER_HERO = [0, 108, 0];
+    export let TEST_SELF_HERO = [0, 108, 0];
     export let RUN_METHOD:number = 1;
 
     export let WIDTH:number = 480;
@@ -123,14 +122,12 @@ module fight{
     export const LOG_FIGHT_WARN:number = 50;
     export const LOG_FIGHT_ERROR:number = 100;
 
-    export let FORE_GROUND_MOVE_TIME:number = 500;
+    export let FORE_GROUND_MOVE_TIME:number = 400;
     export let MIDDLE_GROUND_MOVE_TIME:number = 500;
-    export let BACK_GROUND_MOVE_TIME:number = 500;
-
-    export let FORE_GROUND_MOVE_DISTANCE:number = 750;
+    export let BACK_GROUND_MOVE_TIME:number = 650;
+    export let FORE_GROUND_MOVE_DISTANCE:number = 800;
     export let MIDDLE_GROUND_MOVE_DISTANCE:number = 480;
     export let BACK_GROUND_MOVE_DISTANCE:number = 200;
-
     export let FORE_GROUND_MOVE_EASE:string = "quintInOut";
     export let MIDDLE_GROUND_MOVE_EASE:string = "quintInOut";
     export let BACK_GROUND_MOVE_EASE:string = "quintInOut";

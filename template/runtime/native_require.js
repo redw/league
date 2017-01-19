@@ -78,6 +78,7 @@ var game_file_list = [
 	"bin-debug/utils/BigNum.js",
 	"bin-debug/utils/DisplayUtil.js",
 	"bin-debug/utils/MathUtils.js",
+	"bin-debug/utils/McUtil.js",
 	//----auto game_file_list end----
 ];
 

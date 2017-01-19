@@ -25,8 +25,6 @@ class NewChapterEff extends egret.DisplayObjectContainer{
 
         this.bitmapText.y = 200;
 
-        debugger
-
         egret.Tween.get(this.bitmapText).wait(500).call(()=>{
             egret.Tween.removeTweens(this.bitmapText);
             this.dispatchEventWith(egret.Event.COMPLETE, true);

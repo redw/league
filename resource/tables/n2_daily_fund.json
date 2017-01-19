@@ -2,331 +2,361 @@
 	"1": {
 		"floor": 50,
 		"disc_name": "1.返还 600元宝",
+		"disc_reward": "闯过 50关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"600"
 		],
-		"id": 1,
-		"disc_reward": "闯过 50关可领取"
+		"icon": "shop_1",
+		"id": 1
 	},
 	"2": {
 		"floor": 100,
 		"disc_name": "2.返还 600元宝",
+		"disc_reward": "闯过 100关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"600"
 		],
-		"id": 2,
-		"disc_reward": "闯过 100关可领取"
+		"icon": "shop_1",
+		"id": 2
 	},
 	"3": {
 		"floor": 150,
 		"disc_name": "3.返还 600元宝",
+		"disc_reward": "闯过 150关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"600"
 		],
-		"id": 3,
-		"disc_reward": "闯过 150关可领取"
+		"icon": "shop_1",
+		"id": 3
 	},
 	"4": {
 		"floor": 200,
 		"disc_name": "4.返还 800元宝",
+		"disc_reward": "闯过 200关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"800"
 		],
-		"id": 4,
-		"disc_reward": "闯过 200关可领取"
+		"icon": "shop_1",
+		"id": 4
 	},
 	"5": {
 		"floor": 250,
 		"disc_name": "5.返还 800元宝",
+		"disc_reward": "闯过 250关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"800"
 		],
-		"id": 5,
-		"disc_reward": "闯过 250关可领取"
+		"icon": "shop_1",
+		"id": 5
 	},
 	"6": {
 		"floor": 300,
 		"disc_name": "6.返还 800元宝",
+		"disc_reward": "闯过 300关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"800"
 		],
-		"id": 6,
-		"disc_reward": "闯过 300关可领取"
+		"icon": "shop_1",
+		"id": 6
 	},
 	"7": {
 		"floor": 400,
 		"disc_name": "7.返还 1100元宝",
+		"disc_reward": "闯过 400关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"1100"
 		],
-		"id": 7,
-		"disc_reward": "闯过 400关可领取"
+		"icon": "shop_1",
+		"id": 7
 	},
 	"8": {
 		"floor": 500,
 		"disc_name": "8.返还 1100元宝",
+		"disc_reward": "闯过 500关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"1100"
 		],
-		"id": 8,
-		"disc_reward": "闯过 500关可领取"
+		"icon": "shop_1",
+		"id": 8
 	},
 	"9": {
 		"floor": 600,
 		"disc_name": "9.返还 1100元宝",
+		"disc_reward": "闯过 600关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"1100"
 		],
-		"id": 9,
-		"disc_reward": "闯过 600关可领取"
+		"icon": "shop_1",
+		"id": 9
 	},
 	"10": {
 		"floor": 700,
 		"disc_name": "10.返还 1500元宝",
+		"disc_reward": "闯过 700关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"1500"
 		],
-		"id": 10,
-		"disc_reward": "闯过 700关可领取"
+		"icon": "shop_1",
+		"id": 10
 	},
 	"11": {
 		"floor": 800,
 		"disc_name": "11.返还 1500元宝",
+		"disc_reward": "闯过 800关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"1500"
 		],
-		"id": 11,
-		"disc_reward": "闯过 800关可领取"
+		"icon": "shop_1",
+		"id": 11
 	},
 	"12": {
 		"floor": 900,
 		"disc_name": "12.返还 1500元宝",
+		"disc_reward": "闯过 900关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"1500"
 		],
-		"id": 12,
-		"disc_reward": "闯过 900关可领取"
+		"icon": "shop_1",
+		"id": 12
 	},
 	"13": {
 		"floor": 1000,
 		"disc_name": "13.返还 2000元宝",
+		"disc_reward": "闯过 1000关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"2000"
 		],
-		"id": 13,
-		"disc_reward": "闯过 1000关可领取"
+		"icon": "shop_3",
+		"id": 13
 	},
 	"14": {
 		"floor": 1100,
 		"disc_name": "14.返还 2000元宝",
+		"disc_reward": "闯过 1100关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"2000"
 		],
-		"id": 14,
-		"disc_reward": "闯过 1100关可领取"
+		"icon": "shop_3",
+		"id": 14
 	},
 	"15": {
 		"floor": 1200,
 		"disc_name": "15.返还 2000元宝",
+		"disc_reward": "闯过 1200关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"2000"
 		],
-		"id": 15,
-		"disc_reward": "闯过 1200关可领取"
+		"icon": "shop_3",
+		"id": 15
 	},
 	"16": {
 		"floor": 1300,
 		"disc_name": "16.返还 2600元宝",
+		"disc_reward": "闯过 1300关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"2600"
 		],
-		"id": 16,
-		"disc_reward": "闯过 1300关可领取"
+		"icon": "shop_3",
+		"id": 16
 	},
 	"17": {
 		"floor": 1400,
 		"disc_name": "17.返还 2600元宝",
+		"disc_reward": "闯过 1400关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"2600"
 		],
-		"id": 17,
-		"disc_reward": "闯过 1400关可领取"
+		"icon": "shop_3",
+		"id": 17
 	},
 	"18": {
 		"floor": 1500,
 		"disc_name": "18.返还 2600元宝",
+		"disc_reward": "闯过 1500关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"2600"
 		],
-		"id": 18,
-		"disc_reward": "闯过 1500关可领取"
+		"icon": "shop_3",
+		"id": 18
 	},
 	"19": {
 		"floor": 1600,
 		"disc_name": "19.返还 3300元宝",
+		"disc_reward": "闯过 1600关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"3300"
 		],
-		"id": 19,
-		"disc_reward": "闯过 1600关可领取"
+		"icon": "shop_3",
+		"id": 19
 	},
 	"20": {
 		"floor": 1700,
 		"disc_name": "20.返还 3300元宝",
+		"disc_reward": "闯过 1700关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"3300"
 		],
-		"id": 20,
-		"disc_reward": "闯过 1700关可领取"
+		"icon": "shop_3",
+		"id": 20
 	},
 	"21": {
 		"floor": 1800,
 		"disc_name": "21.返还 3300元宝",
+		"disc_reward": "闯过 1800关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"3300"
 		],
-		"id": 21,
-		"disc_reward": "闯过 1800关可领取"
+		"icon": "shop_3",
+		"id": 21
 	},
 	"22": {
 		"floor": 1900,
 		"disc_name": "22.返还 4100元宝",
+		"disc_reward": "闯过 1900关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"4100"
 		],
-		"id": 22,
-		"disc_reward": "闯过 1900关可领取"
+		"icon": "shop_3",
+		"id": 22
 	},
 	"23": {
 		"floor": 2000,
 		"disc_name": "23.返还 4100元宝",
+		"disc_reward": "闯过 2000关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"4100"
 		],
-		"id": 23,
-		"disc_reward": "闯过 2000关可领取"
+		"icon": "shop_5",
+		"id": 23
 	},
 	"24": {
 		"floor": 2100,
 		"disc_name": "24.返还 4100元宝",
+		"disc_reward": "闯过 2100关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"4100"
 		],
-		"id": 24,
-		"disc_reward": "闯过 2100关可领取"
+		"icon": "shop_5",
+		"id": 24
 	},
 	"25": {
 		"floor": 2200,
 		"disc_name": "25.返还 5000元宝",
+		"disc_reward": "闯过 2200关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"5000"
 		],
-		"id": 25,
-		"disc_reward": "闯过 2200关可领取"
+		"icon": "shop_5",
+		"id": 25
 	},
 	"26": {
 		"floor": 2300,
 		"disc_name": "26.返还 5000元宝",
+		"disc_reward": "闯过 2300关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"5000"
 		],
-		"id": 26,
-		"disc_reward": "闯过 2300关可领取"
+		"icon": "shop_5",
+		"id": 26
 	},
 	"27": {
 		"floor": 2400,
 		"disc_name": "27.返还 5000元宝",
+		"disc_reward": "闯过 2400关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"5000"
 		],
-		"id": 27,
-		"disc_reward": "闯过 2400关可领取"
+		"icon": "shop_5",
+		"id": 27
 	},
 	"28": {
 		"floor": 2500,
 		"disc_name": "28.返还 6000元宝",
+		"disc_reward": "闯过 2500关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"6000"
 		],
-		"id": 28,
-		"disc_reward": "闯过 2500关可领取"
+		"icon": "shop_5",
+		"id": 28
 	},
 	"29": {
 		"floor": 2600,
 		"disc_name": "29.返还 6000元宝",
+		"disc_reward": "闯过 2600关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"6000"
 		],
-		"id": 29,
-		"disc_reward": "闯过 2600关可领取"
+		"icon": "shop_5",
+		"id": 29
 	},
 	"30": {
 		"floor": 2700,
 		"disc_name": "30.返还 6000元宝",
+		"disc_reward": "闯过 2700关可领取",
 		"reward_1": [
 			"3",
 			"0",
 			"6000"
 		],
-		"id": 30,
-		"disc_reward": "闯过 2700关可领取"
+		"icon": "shop_5",
+		"id": 30
 	}
 }

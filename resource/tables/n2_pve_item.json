@@ -1,49 +1,41 @@
 {
 	"1": {
-		"cd": 10,
-		"tip": "召唤如来神掌秒杀所有小怪（ID小于300），对非小怪造成其生命上限20%的伤害",
-		"chance": 0.05,
+		"chance": 0.1,
 		"resource": "item_kill_effect",
+		"tip": "召唤如来神掌秒杀所有小怪（ID小于300），对非小怪造成其生命上限20%的伤害",
+		"cd": 5,
 		"id": 1,
 		"name": "五指山"
 	},
-	"2": {
-		"cd": 10,
-		"tip": "一场战斗内全体友军的物攻魔攻翻倍",
-		"chance": 0.05,
-		"resource": "item_attack_effect",
-		"id": 2,
-		"name": "攻击神符"
-	},
 	"3": {
-		"cd": 10,
-		"tip": "回复全体友军50%生命",
-		"chance": 0.05,
+		"chance": 0.1,
 		"resource": "item_hp_effect",
+		"tip": "回复全体友军50%生命",
+		"cd": 5,
 		"id": 3,
 		"name": "蟠桃"
 	},
 	"4": {
-		"cd": 4320,
-		"tip": "获得1次转生次数",
 		"chance": 0.005,
 		"resource": "item_reborn_effect",
+		"tip": "获得1次转生次数",
+		"cd": 4320,
 		"id": 4,
 		"name": "月光宝盒"
 	},
 	"5": {
-		"cd": 10,
-		"tip": "获得半小时的铜钱产出",
-		"chance": 0.05,
+		"chance": 0.1,
 		"resource": "item_gold_effect",
+		"tip": "获得半小时的铜钱产出",
+		"cd": 2,
 		"id": 5,
 		"name": "小财神"
 	},
 	"6": {
-		"cd": 10,
-		"tip": "随机获得5-10获得元宝",
 		"chance": 0.05,
 		"resource": "item_diamond_effect",
+		"tip": "随机获得5-10获得元宝",
+		"cd": 5,
 		"id": 6,
 		"name": "大财神"
 	}

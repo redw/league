@@ -8,7 +8,9 @@ class FightContainer extends egret.DisplayObjectContainer {
     private level:number = -1;                                                  // 战斗配置id(pvp战斗无视)
     private steps:any[] = [];                                                   // 战斗步骤(副本)
     private autoFight:boolean = false;                                          // 是否自动战斗
+    private isGuide:boolean = false;                                            // 是否是正在引导
     private type:number = FightTypeEnum.PVE;                                    // 战斗类型
+    private forceEnd:boolean = false;                                           // 强制结束
     private dataGenerator:FightProcessGenerator;                                // 战斗过程生成器(如果需前端算)
 
     private state:number = FightStateEnum.Wait;                                 // 战斗状态
@@ -92,7 +94,7 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.addEventListener("role_die", this.onRoleDie, this, true);
         this.addEventListener("role_hp_change", this.onRoleHPChange, this, true);
         this.addEventListener("fight_ready_complete", this.onReadyComplete, this, true);
-        EventManager.inst.addEventListener("use_prop_eff", this.onUseProp, this);
+        EventManager.inst.addEventListener("use_prop", this.onUseProp, this);
         EventManager.inst.addEventListener(ContextEvent.ROLE_DATA_UPDATE, this.onHeroDataUpdate, this);
     }
 
@@ -104,20 +106,25 @@ class FightContainer extends egret.DisplayObjectContainer {
      * 布署角色
      * @param data  角色的数据
      * @param auto  是否自动开战(只对pve有用)
-     * @param level 场景等级(只对pve有用)
+     * @param level 场景等级(只对pve和秘镜有用)
+     * @param guide 是否是引导除段(引导阶段)
      */
-    public fightDeployment(data:{id:number, pos:number, side:number}[], auto:boolean = false, level:number = 1) {
+    public fightDeployment(data:{id:number, pos:number, side:number}[], auto:boolean = true, level:number = 1, guide:boolean=false) {
         this.shakeScreenEff && this.shakeScreenEff.stopShake();
         this.autoFight = auto;
+        this.isGuide = guide;
+        this.level = level;
         this.bunch = fight.randomSkillTriggerBunch();
         this.originalElements = data.concat();
         if (this.type == FightTypeEnum.PVE) {
-            this.tweenRemoveRole(level - this.level);
             this.foregroundLayer.level = level;
             this.middleGroundLayer.level = level;
             this.prospectLayer.level = level;
             if (this.level < 0 || Config.StageData[this.level].map != Config.StageData[level].map) {
                 this.transitionLayer.level = level;
+            }
+            if (!guide) {
+                this.tweenRemoveRole();
             }
         } else if (this.type == FightTypeEnum.PVP) {
             this.reset();
@@ -129,7 +136,35 @@ class FightContainer extends egret.DisplayObjectContainer {
             this.prospectLayer.level = level;
             this.tweenRemoveRoleComplete();
         }
-        this.level = level;
+    }
+
+    public doGuideEnd(step:number=0){
+        this.autoFight = true;
+        this.tweenRemoveRoleComplete(null);
+    }
+
+    public addGuideProp(propId:number) {
+        let dropConfig:FightDropConfig = Config.DropData[propId];
+        let resource = dropConfig.resource;
+        let path = URLConfig.getPropEffectURL(resource);
+        McUtil.create(path, resource, this.addPropComplete, this);
+    }
+
+    private addPropComplete(){
+        this.dropProps[0].dropId = 5;
+        if (!this.dropProps[0].parent)
+            this.roleLayer.addChild(this.dropProps[0]);
+    }
+
+    public removeGuideProp(){
+        let len = this.dropProps ? this.dropProps.length : 0;
+        for (let i = 0; i < len; i++) {
+            if (this.dropProps[i].parent) {
+                this.dropProps[i].stop();
+                this.dropProps[i].dropId = 0;
+                this.dropProps[i].parent.removeChild(this.dropProps[i]);
+            }
+        }
     }
 
     /**
@@ -152,7 +187,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 if (roleData.side == FightSideEnum.LEFT_SIDE) {
                     role.x = fight.WIDTH * -0.5 + role.x;
                 } else {
-                    role.x = fight.WIDTH * 0.5 + role.x;
+                    role.x = fight.WIDTH * 1.5 + role.x;
                 }
                 egret.Tween.get(role).to({x:tox}, fight.MIDDLE_GROUND_MOVE_TIME).
                 call(()=>{
@@ -174,9 +209,11 @@ class FightContainer extends egret.DisplayObjectContainer {
                 zIndex++;
             }
 
-            let dropIndex = fight.ADD_DROP_IN_INDEX.indexOf(index);
-            if (dropIndex > -1) {
-                this.roleLayer.addChild(this.dropProps[dropIndex]);
+            if (this.type == FightTypeEnum.PVE) {
+                let dropIndex = fight.ADD_DROP_IN_INDEX.indexOf(index);
+                if (dropIndex > -1) {
+                    this.roleLayer.addChild(this.dropProps[dropIndex]);
+                }
             }
 
             if (index == fight.ADD_AREA_IN_INDEX) {
@@ -206,7 +243,8 @@ class FightContainer extends egret.DisplayObjectContainer {
                 this.state = FightStateEnum.Fight;
 
                 let hasDrop = false;
-                for (let i = 0; i < this.dropProps.length; i++) {
+                let len = this.dropProps ? this.dropProps.length : 0;
+                for (let i = 0; i < len; i++) {
                     if (this.dropProps[i].dropId > 0) {
                         hasDrop = true;
                         break;
@@ -214,15 +252,23 @@ class FightContainer extends egret.DisplayObjectContainer {
                 }
                 if (!hasDrop) {
                     let drops = UserProxy.inst.fightData.generateDrop();
+                    let dropIndex:number = 0;
                     for (let i = 0; i < drops.length; i++) {
-                        if (this.dropProps[i]) {
-                            this.dropProps[i].dropId = drops[i];
+                        if (this.dropProps && this.dropProps[i]) {
+                            if (("RES_PROP_WITH_" + drops[i]) in fight){
+                                if (fight.isMCResourceLoaded(fight["RES_PROP_WITH_" + drops[i]])) {
+                                    this.dropProps[dropIndex].dropId = drops[i];
+                                    dropIndex++;
+                                }
+                            } else {
+                                this.dropProps[dropIndex].dropId = drops[i];
+                                dropIndex++;
+                            }
                         }
                     }
                 }
 
                 this.dispatchEventWith("fight_start", true);
-                this.autoFight = false;
                 if (steps) {
                     for (let i = 0; i < steps.length; i++) {
                         steps[i].index = i;
@@ -259,7 +305,9 @@ class FightContainer extends egret.DisplayObjectContainer {
                 console.groupEnd();
 
                 if (this.type != FightTypeEnum.PVP) {
-                    this.startStep();
+                    if (this.autoFight){
+                        this.startStep();
+                    }
                 }
             }
         }
@@ -306,8 +354,15 @@ class FightContainer extends egret.DisplayObjectContainer {
             this.meanWhileStep--;
             if (this.meanWhileStep <= 0)
                 egret.setTimeout(() => {
-                    this.startStep();
-                }, null, fight.STEP_DELAY_TIME);
+                    if (this.forceEnd) {
+                        this.forceEnd = false;
+                        this.reset();
+                        this.state = FightStateEnum.End;
+                        this.dispatchEventWith(ContextEvent.FIGHT_END, true);
+                    } else {
+                        this.startStep();
+                    }
+                }, this, fight.STEP_DELAY_TIME);
         }
     }
 
@@ -363,16 +418,16 @@ class FightContainer extends egret.DisplayObjectContainer {
         if (this.damageEffLayer && this.damageEffLayer.numElements > 0) {
             canEnd = false;
         }
-        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
-            if (this.roles[0][i] && BigNum.greater(fight.DIE_HP, this.roles[0][i].curHP)) {
-                canEnd = false;
-                break;
-            }
-            if (this.roles[1][i] && BigNum.greater(fight.DIE_HP, this.roles[1][i].curHP)) {
-                canEnd = false;
-                break;
-            }
-        }
+        // for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+        //     if (this.roles[0][i] && BigNum.greater(fight.DIE_HP, this.roles[0][i].curHP)) {
+        //         canEnd = false;
+        //         break;
+        //     }
+        //     if (this.roles[1][i] && BigNum.greater(fight.DIE_HP, this.roles[1][i].curHP)) {
+        //         canEnd = false;
+        //         break;
+        //     }
+        // }
         if (canEnd) {
             this.removeEventListener(egret.Event.ENTER_FRAME, this.checkFightEnd, this);
             this.state = FightStateEnum.End;
@@ -468,19 +523,26 @@ class FightContainer extends egret.DisplayObjectContainer {
         }
     }
 
-    private tweenRemoveRole(off:number){
-        if (off > 0 && this.level > 0) {
+    private tweenRemoveRole(){
+        let off:number = 0;
+        for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
+            if (this.leftRoles[i] && this.leftRoles[i].side == FightSideEnum.LEFT_SIDE) {
+                off = fight.WIDTH * -1;
+                break;
+            }
+            if (this.rightRoles[i] && this.rightRoles[i].side == FightSideEnum.RIGHT_SIDE) {
+                off = fight.WIDTH;
+                break;
+            }
+        }
+        if (off) {
             let tween = egret.Tween.get(this.roleLayer);
-            tween.to({x:this.roleLayer.x - fight.WIDTH},
-                fight.MIDDLE_GROUND_MOVE_TIME,
-                egret.Ease[fight.MIDDLE_GROUND_MOVE_EASE]).call(
-                ()=>{
-                    this.roleLayer.x = 0;
-                    this.reset();
-                    egret.setTimeout(()=>{this.tweenRemoveRoleComplete();}, this, fight.MIDDLE_GROUND_MOVE_TIME)
-                },
-                this
-            )
+            tween.to({x:this.roleLayer.x + off}, fight.MIDDLE_GROUND_MOVE_TIME);
+            tween.call(()=>{
+                this.roleLayer.x = 0;
+                this.reset();
+                this.tweenRemoveRoleComplete();
+             }, this);
         } else {
             this.reset();
             this.tweenRemoveRoleComplete();
@@ -501,6 +563,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                     this.roleLayer.addChild(eff);
                 }, this, i * 200, i);
             }
+
         }
     }
 
@@ -525,6 +588,10 @@ class FightContainer extends egret.DisplayObjectContainer {
         }
         this.initRoleCount++;
         if (this.initRoleCount >= this.originalElements.length) {
+            this.leftAreaCont = new egret.DisplayObjectContainer();
+            this.roleLayer.addChildAt(this.leftAreaCont, 0);
+            this.rightAreaCont = new egret.DisplayObjectContainer();
+            this.roleLayer.addChildAt(this.rightAreaCont, 0);
             egret.setTimeout(this.startStep, this, 200);
         }
     }
@@ -542,19 +609,23 @@ class FightContainer extends egret.DisplayObjectContainer {
         } else {
             if (this.level % 10 ==  0) {
                 let eff = new BossIncomingEff();
-                this.autoFight = true;
-                eff.addEventListener(egret.Event.COMPLETE, this.tweenRemoveRole, this);
+                eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
                 this.damageEffLayer.addChild(eff);
             } else if (Config.StageData[this.level - 1] && Config.StageData[this.level].map != Config.StageData[this.level - 1].map){
                 let eff = new NewChapterEff();
-                this.autoFight = true;
-                eff.addEventListener(egret.Event.COMPLETE, this.tweenRemoveRole, this);
+                eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
                 this.damageEffLayer.addChild(eff);
             } else {
-                this.autoFight = true;
                 this.addRoles(roleArr, true);
             }
         }
+    }
+
+    // 场景特效(例如开启新地图,boss关)
+    private stageEffComplete(e:egret.Event){
+        e.target.removeEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
+        this.autoFight = true;
+        this.tweenRemoveRoleComplete(null);
     }
 
     public getCurTotalLife(side:number) {
@@ -695,7 +766,8 @@ class FightContainer extends egret.DisplayObjectContainer {
     }
 
     public reset() {
-        for (let i = 0; i < this.dropProps.length; i++) {
+        let len = this.dropProps ? this.dropProps.length : 0;
+        for (let i = 0; i < len; i++) {
             if (this.dropProps[i].parent) {
                 this.dropProps[i].stop();
                 this.dropProps[i].parent.removeChild(this.dropProps[i]);
@@ -740,7 +812,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 if (!this.palmEff) {
                     this.palmEff = new BuddhaPalmEff();
                     this.palmEff.x = fight.AREA_POS[FightSideEnum.LEFT_SIDE - 1].x;
-                    this.palmEff.x = fight.AREA_POS[FightSideEnum.LEFT_SIDE - 1].y;
+                    this.palmEff.y = fight.AREA_POS[FightSideEnum.LEFT_SIDE - 1].y;
                     this.palmEff.addEventListener(egret.Event.COMPLETE, this.onPalmEffComplete, this);
                     this.addChild(this.palmEff);
                 }
@@ -781,10 +853,10 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.onOneStepComplete();
     }
 
-    /** 强制结束? */
-    public forceEnd(){
-        this.reset();
-        this.dispatchEventWith(ContextEvent.FIGHT_END, true);
+    public forceToStage(){
+        if (this.state != FightStateEnum.End) {
+            this.forceEnd = true;
+        }
     }
 
     private onReadyComplete(e:egret.Event) {

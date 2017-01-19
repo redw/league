@@ -65,7 +65,7 @@ module fight{
                 recordLog(`技能${value.id}的跳跃攻击没有配跳跃帧`,fight.LOG_FIGHT_WARN);
             }
             if (value.action_type == fight.ATTACK_ACTION_AREA || value.action_type == fight.ATTACK_ACTION_TURN) {
-                if (!Number(value.effect_damage_frame)) {
+                if (!value.effect_damage_frame) {
                     recordLog(`技能${value.id}的${value.action_type}攻击伤害帧配置错误`,fight.LOG_FIGHT_WARN);
                 }
             }
@@ -112,7 +112,7 @@ module fight{
         let point = new egret.Point();
         let offPoint = (skill && skill.move_position) || [0, 0];
         if (skill.action_type == fight.ATTACK_ACTION_ROW) {
-            point = getRoleInitPoint({side:3-role.side, pos:role.pos % 3});
+            point = getRoleInitPoint({side:3-role.side, pos:targets[0].pos % 3});
         } else {
             let curRole = targets[0];
             let minValue = Math.abs(role.pos - curRole.pos);
@@ -227,19 +227,18 @@ module fight{
     }
 
     export function playSound(url:string, isMusicEff:boolean=true){
-        /*if (url){
+        if (url){
             try {
-                // if (isMusicEff) {
-                //     SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
-                // } else {
-                //     SoundManager.inst.musicSwitch = true;
-                //     SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
-                // }
+                if (isMusicEff) {
+                    SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+                } else {
+                    SoundManager.inst.musicSwitch = true;
+                    SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
+                }
             } catch (e) {
                 recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
             }
-
-        }*/
+        }
     }
 
     /**

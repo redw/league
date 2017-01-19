@@ -43,6 +43,10 @@ class FightRole extends egret.DisplayObjectContainer {
     private buffContainer2:egret.DisplayObjectContainer = null;
     // 除buff外的效果容器
     private effContainer:egret.DisplayObjectContainer = null;
+    // buff效果map
+    private buffEffMap:any = {};
+    private buffIdArr:number[] = [];
+    private oldBuffIdArr:number[] = [];
 
     public constructor(fightContainer:FightContainer, roleData:{side:number,pos:number,id:number,config?:RoleConfig}) {
         super();
@@ -115,6 +119,7 @@ class FightRole extends egret.DisplayObjectContainer {
         this.reportItem = data;
         let items = data.target;
         this.targets = [];
+        this.addBuff(data);
         for (let i = 0; i < items.length; i++) {
             let targetRole =  this.fightContainer.getRoleByStr(items[i].pos);
             this.targets.push(targetRole);
@@ -141,7 +146,7 @@ class FightRole extends egret.DisplayObjectContainer {
         let frameCount = +this.curSkill.damage_frame - this.curSkill.jump_frame;
         let frameRate = this.body.frameRate || 24;
         let time = frameCount / frameRate * 1000;
-        this.fightContainer.showMoveDustEff({x:this.x, y:this.y, side:3 - this.roleData.side});
+        this.fightContainer.showMoveDustEff({x:this.x, y:this.y, side:this.roleData.side});
         tween.to({x: point.x, y: point.y}, time);
     }
 
@@ -161,6 +166,8 @@ class FightRole extends egret.DisplayObjectContainer {
                 this.fightContainer.startShake(this.curSkill.shake_type);
                 this.showHitEff(index, total);
             }
+        } else {
+            fight.recordLog(`伤害时技能不能为空`,fight.LOG_FIGHT_WARN);
         }
     }
 
@@ -169,13 +176,12 @@ class FightRole extends egret.DisplayObjectContainer {
         this.firedBulletCount = 0;
         this.firedHitMap = {};
         this.isPlayingSkillSound = false;
-
         let skillId = this.reportItem.skillId;
         this.curSkill = Config.SkillData[skillId];
         let showInfo = (this.curSkill.skill_free_effect || "").split(",");
         let needMode = !!showInfo[1];
         let source = showInfo[0];
-        if (source) {
+        if (source && !this.reportItem.vertigo) {
             let eff = new MCEff(source);
             eff.registerBack(0, this.doAction, this, null);
             eff.y = (this.roleData.config.modle_height) * -0.5;
@@ -186,7 +192,8 @@ class FightRole extends egret.DisplayObjectContainer {
     }
 
     private updateTargets(){
-        for (let i = 0; i < this.reportItem.target.length; i++) {
+        let len = (this.reportItem) ? this.reportItem.target.length : 0;
+        for (let i = 0; i < len; i++) {
             let role = this.fightContainer.getRoleByStr(this.reportItem.target[i].pos);
             if (role) {
                 role.maxHP = this.reportItem.target[i].maxhp;
@@ -210,29 +217,29 @@ class FightRole extends egret.DisplayObjectContainer {
             e.target.removeEventListener(egret.Event.COMPLETE, this.doAction, this);
         }
         fight.verifyActiveSkill(this.curSkill);
-
-        // 如果被眩晕
-        if (this.reportItem.vertigo) {
-            fight.recordLog(`第${this.reportItem.index}步角色id${this.reportItem.id} 位置${this.reportItem.pos} 被眩晕`, fight.LOG_FIGHT_PLAY);
-            this.triggerFrameMap = {};
-            this.selfInjury();
-            this.nextStep();
-        } else {
-            let action = this.curSkill.action_type;
-            fight.recordLog(`第${this.reportItem.index}步角色id${this.reportItem.id} 位置${this.reportItem.pos} ${action}攻击目标`, fight.LOG_FIGHT_PLAY);
-            this.fightContainer.bringRoleToFront(this, this.targets);
-            // 如果是移动攻击
-            if (fight.needMoveAttack(action)) {
-                this._waiting = false;
-                let targets = this.targets;
-                let point = fight.getNearFightPoint(this, targets, this.curSkill);
-                this.fightContainer.showMoveDustEff(this);
-                let tween = egret.Tween.get(this);
-                tween.to({x: point.x, y: point.y}, fight.MOVE_TIME);
-                tween.call(this.attack, this);
+        if (this.reportItem) {
+            // 如果被眩晕
+            if (this.reportItem.vertigo) {
+                fight.recordLog(`第${this.reportItem.index}步角色id${this.reportItem.id} 位置${this.reportItem.pos} 被眩晕`, fight.LOG_FIGHT_PLAY);
+                this.attackComplete();
             } else {
-                this.attack();
+                let action = this.curSkill.action_type;
+                fight.recordLog(`第${this.reportItem.index}步角色id${this.reportItem.id} 位置${this.reportItem.pos} ${action}攻击目标`, fight.LOG_FIGHT_PLAY);
+                this.fightContainer.bringRoleToFront(this, this.targets);
+                if (fight.needMoveAttack(action)) {
+                    this._waiting = false;
+                    let targets = this.targets;
+                    let point = fight.getNearFightPoint(this, targets, this.curSkill);
+                    this.fightContainer.showMoveDustEff({x:this.x, y:this.y, side:this.roleData.side});
+                    let tween = egret.Tween.get(this);
+                    tween.to({x: point.x, y: point.y}, fight.MOVE_TIME);
+                    tween.call(this.attack, this);
+                } else {
+                    this.attack();
+                }
             }
+        } else {
+            fight.recordLog(`战斗步骤提前跳过了`, fight.LOG_FIGHT_WARN);
         }
     }
 
@@ -245,15 +252,14 @@ class FightRole extends egret.DisplayObjectContainer {
             if (dataRes && textureRes) {
                 resourceOk = true;
                 let count = 0;
+                this.isPlayingDamage = true;
                 for (let i = 0; i < len; i++) {
                     let targetEff = new MCEff(this.curSkill.target_effect);
                     targetEff.registerBack(0, (index)=>{
                         this.addHPEff(this.targets[index]);
                         count++;
-                        if (count >= len) {
-                            this.nextStep();
-                        }
-                    }, null, i);
+                        this.isPlayingDamage = count < len;
+                    }, this, i);
                     this.targets[i].addChild(targetEff);
                 }
             }
@@ -263,7 +269,6 @@ class FightRole extends egret.DisplayObjectContainer {
         }
         if (!resourceOk) {
             this.updateTargets();
-            this.nextStep();
         }
     }
 
@@ -293,6 +298,7 @@ class FightRole extends egret.DisplayObjectContainer {
                 let target = this.targets[i];
                 if (!role || target == role) {
                     let hitInfo = this.reportItem.target[i];
+                    target.addBuff(hitInfo, true);
                     let damage = BigNum.mul(hitInfo.damage, 1 / total);
                     let damageNum = MathUtil.easyNumber(damage);
                     if (this.curSkill.target_effect_normal) {
@@ -360,12 +366,14 @@ class FightRole extends egret.DisplayObjectContainer {
             let current = 0;
             for (let i = 0; i < total; i++) {
                 damageEff.registerBack(+frameArr[i], ()=>{
-                    fight.playSound(this.curSkill.scource_effect);
-                    current++;
-                    this.isPlayingDamage = current < total;
-                    this.fightContainer.startShake(this.curSkill.shake_type);
-                    this.showHitEff(current, total);
-                });
+                    if (this.curSkill) {
+                        fight.playSound(this.curSkill.scource_effect);
+                        current++;
+                        this.fightContainer.startShake(this.curSkill.shake_type);
+                        this.showHitEff(current, total);
+                    }
+                }, this);
+                damageEff.registerBack(0, this.onPlayExtraEffComplete, this);
             }
             let offPoint:any = (!!this.curSkill.area_effect_point) ? this.curSkill.area_effect_point.split(",") : [0, 0];
             damageEff.x = fight.AREA_POS[this.roleData.side - 1].x + (Number(offPoint[0]) || 0);
@@ -465,6 +473,7 @@ class FightRole extends egret.DisplayObjectContainer {
         }
     }
 
+    // 显示炸弹效果
     private showBombEff(){
         if (this.checkDamageEff()) {
             let total = this.targets.length;
@@ -475,15 +484,21 @@ class FightRole extends egret.DisplayObjectContainer {
                 let damageEff = new MCEff(this.curSkill.scource_effect);
                 damageEff.registerBack(frame, ()=>{
                     fight.playSound(this.curSkill.scource_effect);
-                    current++;
-                    this.isPlayingDamage = current < total;
+                    // current++;
+                    // this.isPlayingDamage = current < total;
                     this.fightContainer.startShake(this.curSkill.shake_type);
                     this.showHitEff(current, total);
                 }, this);
+                damageEff.registerBack(0, this.onPlayExtraEffComplete, this);
                 let target = this.targets[i];
                 target.addEff(damageEff);
             }
         }
+    }
+
+    private onPlayExtraEffComplete(){
+        this.isPlayingDamage = false;
+        this.showHitEff();
     }
 
     /**
@@ -514,9 +529,6 @@ class FightRole extends egret.DisplayObjectContainer {
         if (!this.curSkill || !this.curSkill.scource_effect) {
             fight.recordLog(`技能${this.curSkill.id}资源source_effect没配置`, fight.LOG_FIGHT_WARN);
             result = false;
-            this.triggerFrameMap = {};
-            this.updateTargets();
-            this.nextStep();
         }
         return result;
     }
@@ -582,7 +594,11 @@ class FightRole extends egret.DisplayObjectContainer {
         if (!this.isTriggerDamage) {
             this.triggerFrameMap = {};
             this.isPlayingDamage = false;
-            this.showHitEff();
+            this.updateTargets();
+            let len = this.targets ? this.targets.length : 0;
+            for (let i = 0; i < len; i++) {
+                this.targets[i].hit();
+            }
         }
         if (this.curSkill) {
             if (fight.needRetreat(this.curSkill.action_type)) {
@@ -594,11 +610,14 @@ class FightRole extends egret.DisplayObjectContainer {
     }
 
     private selfInjury(){
-        if (this.updateHP(this.reportItem.hp)){
-            this.dispatchEventWith("role_one_step_complete", true);
-            this.idle();
+        if (this.reportItem) {
+            if (BigNum.greater(this.reportItem.damage || 0, 0)) {
+                this.hit();
+            } else {
+                this.idle();
+            }
         } else {
-            this.idle();
+            fight.recordLog(`自残时reportItem不能为null`,fight.LOG_FIGHT_WARN);
         }
     }
 
@@ -617,11 +636,84 @@ class FightRole extends egret.DisplayObjectContainer {
 
     // 恢复血量
     public  recoveryBlood(){
-        this.fightContainer.flyTxt({str:"回血", x:this.x, y:this.y + this.roleData.config.modle_height * -1}, fight.FONT_SYSTEM);
+        let eff = new MCEff(fight.RES_PROP_WITH_3);
+        eff.x = 0;
+        eff.y = 0;
+        this.fightContainer.showEff(this.effContainer, eff, this);
+    }
+
+    public addBuff(item:FightReportItem|FightReportTargetItem, force:boolean=false){
+        let isSelf = "target" in item;
+        let canAdd = isSelf || force;
+        if (canAdd) {
+            this.buffIdArr = item.buff.filter((value)=>{
+                if (value && Config.BuffData[value])
+                    return Config.BuffData[value].id;
+            });
+            let buffArr = this.buffIdArr || [];
+            let keys = Object.keys(this.buffEffMap);
+            for (let i = 0; i < buffArr.length; i++) {
+                let buffConfig = Config.BuffData[buffArr[i]];
+                if (buffConfig) {
+                    let type = buffConfig.effect + "";
+                    if (keys.indexOf(type) < 0 && buffConfig.resource && fight.isMCResourceLoaded(buffConfig.resource) && !this.buffEffMap[type]) {
+                        let eff = new MCEff(buffConfig.resource, false);
+                        let container = this["buffContainer" + buffConfig.point];
+                        container.addChild(eff);
+                        this.buffEffMap[type] = eff;
+                    }
+                }
+            }
+
+            let nowBuffIdArr = this.buffIdArr.concat();
+            for (let i = 0; i < this.oldBuffIdArr.length; i++) {
+                if (this.oldBuffIdArr.indexOf(nowBuffIdArr[i]) >= 0) {
+                    nowBuffIdArr.splice(i, 1);
+                    i--;
+                }
+            }
+            for (let i = 0; i < nowBuffIdArr.length; i++) {
+                let buffConfig:BuffConfig = Config.BuffData[nowBuffIdArr[i]];
+                if (buffConfig && buffConfig.word && this.fightContainer) {
+                    this.fightContainer.flyTxt({str:buffConfig.word, x:this.x, y:this.y + this.roleData.config.modle_height * -1}, fight.FONT_SYSTEM)
+                }
+            }
+            this.oldBuffIdArr = this.buffIdArr.concat()
+        }
+    }
+
+    private checkBuff(){
+        let keys = Object.keys(this.buffEffMap);
+        let len = keys.length;
+        for (let i = 0; i < len; i++) {
+            let type = keys[i];
+
+            let exist = false;
+            for (let j = 0; j < this.buffIdArr.length; j++) {
+                let buffConfig = Config.BuffData[this.buffIdArr[j]];
+                if (buffConfig.effect == type) {
+                    exist = true;
+                    break;
+                }
+            }
+            if (!exist) {
+                let eff:MCEff = this.buffEffMap[type];
+                if (eff) {
+                    eff.dispose();
+                } else {
+                    fight.recordLog("buff可能出错了",fight.LOG_FIGHT_WARN);
+                }
+                delete this.buffEffMap[type];
+                len--;
+                i--;
+            }
+        }
+
     }
 
     private onTick() {
         let currentFrame = this.body.currentFrame;
+        this.checkBuff();
 
         if (this.body.movieClipData && !this._waiting && currentFrame > 0) {
             let point = new egret.Point();
@@ -672,49 +764,40 @@ class FightRole extends egret.DisplayObjectContainer {
                 for (let i = 0; i < this.targets.length; i++) {
                     oneStepComplete = (oneStepComplete && (this.targets[i].waiting || !this.targets[i].parent));
                 }
-                if (oneStepComplete && this.isPlayingDamage) {
-                    if (this.triggerFrameMap) {
-                        let keys = Object.keys(this.triggerFrameMap);
-                        if (keys.length > 0 && keys.length < String(this.curSkill.damage_frame).split(",").length) {
-                            this.updateTargets();
-                            this.isPlayingDamage = false;
-                        }
-                    }
-                }
+                // if (oneStepComplete && this.isPlayingDamage) {
+                //     if (this.triggerFrameMap) {
+                //         let keys = Object.keys(this.triggerFrameMap);
+                //         if (keys.length > 0 && keys.length < String(this.curSkill.damage_frame).split(",").length) {
+                //             this.updateTargets();
+                //             this.isPlayingDamage = false;
+                //         }
+                //     }
+                // }
                 if (oneStepComplete && !!this.triggerFrameMap &&  !this.isPlayingDamage && !this.isPlayingAction) {
                     this.nextStep();
                 }
-            } else {
-                // this.curSkill = null;
-                // fight.recordLog(`可能有问题`, fight.LOG_FIGHT_WARN);
-                // this.nextStep();
+            } else if (this.reportItem.vertigo) {
+                if (this.waiting) {
+                    this.nextStep();
+                }
+            } else{
+                this.nextStep();
             }
         }
 
         // 处理角色死亡效果
-        if (BigNum.greater(fight.DIE_HP, this.roleData.curHP)) {
+        if ((!this.targets || this.targets.length == 0) && BigNum.greater(fight.DIE_HP, this.roleData.curHP)) {
             if (this.parent && !this.isPlayingDie && this.lifeBar.isCanRemove) {
-                // if (!this.roleData.config.dead_frame) {
-                //     this.isPlayingDie = true;
-                //     fight.recordLog(`角色${this.roleData.id}没有配死亡帧`, fight.LOG_FIGHT_WARN);
-                //     egret.setTimeout(()=> {
-                //         this.onRoleDie();
-                //     }, this, fight.DIE_DELAY_TIME);
-                // } else {
-                    // if (currentFrame >= this.roleData.config.dead_frame) {
-                    this.isPlayingDie = true;
-                    let dieEff = new RoleDieEff();
-                    dieEff.scaleX = this.side == FightSideEnum.RIGHT_SIDE ? -1 : 1;
-                    // dieEff.addEventListener(egret.Event.COMPLETE, this.onRoleDie, this);
-                    dieEff.x = this.x;
-                    dieEff.y = this.y;
-                    this.addChild(dieEff);
-                    this.fightContainer.showDamageEff(dieEff);
-                    this.onRoleDie();
-                    this.idle();
-                    egret.stopTick(this.onTick, this);
-                    // }
-                // }
+                this.isPlayingDie = true;
+                let dieEff = new RoleDieEff();
+                dieEff.scaleX = this.side == FightSideEnum.LEFT_SIDE ? -1 : 1;
+                dieEff.x = this.x;
+                dieEff.y = this.y;
+                this.addChild(dieEff);
+                this.fightContainer.showDamageEff(dieEff);
+                this.onRoleDie();
+                this.idle();
+                egret.stopTick(this.onTick, this);
             }
         }
 
@@ -729,9 +812,7 @@ class FightRole extends egret.DisplayObjectContainer {
         if (e) {
             e.target.removeEventListener(egret.Event.COMPLETE, this.onRoleDie, this);
         }
-        if (!this.reportItem || this.reportItem.id != this.roleData.id) {
-            this.dispatchEventWith("role_die", true, this);
-        }
+        this.dispatchEventWith("role_die", true, this);
         this.isPlayingDamage = false;
     }
 
@@ -801,7 +882,7 @@ class FightRole extends egret.DisplayObjectContainer {
         this.reportItem = null;
         this.isPlayingDie = false;
         this.isPlayingSkillSound = false;
-        this.targets = [];
+        this.targets = null;
         this.fightContainer = null;
         while (this.effContainer.numChildren){
             this.effContainer.removeChildAt(0);

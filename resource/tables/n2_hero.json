@@ -1,47 +1,24 @@
 {
 	"128": {
-		"evolution_star": [
-			"11",
-			"16",
-			"21",
-			"26"
-		],
-		"dead_sound": null,
-		"weapon_disc": "后羿会攻击生命最低的敌人，并且敌人生命越低伤害越高，如果触发终极奥义连神都可以弑杀",
-		"damage_type": 1,
-		"dead_frame": 93,
-		"nature": 4,
-		"weapon_name": "射日弓",
-		"job": 3,
-		"race": 3,
+		"order": 7,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 50,
+		"hp": 24,
+		"star_convert": 7,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1283",
 			"1284",
 			"1285"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 50,
-		"id": 128,
-		"hp": 32,
-		"star_convert": 7,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1286",
-			"1282",
-			"1281",
-			"1280"
-		],
-		"range": 2,
-		"name": "后羿",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 3,
-		"resource": "128_houyi",
-		"crit_chance": 0.1,
+		"id": 128,
 		"block_chance": 0,
-		"tip": "太阳射下来，",
+		"name": "后羿",
 		"modle_height": 80,
 		"skill": [
 			"1281",
@@ -52,16 +29,10 @@
 			"1286",
 			"1280"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"57",
-			"58",
-			"59",
-			"60",
-			"62"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0.1,
+		"tip": "太阳射下来，",
 		"piece": 10,
 		"slogan": "我能射十个",
 		"evolution_stage": [
@@ -70,9 +41,13 @@
 			"4500",
 			"6000"
 		],
-		"order": 7
-	},
-	"129": {
+		"skill_trigger_order": [
+			"1286",
+			"1282",
+			"1281",
+			"1280"
+		],
+		"resource": "128_houyi",
 		"evolution_star": [
 			"11",
 			"16",
@@ -80,41 +55,43 @@
 			"26"
 		],
 		"dead_sound": null,
-		"weapon_disc": "三大主神之一，具有最强的群体魔法伤害和眩晕能力，并且在开战后的前几回合内处于无敌状态",
-		"damage_type": 2,
-		"dead_frame": 72,
-		"nature": 3,
-		"weapon_name": "娲皇翼",
-		"job": 2,
-		"race": 4,
+		"weapon_disc": "后羿会攻击生命最低的敌人，并且敌人生命越低伤害越高，如果触发终极奥义连神都可以弑杀",
+		"damage_type": 1,
+		"nature": 4,
+		"friendly": [
+			"57",
+			"58",
+			"59",
+			"60",
+			"62"
+		],
+		"job": 3,
+		"speed": 5000,
+		"race": 3,
+		"dead_frame": 93,
+		"sex": 1,
+		"weapon_name": "射日弓"
+	},
+	"129": {
+		"order": 2,
+		"physical_atk": 0,
+		"magical_atk": 5,
+		"battle_point": 220,
+		"hp": 24,
+		"star_convert": 10,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1293",
 			"1294",
 			"1295"
 		],
-		"sex": 2,
-		"physical_atk": 0,
-		"magical_atk": 5,
-		"battle_point": 220,
-		"id": 129,
-		"hp": 32,
-		"star_convert": 10,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1291",
-			"1296",
-			"1292",
-			"1290"
-		],
-		"range": 2,
-		"name": "女娲",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0,
 		"quality": 4,
-		"resource": "129_nvwa",
-		"crit_chance": 0,
+		"id": 129,
 		"block_chance": 0,
-		"tip": "补天，",
+		"name": "女娲",
 		"modle_height": 100,
 		"skill": [
 			"1291",
@@ -125,7 +102,35 @@
 			"1296",
 			"1290"
 		],
-		"dodge_chance": 0,
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0,
+		"tip": "补天，",
+		"piece": 10,
+		"slogan": "这个孤独的世界，总觉得缺点什么",
+		"evolution_stage": [
+			"0",
+			"3000",
+			"4500",
+			"6000"
+		],
+		"skill_trigger_order": [
+			"1291",
+			"1296",
+			"1292",
+			"1290"
+		],
+		"resource": "129_nvwa",
+		"evolution_star": [
+			"11",
+			"16",
+			"21",
+			"26"
+		],
+		"dead_sound": null,
+		"weapon_disc": "三大主神之一，具有最强的群体魔法伤害和眩晕能力，并且在开战后的前几回合内处于无敌状态",
+		"damage_type": 2,
+		"nature": 3,
 		"friendly": [
 			"46",
 			"55",
@@ -137,61 +142,34 @@
 			"66",
 			"67"
 		],
-		"origin_star": 1,
+		"job": 2,
 		"speed": 5000,
-		"piece": 10,
-		"slogan": "这个孤独的世界，总觉得缺点什么",
-		"evolution_stage": [
-			"0",
-			"3000",
-			"4500",
-			"6000"
-		],
-		"order": 2
+		"race": 4,
+		"dead_frame": 72,
+		"sex": 2,
+		"weapon_name": "娲皇翼"
 	},
 	"130": {
-		"evolution_star": [
-			"13",
-			"18",
-			"23",
-			"28"
-		],
-		"dead_sound": null,
-		"weapon_disc": "三大主神之一，具有最强的物理攻击能力以及免疫控制的效果",
-		"damage_type": 1,
-		"dead_frame": 80,
-		"nature": 5,
-		"weapon_name": "开天斧",
-		"job": 1,
-		"race": 5,
+		"order": 1,
+		"physical_atk": 5,
+		"magical_atk": 0,
+		"battle_point": 220,
+		"hp": 30,
+		"star_convert": 10,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1303",
 			"1304",
 			"1305",
 			"1306"
 		],
-		"sex": 1,
-		"physical_atk": 5,
-		"magical_atk": 0,
-		"battle_point": 220,
-		"id": 130,
-		"hp": 40,
-		"star_convert": 10,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1301",
-			"1302",
-			"1300"
-		],
-		"range": 1,
-		"name": "盘古真人",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 4,
-		"resource": "130_pangu",
-		"crit_chance": 0.1,
+		"id": 130,
 		"block_chance": 0,
-		"tip": "先有鸡还是先有蛋？",
+		"name": "盘古真人",
 		"modle_height": 120,
 		"skill": [
 			"1301",
@@ -202,17 +180,10 @@
 			"1306",
 			"1300"
 		],
-		"dodge_chance": 0,
-		"friendly": [
-			"62",
-			"66",
-			"67",
-			"68",
-			"69",
-			"70"
-		],
+		"range": 1,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.1,
+		"tip": "先有鸡还是先有蛋？",
 		"piece": 10,
 		"slogan": "开天辟地拂衣去，深藏身与名",
 		"evolution_stage": [
@@ -221,52 +192,56 @@
 			"5000",
 			"6500"
 		],
-		"order": 1
-	},
-	"101": {
+		"skill_trigger_order": [
+			"1301",
+			"1302",
+			"1300"
+		],
+		"resource": "130_pangu",
 		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
+			"13",
+			"18",
+			"23",
+			"28"
 		],
 		"dead_sound": null,
-		"weapon_disc": "悟空具备极强的单体眩晕能力，眩晕时长跟运气有关，运气够好可以让敌人一直醒不过来",
+		"weapon_disc": "三大主神之一，具有最强的物理攻击能力以及免疫控制的效果",
 		"damage_type": 1,
-		"dead_frame": 99,
-		"nature": 4,
-		"weapon_name": "金箍棒",
+		"nature": 5,
+		"friendly": [
+			"62",
+			"66",
+			"67",
+			"68",
+			"69",
+			"70"
+		],
 		"job": 1,
-		"race": 3,
+		"speed": 10000,
+		"race": 5,
+		"dead_frame": 80,
+		"sex": 1,
+		"weapon_name": "开天斧"
+	},
+	"101": {
+		"order": 11,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 30,
+		"hp": 30,
+		"star_convert": 4,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1016",
 			""
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 30,
-		"id": 101,
-		"hp": 40,
-		"star_convert": 4,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1015",
-			"1014",
-			"1013",
-			"1012",
-			"1011",
-			"1010"
-		],
-		"range": 1,
-		"name": "悟空",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 2,
-		"resource": "101_wukong",
-		"crit_chance": 0.05,
+		"id": 101,
 		"block_chance": 0.1,
-		"tip": 1,
+		"name": "悟空",
 		"modle_height": 70,
 		"skill": [
 			"1011",
@@ -277,7 +252,37 @@
 			"1016",
 			"1010"
 		],
-		"dodge_chance": 0,
+		"range": 1,
+		"origin_star": 1,
+		"crit_chance": 0.05,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "吃俺老孙一棒！",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1015",
+			"1014",
+			"1013",
+			"1012",
+			"1011",
+			"1010"
+		],
+		"resource": "101_wukong",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "悟空具备极强的单体眩晕能力，眩晕时长跟运气有关，运气够好可以让敌人一直醒不过来",
+		"damage_type": 1,
+		"nature": 4,
 		"friendly": [
 			"1",
 			"2",
@@ -294,62 +299,32 @@
 			"51",
 			"64"
 		],
-		"origin_star": 1,
+		"job": 1,
 		"speed": 10000,
-		"piece": 10,
-		"slogan": "吃俺老孙一棒！",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 11
+		"race": 3,
+		"dead_frame": 99,
+		"sex": 1,
+		"weapon_name": "金箍棒"
 	},
 	"102": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "唐僧能够对全体敌人造成魔法伤害，伤害高低跟运气有关，运气够好可以直接清掉敌人",
-		"damage_type": 2,
-		"dead_frame": 93,
-		"nature": 2,
-		"weapon_name": "九环锡杖",
-		"job": 2,
-		"race": 3,
+		"order": 21,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1026",
 			""
 		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 10,
-		"id": 102,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1025",
-			"1024",
-			"1023",
-			"1022",
-			"1021",
-			"1020"
-		],
-		"range": 2,
-		"name": "唐僧",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0,
 		"quality": 1,
-		"resource": "102_tangseng",
-		"crit_chance": 0,
+		"id": 102,
 		"block_chance": 0.1,
-		"tip": 1,
+		"name": "唐僧",
 		"modle_height": 75,
 		"skill": [
 			"1021",
@@ -360,7 +335,37 @@
 			"1026",
 			"1020"
 		],
-		"dodge_chance": 0,
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "贫僧从东土大唐而来，去往西天取经",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1025",
+			"1024",
+			"1023",
+			"1022",
+			"1021",
+			"1020"
+		],
+		"resource": "102_tangseng",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "唐僧能够对全体敌人造成魔法伤害，伤害高低跟运气有关，运气够好可以直接清掉敌人",
+		"damage_type": 2,
+		"nature": 2,
 		"friendly": [
 			"1",
 			"9",
@@ -372,61 +377,33 @@
 			"42",
 			"52"
 		],
-		"origin_star": 1,
+		"job": 2,
 		"speed": 5000,
-		"piece": 10,
-		"slogan": "贫僧从东土大唐而来，去往西天取经",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 21
+		"race": 3,
+		"dead_frame": 93,
+		"sex": 1,
+		"weapon_name": "九环锡杖"
 	},
 	"103": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "八戒具备很高的格挡几率，是个可靠的超级肉盾",
-		"damage_type": 1,
-		"dead_frame": 83,
-		"nature": 3,
-		"weapon_name": "九齿钉耙",
-		"job": 1,
-		"race": 3,
+		"order": 22,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 10,
+		"hp": 30,
+		"star_convert": 1,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1033",
 			"1034",
 			"1035"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 10,
-		"id": 103,
-		"hp": 40,
-		"star_convert": 1,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1031",
-			"1036",
-			"1032",
-			"1030"
-		],
-		"range": 1,
-		"name": "八戒",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 1,
-		"resource": "103_bajie",
-		"crit_chance": 0.05,
+		"id": 103,
 		"block_chance": 0.1,
-		"tip": "八戒者，一戒杀生,二戒偷盗,三戒淫,四戒妄语,五戒饮酒,六戒着香华,七戒坐卧高广大床,八戒非时食",
+		"name": "八戒",
 		"modle_height": 70,
 		"skill": [
 			"1031",
@@ -437,7 +414,35 @@
 			"1036",
 			"1030"
 		],
-		"dodge_chance": 0,
+		"range": 1,
+		"origin_star": 1,
+		"crit_chance": 0.05,
+		"tip": "八戒者，一戒杀生,二戒偷盗,三戒淫,四戒妄语,五戒饮酒,六戒着香华,七戒坐卧高广大床,八戒非时食",
+		"piece": 10,
+		"slogan": "当年我可是天蓬大元帅！",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1031",
+			"1036",
+			"1032",
+			"1030"
+		],
+		"resource": "103_bajie",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "八戒具备很高的格挡几率，是个可靠的超级肉盾",
+		"damage_type": 1,
+		"nature": 3,
 		"friendly": [
 			"1",
 			"2",
@@ -449,61 +454,33 @@
 			"39",
 			"59"
 		],
-		"origin_star": 1,
+		"job": 1,
 		"speed": 10000,
-		"piece": 10,
-		"slogan": "当年我可是天蓬大元帅！",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 22
+		"race": 3,
+		"dead_frame": 83,
+		"sex": 1,
+		"weapon_name": "九齿钉耙"
 	},
 	"104": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "沙和尚具备极强的吸血能力，敌人越多吸的越多，可谓攻防兼备",
-		"damage_type": 1,
-		"dead_frame": 85,
-		"nature": 3,
-		"weapon_name": "降妖宝杖",
-		"job": 1,
-		"race": 3,
+		"order": 23,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 10,
+		"hp": 30,
+		"star_convert": 1,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1043",
 			"1044",
 			"1045"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 10,
-		"id": 104,
-		"hp": 40,
-		"star_convert": 1,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1041",
-			"1046",
-			"1042",
-			"1040"
-		],
-		"range": 1,
-		"name": "沙和尚",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 1,
-		"resource": "104_shaheshang",
-		"crit_chance": 0.05,
+		"id": 104,
 		"block_chance": 0.1,
-		"tip": 1,
+		"name": "沙和尚",
 		"modle_height": 70,
 		"skill": [
 			"1041",
@@ -514,7 +491,35 @@
 			"1046",
 			"1040"
 		],
-		"dodge_chance": 0,
+		"range": 1,
+		"origin_star": 1,
+		"crit_chance": 0.05,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "二师兄，你就少说两句吧。",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1041",
+			"1046",
+			"1042",
+			"1040"
+		],
+		"resource": "104_shaheshang",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "沙和尚具备极强的吸血能力，敌人越多吸的越多，可谓攻防兼备",
+		"damage_type": 1,
+		"nature": 3,
 		"friendly": [
 			"1",
 			"2",
@@ -525,61 +530,34 @@
 			"36",
 			"38"
 		],
-		"origin_star": 1,
+		"job": 1,
 		"speed": 10000,
-		"piece": 10,
-		"slogan": "二师兄，你就少说两句吧。",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 23
+		"race": 3,
+		"dead_frame": 85,
+		"sex": 1,
+		"weapon_name": "降妖宝杖"
 	},
 	"105": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "小白龙可以绕开前排而直接攻击后排敌人，单体秒杀能力极强",
-		"damage_type": 1,
-		"dead_frame": 79,
-		"nature": 3,
-		"weapon_name": "白龙剑",
-		"job": 5,
-		"race": 3,
+		"order": 18,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 30,
+		"hp": 24,
+		"star_convert": 4,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1053",
 			"1054",
 			"1055",
 			"1056"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 30,
-		"id": 105,
-		"hp": 32,
-		"star_convert": 4,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1051",
-			"1052",
-			"1050"
-		],
-		"range": 1,
-		"name": "小白龙",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 2,
-		"resource": "105_xiaobailong",
-		"crit_chance": 0.1,
+		"id": 105,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "小白龙",
 		"modle_height": 75,
 		"skill": [
 			"1051",
@@ -590,16 +568,10 @@
 			"1056",
 			"1050"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"1",
-			"13",
-			"17",
-			"36",
-			"45"
-		],
+		"range": 1,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.1,
+		"tip": 1,
 		"piece": 10,
 		"slogan": "我爱吃草，皮肤好好~",
 		"evolution_stage": [
@@ -608,9 +580,12 @@
 			"3000",
 			"4500"
 		],
-		"order": 18
-	},
-	"106": {
+		"skill_trigger_order": [
+			"1051",
+			"1052",
+			"1050"
+		],
+		"resource": "105_xiaobailong",
 		"evolution_star": [
 			"5",
 			"10",
@@ -618,41 +593,44 @@
 			"20"
 		],
 		"dead_sound": null,
-		"weapon_disc": "牛魔王不仅具备眩晕横排敌人的能力，同时具备极强回血能力，兼备控制与肉盾能力",
+		"weapon_disc": "小白龙可以绕开前排而直接攻击后排敌人，单体秒杀能力极强",
 		"damage_type": 1,
-		"dead_frame": 60,
-		"nature": 5,
-		"weapon_name": "混铁棍",
-		"job": 1,
-		"race": 4,
+		"nature": 3,
+		"friendly": [
+			"1",
+			"13",
+			"17",
+			"36",
+			"45"
+		],
+		"job": 5,
+		"speed": 10000,
+		"race": 3,
+		"dead_frame": 79,
+		"sex": 1,
+		"weapon_name": "白龙剑"
+	},
+	"106": {
+		"order": 6,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 65,
+		"hp": 30,
+		"star_convert": 7,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1063",
 			"1064",
 			"1065",
 			"1066"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 65,
-		"id": 106,
-		"hp": 40,
-		"star_convert": 7,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1061",
-			"1062",
-			"1060"
-		],
-		"range": 1,
-		"name": "牛魔王",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 3,
-		"resource": "106_niumowang",
-		"crit_chance": 0.05,
+		"id": 106,
 		"block_chance": 0.1,
-		"tip": 1,
+		"name": "牛魔王",
 		"modle_height": 90,
 		"skill": [
 			"1061",
@@ -663,7 +641,34 @@
 			"1066",
 			"1060"
 		],
-		"dodge_chance": 0,
+		"range": 1,
+		"origin_star": 1,
+		"crit_chance": 0.05,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "力拔山兮气盖世,谁能挡我！",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1061",
+			"1062",
+			"1060"
+		],
+		"resource": "106_niumowang",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "牛魔王不仅具备眩晕横排敌人的能力，同时具备极强回血能力，兼备控制与肉盾能力",
+		"damage_type": 1,
+		"nature": 5,
 		"friendly": [
 			"4",
 			"18",
@@ -673,61 +678,34 @@
 			"24",
 			"40"
 		],
-		"origin_star": 1,
+		"job": 1,
 		"speed": 10000,
-		"piece": 10,
-		"slogan": "力拔山兮气盖世,谁能挡我！",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 6
+		"race": 4,
+		"dead_frame": 60,
+		"sex": 1,
+		"weapon_name": "混铁棍"
 	},
 	"107": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "红孩儿在开战后的前几个回合内具备极强的杀伤力，能够最快速地解决敌人",
-		"damage_type": 1,
-		"dead_frame": 95,
-		"nature": 4,
-		"weapon_name": "圣婴枪",
-		"job": 1,
-		"race": 4,
+		"order": 19,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 30,
+		"hp": 30,
+		"star_convert": 4,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1073",
 			"1074",
 			"1075",
 			"1076"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 30,
-		"id": 107,
-		"hp": 40,
-		"star_convert": 4,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1071",
-			"1072",
-			"1070"
-		],
-		"range": 1,
-		"name": "红孩儿",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 2,
-		"resource": "107_honghaier",
-		"crit_chance": 0.05,
+		"id": 107,
 		"block_chance": 0.1,
-		"tip": "红红红红火火恍恍惚惚",
+		"name": "红孩儿",
 		"modle_height": 70,
 		"skill": [
 			"1071",
@@ -738,27 +716,24 @@
 			"1076",
 			"1070"
 		],
-		"dodge_chance": 0,
-		"friendly": [
-			"18",
-			"20",
-			"22",
-			"40",
-			"44"
-		],
+		"range": 1,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.05,
+		"tip": "红红红红火火恍恍惚惚",
 		"piece": 10,
-		"slogan": "小孩子不要玩火，要玩就玩三位真火",
+		"slogan": "别玩普通的火，要玩就玩三昧真火！",
 		"evolution_stage": [
 			"0",
 			"1500",
 			"3000",
 			"4500"
 		],
-		"order": 19
-	},
-	"108": {
+		"skill_trigger_order": [
+			"1071",
+			"1072",
+			"1070"
+		],
+		"resource": "107_honghaier",
 		"evolution_star": [
 			"5",
 			"10",
@@ -766,41 +741,44 @@
 			"20"
 		],
 		"dead_sound": null,
-		"weapon_disc": "铁扇公主不仅能造成较高的直线伤害，同时具备很高的闪避率",
-		"damage_type": 2,
-		"dead_frame": 77,
+		"weapon_disc": "红孩儿在开战后的前几个回合内具备极强的杀伤力，能够最快速地解决敌人",
+		"damage_type": 1,
 		"nature": 4,
-		"weapon_name": "芭蕉扇",
-		"job": 2,
+		"friendly": [
+			"18",
+			"20",
+			"22",
+			"40",
+			"44"
+		],
+		"job": 1,
+		"speed": 10000,
 		"race": 4,
+		"dead_frame": 95,
+		"sex": 1,
+		"weapon_name": "圣婴枪"
+	},
+	"108": {
+		"order": 27,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1083",
 			"1084",
 			"1085",
 			"1086"
 		],
-		"sex": 2,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 10,
-		"id": 108,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1081",
-			"1082",
-			"1080"
-		],
-		"range": 2,
-		"name": "铁扇公主",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 1,
-		"resource": "108_tieshangongzhu",
-		"crit_chance": 0,
+		"id": 108,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "铁扇公主",
 		"modle_height": 80,
 		"skill": [
 			"1081",
@@ -811,7 +789,34 @@
 			"1086",
 			"1080"
 		],
-		"dodge_chance": 0.05,
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "轻轻一扇，把你扇到天涯海角",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1081",
+			"1082",
+			"1080"
+		],
+		"resource": "108_tieshangongzhu",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "铁扇公主不仅能造成较高的直线伤害，同时具备很高的闪避率",
+		"damage_type": 2,
+		"nature": 4,
 		"friendly": [
 			"18",
 			"19",
@@ -821,61 +826,33 @@
 			"27",
 			"33"
 		],
-		"origin_star": 1,
+		"job": 2,
 		"speed": 5000,
-		"piece": 10,
-		"slogan": "轻轻一扇，把你扇到天涯海角",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 27
+		"race": 4,
+		"dead_frame": 77,
+		"sex": 2,
+		"weapon_name": "芭蕉扇"
 	},
 	"109": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "二郎神每击杀一个敌人，攻击力都会大幅提升，一言不合就达成1V6",
-		"damage_type": 1,
-		"dead_frame": 86,
-		"nature": 1,
-		"weapon_name": "三尖两刃刀",
-		"job": 1,
-		"race": 5,
+		"order": 5,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 65,
+		"hp": 30,
+		"star_convert": 7,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1093",
 			"1094",
 			"1095"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 65,
-		"id": 109,
-		"hp": 40,
-		"star_convert": 7,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1091",
-			"1096",
-			"1092",
-			"1090"
-		],
-		"range": 1,
-		"name": "二郎神",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 3,
-		"resource": "109_erlangshen",
-		"crit_chance": 0.05,
+		"id": 109,
 		"block_chance": 0.1,
-		"tip": 1,
+		"name": "二郎神",
 		"modle_height": 80,
 		"skill": [
 			"1091",
@@ -886,7 +863,35 @@
 			"1096",
 			"1090"
 		],
-		"dodge_chance": 0,
+		"range": 1,
+		"origin_star": 1,
+		"crit_chance": 0.05,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "我舅是如来！",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1096",
+			"1092",
+			"1091",
+			"1090"
+		],
+		"resource": "109_erlangshen",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "二郎神每击杀一个敌人，攻击力都会大幅提升，一言不合就达成1V6",
+		"damage_type": 1,
+		"nature": 1,
 		"friendly": [
 			"5",
 			"8",
@@ -898,62 +903,32 @@
 			"60",
 			"61"
 		],
-		"origin_star": 1,
+		"job": 1,
 		"speed": 10000,
-		"piece": 10,
-		"slogan": "玉帝是我舅舅……",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 5
+		"race": 5,
+		"dead_frame": 86,
+		"sex": 1,
+		"weapon_name": "三尖两刃刀"
 	},
 	"110": {
-		"evolution_star": [
-			"5",
-			"10",
-			"15",
-			"20"
-		],
-		"dead_sound": null,
-		"weapon_disc": "玉兔精会不断削弱敌人的物理攻击，直到攻击力降为0",
-		"damage_type": 1,
-		"dead_frame": 81,
-		"nature": 2,
-		"weapon_name": "广寒石",
-		"job": 3,
-		"race": 4,
+		"order": 30,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1106",
 			""
 		],
-		"sex": 2,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 10,
-		"id": 110,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1101",
-			"1105",
-			"1104",
-			"1103",
-			"1102",
-			"1100"
-		],
-		"range": 2,
-		"name": "玉兔精",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 1,
-		"resource": "110_yutujing",
-		"crit_chance": 0.1,
+		"id": 110,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "玉兔精",
 		"modle_height": 70,
 		"skill": [
 			"1101",
@@ -964,7 +939,37 @@
 			"1106",
 			"1100"
 		],
-		"dodge_chance": 0.05,
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0.1,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "还是和嫦娥在一起吧~",
+		"evolution_stage": [
+			"0",
+			"1500",
+			"3000",
+			"4500"
+		],
+		"skill_trigger_order": [
+			"1101",
+			"1105",
+			"1104",
+			"1103",
+			"1102",
+			"1100"
+		],
+		"resource": "110_yutujing",
+		"evolution_star": [
+			"5",
+			"10",
+			"15",
+			"20"
+		],
+		"dead_sound": null,
+		"weapon_disc": "玉兔精会不断削弱敌人的物理攻击，直到攻击力降为0",
+		"damage_type": 1,
+		"nature": 2,
 		"friendly": [
 			"9",
 			"26",
@@ -972,62 +977,32 @@
 			"54",
 			"71"
 		],
-		"origin_star": 1,
+		"job": 3,
 		"speed": 5000,
-		"piece": 10,
-		"slogan": "还是和嫦娥在一起吧",
-		"evolution_stage": [
-			"0",
-			"1500",
-			"3000",
-			"4500"
-		],
-		"order": 30
+		"race": 4,
+		"dead_frame": 81,
+		"sex": 2,
+		"weapon_name": "广寒石"
 	},
 	"111": {
-		"evolution_star": [
-			"7",
-			"12",
-			"17",
-			"22"
-		],
-		"dead_sound": null,
-		"weapon_disc": "蝎子精会让敌人中毒，毒性无限叠加，只要战斗够持久，敌人迟早会中毒身亡",
-		"damage_type": 2,
-		"dead_frame": 73,
-		"nature": 5,
-		"weapon_name": "蝎尾刺",
-		"job": 2,
-		"race": 4,
+		"order": 29,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1116",
 			""
 		],
-		"sex": 2,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 10,
-		"id": 111,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1111",
-			"1115",
-			"1114",
-			"1113",
-			"1112",
-			"1110"
-		],
-		"range": 2,
-		"name": "蝎子精",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 1,
-		"resource": "111_xiezijing",
-		"crit_chance": 0,
+		"id": 111,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "蝎子精",
 		"modle_height": 80,
 		"skill": [
 			"1111",
@@ -1038,27 +1013,27 @@
 			"1116",
 			"1110"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"9",
-			"26",
-			"27",
-			"28",
-			"29"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": 1,
 		"piece": 10,
-		"slogan": "唐僧，你就从我了吧",
+		"slogan": "唐僧，你就从我了吧~",
 		"evolution_stage": [
 			"0",
 			"2000",
 			"3500",
 			"5000"
 		],
-		"order": 29
-	},
-	"112": {
+		"skill_trigger_order": [
+			"1111",
+			"1115",
+			"1114",
+			"1113",
+			"1112",
+			"1110"
+		],
+		"resource": "111_xiezijing",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1066,40 +1041,39 @@
 			"22"
 		],
 		"dead_sound": null,
-		"weapon_disc": "孔雀公主具备极强的单体治疗能力",
+		"weapon_disc": "蝎子精会让敌人中毒，毒性无限叠加，只要战斗够持久，敌人迟早会中毒身亡",
 		"damage_type": 2,
-		"dead_frame": 88,
-		"nature": 2,
-		"weapon_name": "孔雀翎",
-		"job": 4,
+		"nature": 5,
+		"friendly": [
+			"9",
+			"26",
+			"27",
+			"28",
+			"29"
+		],
+		"job": 2,
+		"speed": 5000,
 		"race": 4,
-		"begin_skill": null,
+		"dead_frame": 73,
 		"sex": 2,
+		"weapon_name": "蝎尾刺"
+	},
+	"112": {
+		"order": 14,
 		"physical_atk": 0,
 		"magical_atk": 4,
 		"battle_point": 30,
-		"id": 112,
-		"hp": 32,
+		"hp": 24,
 		"star_convert": 4,
 		"physical_def": 1,
-		"skill_trigger_order": [
-			"1121",
-			"1126",
-			"1125",
-			"1124",
-			"1123",
-			"1122",
-			"1120"
-		],
-		"range": 2,
-		"name": "孔雀公主",
-		"crit_damage": 1.5,
 		"magical_def": 1.5,
+		"begin_skill": null,
+		"crit_damage": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 2,
-		"resource": "112_kongquegongzhu",
-		"crit_chance": 0,
+		"id": 112,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "孔雀公主",
 		"modle_height": 75,
 		"skill": [
 			"1121",
@@ -1110,26 +1084,28 @@
 			"1126",
 			"1120"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"27",
-			"28",
-			"33",
-			"41"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": 1,
 		"piece": 10,
-		"slogan": "美，是一种境界",
+		"slogan": "美，是一种境界~",
 		"evolution_stage": [
 			"0",
 			"2000",
 			"3500",
 			"5000"
 		],
-		"order": 14
-	},
-	"113": {
+		"skill_trigger_order": [
+			"1121",
+			"1126",
+			"1125",
+			"1124",
+			"1123",
+			"1122",
+			"1120"
+		],
+		"resource": "112_kongquegongzhu",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1137,39 +1113,38 @@
 			"22"
 		],
 		"dead_sound": null,
-		"weapon_disc": "女儿国王会不断削弱敌人的魔法攻击，直到攻击力降为0",
+		"weapon_disc": "孔雀公主具备极强的单体治疗能力",
 		"damage_type": 2,
-		"dead_frame": 79,
-		"nature": 1,
-		"weapon_name": "紫金弓",
-		"job": 2,
-		"race": 3,
-		"begin_skill": 1136,
+		"nature": 2,
+		"friendly": [
+			"27",
+			"28",
+			"33",
+			"41"
+		],
+		"job": 4,
+		"speed": 5000,
+		"race": 4,
+		"dead_frame": 88,
 		"sex": 2,
+		"weapon_name": "孔雀翎"
+	},
+	"113": {
+		"order": 25,
 		"physical_atk": 0,
 		"magical_atk": 4,
 		"battle_point": 10,
-		"id": 113,
-		"hp": 32,
+		"hp": 24,
 		"star_convert": 1,
 		"physical_def": 1,
-		"skill_trigger_order": [
-			"1131",
-			"1135",
-			"1134",
-			"1133",
-			"1132",
-			"1130"
-		],
-		"range": 2,
-		"name": "女儿国王",
-		"crit_damage": 1.5,
 		"magical_def": 1.5,
+		"begin_skill": 1136,
+		"crit_damage": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 1,
-		"resource": "113_nvwang",
-		"crit_chance": 0,
+		"id": 113,
 		"block_chance": 0,
-		"tip": "西梁女国国王，姓名",
+		"name": "女儿国王",
 		"modle_height": 80,
 		"skill": [
 			"1131",
@@ -1180,16 +1155,10 @@
 			"1136",
 			"1130"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"9",
-			"29",
-			"30",
-			"33",
-			"34"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": "西梁女国国王，姓名",
 		"piece": 10,
 		"slogan": "我愿将一国之富，招你为夫",
 		"evolution_stage": [
@@ -1198,9 +1167,15 @@
 			"3500",
 			"5000"
 		],
-		"order": 25
-	},
-	"114": {
+		"skill_trigger_order": [
+			"1131",
+			"1135",
+			"1134",
+			"1133",
+			"1132",
+			"1130"
+		],
+		"resource": "113_nvwang",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1208,40 +1183,39 @@
 			"22"
 		],
 		"dead_sound": null,
-		"weapon_disc": "王母娘娘可以治疗全体友军",
+		"weapon_disc": "女儿国王会不断削弱敌人的魔法攻击，直到攻击力降为0",
 		"damage_type": 2,
-		"dead_frame": 85,
-		"nature": 2,
-		"weapon_name": "长生杖",
-		"job": 4,
-		"race": 5,
-		"begin_skill": null,
+		"nature": 1,
+		"friendly": [
+			"9",
+			"29",
+			"30",
+			"33",
+			"34"
+		],
+		"job": 2,
+		"speed": 5000,
+		"race": 3,
+		"dead_frame": 79,
 		"sex": 2,
+		"weapon_name": "紫金弓"
+	},
+	"114": {
+		"order": 8,
 		"physical_atk": 0,
 		"magical_atk": 4,
 		"battle_point": 65,
-		"id": 114,
-		"hp": 32,
+		"hp": 24,
 		"star_convert": 7,
 		"physical_def": 1,
-		"skill_trigger_order": [
-			"1141",
-			"1146",
-			"1145",
-			"1144",
-			"1143",
-			"1142",
-			"1140"
-		],
-		"range": 2,
-		"name": "王母娘娘",
-		"crit_damage": 1.5,
 		"magical_def": 1.5,
+		"begin_skill": null,
+		"crit_damage": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 3,
-		"resource": "114_xiwangmu",
-		"crit_chance": 0,
+		"id": 114,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "王母娘娘",
 		"modle_height": 75,
 		"skill": [
 			"1141",
@@ -1252,7 +1226,38 @@
 			"1146",
 			"1140"
 		],
-		"dodge_chance": 0.05,
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "蟠桃来两颗，头孢来两粒！",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"skill_trigger_order": [
+			"1141",
+			"1146",
+			"1145",
+			"1144",
+			"1143",
+			"1142",
+			"1140"
+		],
+		"resource": "114_xiwangmu",
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"dead_sound": null,
+		"weapon_disc": "王母娘娘可以治疗全体友军",
+		"damage_type": 2,
+		"nature": 2,
 		"friendly": [
 			"8",
 			"16",
@@ -1263,61 +1268,33 @@
 			"63",
 			"68"
 		],
-		"origin_star": 1,
+		"job": 4,
 		"speed": 5000,
-		"piece": 10,
-		"slogan": "女之耽兮，不可脱也",
-		"evolution_stage": [
-			"0",
-			"2000",
-			"3500",
-			"5000"
-		],
-		"order": 8
+		"race": 5,
+		"dead_frame": 85,
+		"sex": 2,
+		"weapon_name": "长生杖"
 	},
 	"115": {
-		"evolution_star": [
-			"7",
-			"12",
-			"17",
-			"22"
-		],
-		"dead_sound": null,
-		"weapon_disc": "紫霞仙子可以绕开前排而直接攻击后排敌人",
-		"damage_type": 1,
-		"dead_frame": 87,
-		"nature": 2,
-		"weapon_name": "紫青神剑",
-		"job": 5,
-		"race": 5,
+		"order": 24,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1153",
 			"1154",
 			"1155"
 		],
-		"sex": 2,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 10,
-		"id": 115,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1151",
-			"1156",
-			"1152",
-			"1150"
-		],
-		"range": 1,
-		"name": "紫霞仙子",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 1,
-		"resource": "115_zixiaxianzi",
-		"crit_chance": 0.1,
+		"id": 115,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "紫霞仙子",
 		"modle_height": 70,
 		"skill": [
 			"1151",
@@ -1328,15 +1305,10 @@
 			"1156",
 			"1150"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"3",
-			"23",
-			"34",
-			"53"
-		],
+		"range": 1,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.1,
+		"tip": 1,
 		"piece": 10,
 		"slogan": "我猜中了开头,却猜不到这结局",
 		"evolution_stage": [
@@ -1345,9 +1317,86 @@
 			"3500",
 			"5000"
 		],
-		"order": 24
+		"skill_trigger_order": [
+			"1151",
+			"1156",
+			"1152",
+			"1150"
+		],
+		"resource": "115_zixiaxianzi",
+		"evolution_star": [
+			"7",
+			"12",
+			"17",
+			"22"
+		],
+		"dead_sound": null,
+		"weapon_disc": "紫霞仙子可以绕开前排而直接攻击后排敌人",
+		"damage_type": 1,
+		"nature": 2,
+		"friendly": [
+			"3",
+			"23",
+			"34",
+			"53"
+		],
+		"job": 5,
+		"speed": 10000,
+		"race": 5,
+		"dead_frame": 87,
+		"sex": 2,
+		"weapon_name": "紫青神剑"
 	},
 	"116": {
+		"order": 28,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1,
+		"magical_def": 1.5,
+		"begin_skill": [
+			"1166",
+			""
+		],
+		"crit_damage": 1.5,
+		"dodge_chance": 0.05,
+		"quality": 1,
+		"id": 116,
+		"block_chance": 0,
+		"name": "黑无常",
+		"modle_height": 80,
+		"skill": [
+			"1161",
+			"1162",
+			"1163",
+			"1164",
+			"1165",
+			"1166",
+			"1160"
+		],
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "天下太平",
+		"evolution_stage": [
+			"0",
+			"2000",
+			"3500",
+			"5000"
+		],
+		"skill_trigger_order": [
+			"1161",
+			"1165",
+			"1164",
+			"1163",
+			"1162",
+			"1160"
+		],
+		"resource": "116_heiwuchang",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1357,69 +1406,69 @@
 		"dead_sound": null,
 		"weapon_disc": "黑无常会诅咒敌人，让敌人攻击时自残，敌人攻击越高越吃亏",
 		"damage_type": 2,
-		"dead_frame": 88,
 		"nature": 5,
-		"weapon_name": "无常鬼",
-		"job": 2,
-		"race": 5,
-		"begin_skill": [
-			"1166",
-			""
-		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 10,
-		"id": 116,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1161",
-			"1165",
-			"1164",
-			"1163",
-			"1162",
-			"1160"
-		],
-		"range": 2,
-		"name": "黑无常",
-		"crit_damage": 1.5,
-		"magical_def": 1.5,
-		"quality": 1,
-		"resource": "116_heiwuchang",
-		"crit_chance": 0,
-		"block_chance": 0,
-		"tip": 1,
-		"modle_height": 80,
-		"skill": [
-			"1161",
-			"1162",
-			"1163",
-			"1164",
-			"1165",
-			"1166",
-			"1160"
-		],
-		"dodge_chance": 0.05,
 		"friendly": [
 			"6",
 			"35",
 			"49"
 		],
-		"origin_star": 1,
+		"job": 2,
 		"speed": 5000,
+		"race": 5,
+		"dead_frame": 88,
+		"sex": 1,
+		"weapon_name": "无常鬼"
+	},
+	"117": {
+		"order": 20,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 30,
+		"hp": 24,
+		"star_convert": 4,
+		"physical_def": 1,
+		"magical_def": 1.5,
+		"begin_skill": [
+			"1176",
+			""
+		],
+		"crit_damage": 1.5,
+		"dodge_chance": 0.05,
+		"quality": 2,
+		"id": 117,
+		"block_chance": 0,
+		"name": "白无常",
+		"modle_height": 80,
+		"skill": [
+			"1171",
+			"1172",
+			"1173",
+			"1174",
+			"1175",
+			"1176",
+			"1170"
+		],
+		"range": 2,
+		"origin_star": 1,
+		"crit_chance": 0,
+		"tip": 1,
 		"piece": 10,
-		"slogan": "天下太平",
+		"slogan": "一见生财",
 		"evolution_stage": [
 			"0",
 			"2000",
 			"3500",
 			"5000"
 		],
-		"order": 28
-	},
-	"117": {
+		"skill_trigger_order": [
+			"1171",
+			"1175",
+			"1174",
+			"1173",
+			"1172",
+			"1170"
+		],
+		"resource": "117_baiwuchang",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1429,112 +1478,38 @@
 		"dead_sound": null,
 		"weapon_disc": "白无常会祝福友军，让友军攻击时吸血",
 		"damage_type": 2,
-		"dead_frame": 83,
 		"nature": 5,
-		"weapon_name": "招魂幡",
-		"job": 4,
-		"race": 5,
-		"begin_skill": [
-			"1176",
-			""
-		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 30,
-		"id": 117,
-		"hp": 32,
-		"star_convert": 4,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1171",
-			"1175",
-			"1174",
-			"1173",
-			"1172",
-			"1170"
-		],
-		"range": 2,
-		"name": "白无常",
-		"crit_damage": 1.5,
-		"magical_def": 1.5,
-		"quality": 2,
-		"resource": "117_baiwuchang",
-		"crit_chance": 0,
-		"block_chance": 0,
-		"tip": 1,
-		"modle_height": 80,
-		"skill": [
-			"1171",
-			"1172",
-			"1173",
-			"1174",
-			"1175",
-			"1176",
-			"1170"
-		],
-		"dodge_chance": 0.05,
 		"friendly": [
 			"6",
 			"35",
 			"49"
 		],
-		"origin_star": 1,
+		"job": 4,
 		"speed": 5000,
-		"piece": 10,
-		"slogan": "一见生财",
-		"evolution_stage": [
-			"0",
-			"2000",
-			"3500",
-			"5000"
-		],
-		"order": 20
+		"race": 5,
+		"dead_frame": 83,
+		"sex": 1,
+		"weapon_name": "招魂幡"
 	},
 	"118": {
-		"evolution_star": [
-			"7",
-			"12",
-			"17",
-			"22"
-		],
-		"dead_sound": null,
-		"weapon_disc": "东海龙王不仅具备较强的全体伤害能力，还会使敌人无法以任何形式回血",
-		"damage_type": 2,
-		"dead_frame": 71,
-		"nature": 3,
-		"weapon_name": "碧海龙珠",
-		"job": 2,
-		"race": 5,
+		"order": 9,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 65,
+		"hp": 24,
+		"star_convert": 7,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1186",
 			""
 		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 65,
-		"id": 118,
-		"hp": 32,
-		"star_convert": 7,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1181",
-			"1185",
-			"1184",
-			"1183",
-			"1182",
-			"1180"
-		],
-		"range": 2,
-		"name": "东海龙王",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 3,
-		"resource": "118_donghailongwang",
-		"crit_chance": 0,
+		"id": 118,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "东海龙王",
 		"modle_height": 100,
 		"skill": [
 			"1181",
@@ -1545,17 +1520,10 @@
 			"1186",
 			"1180"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"7",
-			"17",
-			"32",
-			"36",
-			"43",
-			"70"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": 1,
 		"piece": 10,
 		"slogan": "别在我的龙宫搞事情了！",
 		"evolution_stage": [
@@ -1564,9 +1532,15 @@
 			"3500",
 			"5000"
 		],
-		"order": 9
-	},
-	"119": {
+		"skill_trigger_order": [
+			"1181",
+			"1185",
+			"1184",
+			"1183",
+			"1182",
+			"1180"
+		],
+		"resource": "118_donghailongwang",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1574,41 +1548,44 @@
 			"22"
 		],
 		"dead_sound": null,
-		"weapon_disc": "金角大王会攻击物理攻击最高的那个敌人，使其攻击力降为0，同时具备很高的物防",
-		"damage_type": 1,
-		"dead_frame": 73,
-		"nature": 1,
-		"weapon_name": "七宝刀",
-		"job": 5,
-		"race": 4,
+		"weapon_disc": "东海龙王不仅具备较强的全体伤害能力，还会使敌人无法以任何形式回血",
+		"damage_type": 2,
+		"nature": 3,
+		"friendly": [
+			"7",
+			"17",
+			"32",
+			"36",
+			"43",
+			"70"
+		],
+		"job": 2,
+		"speed": 5000,
+		"race": 5,
+		"dead_frame": 71,
+		"sex": 1,
+		"weapon_name": "碧海龙珠"
+	},
+	"119": {
+		"order": 13,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 30,
+		"hp": 24,
+		"star_convert": 4,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1193",
 			"1194",
 			"1195"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 30,
-		"id": 119,
-		"hp": 32,
-		"star_convert": 4,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1191",
-			"1196",
-			"1192",
-			"1190"
-		],
-		"range": 1,
-		"name": "金角大王",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 2,
-		"resource": "119_jinjiaodawang",
-		"crit_chance": 0.1,
+		"id": 119,
 		"block_chance": 0,
-		"tip": "金角大王喜爱派人巡山，抓个和尚做晚餐",
+		"name": "金角大王",
 		"modle_height": 80,
 		"skill": [
 			"1191",
@@ -1619,15 +1596,10 @@
 			"1196",
 			"1190"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"37",
-			"38",
-			"40",
-			"71"
-		],
+		"range": 1,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.1,
+		"tip": "金角大王喜爱派人巡山，抓个和尚做晚餐",
 		"piece": 10,
 		"slogan": "在天上看炉子哪有当妖王自在",
 		"evolution_stage": [
@@ -1636,9 +1608,13 @@
 			"3500",
 			"5000"
 		],
-		"order": 13
-	},
-	"120": {
+		"skill_trigger_order": [
+			"1191",
+			"1196",
+			"1192",
+			"1190"
+		],
+		"resource": "119_jinjiaodawang",
 		"evolution_star": [
 			"7",
 			"12",
@@ -1646,41 +1622,42 @@
 			"22"
 		],
 		"dead_sound": null,
-		"weapon_disc": "金角大王会攻击魔法攻击最高的那个敌人，使其攻击力降为0，同时具备很高的魔防",
+		"weapon_disc": "金角大王会攻击物理攻击最高的那个敌人，使其攻击力降为0，同时具备很高的物防",
 		"damage_type": 1,
-		"dead_frame": 81,
 		"nature": 1,
-		"weapon_name": "七星剑",
+		"friendly": [
+			"37",
+			"38",
+			"40",
+			"71"
+		],
 		"job": 5,
+		"speed": 10000,
 		"race": 4,
+		"dead_frame": 73,
+		"sex": 1,
+		"weapon_name": "七宝刀"
+	},
+	"120": {
+		"order": 26,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 10,
+		"hp": 24,
+		"star_convert": 1,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1203",
 			"1204",
 			"1205"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 10,
-		"id": 120,
-		"hp": 32,
-		"star_convert": 1,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1201",
-			"1206",
-			"1202",
-			"1200"
-		],
-		"range": 1,
-		"name": "银角大王",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 1,
-		"resource": "120_yinjiaodawang",
-		"crit_chance": 0.1,
+		"id": 120,
 		"block_chance": 0,
-		"tip": "金角大王喜爱打鼓敲锣，生活充满节奏感",
+		"name": "银角大王",
 		"modle_height": 75,
 		"skill": [
 			"1201",
@@ -1691,15 +1668,10 @@
 			"1206",
 			"1200"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"37",
-			"39",
-			"40",
-			"71"
-		],
+		"range": 1,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.1,
+		"tip": "金角大王喜爱打鼓敲锣，生活充满节奏感",
 		"piece": 10,
 		"slogan": "在天上看炉子好歹也是个公务员啊~",
 		"evolution_stage": [
@@ -1708,51 +1680,56 @@
 			"3500",
 			"5000"
 		],
-		"order": 26
-	},
-	"121": {
+		"skill_trigger_order": [
+			"1201",
+			"1206",
+			"1202",
+			"1200"
+		],
+		"resource": "120_yinjiaodawang",
 		"evolution_star": [
-			"9",
-			"14",
-			"19",
-			"24"
+			"7",
+			"12",
+			"17",
+			"22"
 		],
 		"dead_sound": null,
-		"weapon_disc": "金翅大鹏会攻击生命最高的敌人，并且敌人生命越高伤害越高，可谓肉盾杀手",
+		"weapon_disc": "金角大王会攻击魔法攻击最高的那个敌人，使其攻击力降为0，同时具备很高的魔防",
 		"damage_type": 1,
-		"dead_frame": 76,
 		"nature": 1,
-		"weapon_name": "翅金枪",
-		"job": 3,
+		"friendly": [
+			"37",
+			"39",
+			"40",
+			"71"
+		],
+		"job": 5,
+		"speed": 10000,
 		"race": 4,
+		"dead_frame": 81,
+		"sex": 1,
+		"weapon_name": "七星剑"
+	},
+	"121": {
+		"order": 4,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 65,
+		"hp": 24,
+		"star_convert": 7,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1213",
 			"1214",
 			"1215"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 65,
-		"id": 121,
-		"hp": 32,
-		"star_convert": 7,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1216",
-			"1212",
-			"1211",
-			"1210"
-		],
-		"range": 2,
-		"name": "金翅大鹏",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 3,
-		"resource": "121_jinchidapeng",
-		"crit_chance": 0.1,
+		"id": 121,
 		"block_chance": 0,
-		"tip": "北冥有鱼，其名为鲲，鲲之大，一锅炖不下；化而为鸟，其名为鹏，鹏之大，需要两烤架，一个孜然，一个微辣！",
+		"name": "金翅大鹏",
 		"modle_height": 110,
 		"skill": [
 			"1211",
@@ -1763,27 +1740,25 @@
 			"1216",
 			"1210"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"40",
-			"41",
-			"42",
-			"51",
-			"58"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0.1,
+		"tip": "北冥有鱼，其名为鲲，鲲之大，一锅炖不下；化而为鸟，其名为鹏，鹏之大，需要两烤架，一个孜然，一个微辣！",
 		"piece": 10,
-		"slogan": "我是如来的舅舅！",
+		"slogan": "我是如来的舅舅，我是狡猾的大鸟！",
 		"evolution_stage": [
 			"0",
 			"2500",
 			"4000",
 			"5500"
 		],
-		"order": 4
-	},
-	"122": {
+		"skill_trigger_order": [
+			"1216",
+			"1212",
+			"1211",
+			"1210"
+		],
+		"resource": "121_jinchidapeng",
 		"evolution_star": [
 			"9",
 			"14",
@@ -1791,41 +1766,44 @@
 			"24"
 		],
 		"dead_sound": null,
-		"weapon_disc": "哪吒每次行动后都会提升攻击力，并且没有上限，打到后期无人能敌",
+		"weapon_disc": "金翅大鹏会攻击生命最高的敌人，并且敌人生命越高伤害越高，可谓肉盾杀手",
 		"damage_type": 1,
-		"dead_frame": 92,
-		"nature": 4,
-		"weapon_name": "火尖枪",
-		"job": 1,
-		"race": 5,
+		"nature": 1,
+		"friendly": [
+			"40",
+			"41",
+			"42",
+			"51",
+			"58"
+		],
+		"job": 3,
+		"speed": 10000,
+		"race": 4,
+		"dead_frame": 76,
+		"sex": 1,
+		"weapon_name": "翅金枪"
+	},
+	"122": {
+		"order": 12,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 30,
+		"hp": 30,
+		"star_convert": 4,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1223",
 			"1224",
 			"1225",
 			"1226"
 		],
-		"sex": 1,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 30,
-		"id": 122,
-		"hp": 40,
-		"star_convert": 4,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1221",
-			"1222",
-			"1220"
-		],
-		"range": 1,
-		"name": "哪吒",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0,
 		"quality": 2,
-		"resource": "122_nezha",
-		"crit_chance": 0.05,
+		"id": 122,
 		"block_chance": 0.1,
-		"tip": 1,
+		"name": "哪吒",
 		"modle_height": 75,
 		"skill": [
 			"1221",
@@ -1836,7 +1814,34 @@
 			"1226",
 			"1220"
 		],
-		"dodge_chance": 0,
+		"range": 1,
+		"origin_star": 1,
+		"crit_chance": 0.05,
+		"tip": 1,
+		"piece": 10,
+		"slogan": "闹过东海，拔过龙筋",
+		"evolution_stage": [
+			"0",
+			"2500",
+			"4000",
+			"5500"
+		],
+		"skill_trigger_order": [
+			"1221",
+			"1222",
+			"1220"
+		],
+		"resource": "122_nezha",
+		"evolution_star": [
+			"9",
+			"14",
+			"19",
+			"24"
+		],
+		"dead_sound": null,
+		"weapon_disc": "哪吒每次行动后都会提升攻击力，并且没有上限，打到后期无人能敌",
+		"damage_type": 1,
+		"nature": 4,
 		"friendly": [
 			"8",
 			"25",
@@ -1846,62 +1851,32 @@
 			"47",
 			"61"
 		],
-		"origin_star": 1,
+		"job": 1,
 		"speed": 10000,
-		"piece": 10,
-		"slogan": "闹过东海，拔过龙筋",
-		"evolution_stage": [
-			"0",
-			"2500",
-			"4000",
-			"5500"
-		],
-		"order": 12
+		"race": 5,
+		"dead_frame": 92,
+		"sex": 1,
+		"weapon_name": "火尖枪"
 	},
 	"123": {
-		"evolution_star": [
-			"9",
-			"14",
-			"19",
-			"24"
-		],
-		"dead_sound": null,
-		"weapon_disc": "苏妲己会使敌人灼烧，敌人生命越高灼烧伤害越高",
-		"damage_type": 2,
-		"dead_frame": 89,
-		"nature": 4,
-		"weapon_name": "玲珑心",
-		"job": 2,
-		"race": 3,
+		"order": 17,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 30,
+		"hp": 24,
+		"star_convert": 4,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1236",
 			""
 		],
-		"sex": 2,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 30,
-		"id": 123,
-		"hp": 32,
-		"star_convert": 4,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1231",
-			"1235",
-			"1234",
-			"1233",
-			"1232",
-			"1230"
-		],
-		"range": 2,
-		"name": "苏妲己",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 2,
-		"resource": "123_sudaji",
-		"crit_chance": 0,
+		"id": 123,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "苏妲己",
 		"modle_height": 75,
 		"skill": [
 			"1231",
@@ -1912,27 +1887,27 @@
 			"1236",
 			"1230"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"27",
-			"46",
-			"48",
-			"61",
-			"65"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": 1,
 		"piece": 10,
-		"slogan": "红颜祸水这话，都是男人说的",
+		"slogan": "红颜祸水这话，明显都是男人说的~",
 		"evolution_stage": [
 			"0",
 			"2500",
 			"4000",
 			"5500"
 		],
-		"order": 17
-	},
-	"124": {
+		"skill_trigger_order": [
+			"1231",
+			"1235",
+			"1234",
+			"1233",
+			"1232",
+			"1230"
+		],
+		"resource": "123_sudaji",
 		"evolution_star": [
 			"9",
 			"14",
@@ -1940,42 +1915,42 @@
 			"24"
 		],
 		"dead_sound": null,
-		"weapon_disc": "姜子牙会沉默敌人，使它们无法使用高级技能",
+		"weapon_disc": "苏妲己会使敌人灼烧，敌人生命越高灼烧伤害越高",
 		"damage_type": 2,
-		"dead_frame": 90,
-		"nature": 2,
-		"weapon_name": "太公钓",
+		"nature": 4,
+		"friendly": [
+			"27",
+			"46",
+			"48",
+			"61",
+			"65"
+		],
 		"job": 2,
+		"speed": 5000,
 		"race": 3,
+		"dead_frame": 89,
+		"sex": 2,
+		"weapon_name": "玲珑心"
+	},
+	"124": {
+		"order": 10,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 65,
+		"hp": 24,
+		"star_convert": 7,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1246",
 			""
 		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 65,
-		"id": 124,
-		"hp": 32,
-		"star_convert": 7,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1242",
-			"1245",
-			"1244",
-			"1243",
-			"1241",
-			"1240"
-		],
-		"range": 2,
-		"name": "姜子牙",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 3,
-		"resource": "124_jiangziya",
-		"crit_chance": 0,
+		"id": 124,
 		"block_chance": 0,
-		"tip": "热衷于钓鱼执法",
+		"name": "姜子牙",
 		"modle_height": 85,
 		"skill": [
 			"1241",
@@ -1986,14 +1961,10 @@
 			"1246",
 			"1240"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"47",
-			"48",
-			"61"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": "热衷于钓鱼执法",
 		"piece": 10,
 		"slogan": "愿者上钩",
 		"evolution_stage": [
@@ -2002,9 +1973,15 @@
 			"4000",
 			"5500"
 		],
-		"order": 10
-	},
-	"125": {
+		"skill_trigger_order": [
+			"1242",
+			"1243",
+			"1244",
+			"1245",
+			"1241",
+			"1240"
+		],
+		"resource": "124_jiangziya",
 		"evolution_star": [
 			"9",
 			"14",
@@ -2012,42 +1989,40 @@
 			"24"
 		],
 		"dead_sound": null,
-		"weapon_disc": "阎罗王具备极强的单体伤害能力，伤害高低跟运气有关，运气够好可以直接秒杀敌人",
+		"weapon_disc": "姜子牙会沉默敌人，使它们无法使用高级技能",
 		"damage_type": 2,
-		"dead_frame": 85,
-		"nature": 5,
-		"weapon_name": "判官笔",
+		"nature": 2,
+		"friendly": [
+			"47",
+			"48",
+			"61"
+		],
 		"job": 2,
-		"race": 5,
+		"speed": 5000,
+		"race": 3,
+		"dead_frame": 90,
+		"sex": 1,
+		"weapon_name": "太公钓"
+	},
+	"125": {
+		"order": 15,
+		"physical_atk": 0,
+		"magical_atk": 4,
+		"battle_point": 30,
+		"hp": 24,
+		"star_convert": 4,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1256",
 			""
 		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 4,
-		"battle_point": 30,
-		"id": 125,
-		"hp": 32,
-		"star_convert": 4,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1255",
-			"1254",
-			"1253",
-			"1252",
-			"1251",
-			"1250"
-		],
-		"range": 2,
-		"name": "阎罗王",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0.05,
 		"quality": 2,
-		"resource": "125_yanluowang",
-		"crit_chance": 0,
+		"id": 125,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "阎罗王",
 		"modle_height": 100,
 		"skill": [
 			"1251",
@@ -2058,16 +2033,10 @@
 			"1256",
 			"1250"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"6",
-			"32",
-			"49",
-			"50",
-			"69"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0,
+		"tip": 1,
 		"piece": 10,
 		"slogan": "你的命运写在生死簿里",
 		"evolution_stage": [
@@ -2076,51 +2045,59 @@
 			"4000",
 			"5500"
 		],
-		"order": 15
-	},
-	"126": {
+		"skill_trigger_order": [
+			"1255",
+			"1254",
+			"1253",
+			"1252",
+			"1251",
+			"1250"
+		],
+		"resource": "125_yanluowang",
 		"evolution_star": [
-			"11",
-			"16",
-			"21",
-			"26"
+			"9",
+			"14",
+			"19",
+			"24"
 		],
 		"dead_sound": null,
-		"weapon_disc": "三大主神之一，不仅自身攻防兼备，还可以使全体友军获得无敌能力",
+		"weapon_disc": "阎罗王具备极强的单体伤害能力，伤害高低跟运气有关，运气够好可以直接秒杀敌人",
 		"damage_type": 2,
-		"dead_frame": 78,
-		"nature": 1,
-		"weapon_name": "紫金莲台",
+		"nature": 5,
+		"friendly": [
+			"6",
+			"32",
+			"49",
+			"50",
+			"69"
+		],
 		"job": 2,
-		"race": 3,
+		"speed": 5000,
+		"race": 5,
+		"dead_frame": 85,
+		"sex": 1,
+		"weapon_name": "判官笔"
+	},
+	"126": {
+		"order": 3,
+		"physical_atk": 0,
+		"magical_atk": 5,
+		"battle_point": 220,
+		"hp": 24,
+		"star_convert": 10,
+		"physical_def": 1,
+		"magical_def": 1.5,
 		"begin_skill": [
 			"1263",
 			"1264",
 			"1265"
 		],
-		"sex": 1,
-		"physical_atk": 0,
-		"magical_atk": 5,
-		"battle_point": 220,
-		"id": 126,
-		"hp": 32,
-		"star_convert": 10,
-		"physical_def": 1,
-		"skill_trigger_order": [
-			"1261",
-			"1266",
-			"1262",
-			"1260"
-		],
-		"range": 2,
-		"name": "如来佛主",
 		"crit_damage": 1.5,
-		"magical_def": 1.5,
+		"dodge_chance": 0,
 		"quality": 4,
-		"resource": "126_rulai",
-		"crit_chance": 0,
+		"id": 126,
 		"block_chance": 0,
-		"tip": null,
+		"name": "如来佛主",
 		"modle_height": 125,
 		"skill": [
 			"1261",
@@ -2131,15 +2108,10 @@
 			"1266",
 			"1260"
 		],
-		"dodge_chance": 0,
-		"friendly": [
-			"8",
-			"51",
-			"52",
-			"67"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 10000,
+		"crit_chance": 0,
+		"tip": null,
 		"piece": 10,
 		"slogan": "天上天下，惟我独尊",
 		"evolution_stage": [
@@ -2148,9 +2120,13 @@
 			"4500",
 			"6000"
 		],
-		"order": 3
-	},
-	"127": {
+		"skill_trigger_order": [
+			"1261",
+			"1266",
+			"1262",
+			"1260"
+		],
+		"resource": "126_rulai",
 		"evolution_star": [
 			"11",
 			"16",
@@ -2158,42 +2134,41 @@
 			"26"
 		],
 		"dead_sound": null,
-		"weapon_disc": "嫦娥有几率连续攻击多次，这跟运气有关，运气够好可以直接秒杀敌人",
-		"damage_type": 1,
-		"dead_frame": 79,
-		"nature": 3,
-		"weapon_name": "月轮",
-		"job": 3,
-		"race": 5,
+		"weapon_disc": "三大主神之一，不仅自身攻防兼备，还可以使全体友军获得无敌能力",
+		"damage_type": 2,
+		"nature": 1,
+		"friendly": [
+			"8",
+			"51",
+			"52",
+			"67"
+		],
+		"job": 2,
+		"speed": 10000,
+		"race": 3,
+		"dead_frame": 78,
+		"sex": 1,
+		"weapon_name": "紫金莲台"
+	},
+	"127": {
+		"order": 16,
+		"physical_atk": 4,
+		"magical_atk": 0,
+		"battle_point": 30,
+		"hp": 24,
+		"star_convert": 4,
+		"physical_def": 1.5,
+		"magical_def": 1,
 		"begin_skill": [
 			"1276",
 			""
 		],
-		"sex": 2,
-		"physical_atk": 4,
-		"magical_atk": 0,
-		"battle_point": 30,
-		"id": 127,
-		"hp": 32,
-		"star_convert": 4,
-		"physical_def": 1.5,
-		"skill_trigger_order": [
-			"1275",
-			"1274",
-			"1273",
-			"1272",
-			"1271",
-			"1270"
-		],
-		"range": 2,
-		"name": "嫦娥",
 		"crit_damage": 1.5,
-		"magical_def": 1,
+		"dodge_chance": 0.05,
 		"quality": 2,
-		"resource": "127_change",
-		"crit_chance": 0.1,
+		"id": 127,
 		"block_chance": 0,
-		"tip": 1,
+		"name": "嫦娥",
 		"modle_height": 85,
 		"skill": [
 			"1271",
@@ -2204,17 +2179,10 @@
 			"1276",
 			"1270"
 		],
-		"dodge_chance": 0.05,
-		"friendly": [
-			"14",
-			"53",
-			"54",
-			"55",
-			"56",
-			"57"
-		],
+		"range": 2,
 		"origin_star": 1,
-		"speed": 5000,
+		"crit_chance": 0.1,
+		"tip": 1,
 		"piece": 10,
 		"slogan": "寂寞、空虚、冷",
 		"evolution_stage": [
@@ -2223,6 +2191,38 @@
 			"4500",
 			"6000"
 		],
-		"order": 16
+		"skill_trigger_order": [
+			"1275",
+			"1274",
+			"1273",
+			"1272",
+			"1271",
+			"1270"
+		],
+		"resource": "127_change",
+		"evolution_star": [
+			"11",
+			"16",
+			"21",
+			"26"
+		],
+		"dead_sound": null,
+		"weapon_disc": "嫦娥有几率连续攻击多次，这跟运气有关，运气够好可以直接秒杀敌人",
+		"damage_type": 1,
+		"nature": 3,
+		"friendly": [
+			"14",
+			"53",
+			"54",
+			"55",
+			"56",
+			"57"
+		],
+		"job": 3,
+		"speed": 5000,
+		"race": 5,
+		"dead_frame": 79,
+		"sex": 2,
+		"weapon_name": "月轮"
 	}
 }

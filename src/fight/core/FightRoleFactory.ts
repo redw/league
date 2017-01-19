@@ -15,6 +15,9 @@ class FightRoleFactory{
         } else {
             role = new FightRole(fightContainer, fightRoleVO);
         }
+        let point = fight.getRoleInitPoint(fightRoleVO);
+        role.x = point.x;
+        role.y = point.y;
         return role;
     }
 

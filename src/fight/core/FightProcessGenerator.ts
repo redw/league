@@ -406,7 +406,7 @@ class FightProcessGenerator {
             }
         }
         if (isEnd) {
-            if (this.roles[0].side == FightSideEnum.LEFT_SIDE) {
+            if (len > 0 && this.roles[0].side == FightSideEnum.LEFT_SIDE) {
                 this.result = 1;
             }
         }
