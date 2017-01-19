@@ -12,6 +12,7 @@ class FightContainer extends egret.DisplayObjectContainer {
     private type:number = FightTypeEnum.PVE;                                    // 战斗类型
     private forceEnd:boolean = false;                                           // 强制结束
     private dataGenerator:FightProcessGenerator;                                // 战斗过程生成器(如果需前端算)
+    private playSteps:FightReportItem[];                                        // 战斗报告(服务器端)
 
     private state:number = FightStateEnum.Wait;                                 // 战斗状态
     public oldLifeRatio:number = 1;                                             // 生命进度条
@@ -65,6 +66,11 @@ class FightContainer extends egret.DisplayObjectContainer {
 
             this.middleGroundLayer = new PVEMiddleGround(hasTween);
             this.addChild(this.middleGroundLayer);
+        } else {
+            let areaImage =  new PriorityImage(fight.LOAD_PRIORITY_AREA_BG, "arena_background_png");
+            areaImage.x = -30;
+            areaImage.y = 140;
+            this.addChild(areaImage);
         }
 
         this.grayLayer = new egret.Shape();
@@ -134,11 +140,12 @@ class FightContainer extends egret.DisplayObjectContainer {
             this.foregroundLayer.level = level;
             this.middleGroundLayer.level = level;
             this.prospectLayer.level = level;
-            this.tweenRemoveRoleComplete();
+            // this.tweenRemoveRoleComplete();
         }
     }
 
-    public doGuideEnd(step:number=0){
+    public forceStart(steps:FightReportItem[]=null){
+        this.playSteps = steps;
         this.autoFight = true;
         this.tweenRemoveRoleComplete(null);
     }
@@ -227,7 +234,7 @@ class FightContainer extends egret.DisplayObjectContainer {
             }
         }
         if (!withTween && this.autoFight){
-            this.start();
+            this.start(this.playSteps);
         }
     }
 
@@ -310,6 +317,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                     }
                 }
             }
+            this.playSteps = null;
         }
     }
 
@@ -318,7 +326,7 @@ class FightContainer extends egret.DisplayObjectContainer {
         this.moveCount++;
         if (this.moveCount >= this.originalElements.length) {
             if (this.autoFight)
-                this.start();
+                this.start(this.playSteps);
         }
     }
 
@@ -387,6 +395,9 @@ class FightContainer extends egret.DisplayObjectContainer {
 
     private getPlayingCount() {
         let result = 1;
+        if (this.type == FightTypeEnum.PVP) {
+            return result;
+        }
         if (this.fightSteps.length > 1) {
             let firstPos = this.fightSteps[0].pos;
             let firstSide = firstPos.substr(0, 1);
@@ -607,11 +618,11 @@ class FightContainer extends egret.DisplayObjectContainer {
         if (this.autoFight) {
             this.addRoles(roleArr, true);
         } else {
-            if (this.level % 10 ==  0) {
+            if (this.level % 10 ==  0 && this.type == FightTypeEnum.PVE) {
                 let eff = new BossIncomingEff();
                 eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
                 this.damageEffLayer.addChild(eff);
-            } else if (Config.StageData[this.level - 1] && Config.StageData[this.level].map != Config.StageData[this.level - 1].map){
+            } else if (Config.StageData[this.level - 1] && Config.StageData[this.level].map != Config.StageData[this.level - 1].map && this.type == FightTypeEnum.PVE){
                 let eff = new NewChapterEff();
                 eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
                 this.damageEffLayer.addChild(eff);
@@ -659,7 +670,7 @@ class FightContainer extends egret.DisplayObjectContainer {
      * @param 抖动幅度
      */
     public startShake(range:number){
-        if (this.type != FightTypeEnum.PVP && range > 0) {
+        if (range > 0) {
             if (!this.shakeScreenEff) {
                 this.shakeScreenEff = new ShakeScreenEff(this);
             }
@@ -749,6 +760,16 @@ class FightContainer extends egret.DisplayObjectContainer {
         fontEff.y = content.y || 0;
         fontEff.show(content);
         this.showEff(this.fontEffLayer, fontEff);
+    }
+
+    /** 显示技能名字效果 */
+    public showSkillFlyTxt(content:string){
+        if (this.type == FightTypeEnum.PVP) {
+            let skillEff = new SkillNameEff(content);
+            skillEff.x = 72;
+            skillEff.y = 50;
+            this.addChild(skillEff);
+        }
     }
 
     /**

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png",
+			"keys": "n2_pve_stage_json,n2_buff_json,n2_hero_json,n2_hero_skill_json,n2_monster_json,n2_pve_enemy_json,n2_trigger_chance_json,fight_config_json,n2_pve_item_json,role_shadow_png,pvp_blood_png,pvp_blood_white_png,pvp_blood_hit_png,pvp_blood_enemy_png,pvp_blood_bar_png,pvp_blood_background_png,physical_damage_png,physical_damage_fnt,other_png,other_fnt,magical_damage_png,magical_damage_fnt,hp_png,hp_fnt,danger_png,buff_png,buff_fnt,boss_stage_title_png,blood_stage_png,blood_stage_background_png,130_pangu_png,130_pangu_json",
 			"name": "preload"
 		},
 		{

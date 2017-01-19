@@ -7,7 +7,7 @@ class MCEff extends egret.DisplayObjectContainer {
     public autoDisAppear:boolean = false;
     private _scaleX:number = 1;
     private frameBacks = [];
-    private _source:string = "";
+    private _source:string;
 
     public constructor(value:string, autoDisAppear:boolean=true, scaleX:number = 1){
         super();
@@ -30,40 +30,20 @@ class MCEff extends egret.DisplayObjectContainer {
         this.frameBacks[frame] = [fun, scope, param];
     }
 
-    private triggerFun(frame:number){
-        if (this.frameBacks[frame]) {
-            let fun = this.frameBacks[frame][0];
-            let scope = this.frameBacks[frame][1];
-            let param = this.frameBacks[frame][2];
-            fun.call(scope, param);
-            this.frameBacks[frame] = null;
-        }
-    }
-
-    private triggerFunArr(){
-        let len = this.frameBacks.length;
-        for (let i = 0; i <= len; i++) {
-            this.triggerFun(i);
-        }
-    }
-
     public get source(){
         return this._source;
     }
 
     public set source(value:string) {
-        this._source = value;
-        // let dataRes:any = RES.getRes(value + "_json");
-        // let textureRes:any = RES.getRes(value + "_png");
-        // if (!dataRes || !textureRes) {
-        //     return;
-        // }
-        this.mc = FightRole.createMovieClip(value);
-        egret.callLater(()=>{
-            if (!this.mc || this.mc.totalFrames == 0) {
-                this.onComplete();
-            } else {
+        if (this._source != value) {
+            this._source = value;
+            let hasRes = fight.isMCResourceLoaded(value);
+            if (hasRes) {
+                this.mc = FightRole.createMovieClip(value);
                 let totalFrame = this.mc.totalFrames;
+                if (totalFrame < 1) {
+                    egret.warn(`资源${value}出错`);
+                }
                 if (this.frameBacks) {
                     let keys = Object.keys(this.frameBacks);
                     for (let i = 0; i < keys.length; i++) {
@@ -75,49 +55,58 @@ class MCEff extends egret.DisplayObjectContainer {
                         }
                     }
                 }
-
                 this.mc.scaleX = this._scaleX;
                 this.mc.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
-
                 if (this.autoDisAppear) {
-                    this.mc.gotoAndPlay(1, 1);
                     this.mc.addEventListener(egret.Event.COMPLETE, this.onComplete, this);
+                    this.mc.gotoAndPlay(1, 1);
                 } else {
                     this.mc.gotoAndPlay(1, -1);
                 }
-
                 this.addChild(this.mc);
+            } else {
+                egret.setTimeout(this.onComplete, this, 0);
             }
-        }, null);
+        }
     }
 
     private onEnterFrame(){
         let curFrame = this.mc.currentFrame;
-        if (this.frameBacks[curFrame]) {
-            let fun = this.frameBacks[curFrame][0];
-            let scope = this.frameBacks[curFrame][1];
-            let param = this.frameBacks[curFrame][2];
-            fun.call(scope, param);
-            this.frameBacks[curFrame] = null;
-        }
+        this.triggerFun(curFrame);
         return false;
     }
 
     private onComplete() {
+        this.triggerFunArr();
         this.dispatchEventWith(egret.Event.COMPLETE);
         if (this.mc) {
-
             this.mc.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             this.mc.removeEventListener(egret.Event.COMPLETE, this.onComplete, this);
             if (this.mc.parent)
                 this.mc.parent.removeChild(this.mc);
             this.mc = null;
         }
-        this.triggerFunArr();
         if (this.parent) {
             this.parent.removeChild(this);
         }
         this.frameBacks = [];
+    }
+
+    private triggerFun(frame:number|string){
+        if (this.frameBacks[frame]) {
+            let fun = this.frameBacks[frame][0];
+            let scope = this.frameBacks[frame][1];
+            let param = this.frameBacks[frame][2];
+            fun.call(scope, param);
+            this.frameBacks[frame] = null;
+        }
+    }
+
+    private triggerFunArr(){
+        let keys = Object.keys(this.frameBacks || []);
+        for (let i = 0; i < keys.length; i++) {
+            this.triggerFun(keys[i]);
+        }
     }
 
     public getMC(){

@@ -33,7 +33,7 @@ interface RoleConfig {
     "modle_height":number;
     "group": number;
     "boss": number;
-    "dead_frame":number;
     "quality":string;
     "slogan":string;
+    dead_frame:number;
 }

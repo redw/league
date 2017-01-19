@@ -3,6 +3,8 @@
  * Created by hh on 2016/11/30.
  */
 module fight{
+    let curSoundPath:string = "";
+
     /**
      * 得到角色的描述信息
      * @param role RoleData或FightRole
@@ -227,18 +229,21 @@ module fight{
     }
 
     export function playSound(url:string, isMusicEff:boolean=true){
-        if (url){
-            try {
-                if (isMusicEff) {
-                    SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
-                } else {
-                    SoundManager.inst.musicSwitch = true;
-                    SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
-                }
-            } catch (e) {
-                recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
-            }
-        }
+        // if (url){
+        //     try {
+        //         if (isMusicEff) {
+        //             SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+        //         } else {
+        //             if (curSoundPath != url) {
+        //                 SoundManager.inst.musicSwitch = true;
+        //                 SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
+        //                 curSoundPath = url;
+        //             }
+        //         }
+        //     } catch (e) {
+        //         recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
+        //     }
+        // }
     }
 
     /**

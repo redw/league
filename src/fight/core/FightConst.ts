@@ -63,8 +63,8 @@ enum BuffTypeEnum
 
 module fight{
     export let TEST_BUNCH:string = null;
-    export let TEST_OTHER_HERO = [0, 108, 0];
-    export let TEST_SELF_HERO = [0, 108, 0];
+    export let TEST_OTHER_HERO = null;
+    export let TEST_SELF_HERO = null;
     export let RUN_METHOD:number = 1;
 
     export let WIDTH:number = 480;
@@ -82,7 +82,7 @@ module fight{
     export const DIE_HP:number = 1;
 
     // 同时出战的时间间隔
-    export let MEANWHILE_FIGHT_DELAY_TIME:number = 0;
+    export let MEANWHILE_FIGHT_DELAY_TIME:number = 50;
     // 完成一步的时间间隔
     export let STEP_DELAY_TIME:number = 200;
     // 能否同时出战
@@ -96,7 +96,7 @@ module fight{
     // 子弹飞行时间
     export let BULLET_RUN_TIME:number = 300;
     // 子弹间间隔
-    export let BULLET_RUN_DELAY_TIME:number = 200;
+    export let BULLET_RUN_DELAY_TIME:number = 0;
     // 死亡延迟时间
     export let DIE_DELAY_TIME:number = 600;
     // 生命条缓动时间
@@ -122,12 +122,12 @@ module fight{
     export const LOG_FIGHT_WARN:number = 50;
     export const LOG_FIGHT_ERROR:number = 100;
 
-    export let FORE_GROUND_MOVE_TIME:number = 400;
+    export let FORE_GROUND_MOVE_TIME:number = 500;
     export let MIDDLE_GROUND_MOVE_TIME:number = 500;
-    export let BACK_GROUND_MOVE_TIME:number = 650;
+    export let BACK_GROUND_MOVE_TIME:number = 500;
     export let FORE_GROUND_MOVE_DISTANCE:number = 800;
     export let MIDDLE_GROUND_MOVE_DISTANCE:number = 480;
-    export let BACK_GROUND_MOVE_DISTANCE:number = 200;
+    export let BACK_GROUND_MOVE_DISTANCE:number = 100;
     export let FORE_GROUND_MOVE_EASE:string = "quintInOut";
     export let MIDDLE_GROUND_MOVE_EASE:string = "quintInOut";
     export let BACK_GROUND_MOVE_EASE:string = "quintInOut";
@@ -149,19 +149,19 @@ module fight{
     // 角色z排序
     export const ROLE_Z_INDEX_ARR:number[] = [0,3,6,1,4,7,2,5,8];
     // 当添加角色index时,添加area容器
-    export let ADD_AREA_IN_INDEX:number = 7;
+    export let ADD_AREA_IN_INDEX:number = 6;
     export let ADD_DROP_IN_INDEX:number[] = [6, 7];
-    export let DROP_POS:egret.Point[] = [new egret.Point(240, 240), new egret.Point(240, 380)];
+    export let DROP_POS:egret.Point[] = [new egret.Point(240, 300), new egret.Point(240, 380)];
 
     export let POS_MAP:egret.Point[][] = [
         [
-            new egret.Point(130,260), new egret.Point(130, 340), new egret.Point(130, 420),
-            new egret.Point(60, 260), new egret.Point(60, 340), new egret.Point(60, 420),
+            new egret.Point(130,260), new egret.Point(120, 340), new egret.Point(110, 420),
+            new egret.Point(60, 260), new egret.Point(50, 340), new egret.Point(40, 420),
             new egret.Point(0, 240), new egret.Point(0, 320), new egret.Point(0, 400),
         ],
         [
-            new egret.Point(350, 260), new egret.Point(350, 340), new egret.Point(350, 420),
-            new egret.Point(420, 260), new egret.Point(420, 340), new egret.Point(420, 420),
+            new egret.Point(370, 260), new egret.Point(360, 340), new egret.Point(350, 420),
+            new egret.Point(440, 260), new egret.Point(430, 340), new egret.Point(420, 420),
             new egret.Point(480, 240), new egret.Point(480, 320), new egret.Point(480, 400),
         ]
     ];

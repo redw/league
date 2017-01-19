@@ -189,13 +189,17 @@ class FightProcessGenerator {
         let getTargetFunName = FightProcessGenerator.SkillTargetFunMap[skillInfo.target_cond];
         let skillRepeat = skillInfo.repeat;
         for (let i = 0; i < skillRepeat; i++) {
-            let targets = this[getTargetFunName](role);
-            if (i == 0 && targets.length <= 0) {
-                fight.recordLog("方法" + getTargetFunName + "错误", fight.LOG_FIGHT_ERROR);
-            }
-            if (targets.length > 0) {
-                let item = this.damageCore(role, targets, skillInfo, this.index++, this.turn - 1);
-                result.push(item);
+            if (getTargetFunName in this) {
+                let targets = this[getTargetFunName](role);
+                if (i == 0 && targets.length <= 0) {
+                    fight.recordLog("方法" + getTargetFunName + "错误", fight.LOG_FIGHT_ERROR);
+                }
+                if (targets.length > 0) {
+                    let item = this.damageCore(role, targets, skillInfo, this.index++, this.turn - 1);
+                    result.push(item);
+                }
+            } else {
+                fight.recordLog(`方法${skillInfo.target_cond}错误`, fight.LOG_FIGHT_ERROR);
             }
         }
     }

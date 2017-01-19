@@ -4,6 +4,12 @@
  */
 module fight{
     import hasRes = RES.hasRes;
+    export const LOAD_PRIORITY_SKILL_NAME:number = 10000;
+
+    export const LOAD_PRIORITY_AREA_BG:number = 50;
+    export const LOAD_PRIORITY_STAR_SKY_BG:number = 40;
+    export const LOAD_PRIORITY_EYES:number = 20;
+
     export const LOAD_PRIORITY_ROLE:number = 1000;
     export const LOAD_PRIORITY_SKILL:number = 500;
     export const LOAD_PRIORITY_EFFECT:number = 200;
@@ -48,53 +54,7 @@ module fight{
         RES.createGroup(`pve_fight_role`, rolePathArr, true);
         RES.loadGroup(`pve_fight_role`, LOAD_PRIORITY_ROLE);
 
-        // 加载技能
-        let skillPathArr = [];
-        for (let i = 0; i < roleArr.length; i++) {
-            let roleData = roleArr[i];
-            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
-            let skill:number[] = roleConfig.skill.concat();
-            for (let j = 0; j < skill.length; j++) {
-                let skillConfig = Config.SkillData[skill[j]];
-                if (skillConfig) {
-                    pushResToArr(skillConfig.scource_effect, skillPathArr);
-                    pushResToArr(skillConfig.target_effect, skillPathArr);
-                }
-            }
-        }
-        RES.createGroup(`pve_fight_skill`, skillPathArr, true);
-        RES.loadGroup(`pve_fight_skill`, LOAD_PRIORITY_SKILL);
-
-        // 加载效果
-        const effArr = [];
-        pushResToArr("death_effect", effArr);
-        pushResToArr("dust_effect", effArr);
-        pushResToArr("skill_source", effArr);
-        pushResToArr("lvl_up", effArr);
-        RES.createGroup(`pve_effect_group`, effArr, true);
-        RES.loadGroup(`pve_effect_group`, LOAD_PRIORITY_EFFECT);
-
-        // 加载buff
-        const buffArr = [];
-        for (let i = 0; i < roleArr.length; i++) {
-            let roleData = roleArr[i];
-            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
-            let skill:number[] = roleConfig.skill.concat();
-            for (let j = 0; j < skill.length; j++) {
-                let skillConfig = Config.SkillData[skill[j]];
-                if (skillConfig) {
-                    let buffId = skillConfig.buff_id;
-                    let buffConfig:BuffConfig = Config.BuffData[buffId];
-                    if (buffConfig && buffConfig.resource) {
-                        pushResToArr(buffConfig.resource, buffArr);
-                    }
-                }
-            }
-        }
-        RES.createGroup(`buff_effect_group`, buffArr, true);
-        RES.loadGroup(`buff_effect_group`, LOAD_PRIORITY_BUFF);
-
-
+        loadSkillAndBuff(roleArr);
 
         // 加载掉落
         let dropArr = [];
@@ -113,25 +73,19 @@ module fight{
         RES.loadGroup("pve_drop_group", fight.LOAD_PRIORITY_DROP + Number(id));
     }
 
-    /**
-     * 返回是否mc资源加载完成
-     * @param value
-     * @returns {boolean}
-     */
-    export function isMCResourceLoaded(value:string){
-        return RES.hasRes(`${value}_png`) && RES.hasRes(`${value}_json`);
+    export function loadPVPFightRes(roleArr:{id:number}[]){
+        let resGroupRes = getFightNeedRes(roleArr);
+        pushResToArr("role_born", resGroupRes);
+        loadSkillAndBuff(roleArr);
+        RES.createGroup("pvpFight", resGroupRes, true);
+        RES.loadGroup("pvpFight");
     }
 
-    export function loadPVPFightRes(){
-
-    }
-
-    export function loadBossFightRes(){
-
-    }
-
-    export function loadMap(){
-
+    export function loadBossFightRes(roleArr:{id:number}[]){
+        let resGroupRes = fight.getFightNeedRes(roleArr);
+        loadSkillAndBuff(roleArr);
+        RES.createGroup("bossFight", resGroupRes, true);
+        RES.loadGroup("bossFight");
     }
 
     /**
@@ -160,11 +114,68 @@ module fight{
         return resPath;
     }
 
+    export function loadSkillAndBuff(roleArr:{id:number}[]) {
+        // 加载技能
+        let skillPathArr = [];
+        for (let i = 0; i < roleArr.length; i++) {
+            let roleData = roleArr[i];
+            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
+            let skill:number[] = roleConfig.skill.concat();
+            for (let j = 0; j < skill.length; j++) {
+                let skillConfig = Config.SkillData[skill[j]];
+                if (skillConfig) {
+                    pushResToArr(skillConfig.scource_effect, skillPathArr);
+                    pushResToArr(skillConfig.target_effect, skillPathArr);
+                }
+            }
+        }
+        RES.createGroup(`fight_skill_effect_group`, skillPathArr, true);
+        RES.loadGroup(`fight_skill_effect_group`, LOAD_PRIORITY_SKILL);
+
+        // 加载效果
+        const effArr = [];
+        pushResToArr("death_effect", effArr);
+        pushResToArr("dust_effect", effArr);
+        pushResToArr("skill_source", effArr);
+        pushResToArr("lvl_up", effArr);
+        RES.createGroup(`fight_effect_group`, effArr, true);
+        RES.loadGroup(`fight_effect_group`, LOAD_PRIORITY_EFFECT);
+
+        // 加载buff
+        const buffArr = [];
+        for (let i = 0; i < roleArr.length; i++) {
+            let roleData = roleArr[i];
+            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
+            let skill:number[] = roleConfig.skill.concat();
+            for (let j = 0; j < skill.length; j++) {
+                let skillConfig = Config.SkillData[skill[j]];
+                if (skillConfig) {
+                    let buffId = skillConfig.buff_id;
+                    let buffConfig:BuffConfig = Config.BuffData[buffId];
+                    if (buffConfig && buffConfig.resource) {
+                        pushResToArr(buffConfig.resource, buffArr);
+                    }
+                }
+            }
+        }
+        RES.createGroup(`buff_effect_group`, buffArr, true);
+        RES.loadGroup(`buff_effect_group`, LOAD_PRIORITY_BUFF);
+    }
+
     function pushResToArr(value:any, arr:any[]) {
         if (value) {
             if (arr.indexOf(value + "_png") < 0) {
                 arr.push(value + "_png", value + "_json");
             }
         }
+    }
+
+    /**
+     * 返回是否mc资源加载完成
+     * @param value
+     * @returns {boolean}
+     */
+    export function isMCResourceLoaded(value:string){
+        return RES.hasRes(`${value}_png`) && RES.hasRes(`${value}_json`);
     }
 }

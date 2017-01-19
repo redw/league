@@ -13,6 +13,7 @@ class PriorityImage extends egret.Bitmap{
     }
 
     public set source(value:string){
+        this._source = value;
         if (RES.isGroupLoaded(value)) {
             this.addImage(value);
         } else {
@@ -21,7 +22,6 @@ class PriorityImage extends egret.Bitmap{
             RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onLoadComplete, this);
             RES.loadGroup(value, this.priority)
         }
-        this._source = value;
     }
 
     private onLoadComplete(e:RES.ResourceEvent){

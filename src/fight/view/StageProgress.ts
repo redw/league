@@ -26,15 +26,15 @@ class StageProgress extends egret.DisplayObjectContainer {
         this.addChild(this.maskLayer);
 
         this.levelImg = new egret.BitmapText();
-        this.levelImg.x = 60;
         this.addChild(this.levelImg);
         this.levelImg.font = RES.getRes("stage_fnt");
         this.levelImg.letterSpacing = -3;
-        this.levelImg.$setTextAlign(egret.HorizontalAlign.CENTER)
+        this.levelImg.width = 173;
+        this.levelImg.$setTextAlign(egret.HorizontalAlign.CENTER);
     }
 
     public startLevel(value:number){
-        this.levelImg.text = "关卡:" + value;
+        this.levelImg.text = "关卡" + value;
         this.setProgress(1);
     }
 
@@ -47,7 +47,6 @@ class StageProgress extends egret.DisplayObjectContainer {
             this.hpBitmap.mask = this.maskLayer;
         }
         let w = MathUtil.clamp(value,0,1) * this.WIDTH;
-
         this.maskLayer.x = this.WIDTH - w;
         this.maskLayer.graphics.clear();
         this.maskLayer.graphics.beginFill(0x0, 1);

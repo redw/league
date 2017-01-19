@@ -38,4 +38,5 @@ class SkillConfig {
      skill_free_effect:string;
      scource_sound_frame:number;
      target_effect_normal:number;
+    skill_name:string;
 }
