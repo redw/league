@@ -14,8 +14,8 @@ module fight{
     export const LOAD_PRIORITY_SKILL:number = 500;
     export const LOAD_PRIORITY_EFFECT:number = 200;
     export const LOAD_PRIORITY_BUFF:number = 100;
-    export const LOAD_PRIORITY_MAP_PROSPECT:number = 30;
-    export const LOAD_PRIORITY_MAP_BACKGROUND:number = 40;
+    export const LOAD_PRIORITY_MAP_PROSPECT:number = 0;
+    export const LOAD_PRIORITY_MAP_BACKGROUND:number = 0;
     export const LOAD_PRIORITY_MAP_MIDDLE:number = 50;
     export const LOAD_PRIORITY_DROP:number = 20;
     export const LOAD_PRIORITY_OTHER:number = 1;
@@ -38,12 +38,7 @@ module fight{
         let curLevel = UserProxy.inst.curArea;
     }
 
-    /**
-     * 加载pve资源
-     * @param id    关卡id
-     * @param roleArr   角色
-     */
-    export function loadPVEFightRes(id:number, roleArr:{id:number}[]) {
+    export function firstEnterPVE(roleArr:{id:number}[]){
         // 加载角色
         let rolePathArr = [];
         for (let i = 0; i < roleArr.length; i++) {
@@ -51,10 +46,14 @@ module fight{
             let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
             pushResToArr(roleConfig.resource, rolePathArr);
         }
+        // 初始化时加载背景乐
+        let bgm = Config.StageCommonData[Math.ceil(UserProxy.inst.curArea / fight.MAP_SWITCH_SIZE)].bgm;
+        pushResToArr(`${bgm}_mp3`, rolePathArr);
         RES.createGroup(`pve_fight_role`, rolePathArr, true);
-        RES.loadGroup(`pve_fight_role`, LOAD_PRIORITY_ROLE);
+        RES.loadGroup(`pve_fight_role`, -1);
 
-        loadSkillAndBuff(roleArr);
+        loadSkillEff(roleArr, -1);
+        loadBuffEff(roleArr, -1);
 
         // 加载掉落
         let dropArr = [];
@@ -70,20 +69,44 @@ module fight{
             }
         }
         RES.createGroup("pve_drop_group", dropArr, true);
-        RES.loadGroup("pve_drop_group", fight.LOAD_PRIORITY_DROP + Number(id));
+        RES.loadGroup("pve_drop_group", fight.LOAD_PRIORITY_DROP);
+
+        // 加载效果
+        loadCommonFightEff();
+    }
+
+    /**
+     * 加载pve资源
+     * @param roleArr   角色
+     */
+    export function loadPVEFightRes(roleArr:{id:number}[]) {
+        // 加载角色
+        let rolePathArr = [];
+        for (let i = 0; i < roleArr.length; i++) {
+            let roleData = roleArr[i];
+            let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
+            pushResToArr(roleConfig.resource, rolePathArr);
+        }
+        RES.createGroup(`pve_fight_role`, rolePathArr, true);
+        RES.loadGroup(`pve_fight_role`, LOAD_PRIORITY_ROLE);
+
+        loadSkillEff(roleArr);
+        loadBuffEff(roleArr);
     }
 
     export function loadPVPFightRes(roleArr:{id:number}[]){
         let resGroupRes = getFightNeedRes(roleArr);
         pushResToArr("role_born", resGroupRes);
-        loadSkillAndBuff(roleArr);
+        loadSkillEff(roleArr);
+        loadBuffEff(roleArr);
         RES.createGroup("pvpFight", resGroupRes, true);
         RES.loadGroup("pvpFight");
     }
 
     export function loadBossFightRes(roleArr:{id:number}[]){
         let resGroupRes = fight.getFightNeedRes(roleArr);
-        loadSkillAndBuff(roleArr);
+        loadSkillEff(roleArr);
+        loadBuffEff(roleArr);
         RES.createGroup("bossFight", resGroupRes, true);
         RES.loadGroup("bossFight");
     }
@@ -98,6 +121,7 @@ module fight{
         pushResToArr("dust_effect", resPath);
         pushResToArr("skill_source", resPath);
         pushResToArr("lvl_up", resPath);
+        pushResToArr("hit_normal", resPath);
         for (let i = 0; i < roleDataArr.length; i++) {
             let roleData = roleDataArr[i];
             let roleConfig:RoleConfig = Config.HeroData[roleData.id] || Config.EnemyData[roleData.id];
@@ -114,8 +138,16 @@ module fight{
         return resPath;
     }
 
-    export function loadSkillAndBuff(roleArr:{id:number}[]) {
-        // 加载技能
+    /** 加载英雄资源 */
+    export function loadHeroRes(roleArr:{id:number}[], priority:number=LOAD_PRIORITY_ROLE){
+        let resGroupRes = fight.getFightNeedRes(roleArr);
+        loadSkillEff(roleArr);
+        loadBuffEff(roleArr);
+        RES.createGroup("heroRes_group", resGroupRes, true);
+        RES.loadGroup(`heroRes_group`, priority);
+    }
+
+    function loadSkillEff(roleArr:{id:number}[], priority:number = LOAD_PRIORITY_SKILL){
         let skillPathArr = [];
         for (let i = 0; i < roleArr.length; i++) {
             let roleData = roleArr[i];
@@ -130,18 +162,10 @@ module fight{
             }
         }
         RES.createGroup(`fight_skill_effect_group`, skillPathArr, true);
-        RES.loadGroup(`fight_skill_effect_group`, LOAD_PRIORITY_SKILL);
+        RES.loadGroup(`fight_skill_effect_group`, priority);
+    }
 
-        // 加载效果
-        const effArr = [];
-        pushResToArr("death_effect", effArr);
-        pushResToArr("dust_effect", effArr);
-        pushResToArr("skill_source", effArr);
-        pushResToArr("lvl_up", effArr);
-        RES.createGroup(`fight_effect_group`, effArr, true);
-        RES.loadGroup(`fight_effect_group`, LOAD_PRIORITY_EFFECT);
-
-        // 加载buff
+    function loadBuffEff(roleArr:{id:number}[], priority:number = LOAD_PRIORITY_BUFF) {
         const buffArr = [];
         for (let i = 0; i < roleArr.length; i++) {
             let roleData = roleArr[i];
@@ -159,7 +183,18 @@ module fight{
             }
         }
         RES.createGroup(`buff_effect_group`, buffArr, true);
-        RES.loadGroup(`buff_effect_group`, LOAD_PRIORITY_BUFF);
+        RES.loadGroup(`buff_effect_group`, priority);
+    }
+
+    function loadCommonFightEff(){
+        const effArr = [];
+        pushResToArr("death_effect", effArr);
+        pushResToArr("dust_effect", effArr);
+        pushResToArr("hit_normal", effArr);
+        pushResToArr("skill_source", effArr);
+        pushResToArr("lvl_up", effArr);
+        RES.createGroup(`fight_effect_group`, effArr, true);
+        RES.loadGroup(`fight_effect_group`, LOAD_PRIORITY_EFFECT);
     }
 
     function pushResToArr(value:any, arr:any[]) {

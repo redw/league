@@ -110,7 +110,7 @@ module fight{
      * @param skill
      * @returns {Point}
      */
-    export function getNearFightPoint(role:FightRole, targets:FightRole[], skill:SkillConfig){
+    export function getNearFightPoint(role:FightRole, targets:{side:number, pos:number}[], skill:SkillConfig){
         let point = new egret.Point();
         let offPoint = (skill && skill.move_position) || [0, 0];
         if (skill.action_type == fight.ATTACK_ACTION_ROW) {
@@ -152,13 +152,15 @@ module fight{
      * @param level
      */
     export function recordLog(content:any, level:number=0){
-        if (level >= LOG_FIGHT_ERROR) {
-             console.error(content);
-        } else if (level >= LOG_FIGHT_WARN) {
-             console.warn(content);
-        } else {
-            console.log(content);
-        }
+        // if (Global.DEBUG) {
+        //     if (level >= LOG_FIGHT_ERROR) {
+        //         console.error(content);
+        //     } else if (level >= LOG_FIGHT_WARN) {
+        //         console.warn(content);
+        //     } else {
+        //         console.log(content);
+        //     }
+        // }
     }
 
     /**
@@ -211,7 +213,7 @@ module fight{
      * @returns {string|string|string|string|string}
      */
     export function randomSkillTriggerBunch(){
-        let bunch = ["a", "b", "c", "d", "e"];
+        let bunch = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t"];
         let index = Math.floor(Math.random() * bunch.length);
         return fight.TEST_BUNCH || bunch[index];
     }
@@ -229,21 +231,27 @@ module fight{
     }
 
     export function playSound(url:string, isMusicEff:boolean=true){
-        // if (url){
-        //     try {
-        //         if (isMusicEff) {
-        //             SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
-        //         } else {
-        //             if (curSoundPath != url) {
-        //                 SoundManager.inst.musicSwitch = true;
-        //                 SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
-        //                 curSoundPath = url;
-        //             }
-        //         }
-        //     } catch (e) {
-        //         recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
-        //     }
-        // }
+        if (url){
+            try {
+                if (isMusicEff) {
+                    // egret.setTimeout(()=>{
+                    // SoundManager.inst.effectSwitch = !UserProxy.inst.soundOpen;
+                        SoundManager.inst.playEffect(URLConfig.getSoundURL(url));
+                    // }, this, 100);
+                } else {
+                    if (curSoundPath != url) {
+                        SoundManager.inst.stopMusic();
+                        // SoundManager.inst.musicSwitch = !UserProxy.inst.musicOpen;
+                        egret.setTimeout(()=>{
+                            SoundManager.inst.playMusic(URLConfig.getSoundURL(url));
+                        }, this, 0);
+                        curSoundPath = url;
+                    }
+                }
+            } catch (e) {
+                recordLog(`播放{url}声音出错`, LOG_FIGHT_WARN);
+            }
+        }
     }
 
     /**
@@ -346,5 +354,35 @@ module fight{
             }
         }
         return isEnd;
+    }
+
+    export function generateMonsterInfo(monsterArr:{id:number, pos:number, side:number}[]){
+        let result:{id:number, pos:number, side:number, level:number}[] = [];
+        for (let i = 0; i < monsterArr.length; i++) {
+            let obj:any = {};
+            obj.id = monsterArr[i].id;
+            obj.pos = monsterArr[i].pos;
+            obj.side = monsterArr[i].side;
+            obj.level = this.level;
+            result.push(obj);
+        }
+        return result;
+    }
+
+    export function generateHeroInfo(heroArr:{id:number, pos:number, side:number}[]) {
+        let result:{id:number,pos:number,side:number, level:number, starLevel:number, strengthenLevel:number, starPiece:number}[] = [];
+        for (let i = 0; i < heroArr.length; i++) {
+            let obj:any = {};
+            obj.id = heroArr[i].id;
+            obj.pos = heroArr[i].pos;
+            obj.side = heroArr[i].side;
+            let heroVO = UserProxy.inst.heroData.getHeroData(obj.id);
+            obj.level = heroVO ? heroVO.level : 0;
+            obj.starLevel = heroVO ? heroVO.starLevel : 1;
+            obj.strengthenLevel = heroVO ? heroVO.strengthenLevel : 0;
+            obj.starPiece = heroVO ? heroVO.starPiece : 0;
+            result.push(obj);
+        }
+        return result;
     }
 }

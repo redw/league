@@ -77,6 +77,9 @@ class MCEff extends egret.DisplayObjectContainer {
     }
 
     private onComplete() {
+        if (this._timer >= 0)
+            egret.clearTimeout(this._timer);
+
         this.triggerFunArr();
         this.dispatchEventWith(egret.Event.COMPLETE);
         if (this.mc) {
@@ -114,6 +117,20 @@ class MCEff extends egret.DisplayObjectContainer {
     }
 
     public dispose(){
+        this.onComplete();
+    }
+
+    private _timer:number = -1;
+    public setMaxExistTime(time:number) {
+        if (this.autoDisAppear && this._timer < 0) {
+            egret.setTimeout(this.forceComplete, this, time);
+        }
+    }
+
+    private forceComplete(){
+        if (this._timer >= 0)
+            egret.clearTimeout(this._timer);
+        this._timer = -1;
         this.onComplete();
     }
 }

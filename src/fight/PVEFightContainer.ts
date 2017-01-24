@@ -3,7 +3,7 @@
  * Created by hh on 2016/12/8.
  */
 class PVEScenePanel extends egret.DisplayObjectContainer {
-    private level:number;
+    private level:number = 1;
     private stageProgress:StageProgress;
     private fightContainer:FightContainer;
     private heroArr:{id:number, pos:number, side:number}[];
@@ -30,7 +30,8 @@ class PVEScenePanel extends egret.DisplayObjectContainer {
     }
 
     private onFightStart(){
-
+        let config:StageCommonConfig = Config.StageCommonData[Math.ceil(this.level / 50)];
+        fight.playSound(config.bgm, false);
     }
 
     private onFightEnd() {
@@ -87,15 +88,12 @@ class PVEScenePanel extends egret.DisplayObjectContainer {
         this.heroArr = UserProxy.inst.fightData.getPVEBattleHero();
         this.monsterArr = UserProxy.inst.fightData.getMonster(this.level);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
-        fight.loadPVEFightRes(this.level, [].concat(this.heroArr, this.monsterArr));
+        fight.loadPVEFightRes([].concat(this.heroArr, this.monsterArr));
     }
 
     private loadResComplete(e:RES.ResourceEvent) {
         if (e.groupName == "pve_fight_role") {
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadResComplete, this);
-
-            let sound = Config.StageData[this.level].bgm;
-            fight.playSound(sound, false);
 
             this.stageProgress.startLevel(this.level);
             this.stageProgress.visible = true;
@@ -133,7 +131,7 @@ class PVEScenePanel extends egret.DisplayObjectContainer {
                 autoFight = false;
             }
             //console.log("战场上的角色:", [].concat(heroInfoArr, monsterInfoArr));
-            this.fightContainer.fightDeployment([].concat(heroInfoArr, monsterInfoArr), autoFight, this.level);
+            this.fightContainer.fightDeployment([].concat(heroInfoArr, monsterInfoArr), autoFight, this.level, false, true);
         }
     }
 

@@ -10,7 +10,7 @@ module URLConfig {
 
     // 音乐
     export function getSoundURL(name: string): string {
-        return "resource/assets/sound/" + name + ".mp3";
+        return "./resource/assets/sound/" + name + ".mp3";
     }
 
     // 角色资源

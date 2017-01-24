@@ -2,7 +2,7 @@
  * 战斗中的一些常量
  * Created by hh on 16/12/20.
  */
-enum FightStateEnum{
+enum FightStateEnum {
     Wait = 1,
     Fight,
     End
@@ -14,7 +14,7 @@ enum FightTypeEnum {
     BOSS
 }
 
-enum FightFontEffEnum{
+enum FightFontEffEnum {
     OTHER = 0,
     PHYSICAL_ATK,
     MAGIC_ATK,
@@ -22,13 +22,12 @@ enum FightFontEffEnum{
     SYSTEM
 }
 
-enum FightSideEnum{
+enum FightSideEnum {
     LEFT_SIDE = 1,
     RIGHT_SIDE
 }
 
-enum BuffTypeEnum
-{
+enum BuffTypeEnum {
     PHYSICAL_ATK = 1,                               // 物攻
     MAGIC_ATK,                                      // 魔攻
     PHYSICAL_DEF,                                   // 物防
@@ -61,26 +60,33 @@ enum BuffTypeEnum
     LIFE                                            // 生命
 }
 
+enum FightRoleState {
+    IDLE = 0,                                       // 待机
+    ATTACK,                                         // 攻击
+    SKILL_ATTACK,                                   // 技能攻击
+    ATTACKED,                                       // 被攻击
+    BLOCK,                                          // 格档
+    MOVE,                                           // 移动
+    RETREAT                                         // 撤回
+}
+
 module fight{
+    import numberToBlendMode = egret.sys.numberToBlendMode;
     export let TEST_BUNCH:string = null;
     export let TEST_OTHER_HERO = null;
     export let TEST_SELF_HERO = null;
-    export let RUN_METHOD:number = 1;
+    export let TEST_BATTLE:boolean = false;
 
     export let WIDTH:number = 480;
     export let HEIGHT:number = 460;
+    export let MAP_SWITCH_SIZE:number = 50;
     export let MAP_SIZE_HEIGHT:number = 520;
-    // pve场景偏移
-    export const PVE_SCENE_OFF:number = 0;
-    // pvp 场景偏移
-    export const PVP_SCENE_OFF:number = 100;
     // 角色上限
     export const ROLE_UP_LIMIT:number = 9;
     // 阴影偏移
     export const ROLE_SHADOW_OFF:number = -20;
     // 判断角色死亡的血量上限
     export const DIE_HP:number = 1;
-
     // 同时出战的时间间隔
     export let MEANWHILE_FIGHT_DELAY_TIME:number = 50;
     // 完成一步的时间间隔
@@ -93,17 +99,11 @@ module fight{
     export let MOVE_TIME:number = 150;
     // 移动攻击时,距离目标点的位置
     export let MOVE_ATTACK_OFF:number = 100;
-    // 子弹飞行时间
-    export let BULLET_RUN_TIME:number = 300;
     // 子弹间间隔
     export let BULLET_RUN_DELAY_TIME:number = 0;
     // 死亡延迟时间
     export let DIE_DELAY_TIME:number = 600;
-    // 生命条缓动时间
-    export let LIFE_BAR_TWEEN_TIME:number = 200;
-
-    // 战斗步骤上限
-    export const STEP_UP_LIMIT:number = 100;
+    // 回合数上限
     export const ROUND_LIMIT:number = 20;
 
     export const ATTACK_ACTION_NORMAL:string = "normal_attack";
@@ -131,7 +131,6 @@ module fight{
     export let FORE_GROUND_MOVE_EASE:string = "quintInOut";
     export let MIDDLE_GROUND_MOVE_EASE:string = "quintInOut";
     export let BACK_GROUND_MOVE_EASE:string = "quintInOut";
-
 
     export const FONT_PHYSICAL_DAMAGE:string = "physical_damage_fnt";
     export const FONT_ADD_HP:string = "hp_fnt";
@@ -165,4 +164,6 @@ module fight{
             new egret.Point(480, 240), new egret.Point(480, 320), new egret.Point(480, 400),
         ]
     ];
+
+    export const RUN_METHOD:number = 1;
 }

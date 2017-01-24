@@ -8,6 +8,7 @@ class FightContainer extends egret.DisplayObjectContainer {
     private level:number = -1;                                                  // 战斗配置id(pvp战斗无视)
     private steps:any[] = [];                                                   // 战斗步骤(副本)
     private autoFight:boolean = false;                                          // 是否自动战斗
+    private firstEnter:boolean = false;                                         // 是否第一次进
     private isGuide:boolean = false;                                            // 是否是正在引导
     private type:number = FightTypeEnum.PVE;                                    // 战斗类型
     private forceEnd:boolean = false;                                           // 强制结束
@@ -15,7 +16,7 @@ class FightContainer extends egret.DisplayObjectContainer {
     private playSteps:FightReportItem[];                                        // 战斗报告(服务器端)
 
     private state:number = FightStateEnum.Wait;                                 // 战斗状态
-    public oldLifeRatio:number = 1;                                             // 生命进度条
+    public oldLifeRatio:number = -1;                                            // 生命进度条
     private isHeroDataUpdate:boolean = false;                                   // 英雄数据是否变化
     private initRoleCount:number = 0;                                           // 初始角色数量
     private meanWhileStep:number = 1;                                           // 同时可出战的步数
@@ -48,7 +49,7 @@ class FightContainer extends egret.DisplayObjectContainer {
     public constructor(type:number = FightTypeEnum.PVE) {
         super();
         this.type = type;
-        let hasTween = (type == FightTypeEnum.PVE);
+        let hasTween = type == FightTypeEnum.PVE;
 
         if (type == FightTypeEnum.PVE) {
             this.dropProps = [];
@@ -114,33 +115,39 @@ class FightContainer extends egret.DisplayObjectContainer {
      * @param auto  是否自动开战(只对pve有用)
      * @param level 场景等级(只对pve和秘镜有用)
      * @param guide 是否是引导除段(引导阶段)
+     * @param firstEnter 是否第一次进
      */
-    public fightDeployment(data:{id:number, pos:number, side:number}[], auto:boolean = true, level:number = 1, guide:boolean=false) {
+    public fightDeployment(data:{id:number, pos:number, side:number}[], auto:boolean = true, level:number = 1, guide:boolean=false, firstEnter:boolean=false) {
         this.shakeScreenEff && this.shakeScreenEff.stopShake();
         this.autoFight = auto;
         this.isGuide = guide;
-        this.level = level;
+        this.firstEnter = firstEnter;
         this.bunch = fight.randomSkillTriggerBunch();
         this.originalElements = data.concat();
         if (this.type == FightTypeEnum.PVE) {
             this.foregroundLayer.level = level;
             this.middleGroundLayer.level = level;
             this.prospectLayer.level = level;
-            if (this.level < 0 || Config.StageData[this.level].map != Config.StageData[level].map) {
+            this.level = level;
+            if (firstEnter || Config.StageCommonData[Math.ceil(this.level / fight.MAP_SWITCH_SIZE)].map != Config.StageCommonData[Math.ceil(this.level / fight.MAP_SWITCH_SIZE)].map) {
                 this.transitionLayer.level = level;
             }
             if (!guide) {
                 this.tweenRemoveRole();
             }
         } else if (this.type == FightTypeEnum.PVP) {
+            this.level = level;
             this.reset();
-            this.bornRoles();
+
+            let eff = new BattleStartEff();
+            eff.addEventListener(egret.Event.COMPLETE, this.bornRoles, this);
+            this.damageEffLayer.addChild(eff);
         } else if (this.type == FightTypeEnum.BOSS) {
+            this.level = level;
             this.reset();
-            this.foregroundLayer.level = level;
-            this.middleGroundLayer.level = level;
-            this.prospectLayer.level = level;
-            // this.tweenRemoveRoleComplete();
+            this.foregroundLayer.source = Config.WeaponFb[level].map;
+            this.middleGroundLayer.source = Config.WeaponFb[level].map;
+            this.prospectLayer.source = Config.WeaponFb[level].map;
         }
     }
 
@@ -292,7 +299,6 @@ class FightContainer extends egret.DisplayObjectContainer {
                 }
                 this.steps = this.fightSteps.concat();
 
-                console.groupCollapsed("-----------------------战斗信息---------------");
                 let hero = Array(fight.ROLE_UP_LIMIT);
                 let monsterIds = Array(fight.ROLE_UP_LIMIT);
                 for (let i = 0; i < this.originalElements.length; i++) {
@@ -305,11 +311,14 @@ class FightContainer extends egret.DisplayObjectContainer {
                         }
                     }
                 }
-                console.log("英雄id:", hero);
-                console.log("串:", this.bunch);
-                console.log("怪物id:", monsterIds);
-                console.log("步骤:", this.steps);
-                console.groupEnd();
+                if (Global.DEBUG) {
+                    console.groupCollapsed("-----------------------战斗信息---------------");
+                    console.log("英雄id:", hero);
+                    console.log("串:", this.bunch);
+                    console.log("怪物id:", monsterIds);
+                    console.log("步骤:", this.steps);
+                    console.groupEnd();
+                }
 
                 if (this.type != FightTypeEnum.PVP) {
                     if (this.autoFight){
@@ -330,15 +339,14 @@ class FightContainer extends egret.DisplayObjectContainer {
         }
     }
 
-    private startStep() {
+    private startStep(e:egret.Event=null) {
+        if (e) {
+            e.target.removeEventListener(egret.Event.COMPLETE, this.startStep, this);
+        }
         if (this.fightSteps.length <= 0) {
+            this.oldLifeRatio = -1;
             this.addEventListener(egret.Event.ENTER_FRAME, this.checkFightEnd, this);
         } else {
-            if (this.isHeroDataUpdate && this.type == FightTypeEnum.PVE) {
-                this.fightSteps = this.dataGenerator.updateGenerateData();
-                this.steps = this.fightSteps.concat();
-                this.isHeroDataUpdate = false;
-            }
             let count = this.getPlayingCount();
             this.meanWhileStep = count;
             let delayTime = 0;
@@ -351,11 +359,15 @@ class FightContainer extends egret.DisplayObjectContainer {
     }
 
     private doStep(data:FightReportItem, delay:number) {
-        let startRole = this.getRoleByStr(data.pos);
-        startRole.fight(data, delay);
+        let startRole = this.getRoleByPos(data.pos);
+        if (startRole) {
+            startRole.fight(data, delay);
+        } else {
+            fight.recordLog(`第${data.index}步出错`, fight.LOG_FIGHT_WARN);
+        }
     }
 
-    private onOneStepComplete() {
+    public onOneStepComplete() {
         if (this.palmEff) {
             this.palmEff.free();
         } else {
@@ -387,15 +399,25 @@ class FightContainer extends egret.DisplayObjectContainer {
         FightRoleFactory.freeRole(role);
     }
 
-    public getRoleByStr(str:string) {
+    public getRoleByPos(str:string) {
         let side = +str.substr(0, 1) - 1;
         let pos = +str.substr(2, 1);
         return this.roles[side][pos];
     }
 
+    public getRole(value:{side:number, pos:number}) {
+        let side = value.side;
+        let pos = value.pos;
+        if (side < 1 || side > 2 || pos < 0 || pos > 8) {
+            fight.recordLog("获取角色参数不对", fight.LOG_FIGHT_WARN);
+            return null;
+        }
+        return this.roles[side - 1][pos];
+    }
+
     private getPlayingCount() {
         let result = 1;
-        if (this.type == FightTypeEnum.PVP) {
+        if (this.type != FightTypeEnum.PVE) {
             return result;
         }
         if (this.fightSteps.length > 1) {
@@ -420,25 +442,6 @@ class FightContainer extends egret.DisplayObjectContainer {
      */
     private checkFightEnd(){
         let canEnd:boolean = true;
-        if (this.leftAreaCont && this.leftAreaCont.numChildren > 0) {
-            canEnd = false;
-        }
-        if (this.rightAreaCont && this.rightAreaCont.numChildren > 0) {
-            canEnd = false;
-        }
-        if (this.damageEffLayer && this.damageEffLayer.numElements > 0) {
-            canEnd = false;
-        }
-        // for (let i = 0; i < fight.ROLE_UP_LIMIT; i++) {
-        //     if (this.roles[0][i] && BigNum.greater(fight.DIE_HP, this.roles[0][i].curHP)) {
-        //         canEnd = false;
-        //         break;
-        //     }
-        //     if (this.roles[1][i] && BigNum.greater(fight.DIE_HP, this.roles[1][i].curHP)) {
-        //         canEnd = false;
-        //         break;
-        //     }
-        // }
         if (canEnd) {
             this.removeEventListener(egret.Event.ENTER_FRAME, this.checkFightEnd, this);
             this.state = FightStateEnum.End;
@@ -542,7 +545,11 @@ class FightContainer extends egret.DisplayObjectContainer {
                 break;
             }
             if (this.rightRoles[i] && this.rightRoles[i].side == FightSideEnum.RIGHT_SIDE) {
-                off = fight.WIDTH;
+                if (off) {
+                    off = 0;
+                } else {
+                    off = fight.WIDTH;
+                }
                 break;
             }
         }
@@ -560,10 +567,12 @@ class FightContainer extends egret.DisplayObjectContainer {
         }
     }
 
-    private bornRoles(){
+    private bornRoles(e:egret.Event){
+        if (e) {
+            e.target.removeEventListener(egret.Event.COMPLETE, this.bornRole, this);
+        }
         let arr = this.originalElements;
         let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
-        let self = this;
         for (let i = 0; i < roleArr.length; i++) {
             if (roleArr[i]) {
                 egret.setTimeout((index)=>{
@@ -571,10 +580,9 @@ class FightContainer extends egret.DisplayObjectContainer {
                     this.bornRole(roleArr[index]);
                     eff.x = fight.getRoleInitPoint(roleArr[index]).x;
                     eff.y = fight.getRoleInitPoint(roleArr[index]).y;
-                    this.roleLayer.addChild(eff);
+                    this.damageEffLayer.addChild(eff);
                 }, this, i * 200, i);
             }
-
         }
     }
 
@@ -614,7 +622,24 @@ class FightContainer extends egret.DisplayObjectContainer {
         }
         let arr = this.originalElements;
         let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
-
+        if (this.firstEnter) {
+            if (this.level % 10 ==  0 && this.type == FightTypeEnum.PVE) {
+                let eff = new BossIncomingEff();
+                eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
+                this.damageEffLayer.addChild(eff);
+            } else {
+                let eff;
+                if (this.type == FightTypeEnum.PVE) {
+                    let stageName = Config.StageCommonData[Math.ceil(this.level / fight.MAP_SWITCH_SIZE)].title;
+                    eff = new NewChapterEff(stageName);
+                } else {
+                    eff = new BattleStartEff();
+                }
+                eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
+                this.damageEffLayer.addChild(eff);
+            }
+            return;
+        }
         if (this.autoFight) {
             this.addRoles(roleArr, true);
         } else {
@@ -623,7 +648,7 @@ class FightContainer extends egret.DisplayObjectContainer {
                 eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
                 this.damageEffLayer.addChild(eff);
             } else if (Config.StageData[this.level - 1] && Config.StageData[this.level].map != Config.StageData[this.level - 1].map && this.type == FightTypeEnum.PVE){
-                let eff = new NewChapterEff();
+                let eff = new NewChapterEff(Config.StageData[this.level].title);
                 eff.addEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
                 this.damageEffLayer.addChild(eff);
             } else {
@@ -633,10 +658,13 @@ class FightContainer extends egret.DisplayObjectContainer {
     }
 
     // 场景特效(例如开启新地图,boss关)
-    private stageEffComplete(e:egret.Event){
-        e.target.removeEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
+    private stageEffComplete(e:egret.Event=null){
+        if (e)
+            e.target.removeEventListener(egret.Event.COMPLETE, this.stageEffComplete, this);
         this.autoFight = true;
-        this.tweenRemoveRoleComplete(null);
+        let arr = this.originalElements;
+        let roleArr:FightRoleVO[] = fight.generateFightRoleVOArr(arr);
+        this.addRoles(roleArr, true);
     }
 
     public getCurTotalLife(side:number) {
@@ -764,7 +792,7 @@ class FightContainer extends egret.DisplayObjectContainer {
 
     /** 显示技能名字效果 */
     public showSkillFlyTxt(content:string){
-        if (this.type == FightTypeEnum.PVP) {
+        if (this.type != FightTypeEnum.PVE) {
             let skillEff = new SkillNameEff(content);
             skillEff.x = 72;
             skillEff.y = 50;
@@ -812,17 +840,22 @@ class FightContainer extends egret.DisplayObjectContainer {
     private onRoleHPChange(){
         let curTotalLife = this.getCurTotalLife(FightSideEnum.LEFT_SIDE);
         let ratio:number = +BigNum.div(curTotalLife, this.leftTotalLife);
-        if (ratio <= 0.2 && this.oldLifeRatio < ratio) {
-            if (!this.warnEff) {
-                this.warnEff = new FightWarnEff(this);
-            }
-            this.warnEff.show();
-        } else {
-            if (this.warnEff) {
-                this.warnEff.hide();
-            }
+        let w = fight.WIDTH;
+        let h = fight.HEIGHT;
+        if (this.type != FightTypeEnum.PVE) {
+            h = 860;
         }
-        this.oldLifeRatio = ratio;
+        if (this.oldLifeRatio > 0) {
+            if (ratio <= 0.3 &&  ratio < this.oldLifeRatio) {
+                if (!this.warnEff) {
+                    this.warnEff = new FightWarnEff(this);
+                }
+                this.warnEff.show(w, h);
+                this.oldLifeRatio = ratio;
+            }
+        } else {
+            this.oldLifeRatio = ratio;
+        }
     }
 
     private onUseProp(e:egret.Event) {

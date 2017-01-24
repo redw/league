@@ -117,8 +117,17 @@ class FightProcessGenerator {
      * 重新生成战报
      * @returns {FightReportItem[]}
      */
-    public updateGenerateData(){
+    public updateGenerateData(heroArr:HeroVO[]){
         let result:FightReportItem[] = [];
+
+        for (let i = 0; i < this.roles.length; i++) {
+            for (let j = 0; j < heroArr.length; j++) {
+                if (this.roles[i].id == heroArr[j].id) {
+                    this.roles[i].copyProp(heroArr[j]);
+                }
+            }
+        }
+
         while (!this.checkEnd() && this.turn  <= fight.ROUND_LIMIT) {
             if (this.index >= fight.ROUND_LIMIT) {
                 fight.recordLog("战斗步数超过了上限,数所有问题了", fight.LOG_FIGHT_WARN);
@@ -229,7 +238,8 @@ class FightProcessGenerator {
             cri: cri,
             maxhp:startRole.maxHP,
             round: round,
-            index: index
+            index: index,
+            damage: "0"
         };
 
         // 如果被眩晕
@@ -322,7 +332,7 @@ class FightProcessGenerator {
                         let backHurt = BigNum.mul(backHurtRatio, hurt);
                         startRole.curHP = BigNum.add(startRole.curHP, outHurtBack);
                         startRole.curHP = BigNum.sub(startRole.curHP, backHurt);
-                        result.damage = BigNum.add(backHurt, outHurtBack);
+                        result.damage = BigNum.add(result.damage, BigNum.add(backHurt, outHurtBack));
                         result.hp = startRole.curHP;
 
                         if (BigNum.greater(fight.DIE_HP, target.curHP)){
@@ -357,7 +367,7 @@ class FightProcessGenerator {
         if (BigNum.greater(startRole.curHP, 0)) {
             startRole.loseBlood();
             if (BigNum.lessOrEqual(startRole.curHP, 0)) {
-                console.log("第" + index + "攻击者中毒死亡" + fight.getRolePosDes(startRole));
+                fight.recordLog("第" + index + "攻击者中毒死亡" + fight.getRolePosDes(startRole));
                 this.removeRole(startRole);
             }
         }

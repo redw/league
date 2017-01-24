@@ -1,290 +1,290 @@
 {
 	"1": {
-		"reward_per_game": 72,
-		"point": 830,
-		"tip": "王者3星",
 		"diamond_per_season": 5400,
 		"reward_per_season": 10800,
+		"back_point": 210,
+		"point": 830,
+		"tip": "王者3星",
 		"id": 1,
-		"back_point": 210
+		"reward_per_game": 72
 	},
 	"2": {
-		"reward_per_game": 70,
-		"point": 770,
-		"tip": "王者2星",
 		"diamond_per_season": 4550,
 		"reward_per_season": 9100,
+		"back_point": 210,
+		"point": 770,
+		"tip": "王者2星",
 		"id": 2,
-		"back_point": 210
+		"reward_per_game": 70
 	},
 	"3": {
-		"reward_per_game": 68,
-		"point": 710,
-		"tip": "王者1星",
 		"diamond_per_season": 4080,
 		"reward_per_season": 8160,
+		"back_point": 210,
+		"point": 710,
+		"tip": "王者1星",
 		"id": 3,
-		"back_point": 210
+		"reward_per_game": 68
 	},
 	"4": {
-		"reward_per_game": 66,
-		"point": 650,
-		"tip": "王者0星",
 		"diamond_per_season": 3630.000000000001,
 		"reward_per_season": 7260.000000000002,
+		"back_point": 210,
+		"point": 650,
+		"tip": "王者0星",
 		"id": 4,
-		"back_point": 210
+		"reward_per_game": 66
 	},
 	"5": {
-		"reward_per_game": 64,
-		"point": 590,
-		"tip": "超凡3星",
 		"diamond_per_season": 3520.0000000000005,
 		"reward_per_season": 7040.000000000001,
+		"back_point": 130,
+		"point": 590,
+		"tip": "超凡3星",
 		"id": 5,
-		"back_point": 130
+		"reward_per_game": 64
 	},
 	"6": {
-		"reward_per_game": 62,
-		"point": 550,
-		"tip": "超凡2星",
 		"diamond_per_season": 3100,
 		"reward_per_season": 6200,
+		"back_point": 130,
+		"point": 550,
+		"tip": "超凡2星",
 		"id": 6,
-		"back_point": 130
+		"reward_per_game": 62
 	},
 	"7": {
-		"reward_per_game": 60,
-		"point": 510,
-		"tip": "超凡1星",
 		"diamond_per_season": 3000,
 		"reward_per_season": 6000,
+		"back_point": 130,
+		"point": 510,
+		"tip": "超凡1星",
 		"id": 7,
-		"back_point": 130
+		"reward_per_game": 60
 	},
 	"8": {
-		"reward_per_game": 58,
-		"point": 470,
-		"tip": "超凡0星",
 		"diamond_per_season": 2900,
 		"reward_per_season": 5800,
+		"back_point": 130,
+		"point": 470,
+		"tip": "超凡0星",
 		"id": 8,
-		"back_point": 130
+		"reward_per_game": 58
 	},
 	"9": {
-		"reward_per_game": 56,
-		"point": 430,
-		"tip": "钻石3星",
 		"diamond_per_season": 2520,
 		"reward_per_season": 5040,
+		"back_point": 130,
+		"point": 430,
+		"tip": "钻石3星",
 		"id": 9,
-		"back_point": 130
+		"reward_per_game": 56
 	},
 	"10": {
-		"reward_per_game": 54,
-		"point": 390,
-		"tip": "钻石2星",
 		"diamond_per_season": 2430,
 		"reward_per_season": 4860,
+		"back_point": 130,
+		"point": 390,
+		"tip": "钻石2星",
 		"id": 10,
-		"back_point": 130
+		"reward_per_game": 54
 	},
 	"11": {
-		"reward_per_game": 52,
-		"point": 350,
-		"tip": "钻石1星",
 		"diamond_per_season": 2340,
 		"reward_per_season": 4680,
+		"back_point": 130,
+		"point": 350,
+		"tip": "钻石1星",
 		"id": 11,
-		"back_point": 130
+		"reward_per_game": 52
 	},
 	"12": {
-		"reward_per_game": 50,
-		"point": 310,
-		"tip": "钻石0星",
 		"diamond_per_season": 2000,
 		"reward_per_season": 4000,
+		"back_point": 130,
+		"point": 310,
+		"tip": "钻石0星",
 		"id": 12,
-		"back_point": 130
+		"reward_per_game": 50
 	},
 	"13": {
-		"reward_per_game": 48,
-		"point": 270,
-		"tip": "铂金3星",
 		"diamond_per_season": 1920,
 		"reward_per_season": 3840,
+		"back_point": 50,
+		"point": 270,
+		"tip": "铂金3星",
 		"id": 13,
-		"back_point": 0
+		"reward_per_game": 48
 	},
 	"14": {
-		"reward_per_game": 46,
-		"point": 250,
-		"tip": "铂金2星",
 		"diamond_per_season": 1840,
 		"reward_per_season": 3680,
+		"back_point": 50,
+		"point": 250,
+		"tip": "铂金2星",
 		"id": 14,
-		"back_point": 0
+		"reward_per_game": 46
 	},
 	"15": {
-		"reward_per_game": 44,
-		"point": 230,
-		"tip": "铂金1星",
 		"diamond_per_season": 1540,
 		"reward_per_season": 3080,
+		"back_point": 50,
+		"point": 230,
+		"tip": "铂金1星",
 		"id": 15,
-		"back_point": 0
+		"reward_per_game": 44
 	},
 	"16": {
-		"reward_per_game": 42,
-		"point": 210,
-		"tip": "铂金0星",
 		"diamond_per_season": 1470,
 		"reward_per_season": 2940,
+		"back_point": 50,
+		"point": 210,
+		"tip": "铂金0星",
 		"id": 16,
-		"back_point": 0
+		"reward_per_game": 42
 	},
 	"17": {
-		"reward_per_game": 40,
-		"point": 190,
-		"tip": "黄金3星",
 		"diamond_per_season": 1400,
 		"reward_per_season": 2800,
+		"back_point": 50,
+		"point": 190,
+		"tip": "黄金3星",
 		"id": 17,
-		"back_point": 0
+		"reward_per_game": 40
 	},
 	"18": {
-		"reward_per_game": 38,
-		"point": 170,
-		"tip": "黄金2星",
 		"diamond_per_season": 1140,
 		"reward_per_season": 2280,
+		"back_point": 50,
+		"point": 170,
+		"tip": "黄金2星",
 		"id": 18,
-		"back_point": 0
+		"reward_per_game": 38
 	},
 	"19": {
-		"reward_per_game": 36,
-		"point": 150,
-		"tip": "黄金1星",
 		"diamond_per_season": 1080,
 		"reward_per_season": 2160,
+		"back_point": 50,
+		"point": 150,
+		"tip": "黄金1星",
 		"id": 19,
-		"back_point": 0
+		"reward_per_game": 36
 	},
 	"20": {
-		"reward_per_game": 34,
-		"point": 130,
-		"tip": "黄金0星",
 		"diamond_per_season": 1020,
 		"reward_per_season": 2040,
+		"back_point": 50,
+		"point": 130,
+		"tip": "黄金0星",
 		"id": 20,
-		"back_point": 0
+		"reward_per_game": 34
 	},
 	"21": {
-		"reward_per_game": 32,
+		"diamond_per_season": 800,
+		"reward_per_season": 1500,
+		"back_point": 50,
 		"point": 110,
 		"tip": "白银3星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 21,
-		"back_point": 0
+		"reward_per_game": 32
 	},
 	"22": {
-		"reward_per_game": 30,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 100,
 		"tip": "白银2星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 22,
-		"back_point": 0
+		"reward_per_game": 30
 	},
 	"23": {
-		"reward_per_game": 28,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 90,
 		"tip": "白银1星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 23,
-		"back_point": 0
+		"reward_per_game": 28
 	},
 	"24": {
-		"reward_per_game": 26,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 80,
 		"tip": "白银0星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 24,
-		"back_point": 0
+		"reward_per_game": 26
 	},
 	"25": {
-		"reward_per_game": 24,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 70,
 		"tip": "青铜3星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 25,
-		"back_point": 0
+		"reward_per_game": 24
 	},
 	"26": {
-		"reward_per_game": 22,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 60,
 		"tip": "青铜2星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 26,
-		"back_point": 0
+		"reward_per_game": 22
 	},
 	"27": {
-		"reward_per_game": 20,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 50,
 		"tip": "青铜1星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 27,
-		"back_point": 0
+		"reward_per_game": 20
 	},
 	"28": {
-		"reward_per_game": 18,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 40,
 		"tip": "青铜0星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 28,
-		"back_point": 0
+		"reward_per_game": 18
 	},
 	"29": {
-		"reward_per_game": 16,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 30,
 		"tip": "黑铁3星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 29,
-		"back_point": 0
+		"reward_per_game": 16
 	},
 	"30": {
-		"reward_per_game": 14,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 20,
 		"tip": "黑铁2星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 30,
-		"back_point": 0
+		"reward_per_game": 14
 	},
 	"31": {
-		"reward_per_game": 12,
+		"diamond_per_season": 0,
+		"reward_per_season": 0,
+		"back_point": 0,
 		"point": 10,
 		"tip": "黑铁1星",
-		"diamond_per_season": 0,
-		"reward_per_season": 0,
 		"id": 31,
-		"back_point": 0
+		"reward_per_game": 12
 	},
 	"32": {
-		"reward_per_game": 10,
-		"point": 0,
-		"tip": "黑铁0星",
 		"diamond_per_season": 0,
 		"reward_per_season": 0,
+		"back_point": 0,
+		"point": 0,
+		"tip": "黑铁0星",
 		"id": 32,
-		"back_point": 0
+		"reward_per_game": 10
 	}
 }

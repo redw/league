@@ -1,7 +1,7 @@
 {
 	"1": {
+		"head_icon": 301,
 		"disc": "乾金秘境，内有禁制，人族伙伴不可上阵",
-		"reward_icon": 9,
 		"open_day": [
 			"1",
 			"0",
@@ -11,13 +11,13 @@
 			"1",
 			"0"
 		],
+		"reward_icon": 9,
 		"id": 1,
-		"head_icon": "enemy_301",
 		"name": "乾金秘境"
 	},
 	"2": {
+		"head_icon": 302,
 		"disc": "巽木秘境，内有禁制，妖族伙伴不可上阵",
-		"reward_icon": 10,
 		"open_day": [
 			"1",
 			"0",
@@ -27,13 +27,13 @@
 			"1",
 			"0"
 		],
+		"reward_icon": 10,
 		"id": 2,
-		"head_icon": "enemy_302",
 		"name": "巽木秘境"
 	},
 	"3": {
+		"head_icon": 303,
 		"disc": "坎水秘境，内有禁制，仙族伙伴不可上阵",
-		"reward_icon": 11,
 		"open_day": [
 			"0",
 			"1",
@@ -43,13 +43,13 @@
 			"1",
 			"0"
 		],
+		"reward_icon": 11,
 		"id": 3,
-		"head_icon": "enemy_303",
 		"name": "坎水秘境"
 	},
 	"4": {
+		"head_icon": 304,
 		"disc": "离火秘境，内有禁制，近战伙伴不可上阵",
-		"reward_icon": 12,
 		"open_day": [
 			"0",
 			"1",
@@ -59,13 +59,13 @@
 			"0",
 			"1"
 		],
+		"reward_icon": 12,
 		"id": 4,
-		"head_icon": "enemy_304",
 		"name": "离火秘境"
 	},
 	"5": {
+		"head_icon": 305,
 		"disc": "艮土秘境，内有禁制，远程伙伴不可上阵",
-		"reward_icon": 13,
 		"open_day": [
 			"0",
 			"0",
@@ -75,8 +75,8 @@
 			"0",
 			"1"
 		],
+		"reward_icon": 13,
 		"id": 5,
-		"head_icon": "enemy_305",
 		"name": "艮土秘境"
 	}
 }

@@ -12,18 +12,24 @@ class PVEMiddleGround extends PVEBackGround {
     }
 
     private checkResHeight(){
-        if (this.background.height > 0) {
+        if (this.background && this.background.height > 0) {
             this.background.y = (fight.HEIGHT - this.background.height) * 0.5;
         }
-        if (this.freeBackground.height > 0) {
+        if (this.freeBackground && this.freeBackground.height > 0) {
             this.freeBackground.y = (fight.HEIGHT - this.freeBackground.height) * 0.5;
         }
         return false;
     }
 
     protected getSceneResourcePath(level:number){
-        let map:string = Config.StageData[level].map;
+        let stageConfig:StageCommonConfig = Config.StageCommonData[Math.ceil(level / fight.MAP_SWITCH_SIZE)];
+        let map:string = stageConfig.map;
         return `${map}_2_png`;
+    }
+
+    public set source(value:string){
+        let path = `${value}_2_png`;
+        this.background.source = path;
     }
 
     // 缓动

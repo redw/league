@@ -39,8 +39,14 @@ class PVEProspect extends egret.DisplayObjectContainer{
     }
 
     protected getSceneResourcePath(level:number){
-        let map:string = Config.StageData[level].map;
+        let stageConfig:StageCommonConfig = Config.StageCommonData[Math.ceil(level / fight.MAP_SWITCH_SIZE)];
+        let map:string = stageConfig.map;
         return `${map}_3_png`;
+    }
+
+    public set source(value:string){
+        let path = `${value}_3_png`;
+        this.background1.source = path;
     }
 
     /**
@@ -49,7 +55,7 @@ class PVEProspect extends egret.DisplayObjectContainer{
      */
     public set level(value:number) {
         if (value != this._level) {
-            let stageConfig:StageConfig = Config.StageData[value];
+            let stageConfig:StageCommonConfig = Config.StageCommonData[Math.ceil(value / fight.MAP_SWITCH_SIZE)];
             if (!stageConfig)  return;
             this.background1.source = this.getSceneResourcePath(value);
             if (this.hasTween) {
@@ -57,7 +63,7 @@ class PVEProspect extends egret.DisplayObjectContainer{
                 this.background2.source = this.getSceneResourcePath(value);
                 let off:number = 0;
                 if (this._level != -1) {
-                    let prevConfig:StageConfig = Config.StageData[this._level];
+                    let prevConfig:StageCommonConfig = Config.StageCommonData[Math.ceil(this._level / fight.MAP_SWITCH_SIZE)];
                     if (stageConfig.bgm == prevConfig.bgm) {
                         if (value > this._level) {
                             off = -1;

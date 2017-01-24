@@ -1,6 +1,5 @@
 {
 	"1024": {
-		"level": 4,
 		"enemy": [
 			"209",
 			"209",
@@ -12,21 +11,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_209",
+		"bgm": "golden",
+		"level": 4,
+		"pve_stage": 5050,
 		"map": "golden",
+		"head_icon": 209,
+		"rank": 5,
+		"id": 1024,
 		"reward_1": [
 			"9",
 			"0",
 			"998378"
 		],
-		"pvp_stage": 4350,
-		"rank": 5,
-		"id": 1024,
-		"bgm": "golden",
 		"name": "乾金秘境 5-4"
 	},
 	"1025": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"301",
@@ -38,21 +37,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_301",
+		"bgm": "golden",
+		"level": 5,
+		"pve_stage": 5500,
 		"map": "golden",
+		"head_icon": 301,
+		"rank": 5,
+		"id": 1025,
 		"reward_1": [
 			"9",
 			"0",
 			"1697243"
 		],
-		"pvp_stage": 4750,
-		"rank": 5,
-		"id": 1025,
-		"bgm": "golden",
 		"name": "乾金秘境 5-5"
 	},
 	"1026": {
-		"level": 1,
 		"enemy": [
 			"214",
 			"214",
@@ -64,21 +63,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_214",
+		"bgm": "golden",
+		"level": 1,
+		"pve_stage": 6000,
 		"map": "golden",
+		"head_icon": 214,
+		"rank": 6,
+		"id": 1026,
 		"reward_1": [
 			"9",
 			"0",
 			"2885313"
 		],
-		"pvp_stage": 5050,
-		"rank": 6,
-		"id": 1026,
-		"bgm": "golden",
 		"name": "乾金秘境 6-1"
 	},
 	"1027": {
-		"level": 2,
 		"enemy": [
 			"210",
 			"210",
@@ -90,21 +89,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_210",
+		"bgm": "golden",
+		"level": 2,
+		"pve_stage": 6500,
 		"map": "golden",
+		"head_icon": 210,
+		"rank": 6,
+		"id": 1027,
 		"reward_1": [
 			"9",
 			"0",
 			"4905033"
 		],
-		"pvp_stage": 5350,
-		"rank": 6,
-		"id": 1027,
-		"bgm": "golden",
 		"name": "乾金秘境 6-2"
 	},
 	"1028": {
-		"level": 3,
 		"enemy": [
 			"203",
 			"203",
@@ -116,21 +115,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "golden",
+		"level": 3,
+		"pve_stage": 7000,
 		"map": "golden",
+		"head_icon": 208,
+		"rank": 6,
+		"id": 1028,
 		"reward_1": [
 			"9",
 			"0",
 			"8338556"
 		],
-		"pvp_stage": 5700,
-		"rank": 6,
-		"id": 1028,
-		"bgm": "golden",
 		"name": "乾金秘境 6-3"
 	},
 	"1029": {
-		"level": 4,
 		"enemy": [
 			"209",
 			"209",
@@ -142,21 +141,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_209",
+		"bgm": "golden",
+		"level": 4,
+		"pve_stage": 7550,
 		"map": "golden",
+		"head_icon": 209,
+		"rank": 6,
+		"id": 1029,
 		"reward_1": [
 			"9",
 			"0",
 			"14175546"
 		],
-		"pvp_stage": 6050,
-		"rank": 6,
-		"id": 1029,
-		"bgm": "golden",
 		"name": "乾金秘境 6-4"
 	},
 	"1030": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"301",
@@ -168,21 +167,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_301",
+		"bgm": "golden",
+		"level": 5,
+		"pve_stage": 8150,
 		"map": "golden",
+		"head_icon": 301,
+		"rank": 6,
+		"id": 1030,
 		"reward_1": [
 			"9",
 			"0",
 			"24098428"
 		],
-		"pvp_stage": 6500,
-		"rank": 6,
-		"id": 1030,
-		"bgm": "golden",
 		"name": "乾金秘境 6-5"
 	},
 	"1014": {
-		"level": 4,
 		"enemy": [
 			"209",
 			"209",
@@ -194,21 +193,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_209",
+		"bgm": "golden",
+		"level": 4,
+		"pve_stage": 1550,
 		"map": "golden",
+		"head_icon": 209,
+		"rank": 3,
+		"id": 1014,
 		"reward_1": [
 			"9",
 			"0",
 			"4952"
 		],
-		"pvp_stage": 1700,
-		"rank": 3,
-		"id": 1014,
-		"bgm": "golden",
 		"name": "乾金秘境 3-4"
 	},
 	"1015": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"301",
@@ -220,21 +219,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_301",
+		"bgm": "golden",
+		"level": 5,
+		"pve_stage": 1800,
 		"map": "golden",
+		"head_icon": 301,
+		"rank": 3,
+		"id": 1015,
 		"reward_1": [
 			"9",
 			"0",
 			"8418"
 		],
-		"pvp_stage": 2000,
-		"rank": 3,
-		"id": 1015,
-		"bgm": "golden",
 		"name": "乾金秘境 3-5"
 	},
 	"4028": {
-		"level": 3,
 		"enemy": [
 			"228",
 			"228",
@@ -246,21 +245,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_228",
+		"bgm": "fire",
+		"level": 3,
+		"pve_stage": 7000,
 		"map": "fire",
+		"head_icon": 228,
+		"rank": 6,
+		"id": 4028,
 		"reward_1": [
 			"12",
 			"0",
 			"8338556"
 		],
-		"pvp_stage": 5700,
-		"rank": 6,
-		"id": 4028,
-		"bgm": "fire",
 		"name": "离火秘境 3-3"
 	},
 	"1017": {
-		"level": 2,
 		"enemy": [
 			"210",
 			"210",
@@ -272,21 +271,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_210",
+		"bgm": "golden",
+		"level": 2,
+		"pve_stage": 2400,
 		"map": "golden",
+		"head_icon": 210,
+		"rank": 4,
+		"id": 1017,
 		"reward_1": [
 			"9",
 			"0",
 			"24330"
 		],
-		"pvp_stage": 2400,
-		"rank": 4,
-		"id": 1017,
-		"bgm": "golden",
 		"name": "乾金秘境 4-2"
 	},
 	"1018": {
-		"level": 3,
 		"enemy": [
 			"203",
 			"203",
@@ -298,21 +297,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "golden",
+		"level": 3,
+		"pve_stage": 2700,
 		"map": "golden",
+		"head_icon": 208,
+		"rank": 4,
+		"id": 1018,
 		"reward_1": [
 			"9",
 			"0",
 			"41362"
 		],
-		"pvp_stage": 2650,
-		"rank": 4,
-		"id": 1018,
-		"bgm": "golden",
 		"name": "乾金秘境 4-3"
 	},
 	"1019": {
-		"level": 4,
 		"enemy": [
 			"209",
 			"209",
@@ -324,21 +323,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_209",
+		"bgm": "golden",
+		"level": 4,
+		"pve_stage": 3050,
 		"map": "golden",
+		"head_icon": 209,
+		"rank": 4,
+		"id": 1019,
 		"reward_1": [
 			"9",
 			"0",
 			"70315"
 		],
-		"pvp_stage": 2900,
-		"rank": 4,
-		"id": 1019,
-		"bgm": "golden",
 		"name": "乾金秘境 4-4"
 	},
 	"1020": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"301",
@@ -350,21 +349,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_301",
+		"bgm": "golden",
+		"level": 5,
+		"pve_stage": 3400,
 		"map": "golden",
+		"head_icon": 301,
+		"rank": 4,
+		"id": 1020,
 		"reward_1": [
 			"9",
 			"0",
 			"119536"
 		],
-		"pvp_stage": 3250,
-		"rank": 4,
-		"id": 1020,
-		"bgm": "golden",
 		"name": "乾金秘境 4-5"
 	},
 	"1011": {
-		"level": 1,
 		"enemy": [
 			"214",
 			"214",
@@ -376,21 +375,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_214",
+		"bgm": "golden",
+		"level": 1,
+		"pve_stage": 900,
 		"map": "golden",
+		"head_icon": 214,
+		"rank": 3,
+		"id": 1011,
 		"reward_1": [
 			"9",
 			"0",
 			"1007"
 		],
-		"pvp_stage": 1150,
-		"rank": 3,
-		"id": 1011,
-		"bgm": "golden",
 		"name": "乾金秘境 3-1"
 	},
 	"1012": {
-		"level": 2,
 		"enemy": [
 			"210",
 			"210",
@@ -402,21 +401,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_210",
+		"bgm": "golden",
+		"level": 2,
+		"pve_stage": 1100,
 		"map": "golden",
+		"head_icon": 210,
+		"rank": 3,
+		"id": 1012,
 		"reward_1": [
 			"9",
 			"0",
 			"1713"
 		],
-		"pvp_stage": 1300,
-		"rank": 3,
-		"id": 1012,
-		"bgm": "golden",
 		"name": "乾金秘境 3-2"
 	},
 	"1013": {
-		"level": 3,
 		"enemy": [
 			"203",
 			"203",
@@ -428,21 +427,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "golden",
+		"level": 3,
+		"pve_stage": 1300,
 		"map": "golden",
+		"head_icon": 208,
+		"rank": 3,
+		"id": 1013,
 		"reward_1": [
 			"9",
 			"0",
 			"2913"
 		],
-		"pvp_stage": 1500,
-		"rank": 3,
-		"id": 1013,
-		"bgm": "golden",
 		"name": "乾金秘境 3-3"
 	},
 	"5029": {
-		"level": 4,
 		"enemy": [
 			"204",
 			"204",
@@ -454,21 +453,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_204",
+		"bgm": "soil",
+		"level": 4,
+		"pve_stage": 7550,
 		"map": "soil",
+		"head_icon": 204,
+		"rank": 6,
+		"id": 5029,
 		"reward_1": [
 			"13",
 			"0",
 			"14175546"
 		],
-		"pvp_stage": 6050,
-		"rank": 6,
-		"id": 5029,
-		"bgm": "soil",
 		"name": "艮土秘境 3-4"
 	},
 	"5030": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"305",
@@ -480,21 +479,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_305",
+		"bgm": "soil",
+		"level": 5,
+		"pve_stage": 8150,
 		"map": "soil",
+		"head_icon": 305,
+		"rank": 6,
+		"id": 5030,
 		"reward_1": [
 			"13",
 			"0",
 			"24098428"
 		],
-		"pvp_stage": 6500,
-		"rank": 6,
-		"id": 5030,
-		"bgm": "soil",
 		"name": "艮土秘境 3-5"
 	},
 	"4025": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"304",
@@ -506,21 +505,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_304",
+		"bgm": "fire",
+		"level": 5,
+		"pve_stage": 5500,
 		"map": "fire",
+		"head_icon": 304,
+		"rank": 5,
+		"id": 4025,
 		"reward_1": [
 			"12",
 			"0",
 			"1697243"
 		],
-		"pvp_stage": 4750,
-		"rank": 5,
-		"id": 4025,
-		"bgm": "fire",
 		"name": "离火秘境 2-5"
 	},
 	"4026": {
-		"level": 1,
 		"enemy": [
 			"230",
 			"230",
@@ -532,21 +531,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_230",
+		"bgm": "fire",
+		"level": 1,
+		"pve_stage": 6000,
 		"map": "fire",
+		"head_icon": 230,
+		"rank": 6,
+		"id": 4026,
 		"reward_1": [
 			"12",
 			"0",
 			"2885313"
 		],
-		"pvp_stage": 5050,
-		"rank": 6,
-		"id": 4026,
-		"bgm": "fire",
 		"name": "离火秘境 3-1"
 	},
 	"4027": {
-		"level": 2,
 		"enemy": [
 			"225",
 			"225",
@@ -558,21 +557,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_225",
+		"bgm": "fire",
+		"level": 2,
+		"pve_stage": 6500,
 		"map": "fire",
+		"head_icon": 225,
+		"rank": 6,
+		"id": 4027,
 		"reward_1": [
 			"12",
 			"0",
 			"4905033"
 		],
-		"pvp_stage": 5350,
-		"rank": 6,
-		"id": 4027,
-		"bgm": "fire",
 		"name": "离火秘境 3-2"
 	},
 	"1021": {
-		"level": 1,
 		"enemy": [
 			"214",
 			"214",
@@ -584,21 +583,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_214",
+		"bgm": "golden",
+		"level": 1,
+		"pve_stage": 3800,
 		"map": "golden",
+		"head_icon": 214,
+		"rank": 5,
+		"id": 1021,
 		"reward_1": [
 			"9",
 			"0",
 			"203211"
 		],
-		"pvp_stage": 3500,
-		"rank": 5,
-		"id": 1021,
-		"bgm": "golden",
 		"name": "乾金秘境 5-1"
 	},
 	"1022": {
-		"level": 2,
 		"enemy": [
 			"210",
 			"210",
@@ -610,21 +609,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_210",
+		"bgm": "golden",
+		"level": 2,
+		"pve_stage": 4200,
 		"map": "golden",
+		"head_icon": 210,
+		"rank": 5,
+		"id": 1022,
 		"reward_1": [
 			"9",
 			"0",
 			"345459"
 		],
-		"pvp_stage": 3750,
-		"rank": 5,
-		"id": 1022,
-		"bgm": "golden",
 		"name": "乾金秘境 5-2"
 	},
 	"1023": {
-		"level": 3,
 		"enemy": [
 			"203",
 			"203",
@@ -636,21 +635,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "golden",
+		"level": 3,
+		"pve_stage": 4600,
 		"map": "golden",
+		"head_icon": 208,
+		"rank": 5,
+		"id": 1023,
 		"reward_1": [
 			"9",
 			"0",
 			"587281"
 		],
-		"pvp_stage": 4050,
-		"rank": 5,
-		"id": 1023,
-		"bgm": "golden",
 		"name": "乾金秘境 5-3"
 	},
 	"5025": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"305",
@@ -662,21 +661,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_305",
+		"bgm": "soil",
+		"level": 5,
+		"pve_stage": 5500,
 		"map": "soil",
+		"head_icon": 305,
+		"rank": 5,
+		"id": 5025,
 		"reward_1": [
 			"13",
 			"0",
 			"1697243"
 		],
-		"pvp_stage": 4750,
-		"rank": 5,
-		"id": 5025,
-		"bgm": "soil",
 		"name": "艮土秘境 2-5"
 	},
 	"5026": {
-		"level": 1,
 		"enemy": [
 			"218",
 			"218",
@@ -688,21 +687,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_218",
+		"bgm": "soil",
+		"level": 1,
+		"pve_stage": 6000,
 		"map": "soil",
+		"head_icon": 218,
+		"rank": 6,
+		"id": 5026,
 		"reward_1": [
 			"13",
 			"0",
 			"2885313"
 		],
-		"pvp_stage": 5050,
-		"rank": 6,
-		"id": 5026,
-		"bgm": "soil",
 		"name": "艮土秘境 3-1"
 	},
 	"5027": {
-		"level": 2,
 		"enemy": [
 			"216",
 			"216",
@@ -714,21 +713,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_216",
+		"bgm": "soil",
+		"level": 2,
+		"pve_stage": 6500,
 		"map": "soil",
+		"head_icon": 216,
+		"rank": 6,
+		"id": 5027,
 		"reward_1": [
 			"13",
 			"0",
 			"4905033"
 		],
-		"pvp_stage": 5350,
-		"rank": 6,
-		"id": 5027,
-		"bgm": "soil",
 		"name": "艮土秘境 3-2"
 	},
 	"5028": {
-		"level": 3,
 		"enemy": [
 			"217",
 			"217",
@@ -740,21 +739,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_217",
+		"bgm": "soil",
+		"level": 3,
+		"pve_stage": 7000,
 		"map": "soil",
+		"head_icon": 217,
+		"rank": 6,
+		"id": 5028,
 		"reward_1": [
 			"13",
 			"0",
 			"8338556"
 		],
-		"pvp_stage": 5700,
-		"rank": 6,
-		"id": 5028,
-		"bgm": "soil",
 		"name": "艮土秘境 3-3"
 	},
 	"4029": {
-		"level": 4,
 		"enemy": [
 			"212",
 			"212",
@@ -766,21 +765,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_212",
+		"bgm": "fire",
+		"level": 4,
+		"pve_stage": 7550,
 		"map": "fire",
+		"head_icon": 212,
+		"rank": 6,
+		"id": 4029,
 		"reward_1": [
 			"12",
 			"0",
 			"14175546"
 		],
-		"pvp_stage": 6050,
-		"rank": 6,
-		"id": 4029,
-		"bgm": "fire",
 		"name": "离火秘境 3-4"
 	},
 	"4030": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"304",
@@ -792,21 +791,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_304",
+		"bgm": "fire",
+		"level": 5,
+		"pve_stage": 8150,
 		"map": "fire",
+		"head_icon": 304,
+		"rank": 6,
+		"id": 4030,
 		"reward_1": [
 			"12",
 			"0",
 			"24098428"
 		],
-		"pvp_stage": 6500,
-		"rank": 6,
-		"id": 4030,
-		"bgm": "fire",
 		"name": "离火秘境 3-5"
 	},
 	"5001": {
-		"level": 1,
 		"enemy": [
 			"218",
 			"218",
@@ -818,21 +817,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_218",
+		"bgm": "soil",
+		"level": 1,
+		"pve_stage": 1,
 		"map": "soil",
+		"head_icon": 218,
+		"rank": 1,
+		"id": 5001,
 		"reward_1": [
 			"13",
 			"0",
 			"5"
 		],
-		"pvp_stage": 30,
-		"rank": 1,
-		"id": 5001,
-		"bgm": "soil",
 		"name": "艮土秘境 1-1"
 	},
 	"5002": {
-		"level": 2,
 		"enemy": [
 			"216",
 			"216",
@@ -844,21 +843,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_216",
+		"bgm": "soil",
+		"level": 2,
+		"pve_stage": 10,
 		"map": "soil",
+		"head_icon": 216,
+		"rank": 1,
+		"id": 5002,
 		"reward_1": [
 			"13",
 			"0",
 			"8"
 		],
-		"pvp_stage": 50,
-		"rank": 1,
-		"id": 5002,
-		"bgm": "soil",
 		"name": "艮土秘境 1-2"
 	},
 	"5003": {
-		"level": 3,
 		"enemy": [
 			"217",
 			"217",
@@ -870,21 +869,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_217",
+		"bgm": "soil",
+		"level": 3,
+		"pve_stage": 20,
 		"map": "soil",
+		"head_icon": 217,
+		"rank": 1,
+		"id": 5003,
 		"reward_1": [
 			"13",
 			"0",
 			"14"
 		],
-		"pvp_stage": 100,
-		"rank": 1,
-		"id": 5003,
-		"bgm": "soil",
 		"name": "艮土秘境 1-3"
 	},
 	"5004": {
-		"level": 4,
 		"enemy": [
 			"204",
 			"204",
@@ -896,21 +895,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_204",
+		"bgm": "soil",
+		"level": 4,
+		"pve_stage": 50,
 		"map": "soil",
+		"head_icon": 204,
+		"rank": 1,
+		"id": 5004,
 		"reward_1": [
 			"13",
 			"0",
 			"24"
 		],
-		"pvp_stage": 150,
-		"rank": 1,
-		"id": 5004,
-		"bgm": "soil",
 		"name": "艮土秘境 1-4"
 	},
 	"5005": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"305",
@@ -922,21 +921,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_305",
+		"bgm": "soil",
+		"level": 5,
+		"pve_stage": 100,
 		"map": "soil",
+		"head_icon": 305,
+		"rank": 1,
+		"id": 5005,
 		"reward_1": [
 			"13",
 			"0",
 			"41"
 		],
-		"pvp_stage": 250,
-		"rank": 1,
-		"id": 5005,
-		"bgm": "soil",
 		"name": "艮土秘境 1-5"
 	},
 	"5006": {
-		"level": 1,
 		"enemy": [
 			"218",
 			"218",
@@ -948,21 +947,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_218",
+		"bgm": "soil",
+		"level": 1,
+		"pve_stage": 200,
 		"map": "soil",
+		"head_icon": 218,
+		"rank": 2,
+		"id": 5006,
 		"reward_1": [
 			"13",
 			"0",
 			"70"
 		],
-		"pvp_stage": 350,
-		"rank": 2,
-		"id": 5006,
-		"bgm": "soil",
 		"name": "艮土秘境 2-1"
 	},
 	"5007": {
-		"level": 2,
 		"enemy": [
 			"216",
 			"216",
@@ -974,21 +973,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_216",
+		"bgm": "soil",
+		"level": 2,
+		"pve_stage": 300,
 		"map": "soil",
+		"head_icon": 216,
+		"rank": 2,
+		"id": 5007,
 		"reward_1": [
 			"13",
 			"0",
 			"120"
 		],
-		"pvp_stage": 450,
-		"rank": 2,
-		"id": 5007,
-		"bgm": "soil",
 		"name": "艮土秘境 2-2"
 	},
 	"5008": {
-		"level": 3,
 		"enemy": [
 			"217",
 			"217",
@@ -1000,21 +999,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_217",
+		"bgm": "soil",
+		"level": 3,
+		"pve_stage": 400,
 		"map": "soil",
+		"head_icon": 217,
+		"rank": 2,
+		"id": 5008,
 		"reward_1": [
 			"13",
 			"0",
 			"205"
 		],
-		"pvp_stage": 600,
-		"rank": 2,
-		"id": 5008,
-		"bgm": "soil",
 		"name": "艮土秘境 2-3"
 	},
 	"5009": {
-		"level": 4,
 		"enemy": [
 			"204",
 			"204",
@@ -1026,21 +1025,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_204",
+		"bgm": "soil",
+		"level": 4,
+		"pve_stage": 550,
 		"map": "soil",
+		"head_icon": 204,
+		"rank": 2,
+		"id": 5009,
 		"reward_1": [
 			"13",
 			"0",
 			"348"
 		],
-		"pvp_stage": 750,
-		"rank": 2,
-		"id": 5009,
-		"bgm": "soil",
 		"name": "艮土秘境 2-4"
 	},
 	"5010": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"305",
@@ -1052,21 +1051,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_305",
+		"bgm": "soil",
+		"level": 5,
+		"pve_stage": 700,
 		"map": "soil",
+		"head_icon": 305,
+		"rank": 2,
+		"id": 5010,
 		"reward_1": [
 			"13",
 			"0",
 			"592"
 		],
-		"pvp_stage": 1000,
-		"rank": 2,
-		"id": 5010,
-		"bgm": "soil",
 		"name": "艮土秘境 2-5"
 	},
 	"5011": {
-		"level": 1,
 		"enemy": [
 			"218",
 			"218",
@@ -1078,21 +1077,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_218",
+		"bgm": "soil",
+		"level": 1,
+		"pve_stage": 900,
 		"map": "soil",
+		"head_icon": 218,
+		"rank": 3,
+		"id": 5011,
 		"reward_1": [
 			"13",
 			"0",
 			"1007"
 		],
-		"pvp_stage": 1150,
-		"rank": 3,
-		"id": 5011,
-		"bgm": "soil",
 		"name": "艮土秘境 3-1"
 	},
 	"5012": {
-		"level": 2,
 		"enemy": [
 			"216",
 			"216",
@@ -1104,21 +1103,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_216",
+		"bgm": "soil",
+		"level": 2,
+		"pve_stage": 1100,
 		"map": "soil",
+		"head_icon": 216,
+		"rank": 3,
+		"id": 5012,
 		"reward_1": [
 			"13",
 			"0",
 			"1713"
 		],
-		"pvp_stage": 1300,
-		"rank": 3,
-		"id": 5012,
-		"bgm": "soil",
 		"name": "艮土秘境 3-2"
 	},
 	"5013": {
-		"level": 3,
 		"enemy": [
 			"217",
 			"217",
@@ -1130,21 +1129,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_217",
+		"bgm": "soil",
+		"level": 3,
+		"pve_stage": 1300,
 		"map": "soil",
+		"head_icon": 217,
+		"rank": 3,
+		"id": 5013,
 		"reward_1": [
 			"13",
 			"0",
 			"2913"
 		],
-		"pvp_stage": 1500,
-		"rank": 3,
-		"id": 5013,
-		"bgm": "soil",
 		"name": "艮土秘境 3-3"
 	},
 	"5014": {
-		"level": 4,
 		"enemy": [
 			"204",
 			"204",
@@ -1156,21 +1155,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_204",
+		"bgm": "soil",
+		"level": 4,
+		"pve_stage": 1550,
 		"map": "soil",
+		"head_icon": 204,
+		"rank": 3,
+		"id": 5014,
 		"reward_1": [
 			"13",
 			"0",
 			"4952"
 		],
-		"pvp_stage": 1700,
-		"rank": 3,
-		"id": 5014,
-		"bgm": "soil",
 		"name": "艮土秘境 3-4"
 	},
 	"5015": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"305",
@@ -1182,21 +1181,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_305",
+		"bgm": "soil",
+		"level": 5,
+		"pve_stage": 1800,
 		"map": "soil",
+		"head_icon": 305,
+		"rank": 3,
+		"id": 5015,
 		"reward_1": [
 			"13",
 			"0",
 			"8418"
 		],
-		"pvp_stage": 2000,
-		"rank": 3,
-		"id": 5015,
-		"bgm": "soil",
 		"name": "艮土秘境 3-5"
 	},
 	"5016": {
-		"level": 1,
 		"enemy": [
 			"218",
 			"218",
@@ -1208,21 +1207,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_218",
+		"bgm": "soil",
+		"level": 1,
+		"pve_stage": 2100,
 		"map": "soil",
+		"head_icon": 218,
+		"rank": 4,
+		"id": 5016,
 		"reward_1": [
 			"13",
 			"0",
 			"14312"
 		],
-		"pvp_stage": 2200,
-		"rank": 4,
-		"id": 5016,
-		"bgm": "soil",
 		"name": "艮土秘境 1-1"
 	},
 	"5017": {
-		"level": 2,
 		"enemy": [
 			"216",
 			"216",
@@ -1234,21 +1233,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_216",
+		"bgm": "soil",
+		"level": 2,
+		"pve_stage": 2400,
 		"map": "soil",
+		"head_icon": 216,
+		"rank": 4,
+		"id": 5017,
 		"reward_1": [
 			"13",
 			"0",
 			"24330"
 		],
-		"pvp_stage": 2400,
-		"rank": 4,
-		"id": 5017,
-		"bgm": "soil",
 		"name": "艮土秘境 1-2"
 	},
 	"5018": {
-		"level": 3,
 		"enemy": [
 			"217",
 			"217",
@@ -1260,21 +1259,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_217",
+		"bgm": "soil",
+		"level": 3,
+		"pve_stage": 2700,
 		"map": "soil",
+		"head_icon": 217,
+		"rank": 4,
+		"id": 5018,
 		"reward_1": [
 			"13",
 			"0",
 			"41362"
 		],
-		"pvp_stage": 2650,
-		"rank": 4,
-		"id": 5018,
-		"bgm": "soil",
 		"name": "艮土秘境 1-3"
 	},
 	"5019": {
-		"level": 4,
 		"enemy": [
 			"204",
 			"204",
@@ -1286,21 +1285,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_204",
+		"bgm": "soil",
+		"level": 4,
+		"pve_stage": 3050,
 		"map": "soil",
+		"head_icon": 204,
+		"rank": 4,
+		"id": 5019,
 		"reward_1": [
 			"13",
 			"0",
 			"70315"
 		],
-		"pvp_stage": 2900,
-		"rank": 4,
-		"id": 5019,
-		"bgm": "soil",
 		"name": "艮土秘境 1-4"
 	},
 	"5020": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"305",
@@ -1312,21 +1311,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_305",
+		"bgm": "soil",
+		"level": 5,
+		"pve_stage": 3400,
 		"map": "soil",
+		"head_icon": 305,
+		"rank": 4,
+		"id": 5020,
 		"reward_1": [
 			"13",
 			"0",
 			"119536"
 		],
-		"pvp_stage": 3250,
-		"rank": 4,
-		"id": 5020,
-		"bgm": "soil",
 		"name": "艮土秘境 1-5"
 	},
 	"5021": {
-		"level": 1,
 		"enemy": [
 			"218",
 			"218",
@@ -1338,21 +1337,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_218",
+		"bgm": "soil",
+		"level": 1,
+		"pve_stage": 3800,
 		"map": "soil",
+		"head_icon": 218,
+		"rank": 5,
+		"id": 5021,
 		"reward_1": [
 			"13",
 			"0",
 			"203211"
 		],
-		"pvp_stage": 3500,
-		"rank": 5,
-		"id": 5021,
-		"bgm": "soil",
 		"name": "艮土秘境 2-1"
 	},
 	"5022": {
-		"level": 2,
 		"enemy": [
 			"216",
 			"216",
@@ -1364,21 +1363,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_216",
+		"bgm": "soil",
+		"level": 2,
+		"pve_stage": 4200,
 		"map": "soil",
+		"head_icon": 216,
+		"rank": 5,
+		"id": 5022,
 		"reward_1": [
 			"13",
 			"0",
 			"345459"
 		],
-		"pvp_stage": 3750,
-		"rank": 5,
-		"id": 5022,
-		"bgm": "soil",
 		"name": "艮土秘境 2-2"
 	},
 	"5023": {
-		"level": 3,
 		"enemy": [
 			"217",
 			"217",
@@ -1390,21 +1389,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_217",
+		"bgm": "soil",
+		"level": 3,
+		"pve_stage": 4600,
 		"map": "soil",
+		"head_icon": 217,
+		"rank": 5,
+		"id": 5023,
 		"reward_1": [
 			"13",
 			"0",
 			"587281"
 		],
-		"pvp_stage": 4050,
-		"rank": 5,
-		"id": 5023,
-		"bgm": "soil",
 		"name": "艮土秘境 2-3"
 	},
 	"5024": {
-		"level": 4,
 		"enemy": [
 			"204",
 			"204",
@@ -1416,21 +1415,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_204",
+		"bgm": "soil",
+		"level": 4,
+		"pve_stage": 5050,
 		"map": "soil",
+		"head_icon": 204,
+		"rank": 5,
+		"id": 5024,
 		"reward_1": [
 			"13",
 			"0",
 			"998378"
 		],
-		"pvp_stage": 4350,
-		"rank": 5,
-		"id": 5024,
-		"bgm": "soil",
 		"name": "艮土秘境 2-4"
 	},
 	"4001": {
-		"level": 1,
 		"enemy": [
 			"230",
 			"230",
@@ -1442,21 +1441,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_230",
+		"bgm": "fire",
+		"level": 1,
+		"pve_stage": 1,
 		"map": "fire",
+		"head_icon": 230,
+		"rank": 1,
+		"id": 4001,
 		"reward_1": [
 			"12",
 			"0",
 			"5"
 		],
-		"pvp_stage": 30,
-		"rank": 1,
-		"id": 4001,
-		"bgm": "fire",
 		"name": "离火秘境 1-1"
 	},
 	"4002": {
-		"level": 2,
 		"enemy": [
 			"225",
 			"225",
@@ -1468,21 +1467,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_225",
+		"bgm": "fire",
+		"level": 2,
+		"pve_stage": 10,
 		"map": "fire",
+		"head_icon": 225,
+		"rank": 1,
+		"id": 4002,
 		"reward_1": [
 			"12",
 			"0",
 			"8"
 		],
-		"pvp_stage": 50,
-		"rank": 1,
-		"id": 4002,
-		"bgm": "fire",
 		"name": "离火秘境 1-2"
 	},
 	"4003": {
-		"level": 3,
 		"enemy": [
 			"228",
 			"228",
@@ -1494,21 +1493,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_228",
+		"bgm": "fire",
+		"level": 3,
+		"pve_stage": 20,
 		"map": "fire",
+		"head_icon": 228,
+		"rank": 1,
+		"id": 4003,
 		"reward_1": [
 			"12",
 			"0",
 			"14"
 		],
-		"pvp_stage": 100,
-		"rank": 1,
-		"id": 4003,
-		"bgm": "fire",
 		"name": "离火秘境 1-3"
 	},
 	"4004": {
-		"level": 4,
 		"enemy": [
 			"212",
 			"212",
@@ -1520,21 +1519,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_212",
+		"bgm": "fire",
+		"level": 4,
+		"pve_stage": 50,
 		"map": "fire",
+		"head_icon": 212,
+		"rank": 1,
+		"id": 4004,
 		"reward_1": [
 			"12",
 			"0",
 			"24"
 		],
-		"pvp_stage": 150,
-		"rank": 1,
-		"id": 4004,
-		"bgm": "fire",
 		"name": "离火秘境 1-4"
 	},
 	"4005": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"304",
@@ -1546,21 +1545,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_304",
+		"bgm": "fire",
+		"level": 5,
+		"pve_stage": 100,
 		"map": "fire",
+		"head_icon": 304,
+		"rank": 1,
+		"id": 4005,
 		"reward_1": [
 			"12",
 			"0",
 			"41"
 		],
-		"pvp_stage": 250,
-		"rank": 1,
-		"id": 4005,
-		"bgm": "fire",
 		"name": "离火秘境 1-5"
 	},
 	"4006": {
-		"level": 1,
 		"enemy": [
 			"230",
 			"230",
@@ -1572,21 +1571,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_230",
+		"bgm": "fire",
+		"level": 1,
+		"pve_stage": 200,
 		"map": "fire",
+		"head_icon": 230,
+		"rank": 2,
+		"id": 4006,
 		"reward_1": [
 			"12",
 			"0",
 			"70"
 		],
-		"pvp_stage": 350,
-		"rank": 2,
-		"id": 4006,
-		"bgm": "fire",
 		"name": "离火秘境 2-1"
 	},
 	"4007": {
-		"level": 2,
 		"enemy": [
 			"225",
 			"225",
@@ -1598,21 +1597,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_225",
+		"bgm": "fire",
+		"level": 2,
+		"pve_stage": 300,
 		"map": "fire",
+		"head_icon": 225,
+		"rank": 2,
+		"id": 4007,
 		"reward_1": [
 			"12",
 			"0",
 			"120"
 		],
-		"pvp_stage": 450,
-		"rank": 2,
-		"id": 4007,
-		"bgm": "fire",
 		"name": "离火秘境 2-2"
 	},
 	"4008": {
-		"level": 3,
 		"enemy": [
 			"228",
 			"228",
@@ -1624,21 +1623,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_228",
+		"bgm": "fire",
+		"level": 3,
+		"pve_stage": 400,
 		"map": "fire",
+		"head_icon": 228,
+		"rank": 2,
+		"id": 4008,
 		"reward_1": [
 			"12",
 			"0",
 			"205"
 		],
-		"pvp_stage": 600,
-		"rank": 2,
-		"id": 4008,
-		"bgm": "fire",
 		"name": "离火秘境 2-3"
 	},
 	"4009": {
-		"level": 4,
 		"enemy": [
 			"212",
 			"212",
@@ -1650,21 +1649,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_212",
+		"bgm": "fire",
+		"level": 4,
+		"pve_stage": 550,
 		"map": "fire",
+		"head_icon": 212,
+		"rank": 2,
+		"id": 4009,
 		"reward_1": [
 			"12",
 			"0",
 			"348"
 		],
-		"pvp_stage": 750,
-		"rank": 2,
-		"id": 4009,
-		"bgm": "fire",
 		"name": "离火秘境 2-4"
 	},
 	"4010": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"304",
@@ -1676,21 +1675,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_304",
+		"bgm": "fire",
+		"level": 5,
+		"pve_stage": 700,
 		"map": "fire",
+		"head_icon": 304,
+		"rank": 2,
+		"id": 4010,
 		"reward_1": [
 			"12",
 			"0",
 			"592"
 		],
-		"pvp_stage": 1000,
-		"rank": 2,
-		"id": 4010,
-		"bgm": "fire",
 		"name": "离火秘境 2-5"
 	},
 	"4011": {
-		"level": 1,
 		"enemy": [
 			"230",
 			"230",
@@ -1702,21 +1701,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_230",
+		"bgm": "fire",
+		"level": 1,
+		"pve_stage": 900,
 		"map": "fire",
+		"head_icon": 230,
+		"rank": 3,
+		"id": 4011,
 		"reward_1": [
 			"12",
 			"0",
 			"1007"
 		],
-		"pvp_stage": 1150,
-		"rank": 3,
-		"id": 4011,
-		"bgm": "fire",
 		"name": "离火秘境 3-1"
 	},
 	"4012": {
-		"level": 2,
 		"enemy": [
 			"225",
 			"225",
@@ -1728,21 +1727,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_225",
+		"bgm": "fire",
+		"level": 2,
+		"pve_stage": 1100,
 		"map": "fire",
+		"head_icon": 225,
+		"rank": 3,
+		"id": 4012,
 		"reward_1": [
 			"12",
 			"0",
 			"1713"
 		],
-		"pvp_stage": 1300,
-		"rank": 3,
-		"id": 4012,
-		"bgm": "fire",
 		"name": "离火秘境 3-2"
 	},
 	"4013": {
-		"level": 3,
 		"enemy": [
 			"228",
 			"228",
@@ -1754,21 +1753,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_228",
+		"bgm": "fire",
+		"level": 3,
+		"pve_stage": 1300,
 		"map": "fire",
+		"head_icon": 228,
+		"rank": 3,
+		"id": 4013,
 		"reward_1": [
 			"12",
 			"0",
 			"2913"
 		],
-		"pvp_stage": 1500,
-		"rank": 3,
-		"id": 4013,
-		"bgm": "fire",
 		"name": "离火秘境 3-3"
 	},
 	"4014": {
-		"level": 4,
 		"enemy": [
 			"212",
 			"212",
@@ -1780,21 +1779,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_212",
+		"bgm": "fire",
+		"level": 4,
+		"pve_stage": 1550,
 		"map": "fire",
+		"head_icon": 212,
+		"rank": 3,
+		"id": 4014,
 		"reward_1": [
 			"12",
 			"0",
 			"4952"
 		],
-		"pvp_stage": 1700,
-		"rank": 3,
-		"id": 4014,
-		"bgm": "fire",
 		"name": "离火秘境 3-4"
 	},
 	"4015": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"304",
@@ -1806,21 +1805,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_304",
+		"bgm": "fire",
+		"level": 5,
+		"pve_stage": 1800,
 		"map": "fire",
+		"head_icon": 304,
+		"rank": 3,
+		"id": 4015,
 		"reward_1": [
 			"12",
 			"0",
 			"8418"
 		],
-		"pvp_stage": 2000,
-		"rank": 3,
-		"id": 4015,
-		"bgm": "fire",
 		"name": "离火秘境 3-5"
 	},
 	"4016": {
-		"level": 1,
 		"enemy": [
 			"230",
 			"230",
@@ -1832,21 +1831,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_230",
+		"bgm": "fire",
+		"level": 1,
+		"pve_stage": 2100,
 		"map": "fire",
+		"head_icon": 230,
+		"rank": 4,
+		"id": 4016,
 		"reward_1": [
 			"12",
 			"0",
 			"14312"
 		],
-		"pvp_stage": 2200,
-		"rank": 4,
-		"id": 4016,
-		"bgm": "fire",
 		"name": "离火秘境 1-1"
 	},
 	"4017": {
-		"level": 2,
 		"enemy": [
 			"225",
 			"225",
@@ -1858,21 +1857,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_225",
+		"bgm": "fire",
+		"level": 2,
+		"pve_stage": 2400,
 		"map": "fire",
+		"head_icon": 225,
+		"rank": 4,
+		"id": 4017,
 		"reward_1": [
 			"12",
 			"0",
 			"24330"
 		],
-		"pvp_stage": 2400,
-		"rank": 4,
-		"id": 4017,
-		"bgm": "fire",
 		"name": "离火秘境 1-2"
 	},
 	"4018": {
-		"level": 3,
 		"enemy": [
 			"228",
 			"228",
@@ -1884,21 +1883,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_228",
+		"bgm": "fire",
+		"level": 3,
+		"pve_stage": 2700,
 		"map": "fire",
+		"head_icon": 228,
+		"rank": 4,
+		"id": 4018,
 		"reward_1": [
 			"12",
 			"0",
 			"41362"
 		],
-		"pvp_stage": 2650,
-		"rank": 4,
-		"id": 4018,
-		"bgm": "fire",
 		"name": "离火秘境 1-3"
 	},
 	"4019": {
-		"level": 4,
 		"enemy": [
 			"212",
 			"212",
@@ -1910,21 +1909,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_212",
+		"bgm": "fire",
+		"level": 4,
+		"pve_stage": 3050,
 		"map": "fire",
+		"head_icon": 212,
+		"rank": 4,
+		"id": 4019,
 		"reward_1": [
 			"12",
 			"0",
 			"70315"
 		],
-		"pvp_stage": 2900,
-		"rank": 4,
-		"id": 4019,
-		"bgm": "fire",
 		"name": "离火秘境 1-4"
 	},
 	"4020": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"304",
@@ -1936,21 +1935,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_304",
+		"bgm": "fire",
+		"level": 5,
+		"pve_stage": 3400,
 		"map": "fire",
+		"head_icon": 304,
+		"rank": 4,
+		"id": 4020,
 		"reward_1": [
 			"12",
 			"0",
 			"119536"
 		],
-		"pvp_stage": 3250,
-		"rank": 4,
-		"id": 4020,
-		"bgm": "fire",
 		"name": "离火秘境 1-5"
 	},
 	"4021": {
-		"level": 1,
 		"enemy": [
 			"230",
 			"230",
@@ -1962,21 +1961,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_230",
+		"bgm": "fire",
+		"level": 1,
+		"pve_stage": 3800,
 		"map": "fire",
+		"head_icon": 230,
+		"rank": 5,
+		"id": 4021,
 		"reward_1": [
 			"12",
 			"0",
 			"203211"
 		],
-		"pvp_stage": 3500,
-		"rank": 5,
-		"id": 4021,
-		"bgm": "fire",
 		"name": "离火秘境 2-1"
 	},
 	"4022": {
-		"level": 2,
 		"enemy": [
 			"225",
 			"225",
@@ -1988,21 +1987,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_225",
+		"bgm": "fire",
+		"level": 2,
+		"pve_stage": 4200,
 		"map": "fire",
+		"head_icon": 225,
+		"rank": 5,
+		"id": 4022,
 		"reward_1": [
 			"12",
 			"0",
 			"345459"
 		],
-		"pvp_stage": 3750,
-		"rank": 5,
-		"id": 4022,
-		"bgm": "fire",
 		"name": "离火秘境 2-2"
 	},
 	"4023": {
-		"level": 3,
 		"enemy": [
 			"228",
 			"228",
@@ -2014,21 +2013,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_228",
+		"bgm": "fire",
+		"level": 3,
+		"pve_stage": 4600,
 		"map": "fire",
+		"head_icon": 228,
+		"rank": 5,
+		"id": 4023,
 		"reward_1": [
 			"12",
 			"0",
 			"587281"
 		],
-		"pvp_stage": 4050,
-		"rank": 5,
-		"id": 4023,
-		"bgm": "fire",
 		"name": "离火秘境 2-3"
 	},
 	"4024": {
-		"level": 4,
 		"enemy": [
 			"212",
 			"212",
@@ -2040,21 +2039,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_212",
+		"bgm": "fire",
+		"level": 4,
+		"pve_stage": 5050,
 		"map": "fire",
+		"head_icon": 212,
+		"rank": 5,
+		"id": 4024,
 		"reward_1": [
 			"12",
 			"0",
 			"998378"
 		],
-		"pvp_stage": 4350,
-		"rank": 5,
-		"id": 4024,
-		"bgm": "fire",
 		"name": "离火秘境 2-4"
 	},
 	"3001": {
-		"level": 1,
 		"enemy": [
 			"201",
 			"201",
@@ -2066,21 +2065,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_201",
+		"bgm": "water",
+		"level": 1,
+		"pve_stage": 1,
 		"map": "water",
+		"head_icon": 201,
+		"rank": 1,
+		"id": 3001,
 		"reward_1": [
 			"11",
 			"0",
 			"5"
 		],
-		"pvp_stage": 30,
-		"rank": 1,
-		"id": 3001,
-		"bgm": "water",
 		"name": "坎水秘境 1-1"
 	},
 	"3002": {
-		"level": 2,
 		"enemy": [
 			"208",
 			"208",
@@ -2092,21 +2091,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "water",
+		"level": 2,
+		"pve_stage": 10,
 		"map": "water",
+		"head_icon": 208,
+		"rank": 1,
+		"id": 3002,
 		"reward_1": [
 			"11",
 			"0",
 			"8"
 		],
-		"pvp_stage": 50,
-		"rank": 1,
-		"id": 3002,
-		"bgm": "water",
 		"name": "坎水秘境 1-2"
 	},
 	"3003": {
-		"level": 3,
 		"enemy": [
 			"227",
 			"227",
@@ -2118,21 +2117,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_227",
+		"bgm": "water",
+		"level": 3,
+		"pve_stage": 20,
 		"map": "water",
+		"head_icon": 227,
+		"rank": 1,
+		"id": 3003,
 		"reward_1": [
 			"11",
 			"0",
 			"14"
 		],
-		"pvp_stage": 100,
-		"rank": 1,
-		"id": 3003,
-		"bgm": "water",
 		"name": "坎水秘境 1-3"
 	},
 	"3004": {
-		"level": 4,
 		"enemy": [
 			"202",
 			"202",
@@ -2144,21 +2143,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_202",
+		"bgm": "water",
+		"level": 4,
+		"pve_stage": 50,
 		"map": "water",
+		"head_icon": 202,
+		"rank": 1,
+		"id": 3004,
 		"reward_1": [
 			"11",
 			"0",
 			"24"
 		],
-		"pvp_stage": 150,
-		"rank": 1,
-		"id": 3004,
-		"bgm": "water",
 		"name": "坎水秘境 1-4"
 	},
 	"3005": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"303",
@@ -2170,21 +2169,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_303",
+		"bgm": "water",
+		"level": 5,
+		"pve_stage": 100,
 		"map": "water",
+		"head_icon": 303,
+		"rank": 1,
+		"id": 3005,
 		"reward_1": [
 			"11",
 			"0",
 			"41"
 		],
-		"pvp_stage": 250,
-		"rank": 1,
-		"id": 3005,
-		"bgm": "water",
 		"name": "坎水秘境 1-5"
 	},
 	"3006": {
-		"level": 1,
 		"enemy": [
 			"201",
 			"201",
@@ -2196,21 +2195,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_201",
+		"bgm": "water",
+		"level": 1,
+		"pve_stage": 200,
 		"map": "water",
+		"head_icon": 201,
+		"rank": 2,
+		"id": 3006,
 		"reward_1": [
 			"11",
 			"0",
 			"70"
 		],
-		"pvp_stage": 350,
-		"rank": 2,
-		"id": 3006,
-		"bgm": "water",
 		"name": "坎水秘境 2-1"
 	},
 	"3007": {
-		"level": 2,
 		"enemy": [
 			"208",
 			"208",
@@ -2222,21 +2221,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "water",
+		"level": 2,
+		"pve_stage": 300,
 		"map": "water",
+		"head_icon": 208,
+		"rank": 2,
+		"id": 3007,
 		"reward_1": [
 			"11",
 			"0",
 			"120"
 		],
-		"pvp_stage": 450,
-		"rank": 2,
-		"id": 3007,
-		"bgm": "water",
 		"name": "坎水秘境 2-2"
 	},
 	"3008": {
-		"level": 3,
 		"enemy": [
 			"227",
 			"227",
@@ -2248,21 +2247,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_227",
+		"bgm": "water",
+		"level": 3,
+		"pve_stage": 400,
 		"map": "water",
+		"head_icon": 227,
+		"rank": 2,
+		"id": 3008,
 		"reward_1": [
 			"11",
 			"0",
 			"205"
 		],
-		"pvp_stage": 600,
-		"rank": 2,
-		"id": 3008,
-		"bgm": "water",
 		"name": "坎水秘境 2-3"
 	},
 	"3009": {
-		"level": 4,
 		"enemy": [
 			"202",
 			"202",
@@ -2274,21 +2273,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_202",
+		"bgm": "water",
+		"level": 4,
+		"pve_stage": 550,
 		"map": "water",
+		"head_icon": 202,
+		"rank": 2,
+		"id": 3009,
 		"reward_1": [
 			"11",
 			"0",
 			"348"
 		],
-		"pvp_stage": 750,
-		"rank": 2,
-		"id": 3009,
-		"bgm": "water",
 		"name": "坎水秘境 2-4"
 	},
 	"3010": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"303",
@@ -2300,21 +2299,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_303",
+		"bgm": "water",
+		"level": 5,
+		"pve_stage": 700,
 		"map": "water",
+		"head_icon": 303,
+		"rank": 2,
+		"id": 3010,
 		"reward_1": [
 			"11",
 			"0",
 			"592"
 		],
-		"pvp_stage": 1000,
-		"rank": 2,
-		"id": 3010,
-		"bgm": "water",
 		"name": "坎水秘境 2-5"
 	},
 	"3011": {
-		"level": 1,
 		"enemy": [
 			"201",
 			"201",
@@ -2326,21 +2325,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_201",
+		"bgm": "water",
+		"level": 1,
+		"pve_stage": 900,
 		"map": "water",
+		"head_icon": 201,
+		"rank": 3,
+		"id": 3011,
 		"reward_1": [
 			"11",
 			"0",
 			"1007"
 		],
-		"pvp_stage": 1150,
-		"rank": 3,
-		"id": 3011,
-		"bgm": "water",
 		"name": "坎水秘境 3-1"
 	},
 	"3012": {
-		"level": 2,
 		"enemy": [
 			"208",
 			"208",
@@ -2352,21 +2351,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "water",
+		"level": 2,
+		"pve_stage": 1100,
 		"map": "water",
+		"head_icon": 208,
+		"rank": 3,
+		"id": 3012,
 		"reward_1": [
 			"11",
 			"0",
 			"1713"
 		],
-		"pvp_stage": 1300,
-		"rank": 3,
-		"id": 3012,
-		"bgm": "water",
 		"name": "坎水秘境 3-2"
 	},
 	"3013": {
-		"level": 3,
 		"enemy": [
 			"227",
 			"227",
@@ -2378,21 +2377,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_227",
+		"bgm": "water",
+		"level": 3,
+		"pve_stage": 1300,
 		"map": "water",
+		"head_icon": 227,
+		"rank": 3,
+		"id": 3013,
 		"reward_1": [
 			"11",
 			"0",
 			"2913"
 		],
-		"pvp_stage": 1500,
-		"rank": 3,
-		"id": 3013,
-		"bgm": "water",
 		"name": "坎水秘境 3-3"
 	},
 	"3014": {
-		"level": 4,
 		"enemy": [
 			"202",
 			"202",
@@ -2404,21 +2403,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_202",
+		"bgm": "water",
+		"level": 4,
+		"pve_stage": 1550,
 		"map": "water",
+		"head_icon": 202,
+		"rank": 3,
+		"id": 3014,
 		"reward_1": [
 			"11",
 			"0",
 			"4952"
 		],
-		"pvp_stage": 1700,
-		"rank": 3,
-		"id": 3014,
-		"bgm": "water",
 		"name": "坎水秘境 3-4"
 	},
 	"3015": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"303",
@@ -2430,21 +2429,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_303",
+		"bgm": "water",
+		"level": 5,
+		"pve_stage": 1800,
 		"map": "water",
+		"head_icon": 303,
+		"rank": 3,
+		"id": 3015,
 		"reward_1": [
 			"11",
 			"0",
 			"8418"
 		],
-		"pvp_stage": 2000,
-		"rank": 3,
-		"id": 3015,
-		"bgm": "water",
 		"name": "坎水秘境 3-5"
 	},
 	"3016": {
-		"level": 1,
 		"enemy": [
 			"201",
 			"201",
@@ -2456,21 +2455,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_201",
+		"bgm": "water",
+		"level": 1,
+		"pve_stage": 2100,
 		"map": "water",
+		"head_icon": 201,
+		"rank": 4,
+		"id": 3016,
 		"reward_1": [
 			"11",
 			"0",
 			"14312"
 		],
-		"pvp_stage": 2200,
-		"rank": 4,
-		"id": 3016,
-		"bgm": "water",
 		"name": "坎水秘境 1-1"
 	},
 	"3017": {
-		"level": 2,
 		"enemy": [
 			"208",
 			"208",
@@ -2482,21 +2481,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "water",
+		"level": 2,
+		"pve_stage": 2400,
 		"map": "water",
+		"head_icon": 208,
+		"rank": 4,
+		"id": 3017,
 		"reward_1": [
 			"11",
 			"0",
 			"24330"
 		],
-		"pvp_stage": 2400,
-		"rank": 4,
-		"id": 3017,
-		"bgm": "water",
 		"name": "坎水秘境 1-2"
 	},
 	"3018": {
-		"level": 3,
 		"enemy": [
 			"227",
 			"227",
@@ -2508,21 +2507,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_227",
+		"bgm": "water",
+		"level": 3,
+		"pve_stage": 2700,
 		"map": "water",
+		"head_icon": 227,
+		"rank": 4,
+		"id": 3018,
 		"reward_1": [
 			"11",
 			"0",
 			"41362"
 		],
-		"pvp_stage": 2650,
-		"rank": 4,
-		"id": 3018,
-		"bgm": "water",
 		"name": "坎水秘境 1-3"
 	},
 	"3019": {
-		"level": 4,
 		"enemy": [
 			"202",
 			"202",
@@ -2534,21 +2533,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_202",
+		"bgm": "water",
+		"level": 4,
+		"pve_stage": 3050,
 		"map": "water",
+		"head_icon": 202,
+		"rank": 4,
+		"id": 3019,
 		"reward_1": [
 			"11",
 			"0",
 			"70315"
 		],
-		"pvp_stage": 2900,
-		"rank": 4,
-		"id": 3019,
-		"bgm": "water",
 		"name": "坎水秘境 1-4"
 	},
 	"3020": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"303",
@@ -2560,21 +2559,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_303",
+		"bgm": "water",
+		"level": 5,
+		"pve_stage": 3400,
 		"map": "water",
+		"head_icon": 303,
+		"rank": 4,
+		"id": 3020,
 		"reward_1": [
 			"11",
 			"0",
 			"119536"
 		],
-		"pvp_stage": 3250,
-		"rank": 4,
-		"id": 3020,
-		"bgm": "water",
 		"name": "坎水秘境 1-5"
 	},
 	"3021": {
-		"level": 1,
 		"enemy": [
 			"201",
 			"201",
@@ -2586,21 +2585,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_201",
+		"bgm": "water",
+		"level": 1,
+		"pve_stage": 3800,
 		"map": "water",
+		"head_icon": 201,
+		"rank": 5,
+		"id": 3021,
 		"reward_1": [
 			"11",
 			"0",
 			"203211"
 		],
-		"pvp_stage": 3500,
-		"rank": 5,
-		"id": 3021,
-		"bgm": "water",
 		"name": "坎水秘境 2-1"
 	},
 	"3022": {
-		"level": 2,
 		"enemy": [
 			"208",
 			"208",
@@ -2612,21 +2611,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "water",
+		"level": 2,
+		"pve_stage": 4200,
 		"map": "water",
+		"head_icon": 208,
+		"rank": 5,
+		"id": 3022,
 		"reward_1": [
 			"11",
 			"0",
 			"345459"
 		],
-		"pvp_stage": 3750,
-		"rank": 5,
-		"id": 3022,
-		"bgm": "water",
 		"name": "坎水秘境 2-2"
 	},
 	"3023": {
-		"level": 3,
 		"enemy": [
 			"227",
 			"227",
@@ -2638,21 +2637,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_227",
+		"bgm": "water",
+		"level": 3,
+		"pve_stage": 4600,
 		"map": "water",
+		"head_icon": 227,
+		"rank": 5,
+		"id": 3023,
 		"reward_1": [
 			"11",
 			"0",
 			"587281"
 		],
-		"pvp_stage": 4050,
-		"rank": 5,
-		"id": 3023,
-		"bgm": "water",
 		"name": "坎水秘境 2-3"
 	},
 	"3024": {
-		"level": 4,
 		"enemy": [
 			"202",
 			"202",
@@ -2664,21 +2663,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_202",
+		"bgm": "water",
+		"level": 4,
+		"pve_stage": 5050,
 		"map": "water",
+		"head_icon": 202,
+		"rank": 5,
+		"id": 3024,
 		"reward_1": [
 			"11",
 			"0",
 			"998378"
 		],
-		"pvp_stage": 4350,
-		"rank": 5,
-		"id": 3024,
-		"bgm": "water",
 		"name": "坎水秘境 2-4"
 	},
 	"3025": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"303",
@@ -2690,21 +2689,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_303",
+		"bgm": "water",
+		"level": 5,
+		"pve_stage": 5500,
 		"map": "water",
+		"head_icon": 303,
+		"rank": 5,
+		"id": 3025,
 		"reward_1": [
 			"11",
 			"0",
 			"1697243"
 		],
-		"pvp_stage": 4750,
-		"rank": 5,
-		"id": 3025,
-		"bgm": "water",
 		"name": "坎水秘境 2-5"
 	},
 	"3026": {
-		"level": 1,
 		"enemy": [
 			"201",
 			"201",
@@ -2716,21 +2715,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_201",
+		"bgm": "water",
+		"level": 1,
+		"pve_stage": 6000,
 		"map": "water",
+		"head_icon": 201,
+		"rank": 6,
+		"id": 3026,
 		"reward_1": [
 			"11",
 			"0",
 			"2885313"
 		],
-		"pvp_stage": 5050,
-		"rank": 6,
-		"id": 3026,
-		"bgm": "water",
 		"name": "坎水秘境 3-1"
 	},
 	"3027": {
-		"level": 2,
 		"enemy": [
 			"208",
 			"208",
@@ -2742,21 +2741,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "water",
+		"level": 2,
+		"pve_stage": 6500,
 		"map": "water",
+		"head_icon": 208,
+		"rank": 6,
+		"id": 3027,
 		"reward_1": [
 			"11",
 			"0",
 			"4905033"
 		],
-		"pvp_stage": 5350,
-		"rank": 6,
-		"id": 3027,
-		"bgm": "water",
 		"name": "坎水秘境 3-2"
 	},
 	"3028": {
-		"level": 3,
 		"enemy": [
 			"227",
 			"227",
@@ -2768,21 +2767,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_227",
+		"bgm": "water",
+		"level": 3,
+		"pve_stage": 7000,
 		"map": "water",
+		"head_icon": 227,
+		"rank": 6,
+		"id": 3028,
 		"reward_1": [
 			"11",
 			"0",
 			"8338556"
 		],
-		"pvp_stage": 5700,
-		"rank": 6,
-		"id": 3028,
-		"bgm": "water",
 		"name": "坎水秘境 3-3"
 	},
 	"3029": {
-		"level": 4,
 		"enemy": [
 			"202",
 			"202",
@@ -2794,21 +2793,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_202",
+		"bgm": "water",
+		"level": 4,
+		"pve_stage": 7550,
 		"map": "water",
+		"head_icon": 202,
+		"rank": 6,
+		"id": 3029,
 		"reward_1": [
 			"11",
 			"0",
 			"14175546"
 		],
-		"pvp_stage": 6050,
-		"rank": 6,
-		"id": 3029,
-		"bgm": "water",
 		"name": "坎水秘境 3-4"
 	},
 	"3030": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"303",
@@ -2820,21 +2819,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_303",
+		"bgm": "water",
+		"level": 5,
+		"pve_stage": 8150,
 		"map": "water",
+		"head_icon": 303,
+		"rank": 6,
+		"id": 3030,
 		"reward_1": [
 			"11",
 			"0",
 			"24098428"
 		],
-		"pvp_stage": 6500,
-		"rank": 6,
-		"id": 3030,
-		"bgm": "water",
 		"name": "坎水秘境 3-5"
 	},
 	"2007": {
-		"level": 2,
 		"enemy": [
 			"206",
 			"206",
@@ -2846,21 +2845,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_206",
+		"bgm": "wood",
+		"level": 2,
+		"pve_stage": 300,
 		"map": "wood",
+		"head_icon": 206,
+		"rank": 2,
+		"id": 2007,
 		"reward_1": [
 			"10",
 			"0",
 			"120"
 		],
-		"pvp_stage": 450,
-		"rank": 2,
-		"id": 2007,
-		"bgm": "wood",
 		"name": "巽木秘境 2-2"
 	},
 	"2008": {
-		"level": 3,
 		"enemy": [
 			"215",
 			"215",
@@ -2872,21 +2871,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_215",
+		"bgm": "wood",
+		"level": 3,
+		"pve_stage": 400,
 		"map": "wood",
+		"head_icon": 215,
+		"rank": 2,
+		"id": 2008,
 		"reward_1": [
 			"10",
 			"0",
 			"205"
 		],
-		"pvp_stage": 600,
-		"rank": 2,
-		"id": 2008,
-		"bgm": "wood",
 		"name": "巽木秘境 2-3"
 	},
 	"2001": {
-		"level": 1,
 		"enemy": [
 			"205",
 			"205",
@@ -2898,21 +2897,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_205",
+		"bgm": "wood",
+		"level": 1,
+		"pve_stage": 1,
 		"map": "wood",
+		"head_icon": 205,
+		"rank": 1,
+		"id": 2001,
 		"reward_1": [
 			"10",
 			"0",
 			"5"
 		],
-		"pvp_stage": 30,
-		"rank": 1,
-		"id": 2001,
-		"bgm": "wood",
 		"name": "巽木秘境 1-1"
 	},
 	"2002": {
-		"level": 2,
 		"enemy": [
 			"206",
 			"206",
@@ -2924,21 +2923,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_206",
+		"bgm": "wood",
+		"level": 2,
+		"pve_stage": 10,
 		"map": "wood",
+		"head_icon": 206,
+		"rank": 1,
+		"id": 2002,
 		"reward_1": [
 			"10",
 			"0",
 			"8"
 		],
-		"pvp_stage": 50,
-		"rank": 1,
-		"id": 2002,
-		"bgm": "wood",
 		"name": "巽木秘境 1-2"
 	},
 	"2003": {
-		"level": 3,
 		"enemy": [
 			"215",
 			"215",
@@ -2950,21 +2949,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_215",
+		"bgm": "wood",
+		"level": 3,
+		"pve_stage": 20,
 		"map": "wood",
+		"head_icon": 215,
+		"rank": 1,
+		"id": 2003,
 		"reward_1": [
 			"10",
 			"0",
 			"14"
 		],
-		"pvp_stage": 100,
-		"rank": 1,
-		"id": 2003,
-		"bgm": "wood",
 		"name": "巽木秘境 1-3"
 	},
 	"2004": {
-		"level": 4,
 		"enemy": [
 			"207",
 			"207",
@@ -2976,21 +2975,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_207",
+		"bgm": "wood",
+		"level": 4,
+		"pve_stage": 50,
 		"map": "wood",
+		"head_icon": 207,
+		"rank": 1,
+		"id": 2004,
 		"reward_1": [
 			"10",
 			"0",
 			"24"
 		],
-		"pvp_stage": 150,
-		"rank": 1,
-		"id": 2004,
-		"bgm": "wood",
 		"name": "巽木秘境 1-4"
 	},
 	"2005": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"302",
@@ -3002,21 +3001,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_302",
+		"bgm": "wood",
+		"level": 5,
+		"pve_stage": 100,
 		"map": "wood",
+		"head_icon": 302,
+		"rank": 1,
+		"id": 2005,
 		"reward_1": [
 			"10",
 			"0",
 			"41"
 		],
-		"pvp_stage": 250,
-		"rank": 1,
-		"id": 2005,
-		"bgm": "wood",
 		"name": "巽木秘境 1-5"
 	},
 	"2006": {
-		"level": 1,
 		"enemy": [
 			"205",
 			"205",
@@ -3028,21 +3027,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_205",
+		"bgm": "wood",
+		"level": 1,
+		"pve_stage": 200,
 		"map": "wood",
+		"head_icon": 205,
+		"rank": 2,
+		"id": 2006,
 		"reward_1": [
 			"10",
 			"0",
 			"70"
 		],
-		"pvp_stage": 350,
-		"rank": 2,
-		"id": 2006,
-		"bgm": "wood",
 		"name": "巽木秘境 2-1"
 	},
 	"2015": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"302",
@@ -3054,21 +3053,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_302",
+		"bgm": "wood",
+		"level": 5,
+		"pve_stage": 1800,
 		"map": "wood",
+		"head_icon": 302,
+		"rank": 3,
+		"id": 2015,
 		"reward_1": [
 			"10",
 			"0",
 			"8418"
 		],
-		"pvp_stage": 2000,
-		"rank": 3,
-		"id": 2015,
-		"bgm": "wood",
 		"name": "巽木秘境 3-5"
 	},
 	"2016": {
-		"level": 1,
 		"enemy": [
 			"205",
 			"205",
@@ -3080,21 +3079,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_205",
+		"bgm": "wood",
+		"level": 1,
+		"pve_stage": 2100,
 		"map": "wood",
+		"head_icon": 205,
+		"rank": 4,
+		"id": 2016,
 		"reward_1": [
 			"10",
 			"0",
 			"14312"
 		],
-		"pvp_stage": 2200,
-		"rank": 4,
-		"id": 2016,
-		"bgm": "wood",
 		"name": "巽木秘境 1-1"
 	},
 	"2009": {
-		"level": 4,
 		"enemy": [
 			"207",
 			"207",
@@ -3106,21 +3105,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_207",
+		"bgm": "wood",
+		"level": 4,
+		"pve_stage": 550,
 		"map": "wood",
+		"head_icon": 207,
+		"rank": 2,
+		"id": 2009,
 		"reward_1": [
 			"10",
 			"0",
 			"348"
 		],
-		"pvp_stage": 750,
-		"rank": 2,
-		"id": 2009,
-		"bgm": "wood",
 		"name": "巽木秘境 2-4"
 	},
 	"2010": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"302",
@@ -3132,21 +3131,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_302",
+		"bgm": "wood",
+		"level": 5,
+		"pve_stage": 700,
 		"map": "wood",
+		"head_icon": 302,
+		"rank": 2,
+		"id": 2010,
 		"reward_1": [
 			"10",
 			"0",
 			"592"
 		],
-		"pvp_stage": 1000,
-		"rank": 2,
-		"id": 2010,
-		"bgm": "wood",
 		"name": "巽木秘境 2-5"
 	},
 	"2011": {
-		"level": 1,
 		"enemy": [
 			"205",
 			"205",
@@ -3158,21 +3157,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_205",
+		"bgm": "wood",
+		"level": 1,
+		"pve_stage": 900,
 		"map": "wood",
+		"head_icon": 205,
+		"rank": 3,
+		"id": 2011,
 		"reward_1": [
 			"10",
 			"0",
 			"1007"
 		],
-		"pvp_stage": 1150,
-		"rank": 3,
-		"id": 2011,
-		"bgm": "wood",
 		"name": "巽木秘境 3-1"
 	},
 	"2012": {
-		"level": 2,
 		"enemy": [
 			"206",
 			"206",
@@ -3184,21 +3183,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_206",
+		"bgm": "wood",
+		"level": 2,
+		"pve_stage": 1100,
 		"map": "wood",
+		"head_icon": 206,
+		"rank": 3,
+		"id": 2012,
 		"reward_1": [
 			"10",
 			"0",
 			"1713"
 		],
-		"pvp_stage": 1300,
-		"rank": 3,
-		"id": 2012,
-		"bgm": "wood",
 		"name": "巽木秘境 3-2"
 	},
 	"2013": {
-		"level": 3,
 		"enemy": [
 			"215",
 			"215",
@@ -3210,21 +3209,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_215",
+		"bgm": "wood",
+		"level": 3,
+		"pve_stage": 1300,
 		"map": "wood",
+		"head_icon": 215,
+		"rank": 3,
+		"id": 2013,
 		"reward_1": [
 			"10",
 			"0",
 			"2913"
 		],
-		"pvp_stage": 1500,
-		"rank": 3,
-		"id": 2013,
-		"bgm": "wood",
 		"name": "巽木秘境 3-3"
 	},
 	"2014": {
-		"level": 4,
 		"enemy": [
 			"207",
 			"207",
@@ -3236,21 +3235,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_207",
+		"bgm": "wood",
+		"level": 4,
+		"pve_stage": 1550,
 		"map": "wood",
+		"head_icon": 207,
+		"rank": 3,
+		"id": 2014,
 		"reward_1": [
 			"10",
 			"0",
 			"4952"
 		],
-		"pvp_stage": 1700,
-		"rank": 3,
-		"id": 2014,
-		"bgm": "wood",
 		"name": "巽木秘境 3-4"
 	},
 	"2023": {
-		"level": 3,
 		"enemy": [
 			"215",
 			"215",
@@ -3262,21 +3261,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_215",
+		"bgm": "wood",
+		"level": 3,
+		"pve_stage": 4600,
 		"map": "wood",
+		"head_icon": 215,
+		"rank": 5,
+		"id": 2023,
 		"reward_1": [
 			"10",
 			"0",
 			"587281"
 		],
-		"pvp_stage": 4050,
-		"rank": 5,
-		"id": 2023,
-		"bgm": "wood",
 		"name": "巽木秘境 2-3"
 	},
 	"2024": {
-		"level": 4,
 		"enemy": [
 			"207",
 			"207",
@@ -3288,21 +3287,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_207",
+		"bgm": "wood",
+		"level": 4,
+		"pve_stage": 5050,
 		"map": "wood",
+		"head_icon": 207,
+		"rank": 5,
+		"id": 2024,
 		"reward_1": [
 			"10",
 			"0",
 			"998378"
 		],
-		"pvp_stage": 4350,
-		"rank": 5,
-		"id": 2024,
-		"bgm": "wood",
 		"name": "巽木秘境 2-4"
 	},
 	"2025": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"302",
@@ -3314,21 +3313,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_302",
+		"bgm": "wood",
+		"level": 5,
+		"pve_stage": 5500,
 		"map": "wood",
+		"head_icon": 302,
+		"rank": 5,
+		"id": 2025,
 		"reward_1": [
 			"10",
 			"0",
 			"1697243"
 		],
-		"pvp_stage": 4750,
-		"rank": 5,
-		"id": 2025,
-		"bgm": "wood",
 		"name": "巽木秘境 2-5"
 	},
 	"2026": {
-		"level": 1,
 		"enemy": [
 			"205",
 			"205",
@@ -3340,21 +3339,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_205",
+		"bgm": "wood",
+		"level": 1,
+		"pve_stage": 6000,
 		"map": "wood",
+		"head_icon": 205,
+		"rank": 6,
+		"id": 2026,
 		"reward_1": [
 			"10",
 			"0",
 			"2885313"
 		],
-		"pvp_stage": 5050,
-		"rank": 6,
-		"id": 2026,
-		"bgm": "wood",
 		"name": "巽木秘境 3-1"
 	},
 	"2027": {
-		"level": 2,
 		"enemy": [
 			"206",
 			"206",
@@ -3366,21 +3365,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_206",
+		"bgm": "wood",
+		"level": 2,
+		"pve_stage": 6500,
 		"map": "wood",
+		"head_icon": 206,
+		"rank": 6,
+		"id": 2027,
 		"reward_1": [
 			"10",
 			"0",
 			"4905033"
 		],
-		"pvp_stage": 5350,
-		"rank": 6,
-		"id": 2027,
-		"bgm": "wood",
 		"name": "巽木秘境 3-2"
 	},
 	"2028": {
-		"level": 3,
 		"enemy": [
 			"215",
 			"215",
@@ -3392,21 +3391,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_215",
+		"bgm": "wood",
+		"level": 3,
+		"pve_stage": 7000,
 		"map": "wood",
+		"head_icon": 215,
+		"rank": 6,
+		"id": 2028,
 		"reward_1": [
 			"10",
 			"0",
 			"8338556"
 		],
-		"pvp_stage": 5700,
-		"rank": 6,
-		"id": 2028,
-		"bgm": "wood",
 		"name": "巽木秘境 3-3"
 	},
 	"2029": {
-		"level": 4,
 		"enemy": [
 			"207",
 			"207",
@@ -3418,21 +3417,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_207",
+		"bgm": "wood",
+		"level": 4,
+		"pve_stage": 7550,
 		"map": "wood",
+		"head_icon": 207,
+		"rank": 6,
+		"id": 2029,
 		"reward_1": [
 			"10",
 			"0",
 			"14175546"
 		],
-		"pvp_stage": 6050,
-		"rank": 6,
-		"id": 2029,
-		"bgm": "wood",
 		"name": "巽木秘境 3-4"
 	},
 	"2030": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"302",
@@ -3444,21 +3443,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_302",
+		"bgm": "wood",
+		"level": 5,
+		"pve_stage": 8150,
 		"map": "wood",
+		"head_icon": 302,
+		"rank": 6,
+		"id": 2030,
 		"reward_1": [
 			"10",
 			"0",
 			"24098428"
 		],
-		"pvp_stage": 6500,
-		"rank": 6,
-		"id": 2030,
-		"bgm": "wood",
 		"name": "巽木秘境 3-5"
 	},
 	"1007": {
-		"level": 2,
 		"enemy": [
 			"210",
 			"210",
@@ -3470,21 +3469,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_210",
+		"bgm": "golden",
+		"level": 2,
+		"pve_stage": 300,
 		"map": "golden",
+		"head_icon": 210,
+		"rank": 2,
+		"id": 1007,
 		"reward_1": [
 			"9",
 			"0",
 			"120"
 		],
-		"pvp_stage": 450,
-		"rank": 2,
-		"id": 1007,
-		"bgm": "golden",
 		"name": "乾金秘境 2-2"
 	},
 	"1008": {
-		"level": 3,
 		"enemy": [
 			"203",
 			"203",
@@ -3496,21 +3495,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "golden",
+		"level": 3,
+		"pve_stage": 400,
 		"map": "golden",
+		"head_icon": 208,
+		"rank": 2,
+		"id": 1008,
 		"reward_1": [
 			"9",
 			"0",
 			"205"
 		],
-		"pvp_stage": 600,
-		"rank": 2,
-		"id": 1008,
-		"bgm": "golden",
 		"name": "乾金秘境 2-3"
 	},
 	"1001": {
-		"level": 1,
 		"enemy": [
 			"214",
 			"214",
@@ -3522,21 +3521,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_214",
+		"bgm": "golden",
+		"level": 1,
+		"pve_stage": 1,
 		"map": "golden",
+		"head_icon": 214,
+		"rank": 1,
+		"id": 1001,
 		"reward_1": [
 			"9",
 			"0",
 			"5"
 		],
-		"pvp_stage": 30,
-		"rank": 1,
-		"id": 1001,
-		"bgm": "golden",
 		"name": "乾金秘境 1-1"
 	},
 	"2017": {
-		"level": 2,
 		"enemy": [
 			"206",
 			"206",
@@ -3548,21 +3547,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_206",
+		"bgm": "wood",
+		"level": 2,
+		"pve_stage": 2400,
 		"map": "wood",
+		"head_icon": 206,
+		"rank": 4,
+		"id": 2017,
 		"reward_1": [
 			"10",
 			"0",
 			"24330"
 		],
-		"pvp_stage": 2400,
-		"rank": 4,
-		"id": 2017,
-		"bgm": "wood",
 		"name": "巽木秘境 1-2"
 	},
 	"2018": {
-		"level": 3,
 		"enemy": [
 			"215",
 			"215",
@@ -3574,21 +3573,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_215",
+		"bgm": "wood",
+		"level": 3,
+		"pve_stage": 2700,
 		"map": "wood",
+		"head_icon": 215,
+		"rank": 4,
+		"id": 2018,
 		"reward_1": [
 			"10",
 			"0",
 			"41362"
 		],
-		"pvp_stage": 2650,
-		"rank": 4,
-		"id": 2018,
-		"bgm": "wood",
 		"name": "巽木秘境 1-3"
 	},
 	"2019": {
-		"level": 4,
 		"enemy": [
 			"207",
 			"207",
@@ -3600,21 +3599,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_207",
+		"bgm": "wood",
+		"level": 4,
+		"pve_stage": 3050,
 		"map": "wood",
+		"head_icon": 207,
+		"rank": 4,
+		"id": 2019,
 		"reward_1": [
 			"10",
 			"0",
 			"70315"
 		],
-		"pvp_stage": 2900,
-		"rank": 4,
-		"id": 2019,
-		"bgm": "wood",
 		"name": "巽木秘境 1-4"
 	},
 	"2020": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"302",
@@ -3626,21 +3625,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_302",
+		"bgm": "wood",
+		"level": 5,
+		"pve_stage": 3400,
 		"map": "wood",
+		"head_icon": 302,
+		"rank": 4,
+		"id": 2020,
 		"reward_1": [
 			"10",
 			"0",
 			"119536"
 		],
-		"pvp_stage": 3250,
-		"rank": 4,
-		"id": 2020,
-		"bgm": "wood",
 		"name": "巽木秘境 1-5"
 	},
 	"2021": {
-		"level": 1,
 		"enemy": [
 			"205",
 			"205",
@@ -3652,21 +3651,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_205",
+		"bgm": "wood",
+		"level": 1,
+		"pve_stage": 3800,
 		"map": "wood",
+		"head_icon": 205,
+		"rank": 5,
+		"id": 2021,
 		"reward_1": [
 			"10",
 			"0",
 			"203211"
 		],
-		"pvp_stage": 3500,
-		"rank": 5,
-		"id": 2021,
-		"bgm": "wood",
 		"name": "巽木秘境 2-1"
 	},
 	"2022": {
-		"level": 2,
 		"enemy": [
 			"206",
 			"206",
@@ -3678,21 +3677,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_206",
+		"bgm": "wood",
+		"level": 2,
+		"pve_stage": 4200,
 		"map": "wood",
+		"head_icon": 206,
+		"rank": 5,
+		"id": 2022,
 		"reward_1": [
 			"10",
 			"0",
 			"345459"
 		],
-		"pvp_stage": 3750,
-		"rank": 5,
-		"id": 2022,
-		"bgm": "wood",
 		"name": "巽木秘境 2-2"
 	},
 	"1016": {
-		"level": 1,
 		"enemy": [
 			"214",
 			"214",
@@ -3704,21 +3703,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_214",
+		"bgm": "golden",
+		"level": 1,
+		"pve_stage": 2100,
 		"map": "golden",
+		"head_icon": 214,
+		"rank": 4,
+		"id": 1016,
 		"reward_1": [
 			"9",
 			"0",
 			"14312"
 		],
-		"pvp_stage": 2200,
-		"rank": 4,
-		"id": 1016,
-		"bgm": "golden",
 		"name": "乾金秘境 4-1"
 	},
 	"1009": {
-		"level": 4,
 		"enemy": [
 			"209",
 			"209",
@@ -3730,21 +3729,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_209",
+		"bgm": "golden",
+		"level": 4,
+		"pve_stage": 550,
 		"map": "golden",
+		"head_icon": 209,
+		"rank": 2,
+		"id": 1009,
 		"reward_1": [
 			"9",
 			"0",
 			"348"
 		],
-		"pvp_stage": 750,
-		"rank": 2,
-		"id": 1009,
-		"bgm": "golden",
 		"name": "乾金秘境 2-4"
 	},
 	"1010": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"301",
@@ -3756,21 +3755,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_301",
+		"bgm": "golden",
+		"level": 5,
+		"pve_stage": 700,
 		"map": "golden",
+		"head_icon": 301,
+		"rank": 2,
+		"id": 1010,
 		"reward_1": [
 			"9",
 			"0",
 			"592"
 		],
-		"pvp_stage": 1000,
-		"rank": 2,
-		"id": 1010,
-		"bgm": "golden",
 		"name": "乾金秘境 2-5"
 	},
 	"1002": {
-		"level": 2,
 		"enemy": [
 			"210",
 			"210",
@@ -3782,21 +3781,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_210",
+		"bgm": "golden",
+		"level": 2,
+		"pve_stage": 10,
 		"map": "golden",
+		"head_icon": 210,
+		"rank": 1,
+		"id": 1002,
 		"reward_1": [
 			"9",
 			"0",
 			"8"
 		],
-		"pvp_stage": 50,
-		"rank": 1,
-		"id": 1002,
-		"bgm": "golden",
 		"name": "乾金秘境 1-2"
 	},
 	"1003": {
-		"level": 3,
 		"enemy": [
 			"203",
 			"203",
@@ -3808,21 +3807,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_208",
+		"bgm": "golden",
+		"level": 3,
+		"pve_stage": 20,
 		"map": "golden",
+		"head_icon": 208,
+		"rank": 1,
+		"id": 1003,
 		"reward_1": [
 			"9",
 			"0",
 			"14"
 		],
-		"pvp_stage": 100,
-		"rank": 1,
-		"id": 1003,
-		"bgm": "golden",
 		"name": "乾金秘境 1-3"
 	},
 	"1004": {
-		"level": 4,
 		"enemy": [
 			"209",
 			"209",
@@ -3834,21 +3833,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_209",
+		"bgm": "golden",
+		"level": 4,
+		"pve_stage": 50,
 		"map": "golden",
+		"head_icon": 209,
+		"rank": 1,
+		"id": 1004,
 		"reward_1": [
 			"9",
 			"0",
 			"24"
 		],
-		"pvp_stage": 150,
-		"rank": 1,
-		"id": 1004,
-		"bgm": "golden",
 		"name": "乾金秘境 1-4"
 	},
 	"1005": {
-		"level": 5,
 		"enemy": [
 			"0",
 			"301",
@@ -3860,21 +3859,21 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_301",
+		"bgm": "golden",
+		"level": 5,
+		"pve_stage": 100,
 		"map": "golden",
+		"head_icon": 301,
+		"rank": 1,
+		"id": 1005,
 		"reward_1": [
 			"9",
 			"0",
 			"41"
 		],
-		"pvp_stage": 250,
-		"rank": 1,
-		"id": 1005,
-		"bgm": "golden",
 		"name": "乾金秘境 1-5"
 	},
 	"1006": {
-		"level": 1,
 		"enemy": [
 			"214",
 			"214",
@@ -3886,17 +3885,18 @@
 			"0",
 			"0"
 		],
-		"head_icon": "enemy_214",
+		"bgm": "golden",
+		"level": 1,
+		"pve_stage": 200,
 		"map": "golden",
+		"head_icon": 214,
+		"rank": 2,
+		"id": 1006,
 		"reward_1": [
 			"9",
 			"0",
 			"70"
 		],
-		"pvp_stage": 350,
-		"rank": 2,
-		"id": 1006,
-		"bgm": "golden",
 		"name": "乾金秘境 2-1"
 	}
 }

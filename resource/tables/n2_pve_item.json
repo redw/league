@@ -1,42 +1,52 @@
 {
-	"1": {
-		"chance": 0.1,
-		"resource": "item_kill_effect",
-		"tip": "召唤如来神掌秒杀所有小怪（ID小于300），对非小怪造成其生命上限20%的伤害",
-		"cd": 5,
-		"id": 1,
-		"name": "五指山"
-	},
-	"3": {
-		"chance": 0.1,
-		"resource": "item_hp_effect",
-		"tip": "回复全体友军50%生命",
-		"cd": 5,
-		"id": 3,
-		"name": "蟠桃"
+	"8": {
+		"value": 5,
+		"resource": "item_pill_effect",
+		"cd": 60,
+		"tip": "随机获得value枚升星丹",
+		"name": "升星丹",
+		"id": 8,
+		"times": 2,
+		"chance": 0.01
 	},
 	"4": {
-		"chance": 0.005,
+		"value": 1,
 		"resource": "item_reborn_effect",
-		"tip": "获得1次转生次数",
 		"cd": 4320,
+		"tip": "获得value次转生次数",
+		"name": "月光宝盒",
 		"id": 4,
-		"name": "月光宝盒"
+		"times": 1,
+		"chance": 0.005
 	},
 	"5": {
-		"chance": 0.1,
+		"value": 0.016,
 		"resource": "item_gold_effect",
-		"tip": "获得半小时的铜钱产出",
-		"cd": 2,
+		"cd": 1,
+		"tip": "获得value小时铜钱产出",
+		"name": "小财神",
 		"id": 5,
-		"name": "小财神"
+		"times": 9999,
+		"chance": 0.25
 	},
 	"6": {
-		"chance": 0.05,
+		"value": 35,
 		"resource": "item_diamond_effect",
-		"tip": "随机获得5-10获得元宝",
-		"cd": 5,
+		"cd": 3,
+		"tip": "随机获得5~value的元宝",
+		"name": "大财神",
 		"id": 6,
-		"name": "大财神"
+		"times": 20,
+		"chance": 0.1
+	},
+	"7": {
+		"value": 0.5,
+		"resource": "item_jade_effect",
+		"cd": 10,
+		"tip": "获得转生灵玉*value的灵玉",
+		"name": "闯关灵玉",
+		"id": 7,
+		"times": 12,
+		"chance": 0.1
 	}
 }

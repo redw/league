@@ -14,9 +14,12 @@ class PVEBackGround extends egret.DisplayObjectContainer {
         this.hasTween = hasTween;
         this.priority = priority;
         this.background = new PriorityImage(this.priority);
-        this.freeBackground = new PriorityImage(this.priority);
         this.addChild(this.background);
-        this.addChild(this.freeBackground);
+
+        if (hasTween) {
+            this.freeBackground = new PriorityImage(this.priority);
+            this.addChild(this.freeBackground);
+        }
     }
 
     protected getSceneResourcePath(level:number) {
@@ -25,7 +28,7 @@ class PVEBackGround extends egret.DisplayObjectContainer {
 
     public set level(value:number) {
         if (value != this._level) {
-            let stageConfig:StageConfig = Config.StageData[value];
+            let stageConfig:StageCommonConfig = Config.StageCommonData[Math.ceil(value / fight.MAP_SWITCH_SIZE)];
             if (!stageConfig)  return;
             this.background.source = this.getSceneResourcePath(value);
             this.freeBackground.source = this.getSceneResourcePath(value);
@@ -39,8 +42,8 @@ class PVEBackGround extends egret.DisplayObjectContainer {
 
             let off:number = 0;
             if (this.hasTween && this._level != -1) {
-                let prevConfig:StageConfig = Config.StageData[this._level];
-                if (stageConfig.bgm == prevConfig.bgm) {
+                let prevConfig:StageCommonConfig = Config.StageCommonData[Math.ceil(this._level / fight.MAP_SWITCH_SIZE)];
+                if (stageConfig.map == prevConfig.map) {
                     if (value > this._level) {
                         off = fight.WIDTH * -1;
                     } else if (value < this._level) {

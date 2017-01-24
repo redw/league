@@ -6,6 +6,9 @@ interface StageConfig {
     monster_number: number[];
     monster:string[];
     id: number;
+}
+
+interface StageCommonConfig {
     map:string;
     bgm:string;
     title:string;

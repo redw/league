@@ -6,7 +6,7 @@ class NewChapterEff extends egret.DisplayObjectContainer{
 
     protected bitmapText:egret.BitmapText = new egret.BitmapText();
 
-    public constructor() {
+    public constructor(title:string) {
         super();
 
         this.bitmapText = new egret.BitmapText();
@@ -15,13 +15,10 @@ class NewChapterEff extends egret.DisplayObjectContainer{
         this.bitmapText.letterSpacing = -3;
         this.bitmapText.textAlign = "center";
 
-        let id = UserProxy.inst.curArea;
-        let stageConfig:StageConfig = Config.StageData[id];
-
 
         this.bitmapText.x = 0;
         this.bitmapText.width = 480;
-        this.bitmapText.text = stageConfig.title || "";
+        this.bitmapText.text = title || "";
 
         this.bitmapText.y = 200;
 

@@ -1,1989 +1,1989 @@
 {
 	"1": {
+		"achv_type": 1,
+		"achv_parm": 10,
+		"disc": "闯过第 10关",
+		"type_child": 1,
+		"next_id": 2,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "闯过第 10 关",
-		"achv_parm": 10,
-		"achv_type": 1,
-		"next_id": 2,
 		"id": 1,
 		"name": "踏平坎坷"
 	},
 	"2": {
+		"achv_type": 1,
+		"achv_parm": 50,
+		"disc": "闯过第 50关",
+		"type_child": 2,
+		"next_id": 3,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "闯过第 50 关",
-		"achv_parm": 50,
-		"achv_type": 1,
-		"next_id": 3,
 		"id": 2,
 		"name": "踏平坎坷"
 	},
 	"3": {
+		"achv_type": 1,
+		"achv_parm": 100,
+		"disc": "闯过第 100关",
+		"type_child": 3,
+		"next_id": 4,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "闯过第 100 关",
-		"achv_parm": 100,
-		"achv_type": 1,
-		"next_id": 4,
 		"id": 3,
 		"name": "踏平坎坷"
 	},
 	"4": {
+		"achv_type": 1,
+		"achv_parm": 200,
+		"disc": "闯过第 200关",
+		"type_child": 4,
+		"next_id": 5,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 4,
-		"disc": "闯过第 200 关",
-		"achv_parm": 200,
-		"achv_type": 1,
-		"next_id": 5,
 		"id": 4,
 		"name": "踏平坎坷"
 	},
 	"5": {
+		"achv_type": 1,
+		"achv_parm": 300,
+		"disc": "闯过第 300关",
+		"type_child": 5,
+		"next_id": 6,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 5,
-		"disc": "闯过第 300 关",
-		"achv_parm": 300,
-		"achv_type": 1,
-		"next_id": 6,
 		"id": 5,
 		"name": "踏平坎坷"
 	},
 	"6": {
+		"achv_type": 1,
+		"achv_parm": 500,
+		"disc": "闯过第 500关",
+		"type_child": 6,
+		"next_id": 7,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 6,
-		"disc": "闯过第 500 关",
-		"achv_parm": 500,
-		"achv_type": 1,
-		"next_id": 7,
 		"id": 6,
 		"name": "踏平坎坷"
 	},
 	"7": {
+		"achv_type": 1,
+		"achv_parm": 700,
+		"disc": "闯过第 700关",
+		"type_child": 7,
+		"next_id": 8,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 7,
-		"disc": "闯过第 700 关",
-		"achv_parm": 700,
-		"achv_type": 1,
-		"next_id": 8,
 		"id": 7,
 		"name": "踏平坎坷"
 	},
 	"8": {
+		"achv_type": 1,
+		"achv_parm": 1000,
+		"disc": "闯过第 1000关",
+		"type_child": 8,
+		"next_id": 9,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "闯过第 1000 关",
-		"achv_parm": 1000,
-		"achv_type": 1,
-		"next_id": 9,
 		"id": 8,
 		"name": "踏平坎坷"
 	},
 	"9": {
+		"achv_type": 1,
+		"achv_parm": 1300,
+		"disc": "闯过第 1300关",
+		"type_child": 9,
+		"next_id": 10,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 9,
-		"disc": "闯过第 1300 关",
-		"achv_parm": 1300,
-		"achv_type": 1,
-		"next_id": 10,
 		"id": 9,
 		"name": "踏平坎坷"
 	},
 	"10": {
+		"achv_type": 1,
+		"achv_parm": 1600,
+		"disc": "闯过第 1600关",
+		"type_child": 10,
+		"next_id": 11,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 10,
-		"disc": "闯过第 1600 关",
-		"achv_parm": 1600,
-		"achv_type": 1,
-		"next_id": 11,
 		"id": 10,
 		"name": "踏平坎坷"
 	},
 	"11": {
+		"achv_type": 1,
+		"achv_parm": 2000,
+		"disc": "闯过第 2000关",
+		"type_child": 11,
+		"next_id": 12,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 11,
-		"disc": "闯过第 2000 关",
-		"achv_parm": 2000,
-		"achv_type": 1,
-		"next_id": 12,
 		"id": 11,
 		"name": "踏平坎坷"
 	},
 	"12": {
+		"achv_type": 1,
+		"achv_parm": 2500,
+		"disc": "闯过第 2500关",
+		"type_child": 12,
+		"next_id": 13,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 12,
-		"disc": "闯过第 2500 关",
-		"achv_parm": 2500,
-		"achv_type": 1,
-		"next_id": 13,
 		"id": 12,
 		"name": "踏平坎坷"
 	},
 	"13": {
+		"achv_type": 1,
+		"achv_parm": 3000,
+		"disc": "闯过第 3000关",
+		"type_child": 13,
+		"next_id": 14,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 13,
-		"disc": "闯过第 3000 关",
-		"achv_parm": 3000,
-		"achv_type": 1,
-		"next_id": 14,
 		"id": 13,
 		"name": "踏平坎坷"
 	},
 	"14": {
+		"achv_type": 1,
+		"achv_parm": 4000,
+		"disc": "闯过第 4000关",
+		"type_child": 14,
+		"next_id": 15,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 14,
-		"disc": "闯过第 4000 关",
-		"achv_parm": 4000,
-		"achv_type": 1,
-		"next_id": 15,
 		"id": 14,
 		"name": "踏平坎坷"
 	},
 	"15": {
+		"achv_type": 1,
+		"achv_parm": 5000,
+		"disc": "闯过第 5000关",
+		"type_child": 15,
+		"next_id": 16,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 15,
-		"disc": "闯过第 5000 关",
-		"achv_parm": 5000,
-		"achv_type": 1,
-		"next_id": 16,
 		"id": 15,
 		"name": "踏平坎坷"
 	},
 	"16": {
+		"achv_type": 1,
+		"achv_parm": 10000,
+		"disc": "闯过第 10000关",
+		"type_child": 16,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 16,
-		"disc": "闯过第 10000 关",
-		"achv_parm": 10000,
-		"achv_type": 1,
-		"next_id": 0,
 		"id": 16,
 		"name": "踏平坎坷"
 	},
 	"17": {
+		"achv_type": 2,
+		"achv_parm": 5,
+		"disc": "点击 5次奇遇",
+		"type_child": 1,
+		"next_id": 18,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "点击 5 次奇遇",
-		"achv_parm": 5,
-		"achv_type": 2,
-		"next_id": 18,
 		"id": 17,
 		"name": "西游奇遇"
 	},
 	"18": {
+		"achv_type": 2,
+		"achv_parm": 50,
+		"disc": "点击 50次奇遇",
+		"type_child": 2,
+		"next_id": 19,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "点击 50 次奇遇",
-		"achv_parm": 50,
-		"achv_type": 2,
-		"next_id": 19,
 		"id": 18,
 		"name": "西游奇遇"
 	},
 	"19": {
+		"achv_type": 2,
+		"achv_parm": 500,
+		"disc": "点击 500次奇遇",
+		"type_child": 3,
+		"next_id": 20,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "点击 500 次奇遇",
-		"achv_parm": 500,
-		"achv_type": 2,
-		"next_id": 20,
 		"id": 19,
 		"name": "西游奇遇"
 	},
 	"20": {
+		"achv_type": 2,
+		"achv_parm": 5000,
+		"disc": "点击 5000次奇遇",
+		"type_child": 4,
+		"next_id": 21,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "点击 5000 次奇遇",
-		"achv_parm": 5000,
-		"achv_type": 2,
-		"next_id": 21,
 		"id": 20,
 		"name": "西游奇遇"
 	},
 	"21": {
+		"achv_type": 2,
+		"achv_parm": 50000,
+		"disc": "点击 50000次奇遇",
+		"type_child": 5,
+		"next_id": 22,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "点击 50000 次奇遇",
-		"achv_parm": 50000,
-		"achv_type": 2,
-		"next_id": 22,
 		"id": 21,
 		"name": "西游奇遇"
 	},
 	"22": {
+		"achv_type": 2,
+		"achv_parm": 500000,
+		"disc": "点击 500000次奇遇",
+		"type_child": 6,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "点击 500000 次奇遇",
-		"achv_parm": 500000,
-		"achv_type": 2,
-		"next_id": 0,
 		"id": 22,
 		"name": "西游奇遇"
 	},
 	"23": {
+		"achv_type": 3,
+		"achv_parm": 1,
+		"disc": "进行 1次轮回",
+		"type_child": 1,
+		"next_id": 24,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "进行 1 次轮回",
-		"achv_parm": 1,
-		"achv_type": 3,
-		"next_id": 24,
 		"id": 23,
 		"name": "无尽轮回"
 	},
 	"24": {
+		"achv_type": 3,
+		"achv_parm": 3,
+		"disc": "进行 3次轮回",
+		"type_child": 2,
+		"next_id": 25,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "进行 3 次轮回",
-		"achv_parm": 3,
-		"achv_type": 3,
-		"next_id": 25,
 		"id": 24,
 		"name": "无尽轮回"
 	},
 	"25": {
+		"achv_type": 3,
+		"achv_parm": 8,
+		"disc": "进行 8次轮回",
+		"type_child": 3,
+		"next_id": 26,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "进行 8 次轮回",
-		"achv_parm": 8,
-		"achv_type": 3,
-		"next_id": 26,
 		"id": 25,
 		"name": "无尽轮回"
 	},
 	"26": {
+		"achv_type": 3,
+		"achv_parm": 15,
+		"disc": "进行 15次轮回",
+		"type_child": 4,
+		"next_id": 27,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "进行 15 次轮回",
-		"achv_parm": 15,
-		"achv_type": 3,
-		"next_id": 27,
 		"id": 26,
 		"name": "无尽轮回"
 	},
 	"27": {
+		"achv_type": 3,
+		"achv_parm": 30,
+		"disc": "进行 30次轮回",
+		"type_child": 5,
+		"next_id": 28,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "进行 30 次轮回",
-		"achv_parm": 30,
-		"achv_type": 3,
-		"next_id": 28,
 		"id": 27,
 		"name": "无尽轮回"
 	},
 	"28": {
+		"achv_type": 3,
+		"achv_parm": 50,
+		"disc": "进行 50次轮回",
+		"type_child": 6,
+		"next_id": 29,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "进行 50 次轮回",
-		"achv_parm": 50,
-		"achv_type": 3,
-		"next_id": 29,
 		"id": 28,
 		"name": "无尽轮回"
 	},
 	"29": {
+		"achv_type": 3,
+		"achv_parm": 100,
+		"disc": "进行 100次轮回",
+		"type_child": 7,
+		"next_id": 30,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "进行 100 次轮回",
-		"achv_parm": 100,
-		"achv_type": 3,
-		"next_id": 30,
 		"id": 29,
 		"name": "无尽轮回"
 	},
 	"30": {
+		"achv_type": 3,
+		"achv_parm": 200,
+		"disc": "进行 200次轮回",
+		"type_child": 8,
+		"next_id": 31,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "进行 200 次轮回",
-		"achv_parm": 200,
-		"achv_type": 3,
-		"next_id": 31,
 		"id": 30,
 		"name": "无尽轮回"
 	},
 	"31": {
+		"achv_type": 3,
+		"achv_parm": 600,
+		"disc": "进行 600次轮回",
+		"type_child": 9,
+		"next_id": 32,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 9,
-		"disc": "进行 600 次轮回",
-		"achv_parm": 600,
-		"achv_type": 3,
-		"next_id": 32,
 		"id": 31,
 		"name": "无尽轮回"
 	},
 	"32": {
+		"achv_type": 3,
+		"achv_parm": 2000,
+		"disc": "进行 2000次轮回",
+		"type_child": 10,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 10,
-		"disc": "进行 2000 次轮回",
-		"achv_parm": 2000,
-		"achv_type": 3,
-		"next_id": 0,
 		"id": 32,
 		"name": "无尽轮回"
 	},
 	"33": {
+		"achv_type": 4,
+		"achv_parm": 20,
+		"disc": "进行 20次寻仙",
+		"type_child": 1,
+		"next_id": 34,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "进行 20 次寻仙",
-		"achv_parm": 20,
-		"achv_type": 4,
-		"next_id": 34,
 		"id": 33,
 		"name": "神仙助我"
 	},
 	"34": {
+		"achv_type": 4,
+		"achv_parm": 100,
+		"disc": "进行 100次寻仙",
+		"type_child": 2,
+		"next_id": 35,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "进行 100 次寻仙",
-		"achv_parm": 100,
-		"achv_type": 4,
-		"next_id": 35,
 		"id": 34,
 		"name": "神仙助我"
 	},
 	"35": {
+		"achv_type": 4,
+		"achv_parm": 500,
+		"disc": "进行 500次寻仙",
+		"type_child": 3,
+		"next_id": 36,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "进行 500 次寻仙",
-		"achv_parm": 500,
-		"achv_type": 4,
-		"next_id": 36,
 		"id": 35,
 		"name": "神仙助我"
 	},
 	"36": {
+		"achv_type": 4,
+		"achv_parm": 2000,
+		"disc": "进行 2000次寻仙",
+		"type_child": 4,
+		"next_id": 37,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "进行 2000 次寻仙",
-		"achv_parm": 2000,
-		"achv_type": 4,
-		"next_id": 37,
 		"id": 36,
 		"name": "神仙助我"
 	},
 	"37": {
+		"achv_type": 4,
+		"achv_parm": 10000,
+		"disc": "进行 10000次寻仙",
+		"type_child": 5,
+		"next_id": 38,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "进行 10000 次寻仙",
-		"achv_parm": 10000,
-		"achv_type": 4,
-		"next_id": 38,
 		"id": 37,
 		"name": "神仙助我"
 	},
 	"38": {
+		"achv_type": 4,
+		"achv_parm": 50000,
+		"disc": "进行 50000次寻仙",
+		"type_child": 6,
+		"next_id": 39,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "进行 50000 次寻仙",
-		"achv_parm": 50000,
-		"achv_type": 4,
-		"next_id": 39,
 		"id": 38,
 		"name": "神仙助我"
 	},
 	"39": {
+		"achv_type": 4,
+		"achv_parm": 200000,
+		"disc": "进行 200000次寻仙",
+		"type_child": 7,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "进行 200000 次寻仙",
-		"achv_parm": 200000,
-		"achv_type": 4,
-		"next_id": 0,
 		"id": 39,
 		"name": "神仙助我"
 	},
 	"40": {
+		"achv_type": 5,
+		"achv_parm": 3,
+		"disc": "拥有 3位伙伴",
+		"type_child": 1,
+		"next_id": 41,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "获得 3 位西游伙伴",
-		"achv_parm": 3,
-		"achv_type": 5,
-		"next_id": 41,
 		"id": 40,
 		"name": "兵多将广"
 	},
 	"41": {
+		"achv_type": 5,
+		"achv_parm": 6,
+		"disc": "拥有 6位伙伴",
+		"type_child": 2,
+		"next_id": 42,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "获得 6 位西游伙伴",
-		"achv_parm": 6,
-		"achv_type": 5,
-		"next_id": 42,
 		"id": 41,
 		"name": "兵多将广"
 	},
 	"42": {
+		"achv_type": 5,
+		"achv_parm": 10,
+		"disc": "拥有 10位伙伴",
+		"type_child": 3,
+		"next_id": 43,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "获得 10 位西游伙伴",
-		"achv_parm": 10,
-		"achv_type": 5,
-		"next_id": 43,
 		"id": 42,
 		"name": "兵多将广"
 	},
 	"43": {
+		"achv_type": 5,
+		"achv_parm": 15,
+		"disc": "拥有 15位伙伴",
+		"type_child": 4,
+		"next_id": 44,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "获得 15 位西游伙伴",
-		"achv_parm": 15,
-		"achv_type": 5,
-		"next_id": 44,
 		"id": 43,
 		"name": "兵多将广"
 	},
 	"44": {
+		"achv_type": 5,
+		"achv_parm": 20,
+		"disc": "拥有 20位伙伴",
+		"type_child": 5,
+		"next_id": 45,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "获得 20 位西游伙伴",
-		"achv_parm": 20,
-		"achv_type": 5,
-		"next_id": 45,
 		"id": 44,
 		"name": "兵多将广"
 	},
 	"45": {
+		"achv_type": 5,
+		"achv_parm": 30,
+		"disc": "拥有 30位伙伴",
+		"type_child": 6,
+		"next_id": 46,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "获得 30 位西游伙伴",
-		"achv_parm": 30,
-		"achv_type": 5,
-		"next_id": 46,
 		"id": 45,
 		"name": "兵多将广"
 	},
 	"46": {
+		"achv_type": 5,
+		"achv_parm": 50,
+		"disc": "拥有 50位伙伴",
+		"type_child": 7,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "获得 50 位西游伙伴",
-		"achv_parm": 50,
-		"achv_type": 5,
-		"next_id": 0,
 		"id": 46,
 		"name": "兵多将广"
 	},
 	"47": {
+		"achv_type": 6,
+		"achv_parm": 10,
+		"disc": "最高强化等级达到 +10",
+		"type_child": 1,
+		"next_id": 48,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "最高强化等级达到 +10",
-		"achv_parm": 10,
-		"achv_type": 6,
-		"next_id": 48,
 		"id": 47,
 		"name": "无限强化"
 	},
 	"48": {
+		"achv_type": 6,
+		"achv_parm": 25,
+		"disc": "最高强化等级达到 +25",
+		"type_child": 2,
+		"next_id": 49,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "最高强化等级达到 +25",
-		"achv_parm": 25,
-		"achv_type": 6,
-		"next_id": 49,
 		"id": 48,
 		"name": "无限强化"
 	},
 	"49": {
+		"achv_type": 6,
+		"achv_parm": 50,
+		"disc": "最高强化等级达到 +50",
+		"type_child": 3,
+		"next_id": 50,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "最高强化等级达到 +50",
-		"achv_parm": 50,
-		"achv_type": 6,
-		"next_id": 50,
 		"id": 49,
 		"name": "无限强化"
 	},
 	"50": {
+		"achv_type": 6,
+		"achv_parm": 100,
+		"disc": "最高强化等级达到 +100",
+		"type_child": 4,
+		"next_id": 51,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 4,
-		"disc": "最高强化等级达到 +100",
-		"achv_parm": 100,
-		"achv_type": 6,
-		"next_id": 51,
 		"id": 50,
 		"name": "无限强化"
 	},
 	"51": {
+		"achv_type": 6,
+		"achv_parm": 200,
+		"disc": "最高强化等级达到 +200",
+		"type_child": 5,
+		"next_id": 52,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 5,
-		"disc": "最高强化等级达到 +200",
-		"achv_parm": 200,
-		"achv_type": 6,
-		"next_id": 52,
 		"id": 51,
 		"name": "无限强化"
 	},
 	"52": {
+		"achv_type": 6,
+		"achv_parm": 300,
+		"disc": "最高强化等级达到 +300",
+		"type_child": 6,
+		"next_id": 53,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 6,
-		"disc": "最高强化等级达到 +300",
-		"achv_parm": 300,
-		"achv_type": 6,
-		"next_id": 53,
 		"id": 52,
 		"name": "无限强化"
 	},
 	"53": {
+		"achv_type": 6,
+		"achv_parm": 400,
+		"disc": "最高强化等级达到 +400",
+		"type_child": 7,
+		"next_id": 54,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "最高强化等级达到 +400",
-		"achv_parm": 400,
-		"achv_type": 6,
-		"next_id": 54,
 		"id": 53,
 		"name": "无限强化"
 	},
 	"54": {
+		"achv_type": 6,
+		"achv_parm": 500,
+		"disc": "最高强化等级达到 +500",
+		"type_child": 8,
+		"next_id": 55,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "最高强化等级达到 +500",
-		"achv_parm": 500,
-		"achv_type": 6,
-		"next_id": 55,
 		"id": 54,
 		"name": "无限强化"
 	},
 	"55": {
+		"achv_type": 6,
+		"achv_parm": 600,
+		"disc": "最高强化等级达到 +600",
+		"type_child": 9,
+		"next_id": 56,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 9,
-		"disc": "最高强化等级达到 +600",
-		"achv_parm": 600,
-		"achv_type": 6,
-		"next_id": 56,
 		"id": 55,
 		"name": "无限强化"
 	},
 	"56": {
+		"achv_type": 6,
+		"achv_parm": 700,
+		"disc": "最高强化等级达到 +700",
+		"type_child": 10,
+		"next_id": 57,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 10,
-		"disc": "最高强化等级达到 +700",
-		"achv_parm": 700,
-		"achv_type": 6,
-		"next_id": 57,
 		"id": 56,
 		"name": "无限强化"
 	},
 	"57": {
+		"achv_type": 6,
+		"achv_parm": 800,
+		"disc": "最高强化等级达到 +800",
+		"type_child": 11,
+		"next_id": 58,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 11,
-		"disc": "最高强化等级达到 +800",
-		"achv_parm": 800,
-		"achv_type": 6,
-		"next_id": 58,
 		"id": 57,
 		"name": "无限强化"
 	},
 	"58": {
+		"achv_type": 6,
+		"achv_parm": 900,
+		"disc": "最高强化等级达到 +900",
+		"type_child": 12,
+		"next_id": 59,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 12,
-		"disc": "最高强化等级达到 +900",
-		"achv_parm": 900,
-		"achv_type": 6,
-		"next_id": 59,
 		"id": 58,
 		"name": "无限强化"
 	},
 	"59": {
+		"achv_type": 6,
+		"achv_parm": 1000,
+		"disc": "最高强化等级达到 +1000",
+		"type_child": 13,
+		"next_id": 60,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 13,
-		"disc": "最高强化等级达到 +1000",
-		"achv_parm": 1000,
-		"achv_type": 6,
-		"next_id": 60,
 		"id": 59,
 		"name": "无限强化"
 	},
 	"60": {
+		"achv_type": 6,
+		"achv_parm": 1100,
+		"disc": "最高强化等级达到 +1100",
+		"type_child": 14,
+		"next_id": 61,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 14,
-		"disc": "最高强化等级达到 +1100",
-		"achv_parm": 1100,
-		"achv_type": 6,
-		"next_id": 61,
 		"id": 60,
 		"name": "无限强化"
 	},
 	"61": {
+		"achv_type": 6,
+		"achv_parm": 1200,
+		"disc": "最高强化等级达到 +1200",
+		"type_child": 15,
+		"next_id": 62,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 15,
-		"disc": "最高强化等级达到 +1200",
-		"achv_parm": 1200,
-		"achv_type": 6,
-		"next_id": 62,
 		"id": 61,
 		"name": "无限强化"
 	},
 	"62": {
+		"achv_type": 6,
+		"achv_parm": 1300,
+		"disc": "最高强化等级达到 +1300",
+		"type_child": 16,
+		"next_id": 63,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 16,
-		"disc": "最高强化等级达到 +1300",
-		"achv_parm": 1300,
-		"achv_type": 6,
-		"next_id": 63,
 		"id": 62,
 		"name": "无限强化"
 	},
 	"63": {
+		"achv_type": 6,
+		"achv_parm": 1400,
+		"disc": "最高强化等级达到 +1400",
+		"type_child": 17,
+		"next_id": 64,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 17,
-		"disc": "最高强化等级达到 +1400",
-		"achv_parm": 1400,
-		"achv_type": 6,
-		"next_id": 64,
 		"id": 63,
 		"name": "无限强化"
 	},
 	"64": {
+		"achv_type": 6,
+		"achv_parm": 1500,
+		"disc": "最高强化等级达到 +1500",
+		"type_child": 18,
+		"next_id": 65,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 18,
-		"disc": "最高强化等级达到 +1500",
-		"achv_parm": 1500,
-		"achv_type": 6,
-		"next_id": 65,
 		"id": 64,
 		"name": "无限强化"
 	},
 	"65": {
+		"achv_type": 6,
+		"achv_parm": 1600,
+		"disc": "最高强化等级达到 +1600",
+		"type_child": 19,
+		"next_id": 66,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 19,
-		"disc": "最高强化等级达到 +1600",
-		"achv_parm": 1600,
-		"achv_type": 6,
-		"next_id": 66,
 		"id": 65,
 		"name": "无限强化"
 	},
 	"66": {
+		"achv_type": 6,
+		"achv_parm": 1700,
+		"disc": "最高强化等级达到 +1700",
+		"type_child": 20,
+		"next_id": 67,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 20,
-		"disc": "最高强化等级达到 +1700",
-		"achv_parm": 1700,
-		"achv_type": 6,
-		"next_id": 67,
 		"id": 66,
 		"name": "无限强化"
 	},
 	"67": {
+		"achv_type": 6,
+		"achv_parm": 1800,
+		"disc": "最高强化等级达到 +1800",
+		"type_child": 21,
+		"next_id": 68,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 21,
-		"disc": "最高强化等级达到 +1800",
-		"achv_parm": 1800,
-		"achv_type": 6,
-		"next_id": 68,
 		"id": 67,
 		"name": "无限强化"
 	},
 	"68": {
+		"achv_type": 6,
+		"achv_parm": 1900,
+		"disc": "最高强化等级达到 +1900",
+		"type_child": 22,
+		"next_id": 69,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 22,
-		"disc": "最高强化等级达到 +1900",
-		"achv_parm": 1900,
-		"achv_type": 6,
-		"next_id": 69,
 		"id": 68,
 		"name": "无限强化"
 	},
 	"69": {
+		"achv_type": 6,
+		"achv_parm": 2000,
+		"disc": "最高强化等级达到 +2000",
+		"type_child": 23,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 23,
-		"disc": "最高强化等级达到 +2000",
-		"achv_parm": 2000,
-		"achv_type": 6,
-		"next_id": 0,
 		"id": 69,
 		"name": "无限强化"
 	},
 	"70": {
+		"achv_type": 7,
+		"achv_parm": 5,
+		"disc": "进行 5次伙伴升星",
+		"type_child": 1,
+		"next_id": 71,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "进行 5 次伙伴升星",
-		"achv_parm": 5,
-		"achv_type": 7,
-		"next_id": 71,
 		"id": 70,
 		"name": "羽化升星"
 	},
 	"71": {
+		"achv_type": 7,
+		"achv_parm": 10,
+		"disc": "进行 10次伙伴升星",
+		"type_child": 2,
+		"next_id": 72,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "进行 10 次伙伴升星",
-		"achv_parm": 10,
-		"achv_type": 7,
-		"next_id": 72,
 		"id": 71,
 		"name": "羽化升星"
 	},
 	"72": {
+		"achv_type": 7,
+		"achv_parm": 20,
+		"disc": "进行 20次伙伴升星",
+		"type_child": 3,
+		"next_id": 73,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "进行 20 次伙伴升星",
-		"achv_parm": 20,
-		"achv_type": 7,
-		"next_id": 73,
 		"id": 72,
 		"name": "羽化升星"
 	},
 	"73": {
+		"achv_type": 7,
+		"achv_parm": 50,
+		"disc": "进行 50次伙伴升星",
+		"type_child": 4,
+		"next_id": 74,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "进行 50 次伙伴升星",
-		"achv_parm": 50,
-		"achv_type": 7,
-		"next_id": 74,
 		"id": 73,
 		"name": "羽化升星"
 	},
 	"74": {
+		"achv_type": 7,
+		"achv_parm": 100,
+		"disc": "进行 100次伙伴升星",
+		"type_child": 5,
+		"next_id": 75,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "进行 100 次伙伴升星",
-		"achv_parm": 100,
-		"achv_type": 7,
-		"next_id": 75,
 		"id": 74,
 		"name": "羽化升星"
 	},
 	"75": {
+		"achv_type": 7,
+		"achv_parm": 200,
+		"disc": "进行 200次伙伴升星",
+		"type_child": 6,
+		"next_id": 76,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "进行 200 次伙伴升星",
-		"achv_parm": 200,
-		"achv_type": 7,
-		"next_id": 76,
 		"id": 75,
 		"name": "羽化升星"
 	},
 	"76": {
+		"achv_type": 7,
+		"achv_parm": 500,
+		"disc": "进行 500次伙伴升星",
+		"type_child": 7,
+		"next_id": 77,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "进行 500 次伙伴升星",
-		"achv_parm": 500,
-		"achv_type": 7,
-		"next_id": 77,
 		"id": 76,
 		"name": "羽化升星"
 	},
 	"77": {
+		"achv_type": 7,
+		"achv_parm": 1000,
+		"disc": "进行 1000次伙伴升星",
+		"type_child": 8,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "进行 1000 次伙伴升星",
-		"achv_parm": 1000,
-		"achv_type": 7,
-		"next_id": 0,
 		"id": 77,
 		"name": "羽化升星"
 	},
 	"78": {
+		"achv_type": 8,
+		"achv_parm": 1,
+		"disc": "激活1组伙伴情缘",
+		"type_child": 1,
+		"next_id": 79,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "解锁 1 组伙伴情缘",
-		"achv_parm": 1,
-		"achv_type": 8,
-		"next_id": 79,
 		"id": 78,
 		"name": "一世情缘"
 	},
 	"79": {
+		"achv_type": 8,
+		"achv_parm": 5,
+		"disc": "激活5组伙伴情缘",
+		"type_child": 2,
+		"next_id": 80,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "解锁 5 组伙伴情缘",
-		"achv_parm": 5,
-		"achv_type": 8,
-		"next_id": 80,
 		"id": 79,
 		"name": "一世情缘"
 	},
 	"80": {
+		"achv_type": 8,
+		"achv_parm": 10,
+		"disc": "激活10组伙伴情缘",
+		"type_child": 3,
+		"next_id": 81,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "解锁 10 组伙伴情缘",
-		"achv_parm": 10,
-		"achv_type": 8,
-		"next_id": 81,
 		"id": 80,
 		"name": "一世情缘"
 	},
 	"81": {
+		"achv_type": 8,
+		"achv_parm": 20,
+		"disc": "激活20组伙伴情缘",
+		"type_child": 4,
+		"next_id": 82,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "解锁 20 组伙伴情缘",
-		"achv_parm": 20,
-		"achv_type": 8,
-		"next_id": 82,
 		"id": 81,
 		"name": "一世情缘"
 	},
 	"82": {
+		"achv_type": 8,
+		"achv_parm": 30,
+		"disc": "激活30组伙伴情缘",
+		"type_child": 5,
+		"next_id": 83,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "解锁 30 组伙伴情缘",
-		"achv_parm": 30,
-		"achv_type": 8,
-		"next_id": 83,
 		"id": 82,
 		"name": "一世情缘"
 	},
 	"83": {
+		"achv_type": 8,
+		"achv_parm": 50,
+		"disc": "激活50组伙伴情缘",
+		"type_child": 6,
+		"next_id": 84,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "解锁 50 组伙伴情缘",
-		"achv_parm": 50,
-		"achv_type": 8,
-		"next_id": 84,
 		"id": 83,
 		"name": "一世情缘"
 	},
 	"84": {
+		"achv_type": 8,
+		"achv_parm": 70,
+		"disc": "激活70组伙伴情缘",
+		"type_child": 7,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "解锁 100 组伙伴情缘",
-		"achv_parm": 100,
-		"achv_type": 8,
-		"next_id": 0,
 		"id": 84,
 		"name": "一世情缘"
 	},
 	"85": {
+		"achv_type": 9,
+		"achv_parm": 3,
+		"disc": "收服 3只小妖",
+		"type_child": 1,
+		"next_id": 86,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "收服 3 只小妖",
-		"achv_parm": 3,
-		"achv_type": 9,
-		"next_id": 86,
 		"id": 85,
 		"name": "西行降妖"
 	},
 	"86": {
+		"achv_type": 9,
+		"achv_parm": 6,
+		"disc": "收服 6只小妖",
+		"type_child": 2,
+		"next_id": 87,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "收服 6 只小妖",
-		"achv_parm": 6,
-		"achv_type": 9,
-		"next_id": 87,
 		"id": 86,
 		"name": "西行降妖"
 	},
 	"87": {
+		"achv_type": 9,
+		"achv_parm": 10,
+		"disc": "收服 10只小妖",
+		"type_child": 3,
+		"next_id": 88,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "收服 10 只小妖",
-		"achv_parm": 10,
-		"achv_type": 9,
-		"next_id": 88,
 		"id": 87,
 		"name": "西行降妖"
 	},
 	"88": {
+		"achv_type": 9,
+		"achv_parm": 15,
+		"disc": "收服 15只小妖",
+		"type_child": 4,
+		"next_id": 89,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "收服 15 只小妖",
-		"achv_parm": 15,
-		"achv_type": 9,
-		"next_id": 89,
 		"id": 88,
 		"name": "西行降妖"
 	},
 	"89": {
+		"achv_type": 9,
+		"achv_parm": 20,
+		"disc": "收服 20只小妖",
+		"type_child": 5,
+		"next_id": 90,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "收服 20 只小妖",
-		"achv_parm": 20,
-		"achv_type": 9,
-		"next_id": 90,
 		"id": 89,
 		"name": "西行降妖"
 	},
 	"90": {
+		"achv_type": 9,
+		"achv_parm": 25,
+		"disc": "收服 25只小妖",
+		"type_child": 6,
+		"next_id": 91,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "收服 25 只小妖",
-		"achv_parm": 25,
-		"achv_type": 9,
-		"next_id": 91,
 		"id": 90,
 		"name": "西行降妖"
 	},
 	"91": {
+		"achv_type": 9,
+		"achv_parm": 30,
+		"disc": "收服 30只小妖",
+		"type_child": 7,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "收服 30 只小妖",
-		"achv_parm": 30,
-		"achv_type": 9,
-		"next_id": 0,
 		"id": 91,
 		"name": "西行降妖"
 	},
 	"92": {
+		"achv_type": 10,
+		"achv_parm": 1,
+		"disc": "小妖总等级达到 1级",
+		"type_child": 1,
+		"next_id": 93,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "小妖总等级达到 1级",
-		"achv_parm": 1,
-		"achv_type": 10,
-		"next_id": 93,
 		"id": 92,
 		"name": "群妖乱舞"
 	},
 	"93": {
+		"achv_type": 10,
+		"achv_parm": 3,
+		"disc": "小妖总等级达到 3级",
+		"type_child": 2,
+		"next_id": 94,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "小妖总等级达到 3级",
-		"achv_parm": 3,
-		"achv_type": 10,
-		"next_id": 94,
 		"id": 93,
 		"name": "群妖乱舞"
 	},
 	"94": {
+		"achv_type": 10,
+		"achv_parm": 8,
+		"disc": "小妖总等级达到 8级",
+		"type_child": 3,
+		"next_id": 95,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "小妖总等级达到 8级",
-		"achv_parm": 8,
-		"achv_type": 10,
-		"next_id": 95,
 		"id": 94,
 		"name": "群妖乱舞"
 	},
 	"95": {
+		"achv_type": 10,
+		"achv_parm": 15,
+		"disc": "小妖总等级达到 15级",
+		"type_child": 4,
+		"next_id": 96,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 4,
-		"disc": "小妖总等级达到 15级",
-		"achv_parm": 15,
-		"achv_type": 10,
-		"next_id": 96,
 		"id": 95,
 		"name": "群妖乱舞"
 	},
 	"96": {
+		"achv_type": 10,
+		"achv_parm": 30,
+		"disc": "小妖总等级达到 30级",
+		"type_child": 5,
+		"next_id": 97,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 5,
-		"disc": "小妖总等级达到 30级",
-		"achv_parm": 30,
-		"achv_type": 10,
-		"next_id": 97,
 		"id": 96,
 		"name": "群妖乱舞"
 	},
 	"97": {
+		"achv_type": 10,
+		"achv_parm": 50,
+		"disc": "小妖总等级达到 50级",
+		"type_child": 6,
+		"next_id": 98,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "小妖总等级达到 50级",
-		"achv_parm": 50,
-		"achv_type": 10,
-		"next_id": 98,
 		"id": 97,
 		"name": "群妖乱舞"
 	},
 	"98": {
+		"achv_type": 10,
+		"achv_parm": 100,
+		"disc": "小妖总等级达到 100级",
+		"type_child": 7,
+		"next_id": 99,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "小妖总等级达到 100级",
-		"achv_parm": 100,
-		"achv_type": 10,
-		"next_id": 99,
 		"id": 98,
 		"name": "群妖乱舞"
 	},
 	"99": {
+		"achv_type": 10,
+		"achv_parm": 200,
+		"disc": "小妖总等级达到 200级",
+		"type_child": 8,
+		"next_id": 100,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "小妖总等级达到 200级",
-		"achv_parm": 200,
-		"achv_type": 10,
-		"next_id": 100,
 		"id": 99,
 		"name": "群妖乱舞"
 	},
 	"100": {
+		"achv_type": 10,
+		"achv_parm": 500,
+		"disc": "小妖总等级达到 500级",
+		"type_child": 9,
+		"next_id": 101,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 9,
-		"disc": "小妖总等级达到 500级",
-		"achv_parm": 500,
-		"achv_type": 10,
-		"next_id": 101,
 		"id": 100,
 		"name": "群妖乱舞"
 	},
 	"101": {
+		"achv_type": 10,
+		"achv_parm": 1000,
+		"disc": "小妖总等级达到 1000级",
+		"type_child": 10,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 10,
-		"disc": "小妖总等级达到 1000级",
-		"achv_parm": 1000,
-		"achv_type": 10,
-		"next_id": 0,
 		"id": 101,
 		"name": "群妖乱舞"
 	},
 	"102": {
+		"achv_type": 11,
+		"achv_parm": 1,
+		"disc": "拥有 白色品质装备",
+		"type_child": 1,
+		"next_id": 103,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "拥有 1 品质装备",
-		"achv_parm": 1,
-		"achv_type": 11,
-		"next_id": 103,
 		"id": 102,
 		"name": "神兵利器"
 	},
 	"103": {
+		"achv_type": 11,
+		"achv_parm": 2,
+		"disc": "拥有 绿色品质装备",
+		"type_child": 2,
+		"next_id": 104,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 2,
-		"disc": "拥有 2 品质装备",
-		"achv_parm": 2,
-		"achv_type": 11,
-		"next_id": 104,
 		"id": 103,
 		"name": "神兵利器"
 	},
 	"104": {
+		"achv_type": 11,
+		"achv_parm": 3,
+		"disc": "拥有 蓝色品质装备",
+		"type_child": 3,
+		"next_id": 105,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "拥有 3 品质装备",
-		"achv_parm": 3,
-		"achv_type": 11,
-		"next_id": 105,
 		"id": 104,
 		"name": "神兵利器"
 	},
 	"105": {
+		"achv_type": 11,
+		"achv_parm": 4,
+		"disc": "拥有 紫色品质装备",
+		"type_child": 4,
+		"next_id": 106,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "拥有 4 品质装备",
-		"achv_parm": 4,
-		"achv_type": 11,
-		"next_id": 106,
 		"id": 105,
 		"name": "神兵利器"
 	},
 	"106": {
+		"achv_type": 11,
+		"achv_parm": 5,
+		"disc": "拥有 橙色品质装备",
+		"type_child": 5,
+		"next_id": 107,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "拥有 5 品质装备",
-		"achv_parm": 5,
-		"achv_type": 11,
-		"next_id": 107,
 		"id": 106,
 		"name": "神兵利器"
 	},
 	"107": {
+		"achv_type": 11,
+		"achv_parm": 6,
+		"disc": "拥有 红色品质装备",
+		"type_child": 6,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "拥有 6 品质装备",
-		"achv_parm": 6,
-		"achv_type": 11,
-		"next_id": 0,
 		"id": 107,
 		"name": "神兵利器"
 	},
 	"108": {
+		"achv_type": 12,
+		"achv_parm": 1,
+		"disc": "拥有 1件装备",
+		"type_child": 1,
+		"next_id": 109,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "拥有 1 件装备",
-		"achv_parm": 1,
-		"achv_type": 12,
-		"next_id": 109,
 		"id": 108,
 		"name": "全副武装"
 	},
 	"109": {
+		"achv_type": 12,
+		"achv_parm": 3,
+		"disc": "拥有 3件装备",
+		"type_child": 2,
+		"next_id": 110,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "拥有 3 件装备",
-		"achv_parm": 3,
-		"achv_type": 12,
-		"next_id": 110,
 		"id": 109,
 		"name": "全副武装"
 	},
 	"110": {
+		"achv_type": 12,
+		"achv_parm": 5,
+		"disc": "拥有 5件装备",
+		"type_child": 3,
+		"next_id": 111,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "拥有 5 件装备",
-		"achv_parm": 5,
-		"achv_type": 12,
-		"next_id": 111,
 		"id": 110,
 		"name": "全副武装"
 	},
 	"111": {
+		"achv_type": 12,
+		"achv_parm": 7,
+		"disc": "拥有 7件装备",
+		"type_child": 4,
+		"next_id": 112,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "拥有 7 件装备",
-		"achv_parm": 7,
-		"achv_type": 12,
-		"next_id": 112,
 		"id": 111,
 		"name": "全副武装"
 	},
 	"112": {
+		"achv_type": 12,
+		"achv_parm": 9,
+		"disc": "拥有 9件装备",
+		"type_child": 5,
+		"next_id": 113,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "拥有 9 件装备",
-		"achv_parm": 9,
-		"achv_type": 12,
-		"next_id": 113,
 		"id": 112,
 		"name": "全副武装"
 	},
 	"113": {
+		"achv_type": 12,
+		"achv_parm": 12,
+		"disc": "拥有 12件装备",
+		"type_child": 6,
+		"next_id": 114,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "拥有 12 件装备",
-		"achv_parm": 12,
-		"achv_type": 12,
-		"next_id": 114,
 		"id": 113,
 		"name": "全副武装"
 	},
 	"114": {
+		"achv_type": 12,
+		"achv_parm": 15,
+		"disc": "拥有 15件装备",
+		"type_child": 7,
+		"next_id": 115,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "拥有 15 件装备",
-		"achv_parm": 15,
-		"achv_type": 12,
-		"next_id": 115,
 		"id": 114,
 		"name": "全副武装"
 	},
 	"115": {
+		"achv_type": 12,
+		"achv_parm": 18,
+		"disc": "拥有 18件装备",
+		"type_child": 8,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "拥有 20 件装备",
-		"achv_parm": 20,
-		"achv_type": 12,
-		"next_id": 0,
 		"id": 115,
 		"name": "全副武装"
 	},
 	"116": {
+		"achv_type": 13,
+		"achv_parm": 3,
+		"disc": "开启第 3个巡山",
+		"type_child": 1,
+		"next_id": 117,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "开启第 3个巡山",
-		"achv_parm": 3,
-		"achv_type": 13,
-		"next_id": 117,
 		"id": 116,
 		"name": "翻山越岭"
 	},
 	"117": {
+		"achv_type": 13,
+		"achv_parm": 5,
+		"disc": "开启第 5个巡山",
+		"type_child": 2,
+		"next_id": 118,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "开启第 5个巡山",
-		"achv_parm": 5,
-		"achv_type": 13,
-		"next_id": 118,
 		"id": 117,
 		"name": "翻山越岭"
 	},
 	"118": {
+		"achv_type": 13,
+		"achv_parm": 7,
+		"disc": "开启第 7个巡山",
+		"type_child": 3,
+		"next_id": 119,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "开启第 7个巡山",
-		"achv_parm": 7,
-		"achv_type": 13,
-		"next_id": 119,
 		"id": 118,
 		"name": "翻山越岭"
 	},
 	"119": {
+		"achv_type": 13,
+		"achv_parm": 9,
+		"disc": "开启第 9个巡山",
+		"type_child": 4,
+		"next_id": 120,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 4,
-		"disc": "开启第 9个巡山",
-		"achv_parm": 9,
-		"achv_type": 13,
-		"next_id": 120,
 		"id": 119,
 		"name": "翻山越岭"
 	},
 	"120": {
+		"achv_type": 13,
+		"achv_parm": 12,
+		"disc": "开启第 12个巡山",
+		"type_child": 5,
+		"next_id": 121,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "开启第 12个巡山",
-		"achv_parm": 12,
-		"achv_type": 13,
-		"next_id": 121,
 		"id": 120,
 		"name": "翻山越岭"
 	},
 	"121": {
+		"achv_type": 13,
+		"achv_parm": 16,
+		"disc": "开启第 16个巡山",
+		"type_child": 6,
+		"next_id": 122,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "开启第 16个巡山",
-		"achv_parm": 16,
-		"achv_type": 13,
-		"next_id": 122,
 		"id": 121,
 		"name": "翻山越岭"
 	},
 	"122": {
+		"achv_type": 13,
+		"achv_parm": 20,
+		"disc": "开启第 20个巡山",
+		"type_child": 7,
+		"next_id": 123,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 7,
-		"disc": "开启第 20个巡山",
-		"achv_parm": 20,
-		"achv_type": 13,
-		"next_id": 123,
 		"id": 122,
 		"name": "翻山越岭"
 	},
 	"123": {
+		"achv_type": 13,
+		"achv_parm": 25,
+		"disc": "开启第 25个巡山",
+		"type_child": 8,
+		"next_id": 124,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 8,
-		"disc": "开启第 25个巡山",
-		"achv_parm": 25,
-		"achv_type": 13,
-		"next_id": 124,
 		"id": 123,
 		"name": "翻山越岭"
 	},
 	"124": {
+		"achv_type": 13,
+		"achv_parm": 30,
+		"disc": "开启第 30个巡山",
+		"type_child": 9,
+		"next_id": 125,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 9,
-		"disc": "开启第 30个巡山",
-		"achv_parm": 30,
-		"achv_type": 13,
-		"next_id": 125,
 		"id": 124,
 		"name": "翻山越岭"
 	},
 	"125": {
+		"achv_type": 13,
+		"achv_parm": 40,
+		"disc": "开启第 40个巡山",
+		"type_child": 10,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 10,
-		"disc": "开启第 40个巡山",
-		"achv_parm": 40,
-		"achv_type": 13,
-		"next_id": 0,
 		"id": 125,
 		"name": "翻山越岭"
 	},
 	"126": {
+		"achv_type": 14,
+		"achv_parm": 5,
+		"disc": "在竞技场取得 5场胜利",
+		"type_child": 1,
+		"next_id": 127,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "在斗法中取得 5场胜利",
-		"achv_parm": 5,
-		"achv_type": 14,
-		"next_id": 127,
 		"id": 126,
 		"name": "胜者为王"
 	},
 	"127": {
+		"achv_type": 14,
+		"achv_parm": 10,
+		"disc": "在竞技场取得 10场胜利",
+		"type_child": 2,
+		"next_id": 128,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 2,
-		"disc": "在斗法中取得 10场胜利",
-		"achv_parm": 10,
-		"achv_type": 14,
-		"next_id": 128,
 		"id": 127,
 		"name": "胜者为王"
 	},
 	"128": {
+		"achv_type": 14,
+		"achv_parm": 20,
+		"disc": "在竞技场取得 20场胜利",
+		"type_child": 3,
+		"next_id": 129,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 3,
-		"disc": "在斗法中取得 20场胜利",
-		"achv_parm": 20,
-		"achv_type": 14,
-		"next_id": 129,
 		"id": 128,
 		"name": "胜者为王"
 	},
 	"129": {
+		"achv_type": 14,
+		"achv_parm": 50,
+		"disc": "在竞技场取得 50场胜利",
+		"type_child": 4,
+		"next_id": 130,
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 4,
-		"disc": "在斗法中取得 50场胜利",
-		"achv_parm": 50,
-		"achv_type": 14,
-		"next_id": 130,
 		"id": 129,
 		"name": "胜者为王"
 	},
 	"130": {
-		"reward_1": [
-			"7",
-			"119",
-			"2"
-		],
-		"type_child": 5,
-		"disc": "在斗法中取得 100场胜利",
+		"achv_type": 14,
 		"achv_parm": 100,
-		"achv_type": 14,
+		"disc": "在竞技场取得 100场胜利",
+		"type_child": 5,
 		"next_id": 131,
-		"id": 130,
-		"name": "胜者为王"
-	},
-	"131": {
-		"reward_1": [
-			"7",
-			"119",
-			"2"
-		],
-		"type_child": 6,
-		"disc": "在斗法中取得 200场胜利",
-		"achv_parm": 200,
-		"achv_type": 14,
-		"next_id": 132,
-		"id": 131,
-		"name": "胜者为王"
-	},
-	"132": {
-		"reward_1": [
-			"7",
-			"119",
-			"3"
-		],
-		"type_child": 7,
-		"disc": "在斗法中取得 500场胜利",
-		"achv_parm": 500,
-		"achv_type": 14,
-		"next_id": 133,
-		"id": 132,
-		"name": "胜者为王"
-	},
-	"133": {
-		"reward_1": [
-			"7",
-			"119",
-			"3"
-		],
-		"type_child": 8,
-		"disc": "在斗法中取得 1000场胜利",
-		"achv_parm": 1000,
-		"achv_type": 14,
-		"next_id": 134,
-		"id": 133,
-		"name": "胜者为王"
-	},
-	"134": {
-		"reward_1": [
-			"7",
-			"119",
-			"4"
-		],
-		"type_child": 9,
-		"disc": "在斗法中取得 5000场胜利",
-		"achv_parm": 5000,
-		"achv_type": 14,
-		"next_id": 135,
-		"id": 134,
-		"name": "胜者为王"
-	},
-	"135": {
-		"reward_1": [
-			"7",
-			"119",
-			"5"
-		],
-		"type_child": 10,
-		"disc": "在斗法中取得 10000场胜利",
-		"achv_parm": 10000,
-		"achv_type": 14,
-		"next_id": 136,
-		"id": 135,
-		"name": "胜者为王"
-	},
-	"136": {
-		"reward_1": [
-			"7",
-			"119",
-			"6"
-		],
-		"type_child": 11,
-		"disc": "在斗法中取得 50000场胜利",
-		"achv_parm": 50000,
-		"achv_type": 14,
-		"next_id": 0,
-		"id": 136,
-		"name": "胜者为王"
-	},
-	"137": {
 		"reward_1": [
 			"7",
 			"119",
 			"1"
 		],
-		"type_child": 1,
-		"disc": "在斗法中最多取得 3场连胜",
-		"achv_parm": 3,
+		"id": 130,
+		"name": "胜者为王"
+	},
+	"131": {
+		"achv_type": 14,
+		"achv_parm": 200,
+		"disc": "在竞技场取得 200场胜利",
+		"type_child": 6,
+		"next_id": 132,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
+		"id": 131,
+		"name": "胜者为王"
+	},
+	"132": {
+		"achv_type": 14,
+		"achv_parm": 500,
+		"disc": "在竞技场取得 500场胜利",
+		"type_child": 7,
+		"next_id": 133,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
+		"id": 132,
+		"name": "胜者为王"
+	},
+	"133": {
+		"achv_type": 14,
+		"achv_parm": 1000,
+		"disc": "在竞技场取得 1000场胜利",
+		"type_child": 8,
+		"next_id": 134,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
+		"id": 133,
+		"name": "胜者为王"
+	},
+	"134": {
+		"achv_type": 14,
+		"achv_parm": 5000,
+		"disc": "在竞技场取得 5000场胜利",
+		"type_child": 9,
+		"next_id": 135,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
+		"id": 134,
+		"name": "胜者为王"
+	},
+	"135": {
+		"achv_type": 14,
+		"achv_parm": 10000,
+		"disc": "在竞技场取得 10000场胜利",
+		"type_child": 10,
+		"next_id": 136,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
+		"id": 135,
+		"name": "胜者为王"
+	},
+	"136": {
+		"achv_type": 14,
+		"achv_parm": 50000,
+		"disc": "在竞技场取得 50000场胜利",
+		"type_child": 11,
+		"next_id": 0,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
+		"id": 136,
+		"name": "胜者为王"
+	},
+	"137": {
 		"achv_type": 15,
+		"achv_parm": 3,
+		"disc": "在竞技场取得 3场连胜",
+		"type_child": 1,
 		"next_id": 138,
+		"reward_1": [
+			"7",
+			"119",
+			"1"
+		],
 		"id": 137,
 		"name": "不败神话"
 	},
 	"138": {
+		"achv_type": 15,
+		"achv_parm": 5,
+		"disc": "在竞技场取得 5场连胜",
+		"type_child": 2,
+		"next_id": 139,
 		"reward_1": [
 			"7",
 			"119",
-			"2"
+			"1"
 		],
-		"type_child": 2,
-		"disc": "在斗法中最多取得 5场连胜",
-		"achv_parm": 5,
-		"achv_type": 15,
-		"next_id": 139,
 		"id": 138,
 		"name": "不败神话"
 	},
 	"139": {
+		"achv_type": 15,
+		"achv_parm": 10,
+		"disc": "在竞技场取得 10场连胜",
+		"type_child": 3,
+		"next_id": 140,
 		"reward_1": [
 			"7",
 			"119",
-			"3"
+			"1"
 		],
-		"type_child": 3,
-		"disc": "在斗法中最多取得 10场连胜",
-		"achv_parm": 10,
-		"achv_type": 15,
-		"next_id": 140,
 		"id": 139,
 		"name": "不败神话"
 	},
 	"140": {
+		"achv_type": 15,
+		"achv_parm": 20,
+		"disc": "在竞技场取得 20场连胜",
+		"type_child": 4,
+		"next_id": 141,
 		"reward_1": [
 			"7",
 			"119",
-			"4"
+			"1"
 		],
-		"type_child": 4,
-		"disc": "在斗法中最多取得 20场连胜",
-		"achv_parm": 20,
-		"achv_type": 15,
-		"next_id": 141,
 		"id": 140,
 		"name": "不败神话"
 	},
 	"141": {
+		"achv_type": 15,
+		"achv_parm": 30,
+		"disc": "在竞技场取得 30场连胜",
+		"type_child": 5,
+		"next_id": 142,
 		"reward_1": [
 			"7",
 			"119",
-			"5"
+			"1"
 		],
-		"type_child": 5,
-		"disc": "在斗法中最多取得 30场连胜",
-		"achv_parm": 30,
-		"achv_type": 15,
-		"next_id": 142,
 		"id": 141,
 		"name": "不败神话"
 	},
 	"142": {
+		"achv_type": 15,
+		"achv_parm": 50,
+		"disc": "在竞技场取得 50场连胜",
+		"type_child": 6,
+		"next_id": 0,
 		"reward_1": [
 			"7",
 			"119",
-			"6"
+			"1"
 		],
-		"type_child": 6,
-		"disc": "在斗法中最多取得 50场连胜",
-		"achv_parm": 50,
-		"achv_type": 15,
-		"next_id": 0,
 		"id": 142,
 		"name": "不败神话"
 	}
