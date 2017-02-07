@@ -1,0 +1,212 @@
+{
+	"1": {
+		"hero_id": 0,
+		"id": 1,
+		"head_res": 219
+	},
+	"2": {
+		"hero_id": 0,
+		"id": 2,
+		"head_res": 213
+	},
+	"3": {
+		"hero_id": 0,
+		"id": 3,
+		"head_res": 210
+	},
+	"4": {
+		"hero_id": 0,
+		"id": 4,
+		"head_res": 217
+	},
+	"5": {
+		"hero_id": 0,
+		"id": 5,
+		"head_res": 201
+	},
+	"6": {
+		"hero_id": 0,
+		"id": 6,
+		"head_res": 223
+	},
+	"7": {
+		"hero_id": 0,
+		"id": 7,
+		"head_res": 226
+	},
+	"8": {
+		"hero_id": 0,
+		"id": 8,
+		"head_res": 206
+	},
+	"9": {
+		"hero_id": 0,
+		"id": 9,
+		"head_res": 227
+	},
+	"10": {
+		"hero_id": 0,
+		"id": 10,
+		"head_res": 224
+	},
+	"11": {
+		"hero_id": 0,
+		"id": 11,
+		"head_res": 215
+	},
+	"12": {
+		"hero_id": 0,
+		"id": 12,
+		"head_res": 204
+	},
+	"13": {
+		"hero_id": 101,
+		"id": 13,
+		"head_res": 101
+	},
+	"14": {
+		"hero_id": 102,
+		"id": 14,
+		"head_res": 102
+	},
+	"15": {
+		"hero_id": 103,
+		"id": 15,
+		"head_res": 103
+	},
+	"16": {
+		"hero_id": 104,
+		"id": 16,
+		"head_res": 104
+	},
+	"17": {
+		"hero_id": 105,
+		"id": 17,
+		"head_res": 105
+	},
+	"18": {
+		"hero_id": 106,
+		"id": 18,
+		"head_res": 106
+	},
+	"19": {
+		"hero_id": 107,
+		"id": 19,
+		"head_res": 107
+	},
+	"20": {
+		"hero_id": 108,
+		"id": 20,
+		"head_res": 108
+	},
+	"21": {
+		"hero_id": 109,
+		"id": 21,
+		"head_res": 109
+	},
+	"22": {
+		"hero_id": 110,
+		"id": 22,
+		"head_res": 110
+	},
+	"23": {
+		"hero_id": 111,
+		"id": 23,
+		"head_res": 111
+	},
+	"24": {
+		"hero_id": 112,
+		"id": 24,
+		"head_res": 112
+	},
+	"25": {
+		"hero_id": 113,
+		"id": 25,
+		"head_res": 113
+	},
+	"26": {
+		"hero_id": 114,
+		"id": 26,
+		"head_res": 114
+	},
+	"27": {
+		"hero_id": 115,
+		"id": 27,
+		"head_res": 115
+	},
+	"28": {
+		"hero_id": 116,
+		"id": 28,
+		"head_res": 116
+	},
+	"29": {
+		"hero_id": 117,
+		"id": 29,
+		"head_res": 117
+	},
+	"30": {
+		"hero_id": 118,
+		"id": 30,
+		"head_res": 118
+	},
+	"31": {
+		"hero_id": 119,
+		"id": 31,
+		"head_res": 119
+	},
+	"32": {
+		"hero_id": 120,
+		"id": 32,
+		"head_res": 120
+	},
+	"33": {
+		"hero_id": 121,
+		"id": 33,
+		"head_res": 121
+	},
+	"34": {
+		"hero_id": 122,
+		"id": 34,
+		"head_res": 122
+	},
+	"35": {
+		"hero_id": 123,
+		"id": 35,
+		"head_res": 123
+	},
+	"36": {
+		"hero_id": 124,
+		"id": 36,
+		"head_res": 124
+	},
+	"37": {
+		"hero_id": 125,
+		"id": 37,
+		"head_res": 125
+	},
+	"38": {
+		"hero_id": 126,
+		"id": 38,
+		"head_res": 126
+	},
+	"39": {
+		"hero_id": 127,
+		"id": 39,
+		"head_res": 127
+	},
+	"40": {
+		"hero_id": 128,
+		"id": 40,
+		"head_res": 128
+	},
+	"41": {
+		"hero_id": 129,
+		"id": 41,
+		"head_res": 129
+	},
+	"42": {
+		"hero_id": 130,
+		"id": 42,
+		"head_res": 130
+	}
+}

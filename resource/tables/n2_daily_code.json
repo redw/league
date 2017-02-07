@@ -1,0 +1,230 @@
+{
+	"1": {
+		"reward_4": null,
+		"reward_3": null,
+		"reward_1": [
+			"3",
+			"0",
+			"3000"
+		],
+		"rmb": 0,
+		"reward_2": null,
+		"floor": 0,
+		"overtime": 1,
+		"id": 1,
+		"reward_5": null,
+		"code": "qwe123scjqlb"
+	},
+	"2": {
+		"reward_4": [
+			"22",
+			"0",
+			"100"
+		],
+		"reward_3": [
+			"4",
+			"0",
+			"500"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"9000"
+		],
+		"rmb": 0,
+		"reward_2": [
+			"2",
+			"0",
+			"10"
+		],
+		"floor": 100,
+		"overtime": 1,
+		"id": 2,
+		"reward_5": [
+			"6",
+			"106",
+			"1"
+		],
+		"code": "asd789scbclb"
+	},
+	"3": {
+		"reward_4": null,
+		"reward_3": null,
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"rmb": 0,
+		"reward_2": null,
+		"floor": 0,
+		"overtime": 0,
+		"id": 3,
+		"reward_5": null,
+		"code": "dtm9512jqxs"
+	},
+	"4": {
+		"reward_4": [
+			"22",
+			"0",
+			"10"
+		],
+		"reward_3": [
+			"4",
+			"0",
+			"200"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"rmb": 0,
+		"reward_2": [
+			"2",
+			"0",
+			"2"
+		],
+		"floor": 200,
+		"overtime": 0,
+		"id": 4,
+		"reward_5": null,
+		"code": "mhq7415jq200"
+	},
+	"5": {
+		"reward_4": [
+			"22",
+			"0",
+			"20"
+		],
+		"reward_3": [
+			"4",
+			"0",
+			"1000"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"rmb": 0,
+		"reward_2": [
+			"2",
+			"0",
+			"2"
+		],
+		"floor": 1000,
+		"overtime": 0,
+		"id": 5,
+		"reward_5": null,
+		"code": "psx9563jq1000"
+	},
+	"6": {
+		"reward_4": null,
+		"reward_3": [
+			"4",
+			"0",
+			"50"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"200"
+		],
+		"rmb": 0,
+		"reward_2": [
+			"2",
+			"0",
+			"1"
+		],
+		"floor": 0,
+		"overtime": 0,
+		"id": 6,
+		"reward_5": null,
+		"code": "ddx8526xs"
+	},
+	"7": {
+		"reward_4": [
+			"22",
+			"0",
+			"10"
+		],
+		"reward_3": [
+			"4",
+			"0",
+			"100"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"200"
+		],
+		"rmb": 2,
+		"reward_2": [
+			"2",
+			"0",
+			"1"
+		],
+		"floor": 0,
+		"overtime": 0,
+		"id": 7,
+		"reward_5": null,
+		"code": "ydc3576sc"
+	},
+	"8": {
+		"reward_4": [
+			"22",
+			"0",
+			"10"
+		],
+		"reward_3": [
+			"4",
+			"0",
+			"50"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"rmb": 0,
+		"reward_2": [
+			"2",
+			"0",
+			"2"
+		],
+		"floor": 100,
+		"overtime": 0,
+		"id": 8,
+		"reward_5": null,
+		"code": "dkx7416100"
+	},
+	"9": {
+		"reward_4": [
+			"22",
+			"0",
+			"20"
+		],
+		"reward_3": [
+			"4",
+			"0",
+			"500"
+		],
+		"reward_1": [
+			"3",
+			"0",
+			"300"
+		],
+		"rmb": 0,
+		"reward_2": [
+			"2",
+			"0",
+			"2"
+		],
+		"floor": 500,
+		"overtime": 0,
+		"id": 9,
+		"reward_5": null,
+		"code": "pex6658500"
+	}
+}

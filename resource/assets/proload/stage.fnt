@@ -1,0 +1,13 @@
+{"file":"/stage.png","frames":{
+"卡":{"x":1,"y":1,"w":19,"h":19,"offX":2,"offY":2,"sourceW":21,"sourceH":21},
+"0":{"x":15,"y":41,"w":12,"h":17,"offX":2,"offY":4,"sourceW":14,"sourceH":21},
+"1":{"x":29,"y":58,"w":12,"h":17,"offX":2,"offY":4,"sourceW":14,"sourceH":21},
+"2":{"x":43,"y":20,"w":13,"h":17,"offX":1,"offY":4,"sourceW":14,"sourceH":21},
+"3":{"x":31,"y":39,"w":13,"h":17,"offX":1,"offY":4,"sourceW":14,"sourceH":21},
+"4":{"x":16,"y":22,"w":13,"h":17,"offX":1,"offY":4,"sourceW":14,"sourceH":21},
+"5":{"x":43,"y":1,"w":13,"h":17,"offX":1,"offY":4,"sourceW":14,"sourceH":21},
+"6":{"x":43,"y":58,"w":12,"h":17,"offX":2,"offY":4,"sourceW":14,"sourceH":21},
+"7":{"x":1,"y":41,"w":12,"h":17,"offX":2,"offY":4,"sourceW":14,"sourceH":21},
+"8":{"x":46,"y":39,"w":12,"h":17,"offX":2,"offY":4,"sourceW":14,"sourceH":21},
+"9":{"x":1,"y":22,"w":13,"h":17,"offX":1,"offY":4,"sourceW":14,"sourceH":21},
+"关":{"x":22,"y":1,"w":19,"h":19,"offX":2,"offY":2,"sourceW":21,"sourceH":21}}}

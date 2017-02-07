@@ -1,0 +1,19 @@
+{"mc":{
+	"205_attack_missle":{
+		"frameRate":12,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"5D0F0DCB",
+			"x":-18,
+			"y":-11,
+			"duration":3
+			}
+			]
+}},
+	"res":{
+		"5D0F0DCB":{"x":1,"y":1,"w":40,"h":11}
+	}}

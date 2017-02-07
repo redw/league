@@ -1,0 +1,19 @@
+{"mc":{
+	"213_attack_missle":{
+		"frameRate":12,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"119BAE6C",
+			"x":-10,
+			"y":-11,
+			"duration":2
+			}
+			]
+}},
+	"res":{
+		"119BAE6C":{"x":1,"y":1,"w":20,"h":13}
+	}}

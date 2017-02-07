@@ -1,0 +1,18 @@
+{"mc":{
+	"123_attack_missle":{
+		"frameRate":18,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"FDA32D74",
+			"x":-11,
+			"y":-9
+			}
+			]
+}},
+	"res":{
+		"FDA32D74":{"x":1,"y":1,"w":36,"h":20}
+	}}

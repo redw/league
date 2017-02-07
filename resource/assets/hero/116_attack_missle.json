@@ -1,0 +1,19 @@
+{"mc":{
+	"116_attack_missle":{
+		"frameRate":18,
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"DEE147DF",
+			"x":-11,
+			"y":-30,
+			"duration":2
+			}
+			]
+}},
+	"res":{
+		"DEE147DF":{"x":1,"y":1,"w":22,"h":29}
+	}}
